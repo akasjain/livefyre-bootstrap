@@ -5,110 +5,58 @@
 // Dropdown menus
 // --------------------------------------------------
 
-// The dropdown wrapper (div)
-.lf-dropdown {
-    position: relative;
-}
-
 // The dropdown menu (ul)
-.lf-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: @zindex-dropdown;
-    display: none; // none by default, but block on "open" of the menu
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0; // override default ul
-    list-style: none;
-    font-size: @font-size-base;
-    background-color: @dropdown-bg;
-    border: 1px solid @dropdown-fallback-border; // IE8 fallback
-    border: 1px solid @dropdown-border;
-    border-radius: @border-radius-base;
-    background-clip: padding-box;
-    .box-shadow(2px 1px 17px rgba(0, 0, 0, 0.25));
-    
-    // Links within the dropdown menu
-    > li > a {
-        display: block;
-        padding: 5px 20px;
-        clear: both;
-        font-weight: normal;
-        line-height: @line-height-base;
-        color: @dropdown-link-color;
-        white-space: nowrap; // prevent links from randomly breaking onto new lines
-    }
+.dropdown-menu {
+  margin-top: 8px; // Make room for arrow
+  .box-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+   
+  // Links within the dropdown menu
+  > li > a {
+    padding: 5px 20px;
+  }
 }
 
-// Hover/Focus state
-.lf-dropdown-menu > li > a {
-     &:hover,
-     &:focus {
-         text-decoration: none;
-         color: @dropdown-link-hover-color;
-         background-color: @dropdown-link-hover-bg;
-     }
+// Menu aligmnment options
+// 
+// Use alongside .dropdown-menu. Ex: <ul class="dropdown-menu dropdown-menu-right">
+
+.dropdown-menu-right, // .dropdown-menu-right introduced in BS v3.1.0 (.pull-right was deprecated)
+.pull-right > .dropdown-menu { // Helps with specificity when .pull-right is applied to the container
+  left: auto; // TODO: Remove once LF-BS's version of BS has been updated.
+  right: -6px; // BS uses right:0 but since we're using arrows, we need more room.
 }
 
-// Active state
-.lf-dropdown-menu > .active > a {
-    &,
-    &:hover,
-    &:focus {
-        color: @dropdown-link-active-color;
-        text-decoration: none;
-        outline: 0;
-        background-color: @dropdown-link-active-bg;
-    }
+.dropdown-menu-center {
+  right: auto;
+  left: 50%;
+  .translate(-50%, 0);
 }
 
-// Disabled state
+// Arrows
 //
-// Gray out text and ensure the hover/focus state remains gray
+// Little, white arrow atop the dropdown menu.
 
-.lf-dropdown-menu > .disabled > a {
-    &,
-    &:hover,
-    &:focus {
-        color: @dropdown-link-disabled-color;
-    }
-}
-// Nuke hover/focus effects
-.lf-dropdown-menu > .disabled > a {
-    &:hover,
-    &:focus {
-        text-decoration: none;
-        background-color: transparent;
-        background-image: none; // Remove CSS gradient
-        .reset-filter();
-        cursor: not-allowed;
-    }
+.dropdown-menu:before {
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  content: "";
+  border: 7px solid; // 7px thickness is 1px more than top (-6px) to prevent bottom of arrow getting clipped in rare instances.
+  border-color: transparent transparent @dropdown-bg @dropdown-bg;
+  .rotate(135deg);
+  .box-shadow(-4px 4px 6px 0 rgba(0, 0, 0, 0.08));
 }
 
-// Open state for the dropdown
-.open {
-    // Show the menu
-    > .lf-dropdown-menu {
-        display: block;
-    }
-    
-    // Remove the outline when :focus is triggered
-    > a {
-        outline: 0;
-    }
+.dropdown-menu-right:before {
+  left: auto;
+  right: 10px;        
 }
 
-// Open state for the dropdown
-.open {
-    // Show the menu
-    > .lf-dropdown-menu {
-        display: block;
-    }
-    
-    // Remove the outline when :focus is triggered
-    > a {
-        outline: 0;
-    }
+.dropdown-menu-center:before {
+  left: 50%;        
+  right: auto;
+  margin-left: -6px;
 }
