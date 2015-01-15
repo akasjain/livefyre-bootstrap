@@ -28,6 +28,18 @@
 .lf-btn-info {
   .lf-button-variant(@btn-info-color; @btn-info-bg; @btn-info-border; 30%);
 }
+// Hollow appears as a mostly-transparent gray. Active state has dark gray bg and border.
+.lf-btn-hollow {
+  .lf-button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-hollow-border; 30%);
+  
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-color: fade(@lf-gray-darker, 80%);
+    border-color: @lf-gray-darker;
+  }  
+}
+
 
 /**
  * Link buttons
