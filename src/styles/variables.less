@@ -242,21 +242,23 @@
 
 // Modals
 // -------------------------
-@modal-header-bg:				#F4F5F5;
-@modal-header-border-color:		#ECECEA;
-@modal-inner-padding: 			15px;
-@modal-title-padding:         	15px;
-@modal-backdrop-bg:           	#000;
-@modal-backdrop-opacity:      	.7;
-@modal-content-fallback-border-color:          #999;
-@modal-title-line-height:     	@line-height-base;
-@modal-content-bg:              #fff;
-@modal-content-border-color: 	rgba(0,0,0,.2);
-@modal-header-border-color:   	#e5e5e5;
-@modal-footer-border-color:   	@modal-header-border-color;
-@modal-lg: 						900px;
-@modal-md: 						600px;
-@modal-sm: 						300px;
+@modal-header-bg:             #F4F5F5;
+@modal-header-border-color:   #ECECEA;
+@modal-inner-padding:         30px;
+@modal-title-padding:         28px;
+@modal-backdrop-bg:           #000;
+@modal-backdrop-opacity:      .7;
+@modal-content-fallback-border-color: #999;
+@modal-title-font-size:       ceil(@font-size-base * 1.42857); // 20px
+@modal-title-line-height:     24px;
+@modal-content-bg:            #fff;
+@modal-content-border-color:  rgba(0,0,0,.2);
+@modal-header-border-color:   #e5e5e5;
+@modal-footer-border-color:   @modal-header-border-color;
+
+@modal-lg: 900px;
+@modal-md: 600px;
+@modal-sm: 300px;
 
 // Alerts
 // -------------------------

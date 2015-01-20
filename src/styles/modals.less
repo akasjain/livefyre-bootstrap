@@ -75,22 +75,36 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .lf-modal-header {
-  padding: @modal-title-padding;
+  padding: 18px @modal-inner-padding 17px;
   border-bottom: 1px solid @modal-header-border-color;
   background-color: @modal-header-bg;
   border-radius: @border-radius-large @border-radius-large 0 0;
   min-height: (@modal-title-padding + @modal-title-line-height);
   text-align: center;
 }
+
 // Close icon
 .lf-modal-header .lf-close {
-  margin-top: -3px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 // Title text within header
 .lf-modal-title {
   margin: 0;
+  padding: 0 @modal-title-padding; // Prevent overlap with close button
+  font-size: @modal-title-font-size;
   line-height: @modal-title-line-height;
+  color: @lf-gray-dark;
+
+  // Tw Bootstrap helper classes
+  &.text-left,
+  &.text-right {
+    padding-left: 0;
+  }
 }
 
 // Modal body
@@ -98,10 +112,6 @@
 .lf-modal-body {
   position: relative;
   padding: @modal-inner-padding;
-
-  &.centered {
-    text-align: center;
-  }
 }
 
 // Footer (for actions)
@@ -109,6 +119,14 @@
   padding: @modal-inner-padding;
   text-align: center;
   &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+  // Tw Bootstrap helper classes. Needed here to override default center alignment.
+  &.text-left {
+    text-align: left;
+  }
+  &.text-right {
+    text-align: right;
+  }
 
   // Properly space out buttons
   .btn + .btn {
