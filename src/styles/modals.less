@@ -92,10 +92,10 @@
   line-height: 18px;
 }
 
-// Title text within header
+// Title text within header or body
 .lf-modal-title {
   margin: 0;
-  padding: 0 @modal-title-padding; // Prevent overlap with close button
+  padding: 0 @modal-title-padding; // Prevent overlap with close button    
   font-size: @modal-title-font-size;
   line-height: @modal-title-line-height;
   color: @lf-gray-dark;
@@ -112,6 +112,11 @@
 .lf-modal-body {
   position: relative;
   padding: @modal-inner-padding;
+
+  p {
+    margin-bottom: 14px;
+    line-height: 18px;
+  }
 }
 
 // Footer (for actions)
@@ -130,7 +135,7 @@
 
   // Properly space out buttons
   .btn + .btn {
-    margin-left: 5px;
+    margin-left: 7px;
     margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
   }
   // but override that for button groups
@@ -151,6 +156,31 @@
   height: 50px;
   overflow: scroll;
 }
+
+
+// Alert Modal
+// Does not include a title section. Useful for alert messages and notifications that requires the users attention.
+.lf-modal-alert {
+  .lf-modal-header {
+    min-height: (@modal-title-padding + @modal-title-line-height) - 6px;
+    background-color: transparent;
+    border-bottom: 0;
+  }
+  .lf-modal-body {
+    padding-top: 0;
+
+    h4 { // Headline text should be placed inside body
+      .lf-modal-title;
+      margin-bottom: 16px;
+      padding: 0;
+      color: @lf-gray-darker;
+    }
+  }
+  .lf-modal-footer {
+    padding-top: 0;
+  }
+}
+
 
 // Scale up the modal
 @media (min-width: @screen-sm-min) {
