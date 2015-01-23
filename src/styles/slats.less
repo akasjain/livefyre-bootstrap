@@ -1,0 +1,74 @@
+@import (reference) "./mixins";
+@import (reference) "./variables";
+
+//
+// Slats
+// --------------------------------------------------
+
+
+// Wrapper
+
+.lf-slat {
+  .clearfix;
+  clear: both;
+  display: block;
+  height: @slat-height;
+  padding: @slat-padding 0;
+  color: @slat-font-color;
+  border-bottom: 1px solid @slat-border-color;
+  cursor: pointer;
+
+  &:hover {
+    color: @slat-font-color;
+    background-color: @slat-bg-hover-color;   
+  }
+
+  &.lf-no-bottom-border {
+    border-bottom: 0;
+  }
+
+  &.lf-add-top-border {
+    height: @slat-height + 1;
+    border-top: 1px solid @slat-border-color;
+  }
+
+}
+
+.lf-slat-vertical-center {
+  .transform-style(preserve-3d); // Works with .vertical-center helper
+  padding: (@slat-padding - 2) 0 (@slat-padding + 2);
+
+  > div {
+    .vertical-center();
+  }
+}
+
+
+// Header Row
+
+.lf-slat-header {
+  height: 36px;
+  font-size: @slat-header-font-size;
+  text-transform: uppercase;
+  color: @slat-header-font-color;
+}
+
+
+// Item Title
+
+.lf-slat-title {
+  .truncate();
+  display: inline-block; // Use inline-block on all slat content to help their baselines align.
+  margin: 0;
+  font-size: @slat-title-size;
+  font-weight: 600;
+  line-height: @slat-line-height;
+  color: @slat-title-color;
+}
+
+
+// Helpers
+
+.lf-slat .vertical-center {
+  .vertical-center();
+}

@@ -135,6 +135,13 @@
        -o-transform: translate(@x, @y);
           transform: translate(@x, @y);
 }
+.translateY(@y) {
+  -webkit-transform: translateY(@y);
+     -moz-transform: translateY(@y);
+      -ms-transform: translateY(@y);
+       -o-transform: translateY(@y);
+          transform: translateY(@y);
+}
 .translateZ(@z) {
   -webkit-transform: translateZ(@z);
      -moz-transform: translateZ(@z);
@@ -255,10 +262,7 @@
 .vertical-center() {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-         -o-transform: translateY(-50%);
-            transform: translateY(-50%);
+    .translateY(-50%);
 }
 
 /* Truncate text with ellipsis */
@@ -267,4 +271,5 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  max-width: 100%;
 }
