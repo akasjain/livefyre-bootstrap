@@ -18,7 +18,7 @@
   border-bottom: 1px solid @slat-border-color;
   cursor: pointer;
 
-  &:hover {
+  &:not(.lf-slat-header):hover {
     color: @slat-font-color;
     background-color: @slat-bg-hover-color;   
   }
@@ -47,10 +47,14 @@
 // Header Row
 
 .lf-slat-header {
-  height: 36px;
+  height: auto;
+  min-height: 36px;
+  padding: (@slat-padding + 3) 0 (@slat-padding + 1);
   font-size: @slat-header-font-size;
+  line-height: (@slat-line-height - 6);
   text-transform: uppercase;
   color: @slat-header-font-color;
+  cursor: auto;
 }
 
 
