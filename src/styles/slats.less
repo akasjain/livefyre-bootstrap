@@ -5,11 +5,12 @@
 // Slats
 // --------------------------------------------------
 
+// TODO: Allow vertical centering of header row text
 
 // Wrapper
 
 .lf-slat {
-  .clearfix;
+  .make-row();
   clear: both;
   display: block;
   height: @slat-height;
@@ -48,13 +49,17 @@
 
 .lf-slat-header {
   height: auto;
-  min-height: 36px;
+  min-height: @slat-header-height;
   padding: (@slat-padding + 3) 0 (@slat-padding + 1);
   font-size: @slat-header-font-size;
   line-height: (@slat-line-height - 6);
   text-transform: uppercase;
   color: @slat-header-font-color;
   cursor: auto;
+
+  &.lf-slat-vertical-center {
+    height: @slat-header-height; // Need to specify a height to properly center headers
+  }
 }
 
 
