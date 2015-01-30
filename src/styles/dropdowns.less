@@ -5,6 +5,37 @@
 // Dropdown menus
 // --------------------------------------------------
 
+// Carets used in dropdowns, buttons, etc.
+//
+// Replace default caret with chevron fycon
+.caret,
+.dropup {
+  .fycon-sm;
+  width: auto;
+  height: auto;
+  border: 0;
+  font-family: "fycons-@{fycon-font-version}" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.caret {
+  .fycon-arrow-down;
+}
+
+.dropup {
+  .fycon-arrow-up;
+}
+
+
 // The dropdown menu (ul)
 .dropdown-menu {
   margin-top: 8px; // Make room for arrow
