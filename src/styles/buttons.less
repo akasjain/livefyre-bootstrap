@@ -4,6 +4,10 @@
 
 .lf-btn {
     .btn();
+    // Using fixed heights and line-heights instead of padding to improve vertically centering fycons inside buttons
+    padding: 0 @padding-base-horizontal;
+    height: @btn-height;
+    line-height: @btn-height - 2;
 }
 
 .lf-btn-default {
@@ -47,7 +51,6 @@
 
 .lf-btn-link {
     .lf-btn-default;
-
     background: transparent;
     border: 1px solid transparent;
 }
@@ -57,12 +60,21 @@
 
 .lf-btn-lg {
     .btn-lg();
+    height: @btn-height-lg;
+    padding: 0 @padding-large-horizontal;
+    line-height: @btn-height-lg - 2;
 }
 .lf-btn-sm {
     .btn-sm();
+    height: @btn-height-sm;
+    padding: 0 @padding-small-horizontal;
+    line-height: @btn-height-sm - 2;
 }
 .lf-btn-xs {
     .btn-xs();
+    height: @btn-height-xs;
+    padding: 0 @padding-xs-horizontal;
+    line-height: @btn-height-xs - 2;
 }
 
 // Block button
@@ -71,3 +83,48 @@
 .lf-btn-block {
     .btn-block();
 }
+
+// Fycons
+// --------------------------------------------------
+
+.lf-btn {
+  [class^="fycon-"],
+  [class*=" fycon-"] {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1; // Must be smaller than .lf-btn's to prevent fycon from expanding height of button.
+
+    &:before {
+      vertical-align: initial;
+    }
+  }
+}
+
+.lf-btn {
+  .fycon-sm {
+    font-size: @font-size-base - 2px;
+  }
+  .fycon-lg {
+    font-size: @font-size-base + 2px;
+  }
+}
+
+.lf-btn-xs, 
+.lf-btn-sm {
+  .fycon-sm {
+    font-size: @font-size-small - 2px;
+  }
+  .fycon-lg {
+    font-size: @font-size-small + 2px;
+  }
+}
+
+.lf-btn-lg {
+  .fycon-sm {
+    font-size: @font-size-large - 4px;
+  }
+  .fycon-lg {
+    font-size: @font-size-large + 4px;
+  }
+}
+
