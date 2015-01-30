@@ -59,22 +59,16 @@
 // --------------------------------------------------
 
 .lf-btn-lg {
-    .btn-lg();
-    height: @btn-height-lg;
-    padding: 0 @padding-large-horizontal;
-    line-height: @btn-height-lg - 2;
+  .button-size(0; @padding-large-horizontal; @font-size-large; @btn-height-lg - 2; @btn-radius);
+  height: @btn-height-lg;
 }
 .lf-btn-sm {
-    .btn-sm();
-    height: @btn-height-sm;
-    padding: 0 @padding-small-horizontal;
-    line-height: @btn-height-sm - 2;
+  .button-size(0; @padding-small-horizontal; @font-size-small; @btn-height-sm - 2; @btn-radius);
+  height: @btn-height-sm;
 }
 .lf-btn-xs {
-    .btn-xs();
-    height: @btn-height-xs;
-    padding: 0 @padding-xs-horizontal;
-    line-height: @btn-height-xs - 2;
+  .button-size(0; @padding-xs-horizontal; @font-size-small; @btn-height-xs - 2; @btn-radius);
+  height: @btn-height-xs;
 }
 
 // Block button
