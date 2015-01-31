@@ -50,14 +50,17 @@
 // Menu aligmnment options
 // 
 // Use alongside .dropdown-menu. Ex: <ul class="dropdown-menu dropdown-menu-right">
-
-.dropdown-menu-right, // .dropdown-menu-right introduced in BS v3.1.0 (.pull-right was deprecated)
-.pull-right > .dropdown-menu { // Helps with specificity when .pull-right is applied to the container
-  left: auto; // TODO: Remove once LF-BS's version of BS has been updated.
-  right: -6px; // BS uses right:0 but since we're using arrows, we need more room.
+//
+// .dropdown-menu-right introduced in TwBS v3.1.0 (.pull-right was deprecated)
+// .dropdown-menu-center is only in LF-BS.
+.dropdown-menu-right, // TODO: Remove once LF-BS's version of BS has been updated.
+.pull-right > .dropdown-menu-right { // Override TwBS styles in dropdowns.less
+  left: auto;
+  right: 0;
 }
 
-.dropdown-menu-center {
+.dropdown-menu-center,
+.pull-right > .dropdown-menu-center { // Override TwBS styles in dropdowns.less
   right: auto;
   left: 50%;
   .translate(-50%, 0);
