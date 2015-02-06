@@ -164,6 +164,12 @@
        -o-transform: translate(@x, @y, @z);
           transform: translate(@x, @y, @z);
 }
+.preserve3d() {
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
 
 // Background sizing
 .background-size(@size){
@@ -255,11 +261,8 @@
 
 /* VERTICAL CENTERING */
 // To avoid half-pixel blurriness, the
-// parent element should have preserve-3d
-// -webkit-transform-style: preserve-3d;
-//    -moz-transform-style: preserve-3d;
-//     -ms-transform-style: preserve-3d;
-//         transform-style: preserve-3d;
+// parent element should have preserve-3d.
+// Use .preserve3d mixin defined above.
 .vertical-center() {
     position: relative;
     top: 50%;
