@@ -1,0 +1,39 @@
+@import (reference) "./variables";
+
+//
+// No-Data Block
+// --------------------------------------------------
+
+.no-data {
+    padding: 60px (@grid-gutter-width / 2) 30px;
+    text-align: center;
+
+    // Large Fycon
+    [class^="fycon-"],
+    [class*=" fycon-"] {
+        display: block;
+        margin: 0 auto 16px;
+        font-size: 90px;
+        line-height: 1;
+        color: @lf-gray-light;
+    }
+    
+    // Header
+    .no-data-header {
+        max-width: 560px;
+        margin: 0 auto 10px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        color: @lf-gray-dark;
+    }
+    
+    // Subheader, buttons, links, etc.
+    p {
+        max-width: 560px;
+        margin: 0 auto 16px;
+        font-size: @font-size-base;
+        line-height: 18px;
+        color: @lf-gray;
+    }
+}
