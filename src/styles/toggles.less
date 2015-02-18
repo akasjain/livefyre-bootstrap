@@ -1,112 +1,181 @@
 @import (reference) "./variables";
 
-/* Toggle styles (to be used with toggles.js)
+/* Toggle styles
 -------------------------------------------------- */
 
 .lf-toggle {
-  position: relative;
-  width: 50px;
-  height: 28px;
-  background-color: #eee;
-  border: 1px solid #bbb;
-  border-radius: 20px;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, .1);
+    position: relative;
+    width: @lf-tog-width;
+    height: @lf-tog-height;
+    overflow: hidden;
+    margin-bottom: auto;
+    cursor: pointer;
 }
 
-.lf-toggle.lf-toggle-label {
-  width: 75px;
+.lf-toggle input {
+    position: absolute;
+    opacity: 0;
 }
 
-/* Text indicating "on" or "off". Default is "off" */
-.lf-toggle.lf-toggle-label:before {
-  position: absolute;
-  right: 13px;
-  font-weight: bold;
-  line-height: 28px;
-  color: #777;
-  text-shadow: 0 1px #fff;
-  text-transform: uppercase;
-  content: "Off";
+// BG
+.lf-toggle span {
+    display: block;
+    height: @lf-tog-height;
+    background-color: #eee;
+    border-radius: 100px;
+    border: 1px solid #bbb;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, .1);
+    -webkit-transition: -webkit-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out; // Can't use .transition mixin because "transform" needs prefixing
+       -moz-transition: -moz-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+        -ms-transition: -ms-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+         -o-transition: -o-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+            transition: transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;  
 }
 
-/* Sliding handle */
-.lf-toggle-handle {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  z-index: 2;
-  width: 28px;
-  height: 28px;
-  background-color: #fff;
-  background-image: -webkit-linear-gradient(top, #fff 0, #f2f2f2 100%);
-  background-image: linear-gradient(to bottom, #fff 0, #f2f2f2 100%);
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 100px;
-  -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
-                  transition: transform 0.1s ease-in-out, border 0.1s ease-in-out;
+// Handle
+.lf-toggle span:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: @lf-tog-handle;
+    height: @lf-tog-handle;
+    content: "";
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(top, #fff 0, #f2f2f2 100%);
+    background-image: linear-gradient(to bottom, #fff 0, #f2f2f2 100%);
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 100px;
+    .translate3d(0, 0, 0);
+    -ms-transform: translateX(0); // IE9
+    -webkit-transition: -webkit-transform 0.1s ease-in-out; // Can't use .transition mixin because "transform" needs prefixing
+       -moz-transition: -moz-transform 0.1s ease-in-out;
+        -ms-transition: -ms-transform 0.1s ease-in-out;
+         -o-transition: -o-transform 0.1s ease-in-out;
+            transition: transform 0.1s ease-in-out;
 }
 
-/* Active state for toggle */
-.lf-toggle.active {
-  background-color: @lf-green;
-  border: 1px solid @lf-green;
-  box-shadow: inset 0 0 15px rgba(255, 255, 255, .25);
+
+// Checked
+.lf-toggle input:checked + span {
+
+    // BG    
+    border: 1px solid @lf-tog-on-bg;
+    background-color: @lf-tog-on-bg;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, .25);
+    
+    // Handle
+    &:before {
+        border: 1px solid @lf-tog-on-bg;
+        .translate3d(@lf-tog-width - @lf-tog-handle, 0, 0);
+         -ms-transform: translateX(@lf-tog-width - @lf-tog-handle); // IE9
+    }
 }
 
-/* Active state for toggle handle */
-.lf-toggle.active .lf-toggle-handle {
-  border-color: @lf-green;
-  -webkit-transform: translate3d(22px,0,0);
-      -ms-transform: translateX(22px); // IE9 doesn't support 3D transforms
-          transform: translate3d(22px,0,0);
-}
-.lf-toggle.lf-toggle-label.active .lf-toggle-handle {
-  -webkit-transform: translate3d(48px,0,0);
-      -ms-transform: translateX(48px); // IE9 doesn't support 3D transforms
-          transform: translate3d(48px,0,0);
-}
 
-/* Change "off" to "on" for active state */
-.lf-toggle.lf-toggle-label.active:before {
-  right: auto;
-  left: 15px;
-  color: #fff;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
-  content: "On";
-}
+//
+// Small Toggle
+// --------------------------------------------------
 
-.lf-toggle.lf-toggle-sm {
-  width: 36px;
-  height: 22px;
+.lf-toggle-sm {
+    width: @lf-tog-width-sm;
+    height: @lf-tog-height-sm;
 
-  .lf-toggle-handle {
-    width: 22px;
-    height: 22px;
-  }
+    span {
+        height: @lf-tog-height-sm;
 
-  &.active .lf-toggle-handle {
-    -webkit-transform: translate3d(14px,0,0);
-      -ms-transform: translateX(14px); // IE9 doesn't support 3D transforms
-          transform: translate3d(14px,0,0);
-  }
+        // Handle
+        &:before {
+            width: @lf-tog-handle-sm;
+            height: @lf-tog-handle-sm;
+        }
+    }
+    
+    // Checked
+    input:checked + span:before {
+        .translate3d(@lf-tog-width-sm - @lf-tog-handle-sm, 0, 0);
+        -ms-transform: translateX(@lf-tog-width-sm - @lf-tog-handle-sm); // IE9
+    }
 }
 
-.lf-toggle.lf-toggle-sm.lf-toggle-label {
-  width: 64px;
 
-  &:before {
-    line-height: 22px;
-    right: 10px;
-  }
+//
+// On/Off text
+// --------------------------------------------------
 
-  &.active:before {
-    right: auto;
-    left: 13px;
-  }
+.lf-toggle-label {
+    width: @lf-tog-label-width;
+    
+    // "On" text
+    span {
+        padding: 0 @lf-tog-handle 0 8px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: @lf-tog-height;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+        text-transform: uppercase;  
+    }
+    
+    // "Off" Text
+    span:after {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        display: block;
+        width: calc(100% - 2px);
+        height: @lf-tog-height - 2px;
+        padding: 0 8px 0 @lf-tog-handle;
+        content: attr(data-off);
+        background-color: @lf-tog-off-bg;
+        color: #777;
+        text-align: center;
+        text-shadow: 0 1px #fff;
+        border-radius: 100px;
+    }
+        
+    // Checked
+    input:checked {
+       
+        // Handle
+        + span:before {
+            .translate3d(@lf-tog-label-width - @lf-tog-handle, 0, 0);    
+            -ms-transform: translateX(@lf-tog-label-width - @lf-tog-handle); // IE9
+        }
 
-  &.active .lf-toggle-handle {
-    -webkit-transform: translate3d(42px,0,0);
-      -ms-transform: translateX(42px); // IE9 doesn't support 3D transforms
-          transform: translate3d(42px,0,0);   
-  }
+        // "Off" Text
+        + span:after {
+            display: none;
+        }
+    }
+}
+
+
+// 
+// Small toggle with On/Off text
+// --------------------------------------------------
+
+.lf-toggle-sm.lf-toggle-label {
+    width: @lf-tog-label-width-sm;
+    
+    // "On" text
+    span {
+        font-size: 12px;
+        line-height: @lf-tog-height-sm;
+    }
+    
+    // "Off" text
+    span:after {
+        height: @lf-tog-height-sm - 2px;
+        padding: 0 8px 0 @lf-tog-handle-sm;
+    }
+    
+    // Handle
+    input:checked + span:before {
+        .translate3d(@lf-tog-label-width-sm - @lf-tog-handle-sm, 0, 0);    
+        -ms-transform: translateX(@lf-tog-label-width-sm - @lf-tog-handle-sm); // IE9
+    }
+
 }

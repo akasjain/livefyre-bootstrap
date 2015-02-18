@@ -1,4 +1,3 @@
-require('livefyre-bootstrap/toggles');
 require('bootstrap');
 require('livefyre-bootstrap/tooltip');
 
