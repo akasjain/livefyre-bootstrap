@@ -15,17 +15,7 @@
 .fycons-styles() {
   [class^="fycon-"]:before,
   [class*=" fycon-"]:before {
-    font-family: "fycons-@{fycon-font-version}" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: inherit;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    .fycons-styles-base();
   }
 
   .fycon-lg {
@@ -39,4 +29,18 @@
   .fycon-inherit {
     font-size: inherit;
   }
+}
+
+.fycons-styles-base() {
+  font-family: "fycons-@{fycon-font-version}" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
