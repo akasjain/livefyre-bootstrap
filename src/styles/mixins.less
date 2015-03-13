@@ -1,22 +1,17 @@
 @import (reference) "@{bootstrap-less}/mixins.less";
 
-// Button variants
+// Button shadows
 // -------------------------
 //
+// Add dropshadow on hover and inset shadow on click
 
-.lf-button-variant(@color; @background; @border; @shadow-percent) {
-  color: @color;
-  background-color: @background;
-  border-color: @border;
-
+.button-shadow(@background; @border; @shadow-percent) {
   &:hover,
   &:focus,
   .open .dropdown-toggle& {
-    color: @color;
-    background-color: @background;
-        border-color: @border;
     .box-shadow(0 1px 2px fade(@lf-gray-darker, @shadow-percent));
   }
+
   &:active,
   &.active,
   .open .dropdown-toggle& {
@@ -24,19 +19,7 @@
     background-color: darken(@background, 5%);
         border-color: darken(@border, 5%);
     .box-shadow(inset 0 1px 2px fade(@lf-gray-darker, 30%));
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      background-color: @background;
-          border-color: @border;
-    }
-  }
+  }  
 }
 
 
