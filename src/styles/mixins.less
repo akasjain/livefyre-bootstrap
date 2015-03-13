@@ -276,3 +276,34 @@
   overflow: hidden;
   max-width: 100%;
 }
+
+
+// Bars
+// -------------------------
+//
+.make-bar-theme(
+  @bg;
+  @nav-link-color: @gray-light;
+  @nav-active-link-color: white;
+  @nav-active-link-bg: transparent;
+  @nav-active-link-border-color: inherit) {
+  background-color: @bg;
+
+  > .nav > li {
+    > a {
+      color: @nav-link-color;
+    }
+
+    // Active item link and hovered links have highlighted
+    // text and background color
+    &.dropdown.open > a,
+    &:hover > a {
+      background-color: @nav-active-link-bg;
+      color: @nav-active-link-color;
+    }
+
+    &.active > a {
+      border-color: @nav-active-link-border-color;
+    }
+  }
+}
