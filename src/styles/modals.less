@@ -2,89 +2,40 @@
 // Modals
 // --------------------------------------------------
 
-// .modal-open      - body class for killing the scroll
-// .modal           - container to scroll within
-// .modal-dialog    - positioning shell for the actual modal
-// .modal-content   - actual modal w/ bg and corners and shit
-
-// Kill the scroll on the body
-.lf-modal-open {
-  overflow: hidden;
-}
-
 // Container that the modal scrolls within
-.lf-modal {
-  display: none;
-  overflow: auto;
-  overflow-y: scroll;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.modal {
   z-index: @zindex-modal;
   -webkit-overflow-scrolling: touch;
 
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
-
-  // When fading in the modal, animate it to slide down
-  &.fade .lf-modal-dialog {
-    .translate(0, -25%);
-    .transition-transform(~"0.3s ease-out");
-  }
-  &.in .lf-modal-dialog { .translate(0, 0)}
-}
-
-// Shell div to position the modal with bottom padding
-.lf-modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 10px;
-  z-index: (@zindex-modal-background + 10);
 }
 
 // Actual modal
-.lf-modal-content {
-  position: relative;
-  background-color: @modal-content-bg;
-  border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-  border: 1px solid @modal-content-border-color;
-  border-radius: @border-radius-large;
-  .box-shadow(0 3px 9px rgba(0,0,0,.5));
-  background-clip: padding-box;
+.modal-content {
   // Remove focus outline from opened modal
   outline: 0;
 }
 
 // Modal background
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   z-index: @zindex-modal-background;
-  background-color: @modal-backdrop-bg;
   // Fade for backdrop
-  &.fade { .opacity(0); }
   &.in { .opacity(@modal-backdrop-opacity); }
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
-.lf-modal-header {
+.modal-header {
   padding: 18px @modal-inner-padding 17px;
-  border-bottom: 1px solid @modal-header-border-color;
   background-color: @modal-header-bg;
   border-radius: @border-radius-large @border-radius-large 0 0;
-  min-height: (@modal-title-padding + @modal-title-line-height);
   text-align: center;
 }
 
 // Close icon
-.lf-modal-header .lf-close {
+.modal-header .close {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -93,12 +44,10 @@
 }
 
 // Title text within header or body
-.lf-modal-title {
-  margin: 0;
+.modal-title {
   padding: 0 @modal-title-padding; // Prevent overlap with close button    
   font-size: @modal-title-font-size;
-  line-height: @modal-title-line-height;
-  color: @lf-gray-dark;
+  color: @gray-dark;
 
   // Tw Bootstrap helper classes
   &.text-left,
@@ -113,10 +62,7 @@
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
-.lf-modal-body {
-  position: relative;
-  padding: @modal-inner-padding;
-
+.modal-body {
   p {
     margin-bottom: 14px;
     line-height: 18px;
@@ -124,7 +70,7 @@
 }
 
 // Footer (for actions)
-.lf-modal-footer {
+.modal-footer {
   padding: @modal-inner-padding;
   text-align: center;
   &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
@@ -140,20 +86,11 @@
   // Properly space out buttons
   .btn + .btn {
     margin-left: 7px;
-    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
-  }
-  // but override that for button groups
-  .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-  // and override it for block buttons as well
-  .btn-block + .btn-block {
-    margin-left: 0;
   }
 }
 
 // Measure scrollbar width for padding body during modal show/hide
-.lf-modal-scrollbar-measure {
+.modal-scrollbar-measure {
   position: absolute;
   top: -9999px;
   width: 50px;
@@ -164,23 +101,23 @@
 
 // Alert Modal
 // Does not include a title section. Useful for alert messages and notifications that requires the users attention.
-.lf-modal-alert {
-  .lf-modal-header {
+.modal-alert {
+  .modal-header {
     min-height: (@modal-title-padding + @modal-title-line-height) - 6px;
     background-color: transparent;
     border-bottom: 0;
   }
-  .lf-modal-body {
+  .modal-body {
     padding-top: 0;
 
     h4 { // Headline text should be placed inside body
-      .lf-modal-title;
+      .modal-title;
       margin-bottom: 16px;
       padding: 0;
-      color: @lf-gray-darker;
+      color: @gray-darker;
     }
   }
-  .lf-modal-footer {
+  .modal-footer {
     padding-top: 0;
   }
 }
@@ -189,25 +126,21 @@
 // Scale up the modal
 @media (min-width: @screen-sm-min) {
   // Automatically set modal's width for larger viewports
-  .lf-modal-dialog {
+  .modal-dialog {
     width: @modal-md;
-    margin: 30px auto;
   }
-  .lf-modal-content {
-    .box-shadow(0 5px 15px rgba(0,0,0,.5));
-  }
-
+  
   // Modal sizes
-  .lf-modal-xs { width: @modal-xs; }
-  .lf-modal-sm { width: @modal-sm; }
+  .modal-xs { width: @modal-xs; }
+  .modal-sm { width: @modal-sm; }
 }
 
 @media (min-width: @screen-md-min) {
-  .lf-modal-lg { width: @modal-lg; }
+  .modal-lg { width: @modal-lg; }
 }
 
-.lf-modal.in .lf-modal-dialog.lf-animated {
-  .animation(lf-scale-bounce-in .3s);
+.modal.in .modal-dialog.animated {
+  .animation(scale-bounce-in .3s);
   .backface-visibility(visible);
   .translate3d(0,0,0);
 }
