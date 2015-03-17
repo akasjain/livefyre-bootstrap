@@ -1,7 +1,7 @@
 @import (reference) "./variables";
 @import (reference) "./mixins";
 
-.lf-form-sidebar {         
+.form-sidebar {         
   .form-section {
     margin-bottom: 27px;
   }
@@ -12,7 +12,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
-    border-bottom: thin solid @lf-gray-light;
+    border-bottom: thin solid @gray-light;
     
     &.control-label {
       border-bottom: 0;
@@ -23,13 +23,13 @@
     .clearfix;
     min-height: @sidebar-form-group-height;
     padding-bottom: 12px;
-    border-bottom: thin solid @lf-gray-light;
+    border-bottom: thin solid @gray-light;
   }
   
   .control-label:not(.form-section-header) {
     font-size: @sidebar-form-label-font-size;
     font-weight: 500;
-    color: @lf-gray-dark;
+    color: @gray-dark;
     line-height: @sidebar-form-label-line-height;
   }
   
@@ -37,10 +37,10 @@
     &.text-left {
       text-align: left; // Needs the extra specificity
     }
-    &.lf-btn-block {
+    &.btn-block {
       padding: 0 @padding-base-horizontal;
     }
-    &.lf-btn-block.lf-btn-lg {
+    &.btn-block.btn-lg {
       padding: 0 @padding-large-horizontal;
     }
   }
@@ -63,38 +63,28 @@
       text-align: left;
     }
 
-    .lf-btn,
-    .lf-input,
-    .lf-toggle {
+    .btn,
+    .input,
+    .toggle {
       .vertical-center-margin(@sidebar-form-group-height; @btn-height);
     }
-    .lf-btn-xs,
-    .lf-btn-group-xs .lf-btn  {
+    .btn-xs,
+    .btn-group-xs .btn  {
       .vertical-center-margin(@sidebar-form-group-height; @btn-height-xs);      
     }
-    .lf-btn-sm,
-    .lf-btn-group-sm .lf-btn {
+    .btn-sm,
+    .btn-group-sm .btn {
       .vertical-center-margin(@sidebar-form-group-height; @btn-height-sm);      
     }
-    .lf-input {
+    .input {
       .vertical-center-margin(@sidebar-form-group-height; @input-height-base);
     }
-    .lf-input-sm {
+    .input-sm {
       .vertical-center-margin(@sidebar-form-group-height; @input-height-small);
     }
-    .lf-toggle-sm {
+    .toggle-sm {
       .vertical-center-margin(@sidebar-form-group-height; 22px);      
     }
   }
 
-}
-
-// Mixins
-// -------------------------
-// Vertically center using a top margin.
-// .vertical-center mixin can cause issues with dropdown menus appearing behind other elements
-// Also allows us to move later to a 6px vertical baseline grid.
-
-.vertical-center-margin (@container-height; @element-height; @container-border-width: 1px) {
-    margin-top: floor((@container-height - @element-height) / 2) - @container-border-width;  
 }
