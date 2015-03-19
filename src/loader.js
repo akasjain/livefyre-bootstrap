@@ -7,7 +7,7 @@ var loader = {};
 
 /** @enum {string} */
 var CLASSES = {
-    NOT_SUPPORTED: 'lf-not-supported'
+    NOT_SUPPORTED: 'not-supported'
 };
 
 /**
@@ -24,7 +24,7 @@ var SIZES = {
  * The classname prefix.
  * @type {string}
  */
-var CLASS_PREFIX = 'lf-';
+var CLASS_PREFIX = 'loader-';
 
 /**
  * The default size.
@@ -36,7 +36,7 @@ var DEFAULT_SIZE = SIZES.SMALL;
  * The DOM string of the loader.
  * @type {string}
  */
-var LOADER_DOM = ['<div class="lf-loader">',
+var LOADER_DOM = ['<div class="loader">',
     '<div /><div /><div /><div /><div /><div /><div /><div /><div />',
     '</div>'].join('');
 

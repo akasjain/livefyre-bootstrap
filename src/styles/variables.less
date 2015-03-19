@@ -6,33 +6,33 @@
 // LF colors
 // -------------------------
 
-@lf-gray-darker:    #2F3440;
-@lf-gray-dark:      tint(@lf-gray-darker, 30%);
-@lf-gray:           tint(@lf-gray-darker, 60%);
-@lf-gray-light:     tint(@lf-gray-darker, 80%);
-@lf-gray-lighter:   tint(@lf-gray-darker, 95%);
+@gray-darker:    #2F3440;
+@gray-dark:      tint(@gray-darker, 30%);
+@gray:           tint(@gray-darker, 60%);
+@gray-light:     tint(@gray-darker, 80%);
+@gray-lighter:   tint(@gray-darker, 95%);
 
-@lf-purple:    #7168A5;
-@lf-blue:      #0F98EC;
-@lf-green:     #63C685;
-@lf-yellow:    #FEB33B;
-@lf-orange:    #E65B3F;
-@lf-red:       #F53E52;
+@purple:    #7168A5;
+@blue:      #0F98EC;
+@green:     #63C685;
+@yellow:    #FEB33B;
+@orange:    #E65B3F;
+@red:       #F53E52;
 @storify-blue: #3A98D9;
 
-@lf-purple-dark:    darken(@lf-purple, 15%);
-@lf-blue-dark:      darken(@lf-blue, 15%);
-@lf-green-dark:     darken(@lf-green, 15%);
-@lf-yellow-dark:    darken(@lf-yellow, 15%);
-@lf-orange-dark:    darken(@lf-orange, 15%);
-@lf-red-dark:       darken(@lf-red, 15%);
+@purple-dark:    darken(@purple, 15%);
+@blue-dark:      darken(@blue, 15%);
+@green-dark:     darken(@green, 15%);
+@yellow-dark:    darken(@yellow, 15%);
+@orange-dark:    darken(@orange, 15%);
+@red-dark:       darken(@red, 15%);
 
-@lf-purple-light:    lighten(@lf-purple, 15%);
-@lf-blue-light:      lighten(@lf-blue, 15%);
-@lf-green-light:     lighten(@lf-green, 15%);
-@lf-yellow-light:    lighten(@lf-yellow, 15%);
-@lf-orange-light:    lighten(@lf-orange, 15%);
-@lf-red-light:       lighten(@lf-red, 15%);
+@purple-light:    lighten(@purple, 15%);
+@blue-light:      lighten(@blue, 15%);
+@green-light:     lighten(@green, 15%);
+@yellow-light:    lighten(@yellow, 15%);
+@orange-light:    lighten(@orange, 15%);
+@red-light:       lighten(@red, 15%);
 
 // Common Social Media Colors
 // -------------------------
@@ -68,10 +68,10 @@
 // -------------------------
 
 @brand-primary:   #FF5E00;
-@brand-success:   @lf-green;
-@brand-warning:   @lf-yellow;
-@brand-danger:    @lf-red;
-@brand-info:      @lf-blue;
+@brand-success:   @green;
+@brand-warning:   @yellow;
+@brand-danger:    @red;
+@brand-info:      @blue;
 
 // Iconography
 // -------------------------
@@ -92,15 +92,15 @@
 @padding-xs-vertical:            1px;
 @padding-xs-horizontal:          12px;
 
-@component-active-bg:       @lf-blue;
+@component-active-bg:       @blue;
 @border-radius-xsmall:		2px;
 
 /**
  * Links
  */
 
-@link-color:            @lf-blue;
-@link-hover-color:      darken(@lf-blue, 15%);
+@link-color:            @blue;
+@link-hover-color:      darken(@blue, 15%);
 
 /**
  * Navbar
@@ -126,31 +126,31 @@
 // -------------------------
 
 @state-success-text:             #FFFFFF;
-@state-success-bg:               @lf-green;
-@state-success-border:           @lf-green;
+@state-success-bg:               @green;
+@state-success-border:           @green;
 
 @state-info-text:                #FFFFFF;
-@state-info-bg:                  @lf-blue;
-@state-info-border:              @lf-blue;
+@state-info-bg:                  @blue;
+@state-info-border:              @blue;
 
 @state-warning-text:             #FFFFFF;
-@state-warning-bg:               @lf-yellow;
-@state-warning-border:           @lf-yellow;
+@state-warning-bg:               @yellow;
+@state-warning-border:           @yellow;
 
 @state-danger-text:              #FFFFFF;
-@state-danger-bg:                @lf-red;
-@state-danger-border:            @lf-red;
+@state-danger-bg:                @red;
+@state-danger-border:            @red;
 
 
 // Forms
 // -------------------------
 @input-bg:                      #fff;
-@input-bg-disabled:             @lf-gray-lighter;
+@input-bg-disabled:             @gray-lighter;
 
-@input-color:                   @lf-gray-darker;
-@input-border:                  @lf-gray-light;
+@input-color:                   @gray-darker;
+@input-border:                  @gray-light;
 @input-border-radius:           3px;
-@input-border-focus:            @lf-blue;
+@input-border-focus:            @blue;
 
 @input-height-base:             (@line-height-computed + (@padding-base-vertical * 2) + 2);
 @input-height-xs:               (@font-size-small * 2);
@@ -173,32 +173,32 @@
 
 @btn-font-weight:                500;
 
-@btn-default-color:              @lf-gray-dark;
-@btn-default-bg:                 @lf-gray-lighter;
-@btn-default-border:             @lf-gray-light;
+@btn-default-color:              @gray-dark;
+@btn-default-bg:                 @gray-lighter;
+@btn-default-border:             @gray-light;
 
 @btn-primary-color:              #fff;
-@btn-primary-bg:                 @lf-orange;
-@btn-primary-border:             @lf-orange-dark;
+@btn-primary-bg:                 @orange;
+@btn-primary-border:             @orange-dark;
 
 @btn-success-color:              #fff;
-@btn-success-bg:                 @lf-green;
-@btn-success-border:             @lf-green-dark;
+@btn-success-bg:                 @green;
+@btn-success-border:             @green-dark;
 
 @btn-info-color:                 #fff;
-@btn-info-bg:                    @lf-blue;
-@btn-info-border:                @lf-blue-dark;
+@btn-info-bg:                    @blue;
+@btn-info-border:                @blue-dark;
 
 @btn-warning-color:              #fff;
-@btn-warning-bg:                 @lf-yellow;
-@btn-warning-border:             @lf-yellow-dark;
+@btn-warning-bg:                 @yellow;
+@btn-warning-border:             @yellow-dark;
 
 @btn-danger-color:               #fff;
-@btn-danger-bg:                  @lf-red;
-@btn-danger-border:              @lf-red-dark;
+@btn-danger-bg:                  @red;
+@btn-danger-border:              @red-dark;
 
 @btn-hollow-color:               #fff;
-@btn-hollow-bg:                  fade(@lf-gray-darker, 40%);
+@btn-hollow-bg:                  fade(@gray-darker, 40%);
 @btn-hollow-border:              #fff;
 
 @btn-link-disabled-color:        @gray-light;
@@ -206,18 +206,18 @@
 // Labels
 // -------------------------
 @label-color:              			#ffffff;
-@label-default-bg:					@lf-gray-lighter;
-@label-primary-bg:					@lf-orange;
-@label-success-bg:					@lf-green;
-@label-info-bg:						@lf-blue;
-@label-warning-bg:					@lf-yellow;
-@label-danger-bg:					@lf-red;
+@label-default-bg:					@gray-lighter;
+@label-primary-bg:					@orange;
+@label-success-bg:					@green;
+@label-info-bg:						@blue;
+@label-warning-bg:					@yellow;
+@label-danger-bg:					@red;
 
 // Badges
 // -------------------------
 @badge-color:                 #fff;
 @badge-link-hover-color:      #fff;
-@badge-bg:                    @lf-orange;
+@badge-bg:                    @orange;
 
 @badge-active-color:          @link-color;
 @badge-active-bg:             #fff;
@@ -227,13 +227,27 @@
 @badge-line-height:           1.2;
 @badge-border-radius:         1em;
 
+// Bars
+// -------------------------
+@bar-default-bg: #f7f8f6;
+@bar-default-nav-link-color: @gray;
+@bar-default-nav-active-link-color: rgb(235, 81, 43);
+@bar-default-nav-active-link-bg: fadeout(@bar-default-nav-active-link-color, 95%);
+@bar-default-nav-active-link-border-color: @bar-default-nav-active-link-color;
+
+@bar-inverted-bg: #30353f;
+@bar-inverted-nav-link-color: @gray-light;
+@bar-inverted-nav-active-link-color: white;
+@bar-inverted-nav-active-link-bg: fadeout(@bar-default-nav-active-link-color, 80%);
+@bar-inverted-nav-active-link-border-color: @bar-default-nav-active-link-color;
+
 // Tooltips
 // -------------------------
 @tooltip-max-width: 			200px;
 @tooltip-arrow-width:           5px;
 
 @tooltip-color:					#ffffff;
-@tooltip-light-color:           @lf-gray-dark;
+@tooltip-light-color:           @gray-dark;
 
 @tooltip-bg:					#232731;
 @tooltip-light-bg:              #ffffff;
@@ -263,7 +277,7 @@
 @dropdown-bg:                    #fff;
 @dropdown-border:                transparent;
 @dropdown-link-hover-color:      #FFFFFF;
-@dropdown-link-hover-bg:         @lf-blue;
+@dropdown-link-hover-bg:         @blue;
 
 // Modals
 // -------------------------
@@ -290,54 +304,54 @@
 // -------------------------
 @alert-padding:                 9px;
 
-@alert-success-bg:              @lf-green;
+@alert-success-bg:              @green;
 @alert-success-border:          darken(@alert-success-bg, 15%);
 @alert-success-text:            #fff;
 
-@alert-warning-bg:              @lf-yellow;
+@alert-warning-bg:              @yellow;
 @alert-warning-border:          darken(@alert-warning-bg, 15%);
 @alert-warning-text:            #fff;
 
-@alert-info-bg:                 @lf-blue;
+@alert-info-bg:                 @blue;
 @alert-info-border:             darken(@alert-info-bg, 15%);
 @alert-info-text:               #fff;
 
-@alert-danger-bg:              @lf-red;
+@alert-danger-bg:              @red;
 @alert-danger-border:          darken(@alert-danger-bg, 15%);
 @alert-danger-text:            #fff;
 
 // Close
 // -------------------------
-@close-color:                   @lf-gray;
+@close-color:                   @gray;
 @close-height:                  32px;
 
 // Slats
 // -------------------------
 @slat-height:                   60px;
 @slat-padding:                  10px;
-@slat-border-color:             @lf-gray-lighter;
-@slat-bg-hover-color:           @lf-gray-lighter;
+@slat-border-color:             @gray-lighter;
+@slat-bg-hover-color:           @gray-lighter;
 @slat-line-height:              18px;
-@slat-font-color:               @lf-gray-dark;
+@slat-font-color:               @gray-dark;
 @slat-header-height:            36px;
 @slat-header-font-size:         11px;
-@slat-header-font-color:        @lf-gray;
+@slat-header-font-color:        @gray;
 @slat-title-size:               @font-size-base;
-@slat-title-color:              @lf-gray-darker;
+@slat-title-color:              @gray-darker;
 
 
 // Toggles
 // -------------------------
-@lf-tog-width: 50px;
-@lf-tog-height: 28px;
-@lf-tog-label-width: 75px;
+@toggle-width: 50px;
+@toggle-height: 28px;
+@toggle-label-width: 75px;
 
-@lf-tog-width-sm: 36px;
-@lf-tog-height-sm: 22px;
-@lf-tog-label-width-sm: 64px;
+@toggle-width-sm: 36px;
+@toggle-height-sm: 22px;
+@toggle-label-width-sm: 64px;
 
-@lf-tog-handle: @lf-tog-height;
-@lf-tog-handle-sm: @lf-tog-height-sm;
+@toggle-handle: @toggle-height;
+@toggle-handle-sm: @toggle-height-sm;
 
-@lf-tog-on-bg: @lf-green;
-@lf-tog-off-bg: #eee;
+@toggle-on-bg: @green;
+@toggle-off-bg: #eee;

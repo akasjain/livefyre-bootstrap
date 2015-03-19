@@ -2,92 +2,109 @@
 @import (reference) "./mixins";
 @import (reference) "./variables";
 
-.lf-btn {
-    .btn();
-    // Using fixed heights and line-heights instead of padding to improve vertically centering fycons inside buttons
-    padding: 0 @padding-base-horizontal;
-    height: @btn-height;
-    line-height: @btn-height - 2;
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  // Using fixed heights and line-heights instead of padding to improve vertically centering fycons inside buttons
+  padding: 0 @padding-base-horizontal;
+  height: @btn-height;
+  line-height: @btn-height - 2;
 }
 
-.lf-btn-default {
-    .lf-button-variant(@btn-default-color; @btn-default-bg; @btn-default-border; 15%);
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  .button-shadow(@btn-default-bg; @btn-default-border; 15%);
 }
-.lf-btn-primary {
-    .lf-button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border; 30%);
+.btn-primary {
+  .button-shadow(@btn-primary-bg; @btn-primary-border; 30%);
 }
 // Warning appears as orange
-.lf-btn-warning {
-    .lf-button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border; 30%);
+.btn-warning {
+  .button-shadow(@btn-warning-bg; @btn-warning-border; 30%);
 }
 // Danger and error appear as red
-.lf-btn-danger {
-  .lf-button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border; 30%);
+.btn-danger {
+  .button-shadow(@btn-danger-bg; @btn-danger-border; 30%);
 }
 // Success appears as green
-.lf-btn-success {
-  .lf-button-variant(@btn-success-color; @btn-success-bg; @btn-success-border; 30%);
+.btn-success {
+  .button-shadow(@btn-success-bg; @btn-success-border; 30%);
 }
 // Info appears as blue-green
-.lf-btn-info {
-  .lf-button-variant(@btn-info-color; @btn-info-bg; @btn-info-border; 30%);
+.btn-info {
+  .button-shadow(@btn-info-bg; @btn-info-border; 30%);
 }
-// Hollow appears as a mostly-transparent gray. Active state has dark gray bg and border.
-.lf-btn-hollow {
-  .lf-button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-hollow-border; 30%);
+
+
+// Hollow buttons
+// -------------------------
+
+.btn-hollow {
+  .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-hollow-border;);
+  .button-shadow(@btn-hollow-bg; @btn-hollow-border; 30%);
   
   &:active,
   &.active,
   .open .dropdown-toggle& {
-    background-color: fade(@lf-gray-darker, 80%);
-    border-color: @lf-gray-darker;
+    background-color: fade(@gray-darker, 80%);
+    border-color: @gray-darker;
   }  
 }
 
 
-/**
- * Link buttons
- */
+// Link buttons
+// -------------------------
 
-.lf-btn-link {
-    .lf-btn-default;
-    background: transparent;
-    border: 1px solid transparent;
+.btn-link {
+  .btn-default;
+  font-weight: @btn-font-weight;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: @border-radius-base;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: @btn-default-color;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: @btn-default-border;
+  }
 }
+
 
 // Button Sizes
 // --------------------------------------------------
 
-.lf-btn-lg {
+.btn-lg {
   .button-size(0; @padding-large-horizontal; @font-size-large; @btn-height-lg - 2; @btn-radius);
   height: @btn-height-lg;
 }
-.lf-btn-sm {
+.btn-sm {
   .button-size(0; @padding-small-horizontal; @font-size-small; @btn-height-sm - 2; @btn-radius);
   height: @btn-height-sm;
 }
-.lf-btn-xs {
+.btn-xs {
   .button-size(0; @padding-xs-horizontal; @font-size-small; @btn-height-xs - 2; @btn-radius);
   height: @btn-height-xs;
 }
 
-// Block button
-// --------------------------------------------------
-
-.lf-btn-block {
-    .btn-block();
-}
 
 // Fycons
 // --------------------------------------------------
 
-.lf-btn {
+.btn {
   [class^="fycon-"],
   [class*=" fycon-"] {
     display: inline-block;
     vertical-align: middle;
     margin: 0 2px;
-    line-height: 1; // Must be smaller than .lf-btn's to prevent fycon from expanding height of button.
+    line-height: 1; // Must be smaller than .btn's to prevent fycon from expanding height of button.
 
     &:before {
       vertical-align: initial;
@@ -100,7 +117,7 @@
   }
 }
 
-.lf-btn {
+.btn {
   .fycon-xs {
     font-size: @font-size-base - 4px;
   }
@@ -112,8 +129,8 @@
   }
 }
 
-.lf-btn-xs, 
-.lf-btn-sm {
+.btn-xs, 
+.btn-sm {
   .fycon-xs {
     font-size: @font-size-small - 4px;
   }
@@ -125,7 +142,7 @@
   }
 }
 
-.lf-btn-lg {
+.btn-lg {
   .fycon-xs {
     font-size: @font-size-large - 8px;
   }

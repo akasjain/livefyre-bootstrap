@@ -8,7 +8,7 @@
   height: 100%;
 
   // If contains form, make scrollable.
-  .lf-form-sidebar {
+  .form-sidebar {
     overflow-y: scroll;
     position: absolute;
     top: 0;
@@ -20,7 +20,7 @@
 
   // Header
   &.has-header {
-    .lf-form-sidebar{
+    .form-sidebar{
       top: @header-height;
       height: calc(100% ~"-" @header-height);
     }
@@ -33,7 +33,7 @@
       padding: 0 (@grid-gutter-width / 2);
       vertical-align: middle;
       line-height: @header-height;
-      border-bottom: 1px solid @lf-gray;
+      border-bottom: 1px solid @gray;
       background-color: #f7f7f8;
       
       h1 {
@@ -41,21 +41,21 @@
         margin: 0;
         font-size: 16px;
         line-height: @header-height;
-        color: @lf-gray-darker;
+        color: @gray-darker;
       }
       /*
       h1,
-      .lf-btn {
+      .btn {
         .vertical-center;
       }
       */
       
-      .lf-btn.pull-left,
-      .lf-btn.pull-right {
+      .btn.pull-left,
+      .btn.pull-right {
         margin-top: floor((@header-height - @btn-height) / 2);
       }
-      .lf-btn-xs.pull-left,
-      .lf-btn-xs.pull-right {
+      .btn-xs.pull-left,
+      .btn-xs.pull-right {
         margin-top: floor((@header-height - @btn-height-xs) / 2);
       }
       
@@ -66,7 +66,7 @@
 
   // Footer
   &.has-footer {
-    .lf-form-sidebar {
+    .form-sidebar {
       height: calc(100% ~"-" @footer-height);
     }
 
@@ -82,9 +82,9 @@
       line-height: @footer-height;
       text-align: center;
       vertical-align: middle;
-      border-top: 1px solid @lf-gray;
+      border-top: 1px solid @gray;
 
-      .lf-btn {
+      .btn {
         margin-top: -4px;
       }
     }
@@ -93,7 +93,7 @@
 
   // If has both header and footer
   &.has-header.has-footer {
-    .lf-form-sidebar {
+    .form-sidebar {
       height: calc(100% ~"-" (@header-height + @footer-height));
     }    
   }

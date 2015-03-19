@@ -41,7 +41,7 @@
 @bounceInScalePeak: 1.1;
 @bounceInScaleEnd: 1;
 
-@-webkit-keyframes lf-scale-bounce-in {
+@-webkit-keyframes scale-bounce-in {
   0% {
     -webkit-opacity: @bounceInOpacityStart;
     -webkit-transform: scale(@bounceInScaleStart);
@@ -54,7 +54,7 @@
     -webkit-transform: scale(@bounceInScaleEnd);
   }
 }
-@-moz-keyframes lf-scale-bounce-in {
+@-moz-keyframes scale-bounce-in {
   0% {
     -moz-opacity: @bounceInOpacityStart;
     -moz-transform: scale(@bounceInScaleStart);
@@ -67,7 +67,7 @@
     -moz-transform: scale(@bounceInScaleEnd);
   }
 }
-@-o-keyframes lf-scale-bounce-in {
+@-o-keyframes scale-bounce-in {
   0% {
     opacity: @bounceInOpacityStart;
     -o-transform: scale(@bounceInScaleStart);
@@ -80,7 +80,7 @@
     -o-transform: scale(@bounceInScaleEnd);
   }
 }
-@keyframes lf-scale-bounce-in {
+@keyframes scale-bounce-in {
   0% {
     opacity: @bounceInOpacityStart;
     filter: ~"alpha(opacity=@{bounceInOpacityStart})";
@@ -101,7 +101,7 @@
   }
 }
 
-@-webkit-keyframes lf-scale-out {
+@-webkit-keyframes scale-out {
   0% {
     -webkit-opacity: @bounceInOpacityEnd;
     -webkit-transform: scale(@bounceInScaleEnd);
@@ -111,7 +111,7 @@
     -webkit-transform: scale(@bounceInScaleStart);
   }
 }
-@-moz-keyframes lf-scale-out {
+@-moz-keyframes scale-out {
   0% {
     -moz-opacity: @bounceInOpacityEnd;
     -moz-transform: scale(@bounceInScaleEnd);
@@ -121,7 +121,7 @@
     -moz-transform: scale(@bounceInScaleStart);
   }
 }
-@-o-keyframes lf-scale-out {
+@-o-keyframes scale-out {
   0% {
     opacity: @bounceInOpacityEnd;
     -o-transform: scale(@bounceInScaleEnd);
@@ -131,7 +131,7 @@
     -o-transform: scale(@bounceInScaleStart);
   }
 }
-@keyframes lf-scale-out {
+@keyframes scale-out {
   0% {
     opacity: @bounceInOpacityEnd;
     filter: ~"alpha(opacity=@{bounceInOpacityEndIE})";
@@ -159,7 +159,7 @@
 @voteMidOpacity: 0.8;
 @voteMidOpacityIE: @voteMidOpacity * 100;
 
-@-webkit-keyframes lf-votebounce {
+@-webkit-keyframes votebounce {
     0% {
         -webkit-transform: scale(@voteStartScale);
         opacity: @voteStartOpacity;
@@ -172,7 +172,7 @@
         -webkit-transform: scale(@voteEndScale);
     }
 }
-@-moz-keyframes lf-votebounce {
+@-moz-keyframes votebounce {
     0% {
         -moz-transform: scale(@voteStartScale);
         opacity: @voteStartOpacity;
@@ -185,7 +185,7 @@
         -moz-transform: scale(@voteEndScale);
     }
 }
-@-o-keyframes lf-votebounce {
+@-o-keyframes votebounce {
     0% {
         -o-transform: scale(@voteStartScale);
         opacity: @voteStartOpacity;
@@ -198,7 +198,7 @@
         -o-transform: scale(@voteEndScale);
     }
 }
-@keyframes lf-votebounce {
+@keyframes votebounce {
     0% {
         -ms-transform: scale(@voteStartScale);
         transform: scale(@voteStartScale);
@@ -235,7 +235,7 @@
 @scale85: 1;
 @scale100: 0.6;
 
-@-webkit-keyframes lf-hudbounce {
+@-webkit-keyframes hudbounce {
     0% {
         -webkit-transform: scale(@scale0);
         opacity: @opacity0;
@@ -253,7 +253,7 @@
         opacity: @opacity100;
     }
 }
-@-moz-keyframes lf-hudbounce {
+@-moz-keyframes hudbounce {
     0% {
         -moz-transform: scale(@scale0);
         opacity: @opacity0;
@@ -271,7 +271,7 @@
         opacity: @opacity100;
     }
 }
-@-o-keyframes lf-hudbounce {
+@-o-keyframes hudbounce {
     0% {
         -o-transform: scale(@scale0);
         opacity: @opacity0;
@@ -289,7 +289,7 @@
         opacity: @opacity100;
     }
 }
-@keyframes lf-hudbounce {
+@keyframes hudbounce {
     0% {
         -ms-transform: scale(@scale0);
         transform: scale(@scale0);
@@ -322,38 +322,38 @@
 
 // FADE-DOWN
 // Used for popovers
-@-webkit-keyframes lf-fade-down {
+@-webkit-keyframes fade-down {
   0% { opacity: 0; -webkit-transform: translateY(-20px); }
   100% { opacity: 1; -webkit-transform: translateY(0); }
 }
-@-moz-keyframes lf-fade-down {
+@-moz-keyframes fade-down {
   0% { opacity: 0; -moz-transform: translateY(-20px); }
   100% { opacity: 1; -moz-transform: translateY(0); }
 }
-@-o-keyframes lf-fade-down {
+@-o-keyframes fade-down {
   0% { opacity: 0; -o-transform: translateY(-20px); }
   100% { opacity: 1; -o-transform: translateY(0); }
 }
-@keyframes lf-fade-down {
+@keyframes fade-down {
   0% { opacity: 0; transform: translateY(-20px); -ms-transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 // FADE-UP
 // Used for popovers
-@-webkit-keyframes lf-fade-up {
+@-webkit-keyframes fade-up {
   0% { opacity: 0; -webkit-transform: translateY(20px); }
   100% { opacity: 1; -webkit-transform: translateY(0); }
 }
-@-moz-keyframes lf-fade-up {
+@-moz-keyframes fade-up {
   0% { opacity: 0; -moz-transform: translateY(20px); }
   100% { opacity: 1; -moz-transform: translateY(0); }
 }
-@-o-keyframes lf-fade-up {
+@-o-keyframes fade-up {
   0% { opacity: 0; -o-transform: translateY(20px); }
   100% { opacity: 1; -o-transform: translateY(0); }
 }
-@keyframes lf-fade-up {
+@keyframes fade-up {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); -ms-transform: translateY(0); }
 }

@@ -3,74 +3,76 @@
 /* Toggle styles
 -------------------------------------------------- */
 
-.lf-toggle {
-    position: relative;
-    width: @lf-tog-width;
-    height: @lf-tog-height;
-    overflow: hidden;
-    margin-bottom: auto;
-    cursor: pointer;
+.toggle {
+  position: relative;
+  width: @toggle-width;
+  height: @toggle-height;
+  overflow: hidden;
+  margin-bottom: auto;
+  cursor: pointer;
 }
 
-.lf-toggle input {
-    position: absolute;
-    opacity: 0;
+.toggle input {
+  position: absolute;
+  opacity: 0;
 }
 
 // BG
-.lf-toggle span {
-    display: block;
-    height: @lf-tog-height;
-    background-color: #eee;
-    border-radius: 100px;
-    border: 1px solid #bbb;
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, .1);
-    -webkit-transition: -webkit-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out; // Can't use .transition mixin because "transform" needs prefixing
-       -moz-transition: -moz-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-        -ms-transition: -ms-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-         -o-transition: -o-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
-            transition: transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;  
+.toggle span {
+  display: block;
+  height: @toggle-height;
+  background-color: #eee;
+  border-radius: 100px;
+  border: 1px solid #bbb;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, .1);
+  // Can't use .transition mixin because "transform" needs prefixing
+  -webkit-transition: -webkit-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+     -moz-transition: -moz-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+      -ms-transition: -ms-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+       -o-transition: -o-transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+          transition: transform background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;  
 }
 
 // Handle
-.lf-toggle span:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: @lf-tog-handle;
-    height: @lf-tog-handle;
-    content: "";
-    background-color: #fff;
-    background-image: -webkit-linear-gradient(top, #fff 0, #f2f2f2 100%);
-    background-image: linear-gradient(to bottom, #fff 0, #f2f2f2 100%);
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 100px;
-    .translate3d(0, 0, 0);
-    -ms-transform: translateX(0); // IE9
-    -webkit-transition: -webkit-transform 0.1s ease-in-out; // Can't use .transition mixin because "transform" needs prefixing
-       -moz-transition: -moz-transform 0.1s ease-in-out;
-        -ms-transition: -ms-transform 0.1s ease-in-out;
-         -o-transition: -o-transform 0.1s ease-in-out;
-            transition: transform 0.1s ease-in-out;
+.toggle span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: @toggle-handle;
+  height: @toggle-handle;
+  content: "";
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(top, #fff 0, #f2f2f2 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #f2f2f2 100%);
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 100px;
+  .translate3d(0, 0, 0);
+  -ms-transform: translateX(0); // IE9
+  // Can't use .transition mixin because "transform" needs prefixing
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+     -moz-transition: -moz-transform 0.1s ease-in-out;
+      -ms-transition: -ms-transform 0.1s ease-in-out;
+       -o-transition: -o-transform 0.1s ease-in-out;
+          transition: transform 0.1s ease-in-out;
 }
 
 
 // Checked
-.lf-toggle input:checked + span {
+.toggle input:checked + span {
 
-    // BG    
-    border: 1px solid @lf-tog-on-bg;
-    background-color: @lf-tog-on-bg;
-    box-shadow: inset 0 0 15px rgba(255, 255, 255, .25);
-    
-    // Handle
-    &:before {
-        border: 1px solid @lf-tog-on-bg;
-        .translate3d(@lf-tog-width - @lf-tog-handle, 0, 0);
-         -ms-transform: translateX(@lf-tog-width - @lf-tog-handle); // IE9
-    }
+  // BG    
+  border: 1px solid @toggle-on-bg;
+  background-color: @toggle-on-bg;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, .25);
+  
+  // Handle
+  &:before {
+    border: 1px solid @toggle-on-bg;
+    .translate3d(@toggle-width - @toggle-handle, 0, 0);
+     -ms-transform: translateX(@toggle-width - @toggle-handle); // IE9
+  }
 }
 
 
@@ -78,25 +80,25 @@
 // Small Toggle
 // --------------------------------------------------
 
-.lf-toggle-sm {
-    width: @lf-tog-width-sm;
-    height: @lf-tog-height-sm;
+.toggle-sm {
+  width: @toggle-width-sm;
+  height: @toggle-height-sm;
 
-    span {
-        height: @lf-tog-height-sm;
+  span {
+    height: @toggle-height-sm;
 
-        // Handle
-        &:before {
-            width: @lf-tog-handle-sm;
-            height: @lf-tog-handle-sm;
-        }
+    // Handle
+    &:before {
+      width: @toggle-handle-sm;
+      height: @toggle-handle-sm;
     }
-    
-    // Checked
-    input:checked + span:before {
-        .translate3d(@lf-tog-width-sm - @lf-tog-handle-sm, 0, 0);
-        -ms-transform: translateX(@lf-tog-width-sm - @lf-tog-handle-sm); // IE9
-    }
+  }
+  
+  // Checked
+  input:checked + span:before {
+    .translate3d(@toggle-width-sm - @toggle-handle-sm, 0, 0);
+    -ms-transform: translateX(@toggle-width-sm - @toggle-handle-sm); // IE9
+  }
 }
 
 
@@ -104,52 +106,52 @@
 // On/Off text
 // --------------------------------------------------
 
-.lf-toggle-label {
-    width: @lf-tog-label-width;
-    
-    // "On" text
-    span {
-        padding: 0 @lf-tog-handle 0 8px;
-        font-size: 14px;
-        font-weight: bold;
-        line-height: @lf-tog-height;
-        color: #fff;
-        text-align: center;
-        text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
-        text-transform: uppercase;  
+.toggle-label {
+  width: @toggle-label-width;
+  
+  // "On" text
+  span {
+    padding: 0 @toggle-handle 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: @toggle-height;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;  
+  }
+  
+  // "Off" Text
+  span:after {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    display: block;
+    width: calc(100% - 2px);
+    height: @toggle-height - 2px;
+    padding: 0 8px 0 @toggle-handle;
+    content: attr(data-off);
+    background-color: @toggle-off-bg;
+    color: #777;
+    text-align: center;
+    text-shadow: 0 1px #fff;
+    border-radius: 100px;
+  }
+      
+  // Checked
+  input:checked {
+     
+    // Handle
+    + span:before {
+      .translate3d(@toggle-label-width - @toggle-handle, 0, 0);    
+      -ms-transform: translateX(@toggle-label-width - @toggle-handle); // IE9
     }
-    
-    // "Off" Text
-    span:after {
-        position: absolute;
-        top: 1px;
-        left: 0;
-        display: block;
-        width: calc(100% - 2px);
-        height: @lf-tog-height - 2px;
-        padding: 0 8px 0 @lf-tog-handle;
-        content: attr(data-off);
-        background-color: @lf-tog-off-bg;
-        color: #777;
-        text-align: center;
-        text-shadow: 0 1px #fff;
-        border-radius: 100px;
-    }
-        
-    // Checked
-    input:checked {
-       
-        // Handle
-        + span:before {
-            .translate3d(@lf-tog-label-width - @lf-tog-handle, 0, 0);    
-            -ms-transform: translateX(@lf-tog-label-width - @lf-tog-handle); // IE9
-        }
 
-        // "Off" Text
-        + span:after {
-            display: none;
-        }
+    // "Off" Text
+    + span:after {
+      display: none;
     }
+  }
 }
 
 
@@ -157,25 +159,24 @@
 // Small toggle with On/Off text
 // --------------------------------------------------
 
-.lf-toggle-sm.lf-toggle-label {
-    width: @lf-tog-label-width-sm;
-    
-    // "On" text
-    span {
-        font-size: 12px;
-        line-height: @lf-tog-height-sm;
-    }
-    
-    // "Off" text
-    span:after {
-        height: @lf-tog-height-sm - 2px;
-        padding: 0 8px 0 @lf-tog-handle-sm;
-    }
-    
-    // Handle
-    input:checked + span:before {
-        .translate3d(@lf-tog-label-width-sm - @lf-tog-handle-sm, 0, 0);    
-        -ms-transform: translateX(@lf-tog-label-width-sm - @lf-tog-handle-sm); // IE9
-    }
-
+.toggle-sm.toggle-label {
+  width: @toggle-label-width-sm;
+  
+  // "On" text
+  span {
+    font-size: 12px;
+    line-height: @toggle-height-sm;
+  }
+  
+  // "Off" text
+  span:after {
+    height: @toggle-height-sm - 2px;
+    padding: 0 8px 0 @toggle-handle-sm;
+  }
+  
+  // Handle
+  input:checked + span:before {
+    .translate3d(@toggle-label-width-sm - @toggle-handle-sm, 0, 0);    
+    -ms-transform: translateX(@toggle-label-width-sm - @toggle-handle-sm); // IE9
+  }
 }

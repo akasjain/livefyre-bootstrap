@@ -7,7 +7,7 @@
 
 // Wrapper
 
-.lf-slat {
+.slat {
   .make-row();
   clear: both;
   display: block;
@@ -17,23 +17,23 @@
   border-bottom: 1px solid @slat-border-color;
   cursor: pointer;
 
-  &:not(.lf-slat-header):hover {
+  &:not(.slat-header):hover {
     color: @slat-font-color;
     background-color: @slat-bg-hover-color;   
   }
 
-  &.lf-no-bottom-border {
+  &.no-bottom-border {
     border-bottom: 0;
   }
 
-  &.lf-add-top-border {
+  &.add-top-border {
     height: @slat-height + 1;
     border-top: 1px solid @slat-border-color;
   }
 
 }
 
-.lf-slat-vertical-center {
+.slat-vertical-center {
   .transform-style(preserve-3d); // Works with .vertical-center helper
   padding: (@slat-padding - 2) 0 (@slat-padding + 2);
 
@@ -45,7 +45,7 @@
 
 // Header Row
 
-.lf-slat-header {
+.slat-header {
   height: auto;
   min-height: @slat-header-height;
   padding: (@slat-padding + 3) 0 (@slat-padding + 1);
@@ -55,7 +55,7 @@
   color: @slat-header-font-color;
   cursor: auto;
 
-  &.lf-slat-vertical-center {
+  &.slat-vertical-center {
     height: @slat-header-height; // Need to specify a height to properly center headers
   }
 }
@@ -63,7 +63,7 @@
 
 // Item Title
 
-.lf-slat-title {
+.slat-title {
   .truncate();
   display: inline-block; // Use inline-block on all slat content to help their baselines align.
   margin: 0;
@@ -76,6 +76,6 @@
 
 // Helpers
 
-.lf-slat .vertical-center {
+.slat .vertical-center {
   .vertical-center();
 }

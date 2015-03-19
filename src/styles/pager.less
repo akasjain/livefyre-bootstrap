@@ -2,23 +2,38 @@
 // Pager pagination
 // --------------------------------------------------
 
-.lf-pager {
-  .clearfix();
-  list-style: none;
-  padding-left: 0;
-  margin: @line-height-computed 0;
+.pager {
   text-align: right;
 
   li {
-    display: inline;
     margin-left: floor(@grid-gutter-width / 2);
 
     &:first-child {
       margin-left: 0;
     }
+
+    // Override Bootstrap's styles for child <a> and <span> when we're using a button.
+    > .btn {
+      .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+    }
+    > .btn-default {
+      .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+    }
+    > .btn-primary {
+      .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+    }
+    > .btn-lg {
+      .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+    }
+    > .btn-sm {
+      .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+    }
+    > .btn-xs {
+      .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+    }
   }
 
-  .lf-btn + .lf-btn {
+  .btn + .btn {
     margin-left: 5px;
   }
 
