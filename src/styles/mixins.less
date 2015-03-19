@@ -301,3 +301,99 @@
 .vertical-center-margin (@container-height; @element-height; @container-border-width: 1px) {
     margin-top: floor((@container-height - @element-height) / 2) - @container-border-width;  
 }
+
+
+// Popovers
+// -------------------------
+// Themes a .popover
+
+.make-popover-theme(
+  @bg;
+  @color;
+  @border;
+  @arrow-color;
+  @arrow-outer-fallback-color;
+  @arrow-outer-color;) {
+  background-color: @bg;
+  border: @border;
+
+  .popover-title {
+    background-color: @bg;
+    color: @color;
+  }
+
+  .popover-content {
+    color: @color;
+  }
+
+  .arrow {
+    border-width: 11px;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  // :after styles weren't compiling for dark them when nested. Don't know why.
+  &.top .arrow {
+    border-top-color: @arrow-outer-fallback-color; // IE8 fallback
+    border-top-color: @arrow-outer-color;
+    border-bottom-width: 0;
+  }
+  &.top .arrow:after {
+    border-top-color: @arrow-color;
+  }
+  &.right .arrow {
+    border-right-color: @arrow-outer-fallback-color; // IE8 fallback
+    border-right-color: @arrow-outer-color;
+    border-left-width: 0;
+  }
+  &.right .arrow:after {
+    border-right-color: @arrow-color;
+  }
+  &.bottom .arrow {
+    border-bottom-color: @arrow-outer-fallback-color; // IE8 fallback
+    border-bottom-color: @arrow-outer-color;
+    border-top-width: 0;
+  }
+  &.bottom .arrow:after {
+    border-bottom-color: @arrow-color;
+  }
+  &.left .arrow {
+    border-left-color: @arrow-outer-fallback-color; // IE8 fallback
+    border-left-color: @arrow-outer-color;
+    border-right-width: 0;
+  }
+  &.left .arrow:after {
+    border-left-color: @arrow-color;
+  }
+}
+
+
+/**
+* Themes an .tooltip
+* @mixin
+*/
+.make-tooltip-theme(
+  @color;
+  @bg;
+  @arrow-color;) {
+  
+  .tooltip-inner {
+    color: @color;
+    background-color: @bg;
+  }
+
+  &.top .tooltip-arrow, &.top-left .tooltip-arrow, &.top-right .tooltip-arrow {
+    border-top-color: @arrow-color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @arrow-color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @arrow-color;
+  }
+  &.bottom .tooltip-arrow, &.bottom-left .tooltip-arrow, &.bottom-right .tooltip-arrow {
+    border-bottom-color: @arrow-color;
+  }
+}
