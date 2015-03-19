@@ -1,45 +1,45 @@
 /**
  * This CSS is for a loader DOM that is structured like below. The element tag
  * doesn't matter, as long as there are 9 direct children of the element that
- * has `.lf-loader` on it.
+ * has `.loader` on it.
  * 
- *     <div class="lf-loader">
- *         <div id="lf-loader-block-1" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-2" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-3" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-4" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-5" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-6" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-7" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-8" class="lf-loader-block"></div>
- *         <div id="lf-loader-block-9" class="lf-loader-block"></div>
+ *     <div class="loader">
+ *         <div id="loader-block-1" class="loader-block"></div>
+ *         <div id="loader-block-2" class="loader-block"></div>
+ *         <div id="loader-block-3" class="loader-block"></div>
+ *         <div id="loader-block-4" class="loader-block"></div>
+ *         <div id="loader-block-5" class="loader-block"></div>
+ *         <div id="loader-block-6" class="loader-block"></div>
+ *         <div id="loader-block-7" class="loader-block"></div>
+ *         <div id="loader-block-8" class="loader-block"></div>
+ *         <div id="loader-block-9" class="loader-block"></div>
  *     </div>
  */
 
-.lf-loader {
+.loader {
     height: 36px;
     width: 36px;
 
-    &.lf-mini {
+    &.loader-mini {
         height: 24px;
         width: 24px;
     }
-    &.lf-small {
+    &.loader-small {
         height: 36px;
         width: 36px;
     }
-    &.lf-large {
+    &.loader-large {
         height: 48px;
         width: 48px;
     }
-    &.lf-not-supported {
+    &.loader-not-supported {
         background: url(../images/spinner.gif) no-repeat;
         height: 64px;
         width: 64px;
     }
 
     > * {
-        .animation(lf-loader-block-fade 3000ms ease-in-out infinite);
+        .animation(loader-block-fade 3000ms ease-in-out infinite);
         display: block;
         float: left;
         height: 33.33333%;
@@ -95,28 +95,28 @@
 @opacity100: 1;
 @opacity100IE: 100;
 
-@-webkit-keyframes lf-loader-block-fade {
+@-webkit-keyframes loader-block-fade {
     0% { -webkit-opacity: @opacity0; }
     50% { -webkit-opacity: @opacity50; }
     60% { -webkit-opacity: @opacity60; }
     90% { -webkit-opacity: @opacity90; }
     100% { -webkit-opacity: @opacity100; }
 }
-@-moz-keyframes lf-loader-block-fade {
+@-moz-keyframes loader-block-fade {
     0% { -moz-opacity: @opacity0; }
     50% { -moz-opacity: @opacity50; }
     60% { -moz-opacity: @opacity60; }
     90% { -moz-opacity: @opacity90; }
     100% { -moz-opacity: @opacity100; }
 }
-@-o-keyframes lf-loader-block-fade {
+@-o-keyframes loader-block-fade {
     0% { -o-opacity: @opacity0; }
     50% { -o-opacity: @opacity50; }
     60% { -o-opacity: @opacity60; }
     90% { -o-opacity: @opacity90; }
     100% { -o-opacity: @opacity100; }
 }
-@keyframes lf-loader-block-fade {
+@keyframes loader-block-fade {
     0% {
         opacity: @opacity0;
         filter: ~"alpha(opacity=@{opacity0IE})";
