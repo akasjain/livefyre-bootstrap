@@ -3,66 +3,74 @@
  */
 @import "@{bootstrap-less}/variables.less";
 
-// LF colors
+// Colors
 // -------------------------
 
-@gray-darker:    #2F3440;
-@gray-dark:      tint(@gray-darker, 30%);
-@gray:           tint(@gray-darker, 60%);
-@gray-light:     tint(@gray-darker, 80%);
-@gray-lighter:   tint(@gray-darker, 95%);
+// Grays (LF variables)
+@gray-1:        #2f3440; // Prominent text
+@gray-2:        #595d66; // Paragraph text
+@gray-3:        #82858c; // Subtext text
+@gray-4:        #acaeb3; // Disabled text
+@gray-5:        #cbcccf; // Default button bg hover
+@gray-6:        #e0e1e3; // Default button bg
+@gray-7:        #efeff0; // Bg watermark
+@gray-8:        #f7f7f7; // Default bg
 
-@purple:    #7168A5;
-@blue:      #0F98EC;
-@green:     #63C685;
-@yellow:    #FEB33B;
-@orange:    #E65B3F;
-@red:       #F53E52;
-@storify-blue: #3A98D9;
+// Equivalent Bootstrap variables
+@gray-base:     @gray-1;
+@gray-darker:   @gray-1;
+@gray-dark:     @gray-2;
+@gray:          @gray-5;
+@gray-light:    @gray-6;
+@gray-lighter:  @gray-7;
 
-@purple-dark:    darken(@purple, 15%);
-@blue-dark:      darken(@blue, 15%);
-@green-dark:     darken(@green, 15%);
-@yellow-dark:    darken(@yellow, 15%);
-@orange-dark:    darken(@orange, 15%);
-@red-dark:       darken(@red, 15%);
+@purple:        #7168a5;
+@blue:          #0f98ec;
+@green:         #63c685;
+@yellow:        #feb33b;
+@orange:        #e65b3f;
+@red:           #d63960;
+@storify-blue:  #3A98D9;
 
-@purple-light:    lighten(@purple, 15%);
-@blue-light:      lighten(@blue, 15%);
-@green-light:     lighten(@green, 15%);
-@yellow-light:    lighten(@yellow, 15%);
-@orange-light:    lighten(@orange, 15%);
-@red-light:       lighten(@red, 15%);
+@purple-dark:   darken(@purple, 15%);
+@blue-dark:     darken(@blue, 15%);
+@green-dark:    darken(@green, 15%);
+@yellow-dark:   darken(@yellow, 15%);
+@orange-dark:   darken(@orange, 15%);
+@red-dark:      darken(@red, 15%);
+
+@purple-light:  lighten(@purple, 15%);
+@blue-light:    lighten(@blue, 15%);
+@green-light:   lighten(@green, 15%);
+@yellow-light:  lighten(@yellow, 15%);
+@orange-light:  lighten(@orange, 15%);
+@red-light:     lighten(@red, 15%);
 
 // Common Social Media Colors
 // -------------------------
-
-
-@brand-drupal: 				#0077c0;
-@brand-facebook:			#3b5998;
-@brand-flickr: 				#ff0084;
-@brand-foursquare: 			#0cbadf;
-@brand-google: 				#4285f4;
-@brand-gplus: 				#dd4b39;
-@brand-instagram: 			#3f729b;
-@brand-linkedin: 			#0e76a8;
-@brand-pinterest: 			#c8232c;
-@brand-reddit: 				#ff4500;
-@brand-rss: 				#ee802f;
-@brand-soundcloud: 			#ff7700;
-@brand-tumblr: 				#34526f;
-@brand-twitter: 			#55acee;
-@brand-vimeo: 				#44bbff;
-@brand-vine: 			 	#00a478;
-@brand-youtube: 			#c4302b;
-@brand-wordpress: 			#21759b;
+@brand-drupal:        #0077c0;
+@brand-facebook:      #3b5998;
+@brand-flickr:        #ff0084;
+@brand-foursquare:      #0cbadf;
+@brand-google:        #4285f4;
+@brand-gplus:         #dd4b39;
+@brand-instagram:       #3f729b;
+@brand-linkedin:      #0e76a8;
+@brand-pinterest:       #c8232c;
+@brand-reddit:        #ff4500;
+@brand-rss:         #ee802f;
+@brand-soundcloud:      #ff7700;
+@brand-tumblr:        #34526f;
+@brand-twitter:       #55acee;
+@brand-vimeo:         #44bbff;
+@brand-vine:        #00a478;
+@brand-youtube:       #c4302b;
+@brand-wordpress:       #21759b;
 
 // Typography
 // -------------------------
-
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
-
 
 // Brand colors
 // -------------------------
@@ -93,7 +101,7 @@
 @padding-xs-horizontal:          12px;
 
 @component-active-bg:       @blue;
-@border-radius-xsmall:		2px;
+@border-radius-xsmall:    2px;
 
 /**
  * Links
@@ -205,13 +213,13 @@
 
 // Labels
 // -------------------------
-@label-color:              			#ffffff;
-@label-default-bg:					@gray-lighter;
-@label-primary-bg:					@orange;
-@label-success-bg:					@green;
-@label-info-bg:						@blue;
-@label-warning-bg:					@yellow;
-@label-danger-bg:					@red;
+@label-color:                   #ffffff;
+@label-default-bg:          @gray-lighter;
+@label-primary-bg:          @orange;
+@label-success-bg:          @green;
+@label-info-bg:           @blue;
+@label-warning-bg:          @yellow;
+@label-danger-bg:         @red;
 
 // Badges
 // -------------------------
@@ -222,7 +230,7 @@
 @badge-active-color:          @link-color;
 @badge-active-bg:             #fff;
 
-@badge-font-size:			  1em;
+@badge-font-size:       1em;
 @badge-font-weight:           500;
 @badge-line-height:           1.2;
 @badge-border-radius:         1em;
@@ -243,13 +251,13 @@
 
 // Tooltips
 // -------------------------
-@tooltip-max-width: 			200px;
+@tooltip-max-width:       200px;
 @tooltip-arrow-width:           5px;
 
-@tooltip-color:					#ffffff;
+@tooltip-color:         #ffffff;
 @tooltip-light-color:           @gray-dark;
 
-@tooltip-bg:					#232731;
+@tooltip-bg:          #232731;
 @tooltip-light-bg:              #ffffff;
 
 @tooltip-arrow-color:           @tooltip-bg;
