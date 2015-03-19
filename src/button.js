@@ -19,7 +19,7 @@ Button.prototype.events = {
     click: '_execute'
 };
 
-Button.prototype.elClass += ' lf-btn';
+Button.prototype.elClass += ' btn';
 
 /**
  * The CSS Class to put on this.$el when the command is
