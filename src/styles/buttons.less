@@ -10,7 +10,14 @@
   // Using fixed heights and line-heights instead of padding to improve vertically centering fycons inside buttons
   padding: 0 @padding-base-horizontal;
   height: @btn-height;
-  line-height: @btn-height - 2;
+  line-height: @btn-height;
+  border: 0;
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    .opacity(.5);
+  }
 }
 
 
@@ -18,26 +25,26 @@
 // --------------------------------------------------
 
 .btn-default {
-  .button-shadow(@btn-default-bg; @btn-default-border; 15%);
+  .button-shadow(@btn-default-bg; @btn-default-border);
 }
 .btn-primary {
-  .button-shadow(@btn-primary-bg; @btn-primary-border; 30%);
+  .button-shadow(@btn-primary-bg; @btn-primary-border);
 }
 // Warning appears as orange
 .btn-warning {
-  .button-shadow(@btn-warning-bg; @btn-warning-border; 30%);
+  .button-shadow(@btn-warning-bg; @btn-warning-border);
 }
 // Danger and error appear as red
 .btn-danger {
-  .button-shadow(@btn-danger-bg; @btn-danger-border; 30%);
+  .button-shadow(@btn-danger-bg; @btn-danger-border);
 }
 // Success appears as green
 .btn-success {
-  .button-shadow(@btn-success-bg; @btn-success-border; 30%);
+  .button-shadow(@btn-success-bg; @btn-success-border);
 }
 // Info appears as blue-green
 .btn-info {
-  .button-shadow(@btn-info-bg; @btn-info-border; 30%);
+  .button-shadow(@btn-info-bg; @btn-info-border);
 }
 
 
@@ -46,7 +53,7 @@
 
 .btn-hollow {
   .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-hollow-border;);
-  .button-shadow(@btn-hollow-bg; @btn-hollow-border; 30%);
+  .button-shadow(@btn-hollow-bg; @btn-hollow-border);
   
   &:active,
   &.active,
@@ -65,7 +72,7 @@
   font-weight: @btn-font-weight;
   background: transparent;
   border: 1px solid transparent;
-  border-radius: @border-radius-base;
+  border-radius: @btn-radius;
 
   &:hover,
   &:focus,
@@ -86,11 +93,11 @@
   height: @btn-height-lg;
 }
 .btn-sm {
-  .button-size(0; @padding-small-horizontal; @font-size-small; @btn-height-sm - 2; @btn-radius);
+  .button-size(0; @padding-small-horizontal; @font-size-small; @btn-height-sm; @btn-radius);
   height: @btn-height-sm;
 }
 .btn-xs {
-  .button-size(0; @padding-xs-horizontal; @font-size-small; @btn-height-xs - 2; @btn-radius);
+  .button-size(0; @padding-xs-horizontal; @font-size-small; @btn-height-xs; @btn-radius);
   height: @btn-height-xs;
 }
 
