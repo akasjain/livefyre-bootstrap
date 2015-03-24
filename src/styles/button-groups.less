@@ -1,0 +1,33 @@
+//
+// Button groups
+// --------------------------------------------------
+// Since LF buttons don't have borders, we need to add separation between buttons
+
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: 1px;
+  }
+}
+
+// Vertical button groups
+.btn-group-vertical {
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group {
+    margin-top: 1px;
+  }
+}
+
+// Justified button groups
+.btn-group-justified {
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group {
+    border-left: 1px solid #fff;
+  }
+}

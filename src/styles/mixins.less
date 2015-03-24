@@ -3,15 +3,9 @@
 // Button shadows
 // -------------------------
 //
-// Add dropshadow on hover and inset shadow on click
+// Add inset shadow on click
 
-.button-shadow(@background; @border; @shadow-percent) {
-  &:hover,
-  &:focus,
-  .open .dropdown-toggle& {
-    .box-shadow(0 1px 2px fade(@gray-darker, @shadow-percent));
-  }
-
+.button-shadow(@background; @border) {
   &:active,
   &.active,
   .open .dropdown-toggle& {

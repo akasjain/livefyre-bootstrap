@@ -92,8 +92,11 @@
 @padding-xs-vertical:            1px;
 @padding-xs-horizontal:          12px;
 
+@border-radius-base:        3px;
+@border-radius-large:       4px;
+@border-radius-small:       2px;
+
 @component-active-bg:       @blue;
-@border-radius-xsmall:    2px;
 
 /**
  * Links
@@ -149,7 +152,7 @@
 
 @input-color:                   @gray-darker;
 @input-border:                  @gray-light;
-@input-border-radius:           3px;
+@input-border-radius:           @border-radius-small;
 @input-border-focus:            @blue;
 
 @input-height-base:             (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -169,12 +172,12 @@
 @btn-height-sm:                  30px;
 @btn-height-lg:                  46px;
 
-@btn-radius:                     3px; // Used for all button sizes
+@btn-radius:                     @border-radius-small; // Used for all button sizes
 
 @btn-font-weight:                500;
 
-@btn-default-color:              @gray-dark;
-@btn-default-bg:                 @gray-lighter;
+@btn-default-color:              @gray-darkest;
+@btn-default-bg:                 @gray-light;
 @btn-default-border:             @gray-light;
 
 @btn-primary-color:              #fff;
@@ -201,7 +204,7 @@
 @btn-hollow-bg:                  fade(@gray-darker, 40%);
 @btn-hollow-border:              #fff;
 
-@btn-link-disabled-color:        @gray-light;
+@btn-link-disabled-color:        @gray-darkish;
 
 // Labels
 // -------------------------
@@ -276,8 +279,8 @@
 // -------------------------
 @dropdown-bg:                    #fff;
 @dropdown-border:                transparent;
-@dropdown-link-hover-color:      #FFFFFF;
-@dropdown-link-hover-bg:         @blue;
+@dropdown-link-hover-color:      @gray-dark;
+@dropdown-link-hover-bg:         @gray-lighter;
 
 // Modals
 // -------------------------
@@ -355,3 +358,8 @@
 
 @toggle-on-bg: @green;
 @toggle-off-bg: #eee;
+
+
+// Pager
+// -------------------------
+@pager-border-radius:           @btn-radius;

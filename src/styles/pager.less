@@ -12,9 +12,10 @@
       margin-left: 0;
     }
 
-    // Override Bootstrap's styles for child <a> and <span> when we're using a button.
+    // Cancel out some of Bootstrap Pager's <a> and <span> styles when we're using a button class.
     > .btn {
-      .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+      padding: 0 @padding-base-horizontal;
+      border: 0;
     }
     > .btn-default {
       .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
@@ -23,13 +24,13 @@
       .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
     }
     > .btn-lg {
-      .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+      padding: 0 @padding-large-horizontal;
     }
     > .btn-sm {
-      .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+      padding: 0 @padding-small-horizontal;
     }
     > .btn-xs {
-      .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+      padding: 0 @padding-xs-horizontal;
     }
   }
 
