@@ -59,7 +59,6 @@
   &.active,
   .open .dropdown-toggle& {
     background-color: fade(@gray-darker, 80%);
-    border-color: @gray-darker;
   }  
 }
 
@@ -71,7 +70,6 @@
   .btn-default;
   font-weight: @btn-font-weight;
   background: transparent;
-  border: 1px solid transparent;
   border-radius: @btn-radius;
 
   &:hover,
@@ -79,8 +77,7 @@
   &:active {
     color: @btn-default-color;
     text-decoration: none;
-    background-color: transparent;
-    border-color: @btn-default-border;
+    background-color: @gray-light;
   }
 }
 
