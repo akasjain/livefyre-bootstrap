@@ -1,0 +1,20 @@
+//
+// Panels
+// --------------------------------------------------
+
+
+// Base class
+.panel {
+  .box-shadow(none);
+}
+
+.panel-title {
+  font-size: @font-size-base;
+  font-weight: 400;
+}
+
+
+// Contextual variations
+.panel-default {
+  .panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @gray-light);  
+}
