@@ -16,6 +16,7 @@
 .modal-content {
   // Remove focus outline from opened modal
   outline: 0;
+  border-radius: @border-radius-base;
 }
 
 // Modal background
@@ -27,31 +28,31 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: 18px @modal-inner-padding 17px;
+  min-height: (@modal-title-padding + @modal-title-line-height);
+  padding: 14px @modal-inner-padding 10px;
   background-color: @modal-header-bg;
   border-radius: @border-radius-large @border-radius-large 0 0;
-  text-align: center;
+  text-align: left;
 }
 
 // Close icon
 .modal-header .close {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 8px;
+  right: 8px;
+  margin-top: 0;
   font-size: 12px;
   line-height: 18px;
 }
 
 // Title text within header or body
 .modal-title {
-  padding: 0 @modal-title-padding; // Prevent overlap with close button    
+  padding: 0 @modal-title-padding 0 0; // Prevent overlap with close button    
   font-size: @modal-title-font-size;
-  color: @gray-dark;
+  color: @gray-darker;
 
-  // Tw Bootstrap helper classes
-  &.text-left,
-  &.text-right {
-    padding-left: 0;
+  &.text-center {
+    padding-left: @modal-title-padding; // Prevent overlap with close button 
   }
 
   em, i {
@@ -62,6 +63,17 @@
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
+  padding: 16px @modal-inner-padding @modal-inner-padding;
+  color: @gray-darker;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    font-size: 20px;
+    line-height: 30px;
+    color: @gray-darkest;
+  }
+
   p {
     margin-bottom: 14px;
     line-height: 18px;
@@ -70,16 +82,17 @@
 
 // Footer (for actions)
 .modal-footer {
-  padding: @modal-inner-padding;
-  text-align: center;
+  padding: 0 @modal-inner-padding @modal-inner-padding;
+  text-align: right;
+  border-top: 0;
   &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
 
-  // Tw Bootstrap helper classes. Needed here to override default center alignment.
+  // Tw Bootstrap helper classes. Needed here to override default right alignment.
   &.text-left {
     text-align: left;
   }
-  &.text-right {
-    text-align: right;
+  &.text-center {
+    text-align: center;
   }
 
   // Properly space out buttons
@@ -99,25 +112,25 @@
 
 
 // Alert Modal
-// Does not include a title section. Useful for alert messages and notifications that requires the users attention.
+// - Does not include a title section. Useful for alert messages and notifications that require the user's attention.
+// - <h4> headline should be placed inside of .modal-body (without the .modal-title class)
+// - There's no "close" button so be sure to include a confirmation button that closes the modal.
 .modal-alert {
   .modal-header {
-    min-height: (@modal-title-padding + @modal-title-line-height) - 6px;
-    background-color: transparent;
-    border-bottom: 0;
+    display: none;
   }
-  .modal-body {
-    padding-top: 0;
 
-    h4 { // Headline text should be placed inside body
-      .modal-title;
-      margin-bottom: 16px;
-      padding: 0;
-      color: @gray-darker;
-    }
+  .modal-body {
+    padding-top: @modal-inner-padding;
+    text-align: center;
   }
+
   .modal-footer {
-    padding-top: 0;
+    text-align: center;
+
+    &.text-right {
+      text-align: right;
+    }
   }
 }
 
