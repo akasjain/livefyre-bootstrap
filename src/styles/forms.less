@@ -27,3 +27,68 @@
 .input-lg {
   .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @input-border-radius);
 }
+
+// Checkboxes and radios
+// - Uses fycons instead of browser styles
+.checkbox,
+.radio,
+.checkbox-inline,
+.radio-inline {
+  label {
+    padding-left: 26px;
+    color: @gray-darker;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin: 1px 0 0 -26px;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+
+  &:before {
+    .fycons-styles-base;
+    color: @gray-darker;
+  }
+
+  &:hover:before {
+    color: @gray-darkest;
+  }
+
+  &:checked:before {
+    color: @gray-darker;
+  }
+
+  &[disabled] {
+    &:before,
+    & + span {
+      color: @gray-darkish;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  .fycon-form-checkbox-empty;
+
+  &:checked {
+    .fycon-form-checkbox-active;
+  }
+
+  &:indeterminate {
+    color: @gray-darkest;
+    .fycon-form-checkbox-partial;
+  }
+}
+
+input[type="radio"] {
+  .fycon-form-radio-empty;
+
+  &:checked {
+    .fycon-form-radio-active;
+  }
+}
