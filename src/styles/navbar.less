@@ -18,3 +18,16 @@
     background-image: linear-gradient(top,#35353a,#1f1f1f);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#35353a',EndColorStr='#1f1f1f');
 }
+
+
+// Dropdown menus
+// - Restore rounded corners
+
+// Menu position and menu carets
+.navbar-nav > li > .dropdown-menu {
+  .border-top-radius(@border-radius-base);
+}
+// Menu position and menu caret support for dropups via extra dropup class
+.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+  border-radius: @border-radius-base;
+}

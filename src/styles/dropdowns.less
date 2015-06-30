@@ -38,12 +38,29 @@
 
 // The dropdown menu (ul)
 .dropdown-menu {
-  margin-top: 8px; // Make room for arrow
+  margin-bottom: 20px; // For when dropdown panel extends to the bottom of the page. Adds a small margin for breathing room.
+  padding: 0;
   .box-shadow(0 0 10px rgba(0, 0, 0, 0.2));
    
   // Links within the dropdown menu
-  > li > a {
-    padding: 5px 20px;
+  > li {
+    > a {
+      padding: 8px 14px 7px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: @gray-darkest;
+      }
+    }
+
+    &:first-child a {
+      border-radius: @border-radius-base @border-radius-base 0 0;
+    }
+
+    &:last-child a {
+      border-radius: 0 0 @border-radius-base @border-radius-base;
+    }
   }
 }
 
@@ -58,31 +75,8 @@
   .translate(-50%, 0);
 }
 
-// Arrows
-//
-// Little, white arrow atop the dropdown menu.
 
-.dropdown-menu:before {
-  display: block;
-  position: absolute;
-  top: -6px;
-  left: 10px;
-  width: 0;
-  height: 0;
-  content: "";
-  border: 7px solid; // 7px thickness is 1px more than top (-6px) to prevent bottom of arrow getting clipped in rare instances.
-  border-color: transparent transparent @dropdown-bg @dropdown-bg;
-  .rotate(135deg);
-  .box-shadow(-4px 4px 6px 0 rgba(0, 0, 0, 0.08));
-}
-
-.dropdown-menu-right:before {
-  left: auto;
-  right: 10px;        
-}
-
-.dropdown-menu-center:before {
-  left: 50%;        
-  right: auto;
-  margin-left: -6px;
+// Dropdown section headers
+.dropdown-header {
+  padding: 3px 14px;
 }
