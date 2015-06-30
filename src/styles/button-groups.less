@@ -1,8 +1,8 @@
 //
 // Button groups
 // --------------------------------------------------
-// Since LF buttons don't have borders, we need to add separation between buttons
 
+// Since LF buttons don't have borders, we need to add separation between buttons
 .btn-group {
   .btn + .btn,
   .btn + .btn-group,
@@ -11,6 +11,40 @@
     margin-left: 1px;
   }
 }
+
+
+// Increase margin between buttons
+.btn-toolbar {
+  margin-left: -6px; // Offset the first child's margin
+
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: 6px;
+  }
+}
+
+
+// Right-aligned button toolbar
+// - Use alongside .btn-toolbar (i.e. class="btn-toolbar btn-toolbar-right")
+.btn-toolbar-right { 
+  margin-right: -6px;
+  margin-left: auto;
+  text-align: right;
+
+  .btn-group,
+  .input-group {
+    float: right;
+  }
+
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-right: 6px;
+    margin-left: auto;
+  }
+}
+
 
 // Vertical button groups
 .btn-group-vertical {
@@ -21,6 +55,7 @@
     margin-top: 1px;
   }
 }
+
 
 // Justified button groups
 .btn-group-justified {
