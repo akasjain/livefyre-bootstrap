@@ -19,6 +19,16 @@
   fieldset[disabled] & {
     .opacity(.5);
   }
+
+  // Remove blue outline that appears when you click a button.
+  &:focus, 
+  &:active:focus, 
+  &.active:focus, 
+  &.focus, 
+  &:active.focus, 
+  &.active.focus {
+    outline: 0;
+  }
 }
 
 
