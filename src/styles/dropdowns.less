@@ -41,17 +41,18 @@
   margin-bottom: 20px; // For when dropdown panel extends to the bottom of the page. Adds a small margin for breathing room.
   padding: 0;
   .box-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+
+  // Dividers
+  .divider {
+    margin: 0;
+  }
    
   // Links within the dropdown menu
   > li {
     > a {
-      padding: 8px 14px 7px;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: @gray-darkest;
-      }
+      font-size: @font-size-small;
+      line-height: 1.5; // 18px
+      padding: 9px 12px;
     }
 
     &:first-child a {
@@ -78,5 +79,5 @@
 
 // Dropdown section headers
 .dropdown-header {
-  padding: 3px 14px;
+  padding: 9px 12px 6px;
 }
