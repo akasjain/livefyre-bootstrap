@@ -16,6 +16,7 @@
       "email": "pcho@livefyre.com"
     }
   ],
+  "main": "src/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Livefyre/livefyre-bootstrap.git"

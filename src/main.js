@@ -1,6 +1,6 @@
 require('bootstrap');
-require('livefyre-bootstrap/tooltip');
+require('./tooltip');
 
 module.exports = {
-	loader: require('livefyre-bootstrap/loader')
+	loader: require('./loader')
 };
