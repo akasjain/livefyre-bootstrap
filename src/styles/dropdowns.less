@@ -38,9 +38,19 @@
 
 // The dropdown menu (ul)
 .dropdown-menu {
-  margin-bottom: 20px; // For when dropdown panel extends to the bottom of the page. Adds a small margin for breathing room.
   padding: 0;
   .box-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+
+  // LF-17947: When dropdown panel extends to the bottom of the page, this ensures there's a small margin for breathing room. (Adding bottom margin to .dropdown-menu doesn't work for FF, Saf, IE)
+  &:before { 
+    position: absolute;
+    z-index: -1;
+    bottom: -20px;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    content: "";
+  }
 
   // Dividers
   .divider {
