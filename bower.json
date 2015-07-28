@@ -5,7 +5,7 @@
     "./src/main.js"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.4",
+    "bootstrap": "3.3.4",
     "sinon-chai": "~2.4.0",
     "sinonjs": "~1.7.3",
     "view": "git://github.com/Livefyre/view.git#~1.0",
