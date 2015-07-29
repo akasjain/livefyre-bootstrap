@@ -18,6 +18,9 @@
           <li>
             <a href="fycons.html">Fycons</a>
           </li>
+          <li>
+            <a href="v2.html">Version 2.0.0!</a>
+          </li>
         </ul>
         <ul class="docs-nav right">
           <li>
@@ -37,28 +40,30 @@
     <section>
       <div class="container padded">
         <h1 class="section-header">Usage</h1>
-        <p class="descrip">Fycons are generally tracked and vertically aligned for you. When used in parent elements such as buttons, they should correctly display and scale with inherited font-sizes. The advised tag to use for fycons is <code>&lt;i class="fycon-*" aria-hidden="true"&gt;&lt;/i&gt;</code>.</p>
+        <p class="descrip">Fycons are generally tracked and vertically aligned for you. When used in parent elements such as buttons, they should correctly display and scale with inherited font-sizes. The advised tag to use for fycons is <code>&lt;span class="fycon-*" aria-hidden="true"&gt;&lt;/span&gt;</code>.</p>
         <p class="descrip">The attribute <code>aria-hidden="true"</code> prevents some screenreaders from announcing the character code (<a href="http://www.filamentgroup.com/lab/bulletproof_icon_fonts.html">reference</a>).</p>
-        <p class="descrip">Note: class names shown below under "List of Fycons" need to be prefixed with <code>fycon-</code>. For example, <code>&lt;i class="fycon-action-etc" aria-hidden="true"&gt;&lt;/i&gt;</code>.</p>
+        <p class="descrip">Note: class names shown below under "List of Fycons" need to be prefixed with <code>fycon-</code>. For example, <code>&lt;span class="fycon-action-etc" aria-hidden="true"&gt;&lt;/span&gt;</code>.</p>
 
         <h3>With buttons</h3>
         <p class="descrip">Add the fycon tag inside of a container element. Do not add the fycon class to container itself.</p>
         <div class="bs-example">
-          <button class="lf-btn lf-btn-primary"><i class="fycon-plus" aria-hidden="true"></i> New Collection</button>
-          <button class="lf-btn lf-btn-default"><i class="fycon-action-like" aria-hidden="true"></i> Like</button>
-          <button class="lf-btn lf-btn-link"><i class="fycon-action-reply" aria-hidden="true"></i> Reply</button>
+          <button class="lf-btn lf-btn-primary"><span class="fycon-plus" aria-hidden="true"></span> New Collection</button>
+          <button class="lf-btn lf-btn-default"><span class="fycon-action-like" aria-hidden="true"></span> Like</button>
+          <button class="lf-btn lf-btn-link"><span class="fycon-action-reply" aria-hidden="true"></span> Reply</button>
         </div>
         <div class="highlight">
-<pre><code>&lt;button class="lf-btn lf-btn-primary"&gt;
-  &lt;i class="fycon-plus" aria-hidden="true"&gt;&lt;/i&gt; New Collection
+<pre><code>&lt;!-- If you're using Livefyre Bootstrap 2.0, skip the "lf-" prefixes. --&gt;
+
+&lt;button class="lf-btn lf-btn-primary"&gt;
+  &lt;span class="fycon-plus" aria-hidden="true"&gt;&lt;/span&gt; New Collection
 &lt;/button&gt;
 
 &lt;button class="lf-btn lf-btn-default"&gt;
-  &lt;i class="fycon-action-like" aria-hidden="true"&gt;&lt;/i&gt; Like
+  &lt;span class="fycon-action-like" aria-hidden="true"&gt;&lt;/span&gt; Like
 &lt;/button&gt;
 
 &lt;button class="lf-btn lf-btn-link"&gt;
-  &lt;i class="fycon-action-reply" aria-hidden="true"&gt;&lt;/i&gt; Reply
+  &lt;span class="fycon-action-reply" aria-hidden="true"&gt;&lt;/span&gt; Reply
 &lt;/button&gt;
 </code></pre>
         </div>
@@ -66,18 +71,18 @@
         <h3>Colored Fycons</h3>
         <p class="descrip">Social media fycons ship with colored variants. Simply add the <code>.colored</code> class and the correct brand color will be applied to it.</p>
         <div class="bs-example" style="font-size: 2em;">
-          <i class="fycon-source-livefyre colored" aria-hidden="true"></i>
-          <i class="fycon-source-facebook colored" aria-hidden="true"></i>
-          <i class="fycon-source-twitter colored" aria-hidden="true"></i>
-          <i class="fycon-source-vine colored" aria-hidden="true"></i>
-          <i class="fycon-source-rss colored" aria-hidden="true"></i>
-          <i class="fycon-source-storify colored" aria-hidden="true"></i>
-          <i class="fycon-source-soundcloud colored" aria-hidden="true"></i>
+          <span class="fycon-source-livefyre colored" aria-hidden="true"></span>
+          <span class="fycon-source-facebook colored" aria-hidden="true"></span>
+          <span class="fycon-source-twitter colored" aria-hidden="true"></span>
+          <span class="fycon-source-vine colored" aria-hidden="true"></span>
+          <span class="fycon-source-rss colored" aria-hidden="true"></span>
+          <span class="fycon-source-storify colored" aria-hidden="true"></span>
+          <span class="fycon-source-soundcloud colored" aria-hidden="true"></span>
         </div>
         <div class="highlight">
-<pre><code>&lt;i class="fycon-source-livefyre colored" aria-hidden="true"&gt;&lt;/i&gt;
-&lt;i class="fycon-source-facebook colored" aria-hidden="true"&gt;&lt;/i&gt;
-&lt;i class="fycon-source-twitter colored" aria-hidden="true"&gt;&lt;/i&gt;
+<pre><code>&lt;span class="fycon-source-livefyre colored" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span class="fycon-source-facebook colored" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;span class="fycon-source-twitter colored" aria-hidden="true"&gt;&lt;/span&gt;
 ...
 </code></pre>
         </div>
@@ -91,743 +96,743 @@
           <div class="col-12">
             <ul class="glyphs css-mapping">
               <li>
-                <div class="icon fycon-action-etc"></div>
+                <span class="fycon-action-etc" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-etc">
               </li>
               <li>
-                <div class="icon fycon-action-favorite"></div>
+                <span class="fycon-action-favorite" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-favorite">
               </li>
               <li>
-                <div class="icon fycon-action-favorite-empty"></div>
+                <span class="fycon-action-favorite-empty" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-favorite-empty">
               </li>
               <li>
-                <div class="icon fycon-action-favorite-half"></div>
+                <span class="fycon-action-favorite-half" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-favorite-half">
               </li>
               <li>
-                <div class="icon fycon-action-helpful"></div>
+                <span class="fycon-action-helpful" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-helpful">
               </li>
               <li>
-                <div class="icon fycon-action-like"></div>
+                <span class="fycon-action-like" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-like">
               </li>
               <li>
-                <div class="icon fycon-action-reply"></div>
+                <span class="fycon-action-reply" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-reply">
               </li>
               <li>
-                <div class="icon fycon-action-reply-right"></div>
+                <span class="fycon-action-reply-right" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-reply-right">
               </li>
               <li>
-                <div class="icon fycon-action-retweet"></div>
+                <span class="fycon-action-retweet" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-retweet">
               </li>
               <li>
-                <div class="icon fycon-action-share"></div>
+                <span class="fycon-action-share" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-share">
               </li>
               <li>
-                <div class="icon fycon-action-unhelpful"></div>
+                <span class="fycon-action-unhelpful" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-unhelpful">
               </li>
               <li>
-                <div class="icon fycon-action-view"></div>
+                <span class="fycon-action-view" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="action-view">
               </li>
               <li>
-                <div class="icon fycon-admin-ban"></div>
+                <span class="fycon-admin-ban" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="admin-ban">
               </li>
               <li>
-                <div class="icon fycon-admin-bozo"></div>
+                <span class="fycon-admin-bozo" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="admin-bozo">
               </li>
               <li>
-                <div class="icon fycon-admin-delete"></div>
+                <span class="fycon-admin-delete" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="admin-delete">
               </li>
               <li>
-                <div class="icon fycon-admin-flag"></div>
+                <span class="fycon-admin-flag" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="admin-flag">
               </li>
               <li>
-                <div class="icon fycon-alert"></div>
+                <span class="fycon-alert" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="alert">
               </li>
               <li>
-                <div class="icon fycon-all-assets"></div>
+                <span class="fycon-all-assets" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="all-assets">
               </li>
               <li>
-                <div class="icon fycon-analytics"></div>
+                <span class="fycon-analytics" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="analytics">
               </li>
               <li>
-                <div class="icon fycon-apps"></div>
+                <span class="fycon-apps" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="apps">
               </li>
               <li>
-                <div class="icon fycon-archive"></div>
+                <span class="fycon-archive" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="archive">
               </li>
               <li>
-                <div class="icon fycon-arrow-back"></div>
+                <span class="fycon-arrow-back" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="arrow-back">
               </li>
               <li>
-                <div class="icon fycon-arrow-down"></div>
+                <span class="fycon-arrow-down" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="arrow-down">
               </li>
               <li>
-                <div class="icon fycon-arrow-down-circle"></div>
+                <span class="fycon-arrow-down-circle" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="arrow-down-circle">
               </li>
               <li>
-                <div class="icon fycon-arrow-left"></div>
+                <span class="fycon-arrow-left" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="arrow-left">
               </li>
               <li>
-                <div class="icon fycon-arrow-right"></div>
+                <span class="fycon-arrow-right" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="arrow-right">
               </li>
               <li>
-                <div class="icon fycon-arrow-up"></div>
+                <span class="fycon-arrow-up" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="arrow-up">
               </li>
               <li>
-                <div class="icon fycon-arrow-up-circle"></div>
+                <span class="fycon-arrow-up-circle" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="arrow-up-circle">
               </li>
               <li>
-                <div class="icon fycon-article"></div>
+                <span class="fycon-article" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="article">
               </li>
               <li>
-                <div class="icon fycon-batch-clear"></div>
+                <span class="fycon-batch-clear" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="batch-clear">
               </li>
               <li>
-                <div class="icon fycon-bell"></div>
+                <span class="fycon-bell" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="bell">
               </li>
               <li>
-                <div class="icon fycon-bolt"></div>
+                <span class="fycon-bolt" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="bolt">
               </li>
               <li>
-                <div class="icon fycon-calendar"></div>
+                <span class="fycon-calendar" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="calendar">
               </li>
               <li>
-                <div class="icon fycon-check"></div>
+                <span class="fycon-check" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="check">
               </li>
               <li>
-                <div class="icon fycon-clock"></div>
+                <span class="fycon-clock" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="clock">
               </li>
               <li>
-                <div class="icon fycon-collections"></div>
+                <span class="fycon-collections" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="collections">
               </li>
               <li>
-                <div class="icon fycon-composer-emoticons"></div>
+                <span class="fycon-composer-emoticons" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="composer-emoticons">
               </li>
               <li>
-                <div class="icon fycon-composer-format1"></div>
+                <span class="fycon-composer-format1" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="composer-format1">
               </li>
               <li>
-                <div class="icon fycon-composer-format2"></div>
+                <span class="fycon-composer-format2" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="composer-format2">
               </li>
               <li>
-                <div class="icon fycon-composer-mention"></div>
+                <span class="fycon-composer-mention" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="composer-mention">
               </li>
               <li>
-                <div class="icon fycon-composer-photo"></div>
+                <span class="fycon-composer-photo" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="composer-photo">
               </li>
               <li>
-                <div class="icon fycon-composer-sad"></div>
+                <span class="fycon-composer-sad" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="composer-sad">
               </li>
               <li>
-                <div class="icon fycon-connect"></div>
+                <span class="fycon-connect" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="connect">
               </li>
               <li>
-                <div class="icon fycon-connection-lost"></div>
+                <span class="fycon-connection-lost" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="connection-lost">
               </li>
               <li>
-                <div class="icon fycon-content"></div>
+                <span class="fycon-content" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="content">
               </li>
               <li>
-                <div class="icon fycon-copy-to-clipboard"></div>
+                <span class="fycon-copy-to-clipboard" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="copy-to-clipboard">
               </li>
               <li>
-                <div class="icon fycon-crop"></div>
+                <span class="fycon-crop" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="crop">
               </li>
               <li>
-                <div class="icon fycon-download"></div>
+                <span class="fycon-download" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="download">
               </li>
               <li>
-                <div class="icon fycon-duplicate"></div>
+                <span class="fycon-duplicate" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="duplicate">
               </li>
               <li>
-                <div class="icon fycon-edit"></div>
+                <span class="fycon-edit" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="edit">
               </li>
               <li>
-                <div class="icon fycon-edit-2"></div>
+                <span class="fycon-edit-2" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="edit-2">
               </li>
               <li>
-                <div class="icon fycon-email"></div>
+                <span class="fycon-email" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="email">
               </li>
               <li>
-                <div class="icon fycon-embed"></div>
+                <span class="fycon-embed" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="embed">
               </li>
               <li>
-                <div class="icon fycon-expand"></div>
+                <span class="fycon-expand" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="expand">
               </li>
               <li>
-                <div class="icon fycon-export"></div>
+                <span class="fycon-export" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="export">
               </li>
               <li>
-                <div class="icon fycon-eye"></div>
+                <span class="fycon-eye" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="eye">
               </li>
               <li>
-                <div class="icon fycon-feature"></div>
+                <span class="fycon-feature" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="feature">
               </li>
               <li>
-                <div class="icon fycon-film"></div>
+                <span class="fycon-film" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="film">
               </li>
               <li>
-                <div class="icon fycon-folder"></div>
+                <span class="fycon-folder" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="folder">
               </li>
               <li>
-                <div class="icon fycon-folder-private"></div>
+                <span class="fycon-folder-private" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="folder-private">
               </li>
               <li>
-                <div class="icon fycon-folder-restricted"></div>
+                <span class="fycon-folder-restricted" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="folder-restricted">
               </li>
               <li>
-                <div class="icon fycon-form-checkbox-active"></div>
+                <span class="fycon-form-checkbox-active" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="form-checkbox-active">
               </li>
               <li>
-                <div class="icon fycon-form-checkbox-empty"></div>
+                <span class="fycon-form-checkbox-empty" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="form-checkbox-empty">
               </li>
               <li>
-                <div class="icon fycon-form-checkbox-partial"></div>
+                <span class="fycon-form-checkbox-partial" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="form-checkbox-partial">
               </li>
               <li>
-                <div class="icon fycon-form-radio-active"></div>
+                <span class="fycon-form-radio-active" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="form-radio-active">
               </li>
               <li>
-                <div class="icon fycon-form-radio-empty"></div>
+                <span class="fycon-form-radio-empty" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="form-radio-empty">
               </li>
               <li>
-                <div class="icon fycon-format-bold"></div>
+                <span class="fycon-format-bold" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="format-bold">
               </li>
               <li>
-                <div class="icon fycon-format-italic"></div>
+                <span class="fycon-format-italic" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="format-italic">
               </li>
               <li>
-                <div class="icon fycon-format-link"></div>
+                <span class="fycon-format-link" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="format-link">
               </li>
               <li>
-                <div class="icon fycon-format-orderedlist"></div>
+                <span class="fycon-format-orderedlist" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="format-orderedlist">
               </li>
               <li>
-                <div class="icon fycon-format-strikethrough"></div>
+                <span class="fycon-format-strikethrough" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="format-strikethrough">
               </li>
               <li>
-                <div class="icon fycon-format-underline"></div>
+                <span class="fycon-format-underline" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="format-underline">
               </li>
               <li>
-                <div class="icon fycon-format-unorderedlist"></div>
+                <span class="fycon-format-unorderedlist" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="format-unorderedlist">
               </li>
               <li>
-                <div class="icon fycon-groups"></div>
+                <span class="fycon-groups" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="groups">
               </li>
               <li>
-                <div class="icon fycon-groups-add"></div>
+                <span class="fycon-groups-add" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="groups-add">
               </li>
               <li>
-                <div class="icon fycon-hamburger"></div>
+                <span class="fycon-hamburger" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="hamburger">
               </li>
               <li>
-                <div class="icon fycon-home"></div>
+                <span class="fycon-home" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="home">
               </li>
               <li>
-                <div class="icon fycon-icon-chat"></div>
+                <span class="fycon-icon-chat" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-chat">
               </li>
               <li>
-                <div class="icon fycon-icon-comments"></div>
+                <span class="fycon-icon-comments" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-comments">
               </li>
               <li>
-                <div class="icon fycon-icon-counter"></div>
+                <span class="fycon-icon-counter" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-counter">
               </li>
               <li>
-                <div class="icon fycon-icon-custom-app"></div>
+                <span class="fycon-icon-custom-app" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-custom-app">
               </li>
               <li>
-                <div class="icon fycon-icon-feed"></div>
+                <span class="fycon-icon-feed" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-feed">
               </li>
               <li>
-                <div class="icon fycon-icon-liveblog"></div>
+                <span class="fycon-icon-liveblog" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-liveblog">
               </li>
               <li>
-                <div class="icon fycon-icon-map"></div>
+                <span class="fycon-icon-map" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-map">
               </li>
               <li>
-                <div class="icon fycon-icon-modq"></div>
+                <span class="fycon-icon-modq" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-modq">
               </li>
               <li>
-                <div class="icon fycon-icon-more"></div>
+                <span class="fycon-icon-more" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-more">
               </li>
               <li>
-                <div class="icon fycon-icon-polls"></div>
+                <span class="fycon-icon-polls" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-polls">
               </li>
               <li>
-                <div class="icon fycon-icon-reviews"></div>
+                <span class="fycon-icon-reviews" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-reviews">
               </li>
               <li>
-                <div class="icon fycon-icon-sidenotes"></div>
+                <span class="fycon-icon-sidenotes" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-sidenotes">
               </li>
               <li>
-                <div class="icon fycon-icon-storify"></div>
+                <span class="fycon-icon-storify" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-storify">
               </li>
               <li>
-                <div class="icon fycon-icon-trending"></div>
+                <span class="fycon-icon-trending" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-trending">
               </li>
               <li>
-                <div class="icon fycon-icon-wall"></div>
+                <span class="fycon-icon-wall" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="icon-wall">
               </li>
               <li>
-                <div class="icon fycon-import"></div>
+                <span class="fycon-import" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="import">
               </li>
               <li>
-                <div class="icon fycon-information"></div>
+                <span class="fycon-information" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="information">
               </li>
               <li>
-                <div class="icon fycon-laptop"></div>
+                <span class="fycon-laptop" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="laptop">
               </li>
               <li>
-                <div class="icon fycon-listening-left"></div>
+                <span class="fycon-listening-left" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="listening-left">
               </li>
               <li>
-                <div class="icon fycon-listening-right"></div>
+                <span class="fycon-listening-right" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="listening-right">
               </li>
               <li>
-                <div class="icon fycon-location"></div>
+                <span class="fycon-location" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="location">
               </li>
               <li>
-                <div class="icon fycon-locked"></div>
+                <span class="fycon-locked" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="locked">
               </li>
               <li>
-                <div class="icon fycon-logo-android"></div>
+                <span class="fycon-logo-android" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-android">
               </li>
               <li>
-                <div class="icon fycon-logo-apple"></div>
+                <span class="fycon-logo-apple" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-apple">
               </li>
               <li>
-                <div class="icon fycon-logo-chat"></div>
+                <span class="fycon-logo-chat" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-chat">
               </li>
               <li>
-                <div class="icon fycon-logo-comments"></div>
+                <span class="fycon-logo-comments" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-comments">
               </li>
               <li>
-                <div class="icon fycon-logo-counter"></div>
+                <span class="fycon-logo-counter" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-counter">
               </li>
               <li>
-                <div class="icon fycon-logo-developers"></div>
+                <span class="fycon-logo-developers" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-developers">
               </li>
               <li>
-                <div class="icon fycon-logo-feed"></div>
+                <span class="fycon-logo-feed" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-feed">
               </li>
               <li>
-                <div class="icon fycon-logo-liveblog"></div>
+                <span class="fycon-logo-liveblog" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-liveblog">
               </li>
               <li>
-                <div class="icon fycon-logo-livefyre"></div>
+                <span class="fycon-logo-livefyre" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-livefyre">
               </li>
               <li>
-                <div class="icon fycon-logo-map"></div>
+                <span class="fycon-logo-map" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-map">
               </li>
               <li>
-                <div class="icon fycon-logo-mediawall"></div>
+                <span class="fycon-logo-mediawall" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-mediawall">
               </li>
               <li>
-                <div class="icon fycon-logo-modq"></div>
+                <span class="fycon-logo-modq" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-modq">
               </li>
               <li>
-                <div class="icon fycon-logo-polls"></div>
+                <span class="fycon-logo-polls" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-polls">
               </li>
               <li>
-                <div class="icon fycon-logo-reviews"></div>
+                <span class="fycon-logo-reviews" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-reviews">
               </li>
               <li>
-                <div class="icon fycon-logo-sidenotes"></div>
+                <span class="fycon-logo-sidenotes" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-sidenotes">
               </li>
               <li>
-                <div class="icon fycon-logo-snap"></div>
+                <span class="fycon-logo-snap" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-snap">
               </li>
               <li>
-                <div class="icon fycon-logo-storify"></div>
+                <span class="fycon-logo-storify" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-storify">
               </li>
               <li>
-                <div class="icon fycon-logo-streamhub"></div>
+                <span class="fycon-logo-streamhub" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-streamhub">
               </li>
               <li>
-                <div class="icon fycon-logo-trending"></div>
+                <span class="fycon-logo-trending" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-trending">
               </li>
               <li>
-                <div class="icon fycon-logo-windows"></div>
+                <span class="fycon-logo-windows" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="logo-windows">
               </li>
               <li>
-                <div class="icon fycon-minimize"></div>
+                <span class="fycon-minimize" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="minimize">
               </li>
               <li>
-                <div class="icon fycon-minus"></div>
+                <span class="fycon-minus" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="minus">
               </li>
               <li>
-                <div class="icon fycon-mobile"></div>
+                <span class="fycon-mobile" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="mobile">
               </li>
               <li>
-                <div class="icon fycon-modal-arrow-left"></div>
+                <span class="fycon-modal-arrow-left" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="modal-arrow-left">
               </li>
               <li>
-                <div class="icon fycon-modal-arrow-right"></div>
+                <span class="fycon-modal-arrow-right" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="modal-arrow-right">
               </li>
               <li>
-                <div class="icon fycon-mute-flags"></div>
+                <span class="fycon-mute-flags" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="mute-flags">
               </li>
               <li>
-                <div class="icon fycon-nav-close"></div>
+                <span class="fycon-nav-close" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="nav-close">
               </li>
               <li>
-                <div class="icon fycon-nav-expand"></div>
+                <span class="fycon-nav-expand" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="nav-expand">
               </li>
               <li>
-                <div class="icon fycon-network"></div>
+                <span class="fycon-network" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="network">
               </li>
               <li>
-                <div class="icon fycon-person"></div>
+                <span class="fycon-person" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="person">
               </li>
               <li>
-                <div class="icon fycon-photograph"></div>
+                <span class="fycon-photograph" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="photograph">
               </li>
               <li>
-                <div class="icon fycon-plane"></div>
+                <span class="fycon-plane" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="plane">
               </li>
               <li>
-                <div class="icon fycon-play"></div>
+                <span class="fycon-play" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="play">
               </li>
               <li>
-                <div class="icon fycon-plus"></div>
+                <span class="fycon-plus" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="plus">
               </li>
               <li>
-                <div class="icon fycon-question"></div>
+                <span class="fycon-question" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="question">
               </li>
               <li>
-                <div class="icon fycon-recent"></div>
+                <span class="fycon-recent" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="recent">
               </li>
               <li>
-                <div class="icon fycon-redo"></div>
+                <span class="fycon-redo" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="redo">
               </li>
               <li>
-                <div class="icon fycon-refresh"></div>
+                <span class="fycon-refresh" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="refresh">
               </li>
               <li>
-                <div class="icon fycon-search"></div>
+                <span class="fycon-search" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="search">
               </li>
               <li>
-                <div class="icon fycon-settings-admin"></div>
+                <span class="fycon-settings-admin" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="settings-admin">
               </li>
               <li>
-                <div class="icon fycon-settings-feedback"></div>
+                <span class="fycon-settings-feedback" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="settings-feedback">
               </li>
               <li>
-                <div class="icon fycon-settings-gear"></div>
+                <span class="fycon-settings-gear" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="settings-gear">
               </li>
               <li>
-                <div class="icon fycon-settings-logout"></div>
+                <span class="fycon-settings-logout" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="settings-logout">
               </li>
               <li>
-                <div class="icon fycon-settings-me"></div>
+                <span class="fycon-settings-me" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="settings-me">
               </li>
               <li>
-                <div class="icon fycon-settings-switch"></div>
+                <span class="fycon-settings-switch" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="settings-switch">
               </li>
               <li>
-                <div class="icon fycon-source-drupal"></div>
+                <span class="fycon-source-drupal" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-drupal">
               </li>
               <li>
-                <div class="icon fycon-source-facebook"></div>
+                <span class="fycon-source-facebook" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-facebook">
               </li>
               <li>
-                <div class="icon fycon-source-flickr"></div>
+                <span class="fycon-source-flickr" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-flickr">
               </li>
               <li>
-                <div class="icon fycon-source-foursquare"></div>
+                <span class="fycon-source-foursquare" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-foursquare">
               </li>
               <li>
-                <div class="icon fycon-source-google"></div>
+                <span class="fycon-source-google" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-google">
               </li>
               <li>
-                <div class="icon fycon-source-googleplus"></div>
+                <span class="fycon-source-googleplus" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-googleplus">
               </li>
               <li>
-                <div class="icon fycon-source-instagram"></div>
+                <span class="fycon-source-instagram" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-instagram">
               </li>
               <li>
-                <div class="icon fycon-source-linkedin"></div>
+                <span class="fycon-source-linkedin" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-linkedin">
               </li>
               <li>
-                <div class="icon fycon-source-livefyre"></div>
+                <span class="fycon-source-livefyre" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-livefyre">
               </li>
               <li>
-                <div class="icon fycon-source-pinterest"></div>
+                <span class="fycon-source-pinterest" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-pinterest">
               </li>
               <li>
-                <div class="icon fycon-source-reddit"></div>
+                <span class="fycon-source-reddit" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-reddit">
               </li>
               <li>
-                <div class="icon fycon-source-rss"></div>
+                <span class="fycon-source-rss" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-rss">
               </li>
               <li>
-                <div class="icon fycon-source-soundcloud"></div>
+                <span class="fycon-source-soundcloud" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-soundcloud">
               </li>
               <li>
-                <div class="icon fycon-source-storify"></div>
+                <span class="fycon-source-storify" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-storify">
               </li>
               <li>
-                <div class="icon fycon-source-tumblr"></div>
+                <span class="fycon-source-tumblr" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-tumblr">
               </li>
               <li>
-                <div class="icon fycon-source-twitter"></div>
+                <span class="fycon-source-twitter" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-twitter">
               </li>
               <li>
-                <div class="icon fycon-source-twitter2"></div>
+                <span class="fycon-source-twitter2" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-twitter2">
               </li>
               <li>
-                <div class="icon fycon-source-vimeo"></div>
+                <span class="fycon-source-vimeo" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-vimeo">
               </li>
               <li>
-                <div class="icon fycon-source-vine"></div>
+                <span class="fycon-source-vine" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-vine">
               </li>
               <li>
-                <div class="icon fycon-source-wordpress"></div>
+                <span class="fycon-source-wordpress" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-wordpress">
               </li>
               <li>
-                <div class="icon fycon-source-youtube1"></div>
+                <span class="fycon-source-youtube1" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-youtube1">
               </li>
               <li>
-                <div class="icon fycon-source-youtube2"></div>
+                <span class="fycon-source-youtube2" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="source-youtube2">
               </li>
               <li>
-                <div class="icon fycon-spaceship"></div>
+                <span class="fycon-spaceship" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="spaceship">
               </li>
               <li>
-                <div class="icon fycon-tablet"></div>
+                <span class="fycon-tablet" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="tablet">
               </li>
               <li>
-                <div class="icon fycon-tag"></div>
+                <span class="fycon-tag" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="tag">
               </li>
               <li>
-                <div class="icon fycon-tv"></div>
+                <span class="fycon-tv" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="tv">
               </li>
               <li>
-                <div class="icon fycon-tv-4k"></div>
+                <span class="fycon-tv-4k" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="tv-4k">
               </li>
               <li>
-                <div class="icon fycon-tv-broadcast"></div>
+                <span class="fycon-tv-broadcast" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="tv-broadcast">
               </li>
               <li>
-                <div class="icon fycon-tv-hd"></div>
+                <span class="fycon-tv-hd" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="tv-hd">
               </li>
               <li>
-                <div class="icon fycon-tv-sd"></div>
+                <span class="fycon-tv-sd" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="tv-sd">
               </li>
               <li>
-                <div class="icon fycon-undo"></div>
+                <span class="fycon-undo" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="undo">
               </li>
               <li>
-                <div class="icon fycon-unlocked"></div>
+                <span class="fycon-unlocked" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="unlocked">
               </li>
               <li>
-                <div class="icon fycon-user-context"></div>
+                <span class="fycon-user-context" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="user-context">
               </li>
               <li>
-                <div class="icon fycon-users"></div>
+                <span class="fycon-users" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="users">
               </li>
               <li>
-                <div class="icon fycon-verified"></div>
+                <span class="fycon-verified" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="verified">
               </li>
               <li>
-                <div class="icon fycon-video"></div>
+                <span class="fycon-video" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="video">
               </li>
               <li>
-                <div class="icon fycon-website"></div>
+                <span class="fycon-website" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="website">
               </li>
               <li>
-                <div class="icon fycon-website-add"></div>
+                <span class="fycon-website-add" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="website-add">
               </li>
               <li>
-                <div class="icon fycon-whitelist"></div>
+                <span class="fycon-whitelist" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="whitelist">
               </li>
               <li>
-                <div class="icon fycon-write"></div>
+                <span class="fycon-write" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="write">
               </li>
               <li>
-                <div class="icon fycon-x"></div>
+                <span class="fycon-x" aria-hidden="true"></span>
                 <input type="text" readonly="readonly" value="x">
               </li>
             </ul>

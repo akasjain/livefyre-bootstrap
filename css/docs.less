@@ -123,21 +123,32 @@ h1.section-header {
   font-size: 2.5em;
 }
 
-section p {
-  font-size: 1.333em;
-  line-height: 1.75;
-  color: lighten(@lf-gray, 20%);
+section > div {
+  > p,
+  > ul,
+  > ol {
+    font-size: 1.333em;
+    line-height: 1.75;
+    color: lighten(@lf-gray, 20%);
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
 }
 
-p.descrip {
+p.descrip,
+ul.descrip {
   font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 14px;
 }
 
 .glossary {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 200px;
-  float: right;
 }
 
 .glossary-list {
@@ -244,4 +255,23 @@ p.descrip {
   margin-right: 10px;
   text-align: right;
   color: #bebec5;
+}
+
+.css-mapping span {
+  margin: 0;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  color: #162a36 !important;
+  overflow: hidden;
+  float: left;
+  font-size: 24px;
+  text-align: center;
+}
+
+.color-swatch {
+  width: 100%;
+  margin-bottom: 5px;
+  padding-top: 100%;
+  border-radius: 2px;
 }
