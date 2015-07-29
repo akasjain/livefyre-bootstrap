@@ -1,0 +1,126 @@
+@import (reference) "./mixins";
+@import (reference) "./variables";
+
+
+// TODO: Pagination, .cm-meta.tagless, .cm-info-lg, .cm-counts-lg
+.cm-container-padding {
+  padding: 0 15px; // DELETE ME
+}
+
+
+// Column Structure
+.cm-info, 
+.cm-site strong,
+.cm-content-count strong, 
+.cm-rules-count strong,
+.cm-format-number strong,
+.cm-timestamp time {  // Help baselines align
+  display: inline-block;
+  line-height: @slat-line-height;
+}
+
+.cm-info {
+  .make-xs-column(6);
+}
+
+.cm-meta {
+  display: inline-block;
+  max-width: calc(100% ~"-" 64px); // 64px = width of .cm-list-status + .cm-app-type
+}
+
+.cm-site {
+  display: none;
+
+  strong {
+    .truncate();
+    max-width: 100%; // LF-9203: Ensure ellipsis cuts off long urls. Use max-width instead of width to ensure tooltip appears over center of text and not its container.
+  }
+}
+
+.cm-content-count, 
+.cm-rules-count,
+.cm-timestamp {
+  .make-xs-column(2);
+}
+
+
+// Status Indicator
+.cm-list-status {
+  .border-radius(8px);
+  .translateY(-10px);
+  position: relative;
+  display: inline-block;
+  width: 8px; 
+  height: 8px;
+  margin-right: 10px;
+
+  &.status-active {
+    background-color: @lf-green;
+  }
+
+  &.status-inactive {
+    background-color: @lf-gray-light;
+  }
+}
+
+
+// App Type Icon
+.cm-app-type {
+  font-size: 28px;
+
+  &:before {
+    margin-right: 10px;
+    vertical-align: initial;
+  }
+}
+
+
+// Tags
+.cm-list-tags {
+  color: @lf-gray;
+  font-size: 10px;
+  font-weight: @headings-font-weight;
+  line-height: (@slat-line-height - 6);
+}
+
+
+// Pagination
+.cm-pagination {
+  margin-top: 20px;
+}
+
+.cm-paginate {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.cm-paginate .fycon {
+  font-size: 0.6em;
+  vertical-align: middle;
+}
+
+
+// Loader
+.cm-list-loader .lf-loader {
+  margin: 40px auto 0;
+}
+
+
+// Media Queries
+@media (min-width: @screen-md-min) {
+
+  .cm-info {
+    .make-xs-column(5);
+  }
+
+  .cm-site {
+    display: block;
+    .make-md-column(3);    
+  }
+
+  .cm-content-count, 
+  .cm-rules-count {
+    .make-md-column(1);
+  }
+
+}

@@ -1,0 +1,595 @@
+<!doctype html>
+<html class="lf">
+  <head>
+    <title>Livefyre Bootstrap Developer Docs</title>
+    <link href="../../dist/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/docs.css">
+  </head>
+  <body>
+    <header class="menu sticky">
+      <div class="container">
+        <a href="index.html" class="brand">Livefyre Bootstrap</a>
+        <ul class="docs-nav">
+          <li>
+            <a href="components.html">UI Components</a>
+          </li>
+          <li>
+            <a href="fycons.html">Fycons</a>
+          </li>
+        </ul>
+        <ul class="docs-nav right">
+          <li>
+            <a href="https://github.com/livefyre/livefyre-bootstrap">Github</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>UI Components</h1>
+        <p>Use & love us &mdash; Engineer, pls</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="glossary">
+        <ul class="glossary-list">
+          <a href="#section-buttons" class=""><li class="list-first">Buttons</li></a>
+          <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
+          <a href="#section-labels"><li>Labels</li></a>
+          <a href="#section-badges"><li>Badges</li></a>
+          <a href="#section-alerts"><li>Alerts</li></a>
+          <a href="#section-avatars"><li>Avatars</li></a>
+          <a href="#section-toggles"><li>Toggles</li></a>
+          <a href="#section-tooltips"><li>Tooltips</li></a>
+          <a href="#section-popovers"><li>Popovers</li></a>
+          <a href="#section-modals"><li>Modals</li></a>
+          <a href="#section-loader"><li class="list-last">Loader</li></a>
+        </ul>
+      </div>
+
+      <section id="section-buttons">
+        <div class="container padded slim">
+          <h1 class="section-header">Buttons</h1>
+          <h3>Colors</h3>
+          <p class="descrip">We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
+          <div class="bs-example">
+            <button class="btn btn-default" disabled="disabled">Disabled</button>
+            <button class="btn btn-default">Default</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-link">Link</button>
+          </div>
+          <div class="highlight">
+<pre class="brush: xml"><code>&lt;button class="btn btn-default" disabled="disabled"&gt;Disabled&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-link"&gt;Link&lt;/button&gt;
+</code></pre>
+          </div>
+
+          <h3>Sizes</h3>
+          <p class="descrip">There are also 3 additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
+          <div class="bs-example">
+            <button class="btn btn-primary btn-lg">Large</button>
+            <button class="btn btn-primary">Default</button>
+            <button class="btn btn-primary btn-sm">Small</button>
+            <button class="btn btn-primary btn-xs">Extra small</button>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;button class="btn btn-primary btn-lg">Large&lt;/button>
+&lt;button class="btn btn-primary">Default&lt;/button>
+&lt;button class="btn btn-primary btn-sm">Small&lt;/button>
+&lt;button class="btn btn-primary btn-xs">Extra small&lt;/button></code></pre>
+          </div>
+
+          <div class="bs-example">
+            <div class="well" style="max-width: 400px; margin: 0 auto 20px; background: #fff;">
+              <button class="btn btn-primary btn-lg btn-block" style="margin-bottom: 8px">Primary Action</button>
+              <button class="btn btn-default btn-lg btn-block">Cancel</button>
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;button class="btn btn-primary btn-lg btn-block"&gt;Primary Action&lt;/button&gt;
+&lt;button class="btn btn-default btn-lg btn-block"&gt;Cancel&lt;/button&gt;
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-button-groups">
+        <div class="container padded slim">
+          <h1 class="section-header">Button Groups & Button Toolbars</h1>
+          <p class="descrip">There are a number of configurable button groups and toolbars that flow both horizontally and vertically as well as sizing options.</p>
+
+          <div class="bs-example">
+            <div class="btn-group btn-group-lg">
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+            </div><br />
+            <div class="btn-group" style="margin-top: 10px;">
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+            </div><br />
+            <div class="btn-group btn-group-sm" style="margin-top: 10px;">
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+            </div><br />
+            <div class="btn-group btn-group-xs" style="margin-top: 10px;">
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+              <button class="btn btn-default">Button</button>
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="btn-group btn-group-lg"&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="btn-group btn-group-sm"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="btn-group btn-group-xs"&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <div class="bs-example">
+            <div class="btn-group-vertical">
+              <button class="btn btn-default">Button</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Dropdown
+                <span class="caret"></span>
+              </button>
+              <button class="btn btn-default">Button</button>
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="btn-group-vertical"&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+    Dropdown
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <div class="bs-example">
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-default">1</button>
+                <button class="btn btn-default">2</button>
+                <button class="btn btn-default">3</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-default">4</button>
+                <button class="btn btn-default">5</button>
+                <button class="btn btn-default">6</button>
+              </div>
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-default"&gt;1&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;2&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-default"&gt;4&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;5&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;6&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-labels">
+        <div class="container padded slim">
+          <h1 class="section-header">Labels</h1>
+          <p class="descrip">Labels are commonly used as tags in our UI.</p>
+          <h3>Colors</h3>
+          <div class="bs-example">
+            <span class="label label-default">Default</span>
+            <span class="label label-primary">Primary</span>
+            <span class="label label-success">Success</span>
+            <span class="label label-info">Info</span>
+            <span class="label label-warning">Warning</span>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;span class="label label-default"&gt;Default&lt;/span&gt;
+&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="label label-success"&gt;Success&lt;/span&gt;
+&lt;span class="label label-info"&gt;Info&lt;/span&gt;
+&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;
+</code></pre>
+          </div>
+          <h3>Sizes</h3>
+          <div class="bs-example">
+            <span class="label label-primary label-xl">label-xl</span>
+            <span class="label label-primary label-lg">label-lg</span>
+            <span class="label label-primary label-md">label-md</span>
+            <span class="label label-primary label">label</span>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;span class="label label-primary label-xl"&gt;label-xl&lt;/span&gt;
+&lt;span class="label label-primary label-lg"&gt;label-lg&lt;/span&gt;
+&lt;span class="label label-primary label-md"&gt;label-md&lt;/span&gt;
+&lt;span class="label label-primary label"&gt;label&lt;/span&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-badges">
+        <div class="container padded slim">
+          <h1 class="section-header">Badges</h1>
+          <p class="descrip">Badges are used to denote counts of items. They can also be used as links. To de-emphasize a badge, append the modifier class, <code>.badge-mute</code>.</p>
+          <div class="bs-example">
+            <span class="badge">1</span>
+            <span class="badge badge-mute">2</span>
+            <a class="badge badge-mute">120</a>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;span class="badge"&gt;1&lt;/span&gt;
+&lt;span class="badge badge-mute"&gt;2&lt;/span&gt;
+&lt;a href="#" class="badge"&gt;120&lt;/a&gt;  
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-alerts">
+        <div class="container padded slim">
+          <h1 class="section-header">Alerts</h1>
+          <h3>Colors</h3>
+          <p class="descrip">
+            Alerts come in three flavors: <code>.alert-success</code>, <code>.alert-info</code>, and <code>.alert-warning</code>.
+          </p>
+
+          <h3>Dismissable alerts</h3>
+          <p class="descrip">If the alert is dismissable, add class <code>.alert-dismissable</code> and include a <code>&lt;span class="close [light]"/&gt;</code>. Depending on the color of the alert, use the default darker close via <code>fycon-x</code> as seen in the example below.</p>
+          <div class="bs-example">
+            <div class="alert alert-info"><strong>Info: You might want to check that thing, it could be important.</strong></div>
+            <div class="alert alert-warning alert-dismissable"><strong>Warning: I think you might've fucked something up.</strong><span class="close light"><i class="fycon-x"></i></span></div>
+            <div class="alert alert-success alert-dismissable"><strong>Success: Good job, everything looks good!</strong><span class="close light"><i class="fycon-x"></i></span></div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="alert alert-info"&gt;
+  &lt;strong&gt;Info: You might want to check that thing, it could be important.&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning"&gt;
+  &lt;strong&gt;Warning: I think you might've fucked something up.&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success alert-dismissable"&gt;
+  &lt;strong&gt;Success: Good job, everything looks good!&lt;/strong&gt;
+  &lt;span class="close light"&gt;&lt;i class="fycon-x"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>            
+          </div>
+        </div>
+      </section>
+
+      <section id="section-avatars">
+        <div class="container padded slim">
+          <h1 class="section-header">Avatars</h1>
+          <p class="descrip">Common Livefyre and other social media avatars come in sizes in multiples of 12. Livefyre-bootstrap ships with 24x24, 36x36, 48x48, and 96x96.</p>
+          <div class="bs-example">
+            <div class="avatar avatar-lg" style="display: inline-block;">
+              <img src="http://placehold.it/96x96">
+            </div>
+            <div class="avatar" style="display: inline-block;">
+              <img src="http://placehold.it/48x48">
+            </div>
+            <div class="avatar avatar-sm" style="display: inline-block;">
+              <img src="http://placehold.it/36x36">
+            </div>
+            <div class="avatar avatar-xs" style="display: inline-block;">
+              <img src="http://placehold.it/24x24">
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="avatar avatar-lg"&gt;
+  &lt;img src="http://placehold.it/96x96"&gt;
+&lt;/div&gt;
+&lt;div class="avatar"&gt;
+  &lt;img src="http://placehold.it/48x48"&gt;
+&lt;/div&gt;
+&lt;div class="avatar avatar-sm"&gt;
+  &lt;img src="http://placehold.it/36x36"&gt;
+&lt;/div&gt;
+&lt;div class="avatar avatar-xs"&gt;
+  &lt;img src="http://placehold.it/24x24"&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-toggles">
+        <div class="container padded slim">
+          <h1 class="section-header">Toggles</h1>
+          <p class="descrip">Toggles are touch-ready and are gpu-accelerated on mobile via <code>-webkit-transform: translate3d(0,0,0)</code>.</p>
+          <p class="descrip">Note: As of LF-Bootstrap 2.0.0 toggles no longer require javascript.</p>
+          <h3>Sizing</h3>
+          <p class="descrip">There is an optional smaller toggle size which can be enabled by adding class <code>.toggle-sm</code>.</p>
+          <p class="descrip">There is an optional label (ex: "On/Off") which can be enabled by adding class <code>.toggle-label</code> and the label text.</p>
+          <div class="bs-example">
+            <label class="toggle">
+                <input type="checkbox" role="checkbox" />
+                <span></span>
+            </label>
+
+            <label class="toggle toggle-sm">
+                <input type="checkbox" role="checkbox" />
+                <span></span>
+            </label>
+
+            <label class="toggle toggle-label">
+                <input type="checkbox" role="checkbox" />
+                <span data-off="Off">On</span>
+            </label>
+
+                   
+            <label class="toggle toggle-label toggle-sm">
+                <input type="checkbox" role="checkbox" />
+                <span data-off="Off">On</span>
+            </label>
+            
+          </div>
+          <div class="highlight">
+<pre><code>&lt;label class="toggle"&gt;
+    &lt;input type="checkbox" role="checkbox" /&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="toggle toggle-sm"&gt;
+    &lt;input type="checkbox" role="checkbox" /&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="toggle toggle-label"&gt;
+    &lt;input type="checkbox" role="checkbox" /&gt;
+    &lt;span data-off="Off"&gt;On&lt;/span&gt;
+&lt;/label&gt;
+
+       
+&lt;label class="toggle toggle-label toggle-sm"&gt;
+    &lt;input type="checkbox" role="checkbox" /&gt;
+    &lt;span data-off="Off"&gt;On&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-tooltips">
+        <div class="container padded slim">
+          <h1 class="section-header">Tooltips</h1>
+          <h3>Usage</h3>
+          <p class="descrip">
+            For performance reasons, tooltip() is not loaded by default. You must initialize them yourself. You can do this via jQuery:
+          </p>
+          <p class="descrip">
+            <strong>data-attribute</strong>: 
+            <code>$('[data-toggle="tooltip"]').tooltip();</code>
+          </p>
+          <p class="descrip">
+            <strong>class/id selector</strong>: 
+            <code>$('.tooltip').tooltip();</code>
+          </p>
+          <div class="bs-example">This is a <span data-toggle="tooltip" data-title="Looks like you've found meh" style="border-bottom: 1px dotted #777">tooltip</span>. You can make them appear in a number of <span data-toggle="tooltip" data-title="To the right" data-placement="right" style="border-bottom: 1px dotted #777">ways</span>. Also to the <span data-toggle="tooltip" data-title="Left coast is the best coast" data-placement="left" style="border-bottom: 1px dotted #777">left</span> and down <span data-toggle="tooltip" data-title="Australia" data-placement="bottom" style="border-bottom: 1px dotted #777">below</span>.</div>
+          <div class="highlight">
+<pre><code><-- HTML -->
+&lt;span data-toggle="tooltip" data-title="Looks like you've found meh"&gt;tooltip&lt;/span&gt;
+
+<-- JS -->
+$('[data-toggle="tooltip"]').tooltip();
+
+$('#element').tooltip(
+  {
+    animation: true, // boolean
+    html: false, // boolean; allows HTML to be inserted into the tooltip
+    placement: 'top|bottom|left|right|auto', 
+    trigger: 'click|hover|focus',
+    title: 'string' // value if title attribute is not present on the element
+    delay: int, // delay animation in ms
+    container: 'string', // appends tooltip to a specific element
+  }
+);</code></pre>
+          </div>
+          <h3>Methods/Options</h3>
+          <p class="descrip">
+            There are also a number of placement options to pass to tooltips. To access these, either configure them via the HTML5 Data API or in a javascript config:
+          </p>
+          <p class="descrip">
+            <strong>data-attribute: </strong>
+            <code>&lt;span data-toggle="tooltip" data-placement="top|bottom|left|right|auto"&gt;</code>
+          </p>
+        </div>
+      </section>
+
+      <section id="section-popovers">
+        <div class="container padded slim">
+          <h1 class="section-header">Popovers</h1>
+          <h3>Usage</h3>
+          <p class="descrip">Popovers are syntatically similar to tooltips. In order to use popovers, you must include the tooltip.js lib as well as it is a dependency. Again, you are responsibile for initializing popovers yourself, and can access them via data-attribute or a selector.</p>
+          <div class="bs-example">
+          <button class='btn btn-primary btn-lg' data-toggle="popover" data-placement="top" data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!">Click me!</button>
+        </div>
+        <div class="highlight">
+<pre><code>&lt;button class='btn btn-primary btn-lg'
+    data-toggle="popover" 
+    data-placement="top" 
+    data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!"&gt;
+  Click me!
+&lt;/button&gt; 
+</code></pre>
+        </div>
+        </div>
+      </section>
+
+      <section id="section-modals">
+        <div class="container padded slim">
+          <h1 class="section-header">Modals</h1>
+          <h3>Static Example</h3>
+          <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button class="close" data-dismiss="modal">
+                    <i class="fycon-x"></i>
+                  </button>
+                  <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                  <span>Yr before they sold out mustache, kale chips butcher Austin Cosby sweater selfies YOLO cred +1 XOXO selvage deep v. Pork belly asymmetrical cardigan selvage Marfa messenger bag. Quinoa American Apparel paleo, cray brunch fixie you probably haven't heard of them Intelligentsia sartorial..</span><br />
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button class="btn btn-primary">Save Changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="modal-dialog"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;button class="close" data-dismiss="modal"&gt;
+        &lt;i class="fycon-x"&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;span&gt;...&lt;/span&gt;&lt;br /&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Save Changes&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>            
+          </div>
+          <h3>Usage</h3>
+          <p class="descrip">Include a template at the bottom of the page with class <code>fade</code> to hide it by default. Assign an <code>id</code> to this modal template and assign it as the <code>data-target</code>.</p>
+          <div class="bs-example">
+            <button class="btn btn-lg btn-default" data-toggle="modal" data-target="#lfModal">Launch Modal</button>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;button class="btn btn-lg btn-default" data-toggle="modal" data-target="#lfModal"&gt;
+  Launch Modal
+&lt;/button&gt;
+</code></pre>
+          </div>
+          <h3>Size options</h3>
+          <p class="descrip">
+            You can also pass two additional modal sizes in lieu of the default 600px width on <code>modal-dialog</code>:
+            <br />
+            <ul>
+              <li><code>.modal-sm</code>: 300px</li>
+              <li><code>.modal-md</code>: 600px</li>
+              <li><code>.modal-lg</code>: 900px</li>
+            </ul>
+          </p>
+          <p class="descrip">
+            If you need the text to be centered, add the class <code>.centered</code> to <code>.modal-body</code>.
+          </p>
+        </div>
+      </section>
+
+      <section id="section-loader">
+        <div class="container padded slim">
+          <h1 class="section-header">Loader</h1>
+          <h3>Usage</h3>
+          <p class="descrip">
+            Livefyre's <code>loader</code> depends on <code>loader.js</code> (included in the minified js).
+          </p>
+          <h3>Options</h3>
+          <p class="descrip">
+            <code>loader</code> accepts two parameters: <code>elem</code> and <code>size</code> (optional).
+            <ul>
+              <li><code>elem</code> expects an object or jQuery object</li>
+              <li><code>size</code> expects an <code>integer</code> divisible by 3 or one of three pre-canned sizes as a <code>string</code>: 'mini', 'small', or 'large'.</li>
+            </ul>
+          </p>
+          <div class="bs-example">
+            <div id="lfLoader" style="display: inline-block;"></div>
+            <div id="lfLoader-large" style="display: inline-block;"></div>
+            <div id="lfLoader-small" style="display: inline-block;"></div>
+            <div id="lfLoader-mini" style="display: inline-block;"></div>
+          </div>
+          <div class="highlight">
+<pre><code><-- HTML -->
+&lt;div id="lfLoader"&gt;&lt;/div&gt;
+
+<-- JS -->
+loader.decorate($('#lfLoader'), 120)
+loader.decorate($('#lfLoader-large'), 'large')
+loader.decorate($('#lfLoader-small'), 'small')
+loader.decorate($('#lfLoader-mini'), 'mini')
+</code></pre>
+          </div>
+        </div>
+      </section>
+      <!-- End of Container -->
+    </div>
+    
+    <div class="modal fade" id="lfModal" style="margin: 0 auto;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">
+              <i class="fycon-x"></i>
+            </button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <img src="img/doge.jpg" alt="doge" width="400">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="cajon.js"></script>
+    <script src="../../requirejs.conf.js"></script>
+    <script type="text/javascript">
+      require(['jquery', 'livefyre-bootstrap'],
+        function(jquery, livefyre_bootstrap){
+          $('.glossary-list').affix({
+            offset: {
+              top: 250
+            }
+          })
+          $('[data-toggle="tooltip"]').tooltip();
+          $('[data-toggle="popover"]').popover();
+          livefyre_bootstrap.loader.decorate($('#lfLoader'), 120);
+          livefyre_bootstrap.loader.decorate($('#lfLoader-large'), 'large');
+          livefyre_bootstrap.loader.decorate($('#lfLoader-small'), 'small');
+          livefyre_bootstrap.loader.decorate($('#lfLoader-mini'), 'mini');
+        });
+    </script>
+  </body>
+</html>
