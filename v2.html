@@ -98,8 +98,8 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
             <li>Updates the [Twitter] Bootstrap version to 3.3.4 (from 3.0.3).</li>
             <li>Loader: Fixes bug where a one-pixel line sometimes appears between the second and third rows.</li>
             <li>Updated Radio button and Checkbox styles.</li>
-            <li>New right-aligned button toolbar.</li>
-            <li>Increased spacing between buttons in button toolbar from 5px to 6px.</li>
+            <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
+            <li>Increased spacing between buttons in button toolbar.</li>
           </ul>
         </div>
       </section>
@@ -213,7 +213,8 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
           <h3>Changes from v1.x</h3>
           <ul class="descrip">
             <li>All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
-            <li>New variables <code>@gray-darkest</code>, <code>@gray-darkish</code> and <code>@gray-lightest</code>. 
+            <li>New variables <code>@gray-darkest</code>, <code>@gray-darkish</code> and <code>@gray-lightest</code>.</li>
+            <li>Using hex codes for all (instead of <code>tint</code>) so it's easier to match a variable name with what you find in the inspector.</li>
           </ul>
 
         </div>
@@ -510,9 +511,9 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
               </div>
             </div>
             <div class="btn-toolbar btn-toolbar-right">
-                <button class="btn btn-default">1</button>
-                <button class="btn btn-default">2</button>
-                <button class="btn btn-default">3</button>
+              <button class="btn btn-default">1</button>
+              <button class="btn btn-default">2</button>
+              <button class="btn btn-default">3</button>
             </div>
           </div>
           <div class="highlight">
@@ -530,12 +531,18 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
 &lt;/div&gt;
 
 &lt;div class="btn-toolbar btn-toolbar-right"&gt;
-    &lt;button class="btn btn-default"&gt;1&lt;/button&gt;
-    &lt;button class="btn btn-default"&gt;2&lt;/button&gt;
-    &lt;button class="btn btn-default"&gt;3&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;1&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;2&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;3&lt;/button&gt;
 &lt;/div&gt;</code></pre>
           </div>
         </div>
+
+        <h3>Changes from v1.x</h3>
+        <ul class="descrip">
+          <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
+        </ul>
+
       </section>
 
       <section id="section-labels">
