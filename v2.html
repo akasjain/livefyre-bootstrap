@@ -50,7 +50,7 @@
           <a href="#section-checklist"><li>Migration Checklist</li></a>
           <a href="#section-importing"><li>Importing</li></a>
           <a href="#section-colors"><li>Colors</li></a>
-          <a href="#section-forms"><li>Forms</li></a>
+          <a href="#section-checkboxes"><li>Checkboxes and Radios</li></a>
           <a href="#section-buttons"><li>Buttons</li></a>
           <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
           <a href="#section-labels"><li>Labels</li></a>
@@ -224,11 +224,9 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
       </section>
 
 
-      <section id="section-buttons">
+      <section id="section-checkboxes">
         <div class="container padded slim">
-          <h1 class="section-header">Forms</h1>
-
-          <h3>Checkboxes and radios</h3>
+          <h1 class="section-header">Checkboxes and Radio Buttons</h1>
           <p class="descrip">Checkboxes and radio buttons override browser default styles and are rendered using Fycons.</p>
           <div class="bs-example" data-example-id="block-checkboxes-radios">
             <form>
@@ -716,6 +714,40 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
           </div>
         </div>
       </section>
+
+
+      <section id="section-pager">
+        <div class="container padded slim">
+          <h1 class="section-header">Pager</h1>
+          <ul class="descrip">
+            <li>For previous/next paging (not for numbered pagination).</li>
+            <li>Pager is right-aligned by default but you can override it using [Twitter] Boostrap's helper classes <code>.text-left</code> and <code>.text-center</code> alongside <code>.pager</code>.</li>
+          </ul>
+          <div class="bs-example">
+            <ul class="pager">
+              <li>
+                <strong>Showing 1-7 of 7</strong>
+              </li>
+              <li>
+                <a class="btn btn-default" href="#"><span class="fycon-arrow-left"></span> Prev</a>
+                <a class="btn btn-default" href="#">Next <span class="fycon-arrow-right"></span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;ul class="pager"&gt;
+  &lt;li&gt;
+    &lt;strong&gt;Showing 1-7 of 7&lt;/strong&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a class="btn btn-default" href="#"&gt;&lt;span class="fycon-arrow-left"&gt;&lt;/span&gt; Prev&lt;/a&gt;
+    &lt;a class="btn btn-default" href="#"&gt;Next &lt;span class="fycon-arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
 
       <section id="section-toggles">
         <div class="container padded slim">
