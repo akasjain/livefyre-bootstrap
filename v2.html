@@ -50,6 +50,7 @@
           <a href="#section-checklist"><li>Migration Checklist</li></a>
           <a href="#section-importing"><li>Importing</li></a>
           <a href="#section-colors"><li>Colors</li></a>
+          <a href="#section-forms"><li>Forms</li></a>
           <a href="#section-buttons"><li>Buttons</li></a>
           <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
           <a href="#section-labels"><li>Labels</li></a>
@@ -217,6 +218,111 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
 
         </div>
       </section>
+
+
+      <section id="section-buttons">
+        <div class="container padded slim">
+          <h1 class="section-header">Forms</h1>
+
+          <h3>Checkboxes and radios</h3>
+          <p class="descrip">Checkboxes and radio buttons override browser default styles and are rendered using Fycons.</p>
+          <div class="bs-example" data-example-id="block-checkboxes-radios">
+            <form>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Option one is this and that - be sure to include why it's great
+                </label>
+              </div>
+              <div class="checkbox disabled">
+                <label>
+                  <input type="checkbox" value="" disabled="">
+                  Option two is disabled
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input id="checkbox-indeterminate" type="checkbox" value="">
+                  Option three is indeterminate (triggered in this example via JS)
+                </label>
+              </div>
+              <br>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                  Option one is this and that - be sure to include why it's great
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  Option two can be something else and selecting it will deselect option one
+                </label>
+              </div>
+              <div class="radio disabled">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+                  Option three is disabled
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="highlight"><pre><code class="language-html" data-lang="html">&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value=""&gt;
+    Option one is this and that - be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="checkbox disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value="" disabled=""&gt;
+    Option two is disabled
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value=""&gt;
+    Option three is indeterminate (triggered in this example via JS)
+  &lt;/label&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""&gt;
+    Option one is this and that - be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+    Option two can be something else and selecting it will deselect option one
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled=""&gt;
+    Option three is disabled
+  &lt;/label&gt;
+&lt;/div&gt;
+          </code></pre></div>
+
+          <h3>Changes from v1.x</h3>
+          <ul class="descrip">
+            <li>Checkboxes and radio buttons override browser default styles and are rendered using Fycons.</li>
+          </ul>
+
+        </div>
+      </section>
+      <script type="text/javascript">
+        document.getElementById("checkbox-indeterminate").indeterminate = true;
+      </script>
+
 
 
       <section id="section-buttons">
