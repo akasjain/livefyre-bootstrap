@@ -334,6 +334,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
           <h1 class="section-header">Buttons</h1>
           <h3>Colors</h3>
           <p class="descrip">We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
+          <p class="descrip">The exception is the new Hollow button. It's semi-transparent so it looks slick on top of a photo.</p>
           <div class="bs-example">
             <button class="btn btn-default" disabled="disabled">Disabled</button>
             <button class="btn btn-default">Default</button>
@@ -342,6 +343,9 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
             <button class="btn btn-success">Success</button>
             <button class="btn btn-info">Info</button>
             <button class="btn btn-link">Link</button>
+            <div style="display: inline-block; margin-top: 30px; padding: 30px 60px; background: url(http://web.livefyre.com/wp-content/uploads/2014/10/Oreo.jpg); background-size: 150% auto;">
+              <button class="btn btn-hollow">Hollow</button>
+            </div>
           </div>
           <div class="highlight">
 <pre class="brush: xml"><code>&lt;button class="btn btn-default" disabled="disabled"&gt;Disabled&lt;/button&gt;
@@ -351,6 +355,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
 &lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
 &lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
 &lt;button class="btn btn-link"&gt;Link&lt;/button&gt;
+&lt;button class="btn btn-hollow"&gt;Hollow&lt;/button&gt;
 </code></pre>
           </div>
 
@@ -425,6 +430,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
           </div>
           <h3>Changes from v1.x</h3>
           <ul class="descrip">
+            <li>New semi-transparent <code>.btn-hollow</code> style.</li>
             <li>Improved ability to fine tune fycon sizes.</li>
             <li>Improved vertical centering.</li>
             <li>Constructed using new button height variables (@btn-height-lg: 46px) instead of vertical padding to ensure better button height consistency.</li>
