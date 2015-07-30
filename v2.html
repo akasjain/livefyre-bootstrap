@@ -57,6 +57,7 @@
           <a href="#section-badges"><li>Badges</li></a>
           <a href="#section-alerts"><li>Alerts</li></a>
           <a href="#section-avatars"><li>Avatars</li></a>
+          <a href="#section-slats"><li>Slats</li></a>
           <a href="#section-toggles"><li>Toggles</li></a>
           <a href="#section-tooltips"><li>Tooltips</li></a>
           <a href="#section-popovers"><li>Popovers</li></a>
@@ -100,6 +101,8 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
             <li>Updated Radio button and Checkbox styles.</li>
             <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
             <li>Increased spacing between buttons in button toolbar.</li>
+            <li>Adds new slats styles.</li>
+            <li>Adds new Alert Modal.</li>
           </ul>
         </div>
       </section>
@@ -667,6 +670,53 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
         </div>
       </section>
 
+
+      <section id="section-slats">
+        <div class="container padded slim">
+          <h1 class="section-header">Slats</h1>
+          <ul class="descrip">
+            <li>Use slats to create dashboard lists. Ex: App Manager and Collection Manager (they don't use slat styles yet but they will!)</li>
+            <li>Content is vertically-aligned to the top by default. Can be vertically centered using the <code>.slat-vertical-center</code> class.</li>
+            <li>Slat can be used as a header by adding <code>.slat-header</code> class.</li>
+          </ul>
+
+          <div class="bs-example">
+            <div class="slat slat-header slat-vertical-center">
+              <div class="col-xs-5">Title</div>
+              <div class="col-xs-5">Site</div>
+              <div class="col-xs-2">Date Modified</div>
+            </div>
+            <div class="slat">
+              <div class="col-xs-5">Lorem Ipsum Dolor Sit Amet</div>
+              <div class="col-xs-5">Test Site</div>
+              <div class="col-xs-2">4 days ago</div>
+            </div>
+            <div class="slat">
+              <div class="col-xs-5">Praesent vestibulum vulputate vehicula In orci diam, suscipit a ultrices et, mollis a turpis</div>
+              <div class="col-xs-5">Another Site</div>
+              <div class="col-xs-2">10 days ago</div>
+            </div>
+            <div class="slat">
+              <div class="col-xs-5">Suscipit a ultrices et, mollis a turpis</div>
+              <div class="col-xs-5">Another Site</div>
+              <div class="col-xs-2">7 months ago</div>
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="slat slat-header slat-vertical-center"&gt;
+  &lt;div class="col-xs-5"&gt;Title&lt;/div&gt;
+  &lt;div class="col-xs-5"&gt;Site&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;Date Modified&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="slat"&gt;
+  &lt;div class="col-xs-5"&gt;Lorem Ipsum...&lt;/div&gt;
+  &lt;div class="col-xs-5"&gt;Test Site&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;4 days ago&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
       <section id="section-toggles">
         <div class="container padded slim">
           <h1 class="section-header">Toggles</h1>
@@ -928,6 +978,42 @@ $('#element').tooltip(
 </code></pre>            
           </div>
           
+          <h3>Alert Modal</h3>
+          <ul class="descrip">
+            <li>Alternative modal style, useful for alert messages and notifications that require the user's attention.</li>
+            <li>To use, add the <code>.modal-alert</code> class to <code>.modal</code> or <code>.modal-dialog</code>. You can't yet create an Alert Modal via a data attribute or JavaScript option.</li>
+            <li>Do not include a <code>.modal-header</code> section.</li>
+            <li>In <code>.modal-body</code>, use an <code>h4</code> for the headline.</li>
+            <li>Everything is center-aligned by default but you can use [Twitter] Boostrap's helper classes <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to independently align headlines, text and buttons.</li>
+          </ul>
+          <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+            <div class="modal-dialog modal-sm modal-alert">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h4>Are you sure you want to publish this version of <strong><em>Winter Storm Media Wall</em></strong>?</h4>  
+                  <p>This will make this App live for use outside of Livefyre Studio.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button class="btn btn-primary">Yes, Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="highlight">
+<pre><code>&lt;div class="modal-dialog modal-sm modal-alert"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;h4&gt;...&lt;/h4&gt;  
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-default" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Yes, Publish&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>            
+          </div>
 
           <h3>Usage</h3>
           <p class="descrip">Include a template at the bottom of the page with class <code>fade</code> to hide it by default. Assign an <code>id</code> to this modal template and assign it as the <code>data-target</code>.</p>
