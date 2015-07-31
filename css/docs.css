@@ -115,16 +115,23 @@ section > ul li,
 section > ol li {
   margin-bottom: 5px;
 }
-.panel p,
-.panel ul,
-.panel ol {
+.panel-group .panel-heading {
+  padding: 0;
+}
+.panel-group .panel-title a {
+  display: block;
+  padding: 19px 17px;
+}
+.panel-group p,
+.panel-group ul,
+.panel-group ol {
   font-size: 1.333em;
   line-height: 1.75;
   color: #5a647b;
 }
-.panel p li,
-.panel ul li,
-.panel ol li {
+.panel-group p li,
+.panel-group ul li,
+.panel-group ol li {
   margin-bottom: 5px;
 }
 p.descrip,
