@@ -115,6 +115,18 @@ section > ul li,
 section > ol li {
   margin-bottom: 5px;
 }
+.panel p,
+.panel ul,
+.panel ol {
+  font-size: 1.333em;
+  line-height: 1.75;
+  color: #5a647b;
+}
+.panel p li,
+.panel ul li,
+.panel ol li {
+  margin-bottom: 5px;
+}
 p.descrip,
 ul.descrip {
   font-size: 1.1rem;
@@ -133,9 +145,6 @@ h1.section-header {
   width: 200px;
 }
 @media (min-width: 990px) {
-  .glossary.affix-top {
-    margin-top: 40px;
-  }
   .glossary.affix {
     position: fixed;
     top: 60px;
@@ -251,4 +260,10 @@ h1.section-header {
   margin-bottom: 5px;
   padding-top: 100%;
   border-radius: 2px;
+}
+.collapse-toggle {
+  margin-top: -3.5em;
+}
+.collapse h3 {
+  margin-top: 0;
 }

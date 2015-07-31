@@ -45,13 +45,9 @@
       <div class="row">
 
         <div class="col-md-3 col-md-push-9">
-          <div class="glossary" data-spy="affix" data-offset-top="240">
+          <div class="glossary" data-spy="affix" data-offset-top="200">
             <ul class="glossary-list">
-              <a href="#section-intro"><li class="list-first">Introduction</li></a>
-              <a href="#section-usage"><li>Usage</li></a>
-              <a href="#section-changes"><li>Changes from v1.x</li></a>
-              <a href="#section-checklist"><li>Migration Checklist</li></a>
-              <a href="#section-importing"><li>Importing</li></a>
+              <a href="#section-importing"><li class="list-first">Importing</li></a>
               <a href="#section-colors"><li>Colors</li></a>
               <a href="#section-checkboxes"><li>Checkboxes and Radios</li></a>
               <a href="#section-buttons"><li>Buttons</li></a>
@@ -62,7 +58,7 @@
               <a href="#section-avatars"><li>Avatars</li></a>
               <a href="#section-slats"><li>Slats</li></a>
               <a href="#section-nodatablock"><li>No-Data Block</li></a>
-              <a href="#section-pager"><li>Toggles</li></a>
+              <a href="#section-pager"><li>Pager</li></a>
               <a href="#section-toggles"><li>Toggles</li></a>
               <a href="#section-tooltips"><li>Tooltips</li></a>
               <a href="#section-popovers"><li>Popovers</li></a>
@@ -77,63 +73,117 @@
         <div class="col-md-9 col-md-pull-3">
 
           <section id="intro">
-            <h1 class="section-header">Introduction</h1>
-            <ul>
-              <li>This version of Livefyre Bootstrap was updated to support the creation of Asset Manager. Version 1.x still exists separately and will be maintained until the rest of Studio migrates to 2.0.0.</li>
-              <li>Version 2.0.0 currently lives on the <a href="https://github.com/Livefyre/livefyre-bootstrap/tree/2.0.0" target="_blank"><code>2.0.0</code> branch on Github</a>. The 1.x version lives on the <code>master</code> branch.</li>
-              <li>All of the content from the <a href="components.html">UI Components</a> page has been included here for your convenience.</li>
-              <li><a href="fycons.html">Fycons</a> and their classes are pretty much identical to v1.x (minus the lf- prefix).</li>
-            </ul>
-          </section>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      About This Version
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <ul>
+                      <li>This version of Livefyre Bootstrap was updated to support the creation of Asset Manager. Version 1.x still exists separately and will be maintained until the rest of Studio and our apps migrate to 2.0.0.</li>
+                      <li>Version 2.0.0 currently lives on the <a href="https://github.com/Livefyre/livefyre-bootstrap/tree/2.0.0" target="_blank"><code>2.0.0</code> branch on Github</a>. The 1.x version lives on the <code>master</code> branch.</li>
+                      <li>All of the content from the <a href="components.html">UI Components</a> page has been included here for your convenience.</li>
+                      <li><a href="fycons.html">Fycons</a> and their classes are pretty much identical to v1.x (minus the lf- prefix).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-          <section id="usage">
-            <h1 class="section-header">Usage</h1>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      Usage
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <p>In your <code>package.json</code> or <code>bower.json</code> file, add or update the <code>livefyre-bootstrap</code> dependency:
+                    <pre>"livefyre-bootstrap": "git+ssh://git@github.com/Livefyre/livefyre-bootstrap.git#2.0.0"</pre>
+                    <p>For JSFiddle and CodePen projects, you can use RawGit to serve the CSS and JS files:</p>
+                    <pre>https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap.min.css
+https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap.min.js</pre>
+                  </div>
+                </div>
+              </div>
 
-            <p>In your <code>package.json</code> or <code>bower.json</code> file, add or update the <code>livefyre-bootstrap</code> dependency:
-            <pre>"livefyre-bootstrap": "git+ssh://git@github.com/Livefyre/livefyre-bootstrap.git#2.0.0"</pre>
-            <p>For JSFiddle and CodePen projects, you can use RawGit to serve the CSS and JS files:</p>
-            <pre>https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap.min.css
-    https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap.min.js</pre>
-          </section>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      Changes from v1.x
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <ul>
+                      <li>Removes the <code>lf-</code> prefix from all CSS classes, markup and JS. This makes it easier to update to the latest [Twitter] Bootstrap version, removes a lot of redundant CSS and allows us to take advantage of all [Twitter] Bootstrap features.</li>
+                      <li>Updates the [Twitter] Bootstrap version to 3.3.4 (from 3.0.3).</li>
+                      <li>Allows you to specify the location of your [Twitter] Bootstrap files.</li>
+                      <li>New Slats styles.</li>
+                      <li>New Alert Modal.</li>
+                      <li>Loader: Fixes bug where a one-pixel line sometimes appears between the second and third rows.</li>
+                      <li>Many more listed alongside each section below.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-          <section id="section-changes">
-            <h1 class="section-header">Changes from v1.x</h1>
-            <ul>
-              <li>Removes the <code>lf-</code> prefix from all CSS classes, markup and JS. This makes it easier to update to the latest [Twitter] Bootstrap version, removes a lot of redundant CSS and allows us to take advantage of all [Twitter] Bootstrap features.</li>
-              <li>Updates the [Twitter] Bootstrap version to 3.3.4 (from 3.0.3).</li>
-              <li>Loader: Fixes bug where a one-pixel line sometimes appears between the second and third rows.</li>
-              <li>Updated Radio button and Checkbox styles.</li>
-              <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
-              <li>Increased spacing between buttons in button toolbar.</li>
-              <li>Adds new slats styles.</li>
-              <li>Adds new Alert Modal.</li>
-            </ul>
-          </section>
-
-          <section id="section-checklist">
-            <h1 class="section-header">Checklist for Migrating From v1.x</h1>
-            <ul>
-              <li>Remove the <code>lf-</code> prefix from your CSS classes, markup and JS.</li>
-              <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre-Bootstrap's variables and mixins files.</li>
-              <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height. (link)</li>
-              <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
-              <li><strong>Toggles:</strong> Update all toggle instances with the new markup (more).</li>
-              <li><strong>Toggles:</strong> Toggle are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
-              <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. You should now look for the "checked" attribute of the input element (the old way was to look for the presence of the "active" class). (more)</li>
-              <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
-              <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
-              <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
-              <li><strong>Modals:</strong> Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to align headlines, text and buttons.</li>
-              <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
-              <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
-              <li><strong>Tooltips:</strong> If you'd like the change a tooltip to trigger on click, use the <code>data-trigger="click"</code> attribute.</li>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                      Checklist for Migrating from v1.x
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                  <div class="panel-body">
+                    <ol>
+                      <li>Remove the <code>lf-</code> prefix from your CSS classes, markup and JS.</li>
+                      <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre-Bootstrap's variables and mixins files.</li>
+                      <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height. (link)</li>
+                      <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
+                      <li><strong>Toggles:</strong> Update all toggle instances with the new markup (more).</li>
+                      <li><strong>Toggles:</strong> Toggle are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
+                      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. You should now look for the "checked" attribute of the input element (the old way was to look for the presence of the "active" class). (more)</li>
+                      <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
+                      <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
+                      <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
+                      <li><strong>Modals:</strong> Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to align headlines, text and buttons.</li>
+                      <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
+                      <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
+                      <li><strong>Tooltips:</strong> If you'd like the change a tooltip to trigger on click, use the <code>data-trigger="click"</code> attribute.</li>
               <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
-            </ul>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </section>
 
 
           <section id="section-importing">
             <h1 class="section-header">Importing Variables &amp; Mixins</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-importing" aria-expanded="false" aria-controls="changes-importing">Changes from v1.x</a>
+            <div class="collapse" id="changes-importing">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>You must specify the location of your [Twitter] Bootstrap files using the <code>@bootstrap-less</code> variable.</li>
+                </ul>
+              </div>
+            </div>
+
             <p>Some of Livefyre Bootstrap's Less files rely on a variable called <code>@bootstrap-less</code>, which contains the location of your [Twitter] Bootstrap files. This allows you to situate your library files wherever you wish. When you're importing Livefyre Bootstrap's Less files individually, you may need to provide a value for this variable as there is no default fallback (couldn't figure this out, sry).</p>
 
             <p>Example: In your main Less file, if your modules have their own variables and mixins files:</p>
@@ -158,7 +208,20 @@
 
 
           <section id="section-colors">
+            
             <h1 class="section-header">Colors</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-colors" aria-expanded="false" aria-controls="changes-colors">Changes from v1.x</a>
+            <div class="collapse" id="changes-colors">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
+                  <li>New variables <code>@gray-darkest</code>, <code>@gray-darkish</code> and <code>@gray-lightest</code>.</li>
+                  <li>Using hex codes for all (instead of <code>tint</code>) so it's easier to match a variable name with what you find in the inspector.</li>
+                </ul>
+              </div>
+            </div>
 
             <h3>Grays</h3>
             <div class="bs-example">
@@ -208,18 +271,22 @@
 @gray-lightest: #f7f7f7; // 4%   - Ex: Default bg (LF variable)</code></pre>
             </div>
 
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
-              <li>New variables <code>@gray-darkest</code>, <code>@gray-darkish</code> and <code>@gray-lightest</code>.</li>
-              <li>Using hex codes for all (instead of <code>tint</code>) so it's easier to match a variable name with what you find in the inspector.</li>
-            </ul>
-
           </section>
 
 
           <section id="section-checkboxes">
             <h1 class="section-header">Checkboxes and Radio Buttons</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-checkboxes" aria-expanded="false" aria-controls="changes-checkboxes">Changes from v1.x</a>
+            <div class="collapse" id="changes-checkboxes">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Checkboxes and radio buttons override browser default styles and are rendered using Fycons.</li>
+                </ul>
+              </div>
+            </div>
+
             <p class="descrip">Checkboxes and radio buttons override browser default styles and are rendered using Fycons.</p>
             <div class="bs-example" data-example-id="block-checkboxes-radios">
               <form>
@@ -306,11 +373,6 @@
   &lt;/label&gt;
 &lt;/div&gt;</code></pre></div>
 
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>Checkboxes and radio buttons override browser default styles and are rendered using Fycons.</li>
-            </ul>
-
           </section>
           <script type="text/javascript">
             document.getElementById("checkbox-indeterminate").indeterminate = true;
@@ -320,6 +382,21 @@
 
           <section id="section-buttons">
             <h1 class="section-header">Buttons</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-buttons" aria-expanded="false" aria-controls="changes-buttons">Changes from v1.x</a>
+            <div class="collapse" id="changes-buttons">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>New semi-transparent <code>.btn-hollow</code> style.</li>
+                  <li>Improved ability to fine tune fycon sizes.</li>
+                  <li>Improved vertical centering.</li>
+                  <li>Constructed using new button height variables (@btn-height-lg: 46px) instead of vertical padding to ensure better button height consistency.</li>
+                  <li>All buttons now have the same border-radius (2px).</li>
+                </ul>
+              </div>
+            </div>
+
             <h3>Colors</h3>
             <p class="descrip">We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
             <p class="descrip">The exception is the new Hollow button. It's semi-transparent so it looks slick on top of a photo.</p>
@@ -332,7 +409,7 @@
               <button class="btn btn-info">Info</button>
               <button class="btn btn-link">Link</button>
               <div style="display: inline-block; margin-top: 30px; padding: 30px 60px; background: url(http://web.livefyre.com/wp-content/uploads/2014/10/Oreo.jpg); background-size: 150% auto;">
-                <button class="btn btn-hollow">Hollow</button>
+                <button class="btn btn-hollow btn-lg">Hollow</button>
               </div>
             </div>
             <div class="highlight">
@@ -343,7 +420,7 @@
 &lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
 &lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
 &lt;button class="btn btn-link"&gt;Link&lt;/button&gt;
-&lt;button class="btn btn-hollow"&gt;Hollow&lt;/button&gt;</code></pre>
+&lt;button class="btn btn-hollow btn-lg"&gt;Hollow&lt;/button&gt;</code></pre>
             </div>
 
             <h3>Sizes</h3>
@@ -414,18 +491,22 @@
   &lt;span class="fycon-action-like fycon-xl" aria-hidden="true"&gt;&lt;/span&gt; Extra Large
 &lt;/button&gt;</code></pre>
             </div>
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>New semi-transparent <code>.btn-hollow</code> style.</li>
-              <li>Improved ability to fine tune fycon sizes.</li>
-              <li>Improved vertical centering.</li>
-              <li>Constructed using new button height variables (@btn-height-lg: 46px) instead of vertical padding to ensure better button height consistency.</li>
-              <li>All buttons now have the same border-radius (2px).</li>
-            </ul>
           </section>
 
           <section id="section-button-groups">
             <h1 class="section-header">Button Groups & Button Toolbars</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-button-groups" aria-expanded="false" aria-controls="changes-button-groups">Changes from v1.x</a>
+            <div class="collapse" id="changes-button-groups">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
+                  <li>Increased spacing between buttons in button toolbar.</li>
+                </ul>
+              </div>
+            </div>
+
             <p class="descrip">There are a number of configurable button groups and toolbars that flow both horizontally and vertically as well as sizing options.</p>
 
             <div class="bs-example">
@@ -527,11 +608,6 @@
   &lt;button class="btn btn-default"&gt;3&lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </div>
-
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
-            </ul>
 
           </section>
 
@@ -750,6 +826,23 @@
 
           <section id="section-toggles">
             <h1 class="section-header">Toggles</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-toggles" aria-expanded="false" aria-controls="changes-toggles">Changes from v1.x</a>
+            <div class="collapse" id="changes-toggles">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Completely different markup.</li>
+                  <li>All-CSS now. No more JS.</li>
+                  <li>Uses checkbox for better accessibility and semantics.</li>
+                  <li>Check for state change by using the <code>checked</code> attribute of input element (instead of <code>.active</code> class).</li>
+                  <li>"On/Off" text lives in markup now so easier to swap in internationalization text.</li>
+                  <li>Works inside of dropdown menus.</li>
+                  <li>Visually unchanged from prevous version.</li>
+                </ul>
+              </div>
+            </div>
+
             <h3>Labels</h3>
             <p class="descrip">
               You can display text labels by adding the <code>.toggle-label</code> class, a <code>data-off</code> attribute and text inside of the span for the "on" state.
@@ -801,19 +894,22 @@
   &lt;span data-off="Off"&gt;On&lt;/span&gt;
 &lt;/label&gt;</code></pre>
             </div>
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>All-CSS now. No more JS.</li>
-              <li>Uses checkbox for better accessibility and semantics.</li>
-              <li>Check for state change by using the <code>checked</code> attribute of input element (instead of <code>.active</code> class).</li>
-              <li>"On/Off" text lives in markup now so easier to swap in internationalization text.</li>
-              <li>Works inside of dropdown menus.</li>
-              <li>Visually unchanged from prevous version.</li>
-            </ul>
+
           </section>
 
           <section id="section-tooltips">
             <h1 class="section-header">Tooltips</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-tooltips" aria-expanded="false" aria-controls="changes-tooltips">Changes from v1.x</a>
+            <div class="collapse" id="changes-tooltips">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Added ability to trigger tooltip on click instead of on hover. (I know, Bootstrap says it can do this out of the box but it really doesn't. So we had to extend the plugin ourselves.)</li>
+                </ul>
+              </div>
+            </div>
+
             <h3>Usage</h3>
             <p class="descrip">
               For performance reasons, tooltip() is not loaded by default. You must initialize them yourself. You can do this via jQuery:
@@ -861,10 +957,6 @@ $('#element').tooltip(
               <code>&lt;span data-toggle="tooltip" data-placement="top|bottom|left|right|auto"&gt;</code>
             </p>
 
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>Added ability to trigger tooltip on click instead of on hover. (I know, [Twitter] Bootstrap says it can do this out of the box but it really doesn't. So we built it.)</li>
-            </ul>
           </section>
 
           <section id="section-popovers">
@@ -886,6 +978,20 @@ $('#element').tooltip(
 
           <section id="section-modals">
             <h1 class="section-header">Modals</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-modals" aria-expanded="false" aria-controls="changes-modals">Changes from v1.x</a>
+            <div class="collapse" id="changes-modals">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Increased overall padding. Other minor style changes.</li>
+                  <li>To add a new 450px modal size, we changed <code>.modal-sm</code> from 300px wide to 450px. You can use the new <code>.modal-xs</code> class to create 300px wide modals.</li>
+                  <li>Added ability to divide content inside the modal body using <code>section</code>.</li>
+                  <li>Added support for [Twitter] Bootstrap's helper classes for text alignment (<code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code>) so they can be used on the modal's title, body and footer containers. Note that the <code>.centered</code> class has been deprecated in [Twitter] Bootstrap.</li>
+                  <li>Fixed close button so it no longer affects header text positioning.</li>
+                </ul>
+              </div>
+            </div>
 
             <h3>Static Example</h3>
             <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
@@ -1064,20 +1170,24 @@ $('#element').tooltip(
               Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> on any element align headers, text and buttons.
             </p>
 
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>Increased overall padding. Other minor style changes.</li>
-              <li>To add a new 450px modal size, we changed <code>.modal-sm</code> from 300px wide to 450px. You can use the new <code>.modal-xs</code> class to create 300px wide modals.</li>
-              <li>Added ability to divide content inside the modal body using <code>section</code>.</li>
-              <li>Added support for [Twitter] Bootstrap's helper classes for text alignment (<code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code>) so they can be used on the modal's title, body and footer containers. Note that the <code>.centered</code> class has been deprecated in [Twitter] Bootstrap.</li>
-              <li>Fixed close button so it no longer affects header text positioning.</li>
-            </ul>
-
           </section>
 
 
           <section id="section-dropdowns">
             <h1 class="section-header">Dropdowns</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-dropdowns" aria-expanded="false" aria-controls="changes-dropdowns">Changes from v1.x</a>
+            <div class="collapse" id="changes-dropdowns">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Minor style updates to padding, border-radius, hover colors.</li>
+                  <li>New <code>.dropdown-menu-center</code> class for center-aligning dropdown panels.</li>
+                  <li>The trigger button's caret has been changed to a chevron. Keep using the <code>.caret</code> class in dropdown triggers. Double-check other dropdown triggers to make sure they now display the chevron.</li>
+                </ul>
+              </div>
+            </div>
+
             <h3>Alignment</h3>
             <p class="descrip">By default, dropdown panels are left-aligned.</p>
             <p class="descrip">To right align a panel, you can either add <code>.dropdown-menu-right</code> alongside the <code>.dropdown-menu</code> class or add <code>.pull-right</code> to the container element.</p>
@@ -1173,13 +1283,6 @@ $('#element').tooltip(
 &lt;/div&gt;</code></pre>
             </div>
 
-            <h3>Changes from v1.x</h3>
-            <ul class="descrip">
-              <li>Minor style updates to padding, border-radius, hover colors.</li>
-              <li>New <code>.dropdown-menu-center</code> class for center-aligning dropdown panels.</li>
-              <li>The trigger button's caret has been changed to a chevron. Keep using the <code>.caret</code> class in dropdown triggers. Double-check other dropdown triggers to make sure they now display the chevron.</li>
-            </ul>
-
           </section>
 
 
@@ -1259,7 +1362,7 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
         function(jquery, livefyre_bootstrap){
           $('.glossary-list').affix({
             offset: {
-              top: 250
+              top: 200
             }
           })
           $('[data-toggle="tooltip"]').tooltip();

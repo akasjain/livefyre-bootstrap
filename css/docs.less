@@ -135,6 +135,20 @@ section {
   }
 }
 
+.panel {
+  p,
+  ul,
+  ol {
+    font-size: 1.333em;
+    line-height: 1.75;
+    color: lighten(@lf-gray, 20%);
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 p.descrip,
 ul.descrip {
   font-size: 1.1rem;
@@ -155,10 +169,6 @@ h1.section-header {
   width: 200px;
 
   @media (min-width: 990px) {
-    &.affix-top {
-      margin-top: 40px;
-    }
-
     &.affix {
       position: fixed;
       top: 60px;
@@ -282,4 +292,12 @@ h1.section-header {
   margin-bottom: 5px;
   padding-top: 100%;
   border-radius: 2px;
+}
+
+.collapse-toggle {
+  margin-top: -3.5em;
+}
+
+.collapse h3 {
+  margin-top: 0;
 }
