@@ -17,13 +17,12 @@ body {
   color: #222222;
 }
 .container {
-  max-width: 1120px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   position: relative;
 }
 .container.slim {
-  max-width: 880px;
   margin: 0;
   padding: 0;
 }
@@ -81,6 +80,7 @@ body {
 .hero {
   background: #2f3440;
   margin-top: 29px;
+  margin-bottom: 20px;
   padding: 30px 10px 50px;
   color: #fff;
 }
@@ -98,25 +98,21 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 section {
-  margin-bottom: 10px;
+  margin-bottom: 60px;
 }
-h1.section-header {
-  padding-bottom: 14px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  color: #2f3440;
-  font-size: 2.5em;
+section > h3 {
+  margin-top: 30px;
 }
-section > div > p,
-section > div > ul,
-section > div > ol {
+section > p,
+section > ul,
+section > ol {
   font-size: 1.333em;
   line-height: 1.75;
   color: #5a647b;
 }
-section > div > p li,
-section > div > ul li,
-section > div > ol li {
+section > p li,
+section > ul li,
+section > ol li {
   margin-bottom: 5px;
 }
 p.descrip,
@@ -125,27 +121,35 @@ ul.descrip {
   line-height: 1.5;
   margin-bottom: 14px;
 }
+h1.section-header {
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #2f3440;
+  font-size: 2.5em;
+}
 .glossary {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
   width: 200px;
 }
+@media (min-width: 990px) {
+  .glossary.affix-top {
+    margin-top: 40px;
+  }
+  .glossary.affix {
+    position: fixed;
+    top: 60px;
+  }
+}
 .glossary-list {
-  width: 200px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.glossary-list.affix-top {
-  margin-top: 40px;
-}
-.glossary-list.affix {
-  top: 60px;
-}
 .glossary-list li {
   margin: 0;
-  padding: 8px 10px;
+  padding: 6px 10px;
+  font-size: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 0;
 }

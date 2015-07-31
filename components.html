@@ -37,105 +37,108 @@
     </section>
 
     <div class="container">
-      <div class="glossary">
-        <ul class="glossary-list">
-          <a href="#section-buttons" class=""><li class="list-first">Buttons</li></a>
-          <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
-          <a href="#section-labels"><li>Labels</li></a>
-          <a href="#section-badges"><li>Badges</li></a>
-          <a href="#section-alerts"><li>Alerts</li></a>
-          <a href="#section-avatars"><li>Avatars</li></a>
-          <a href="#section-toggles"><li>Toggles</li></a>
-          <a href="#section-tooltips"><li>Tooltips</li></a>
-          <a href="#section-popovers"><li>Popovers</li></a>
-          <a href="#section-modals"><li>Modals</li></a>
-          <a href="#section-loader"><li class="list-last">Loader</li></a>
-        </ul>
-      </div>
+      <div class="row">
+        <div class="col-md-3 col-md-push-9">
 
-      <section id="section-buttons">
-        <div class="container padded slim">
-          <h1 class="section-header">Buttons</h1>
-          <h3>Colors</h3>
-          <p class="descrip">We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
-          <div class="bs-example">
-            <button class="lf-btn lf-btn-default" disabled="disabled">Disabled</button>
-            <button class="lf-btn lf-btn-default">Default</button>
-            <button class="lf-btn lf-btn-primary">Primary</button>
-            <button class="lf-btn lf-btn-warning">Warning</button>
-            <button class="lf-btn lf-btn-success">Success</button>
-            <button class="lf-btn lf-btn-info">Info</button>
-            <button class="lf-btn lf-btn-link">Link</button>
+          <div class="glossary">
+            <ul class="glossary-list">
+              <a href="#section-buttons" class=""><li class="list-first">Buttons</li></a>
+              <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
+              <a href="#section-labels"><li>Labels</li></a>
+              <a href="#section-badges"><li>Badges</li></a>
+              <a href="#section-alerts"><li>Alerts</li></a>
+              <a href="#section-avatars"><li>Avatars</li></a>
+              <a href="#section-toggles"><li>Toggles</li></a>
+              <a href="#section-tooltips"><li>Tooltips</li></a>
+              <a href="#section-popovers"><li>Popovers</li></a>
+              <a href="#section-modals"><li>Modals</li></a>
+              <a href="#section-loader"><li class="list-last">Loader</li></a>
+            </ul>
           </div>
-          <div class="highlight">
-<pre class="brush: xml"><code>&lt;button class="lf-btn lf-btn-default" disabled="disabled"&gt;Disabled&lt;/button&gt;
+
+        </div><!-- /.col -->
+
+
+        <div class="col-md-9 col-md-pull-3">
+
+          <section id="section-buttons">
+            <h1 class="section-header">Buttons</h1>
+            <h3>Colors</h3>
+            <p class="descrip">We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
+            <div class="bs-example">
+              <button class="lf-btn lf-btn-default" disabled="disabled">Disabled</button>
+              <button class="lf-btn lf-btn-default">Default</button>
+              <button class="lf-btn lf-btn-primary">Primary</button>
+              <button class="lf-btn lf-btn-warning">Warning</button>
+              <button class="lf-btn lf-btn-success">Success</button>
+              <button class="lf-btn lf-btn-info">Info</button>
+              <button class="lf-btn lf-btn-link">Link</button>
+            </div>
+            <div class="highlight">
+              <pre class="brush: xml"><code>&lt;button class="lf-btn lf-btn-default" disabled="disabled"&gt;Disabled&lt;/button&gt;
 &lt;button class="lf-btn lf-btn-default"&gt;Default&lt;/button&gt;
 &lt;button class="lf-btn lf-btn-primary"&gt;Primary&lt;/button&gt;
 &lt;button class="lf-btn lf-btn-warning"&gt;Warning&lt;/button&gt;
 &lt;button class="lf-btn lf-btn-success"&gt;Success&lt;/button&gt;
 &lt;button class="lf-btn lf-btn-info"&gt;Info&lt;/button&gt;
-&lt;button class="lf-btn lf-btn-link"&gt;Link&lt;/button&gt;
-</code></pre>
-          </div>
+&lt;button class="lf-btn lf-btn-link"&gt;Link&lt;/button&gt;</code></pre>
+            </div>
 
-          <h3>Sizes</h3>
-          <p class="descrip">There are also 3 additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
-          <div class="bs-example">
-            <button class="lf-btn lf-btn-primary lf-btn-lg">Large</button>
-            <button class="lf-btn lf-btn-primary">Default</button>
-            <button class="lf-btn lf-btn-primary lf-btn-sm">Small</button>
-            <button class="lf-btn lf-btn-primary lf-btn-xs">Extra small</button>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;button class="lf-btn lf-btn-primary lf-btn-lg">Large&lt;/button>
+            <h3>Sizes</h3>
+            <p class="descrip">There are also 3 additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
+            <div class="bs-example">
+              <button class="lf-btn lf-btn-primary lf-btn-lg">Large</button>
+              <button class="lf-btn lf-btn-primary">Default</button>
+              <button class="lf-btn lf-btn-primary lf-btn-sm">Small</button>
+              <button class="lf-btn lf-btn-primary lf-btn-xs">Extra small</button>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;button class="lf-btn lf-btn-primary lf-btn-lg">Large&lt;/button>
 &lt;button class="lf-btn lf-btn-primary">Default&lt;/button>
 &lt;button class="lf-btn lf-btn-primary lf-btn-sm">Small&lt;/button>
 &lt;button class="lf-btn lf-btn-primary lf-btn-xs">Extra small&lt;/button></code></pre>
-          </div>
-
-          <div class="bs-example">
-            <div class="well" style="max-width: 400px; margin: 0 auto 20px; background: #fff;">
-              <button class="lf-btn lf-btn-primary lf-btn-lg lf-btn-block" style="margin-bottom: 8px">Primary Action</button>
-              <button class="lf-btn lf-btn-default lf-btn-lg lf-btn-block">Cancel</button>
             </div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;button class="lf-btn lf-btn-primary lf-btn-lg lf-btn-block"&gt;Primary Action&lt;/button&gt;
-&lt;button class="lf-btn lf-btn-default lf-btn-lg lf-btn-block"&gt;Cancel&lt;/button&gt;
-</code></pre>
-          </div>
-        </div>
-      </section>
 
-      <section id="section-button-groups">
-        <div class="container padded slim">
-          <h1 class="section-header">Button Groups & Button Toolbars</h1>
-          <p class="descrip">There are a number of configurable button groups and toolbars that flow both horizontally and vertically as well as sizing options.</p>
-
-          <div class="bs-example">
-            <div class="lf-btn-group lf-btn-group-lg">
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
-            </div><br />
-            <div class="lf-btn-group" style="margin-top: 10px;">
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
-            </div><br />
-            <div class="lf-btn-group lf-btn-group-sm" style="margin-top: 10px;">
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
-            </div><br />
-            <div class="lf-btn-group lf-btn-group-xs" style="margin-top: 10px;">
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button class="lf-btn lf-btn-default">Button</button>
+            <div class="bs-example">
+              <div class="well" style="max-width: 400px; margin: 0 auto 20px; background: #fff;">
+                <button class="lf-btn lf-btn-primary lf-btn-lg lf-btn-block" style="margin-bottom: 8px">Primary Action</button>
+                <button class="lf-btn lf-btn-default lf-btn-lg lf-btn-block">Cancel</button>
+              </div>
             </div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;div class="lf-btn-group lf-btn-group-lg"&gt;
+            <div class="highlight">
+              <pre><code>&lt;button class="lf-btn lf-btn-primary lf-btn-lg lf-btn-block"&gt;Primary Action&lt;/button&gt;
+&lt;button class="lf-btn lf-btn-default lf-btn-lg lf-btn-block"&gt;Cancel&lt;/button&gt;</code></pre>
+            </div>
+          </section>
+
+          <section id="section-button-groups">
+            <h1 class="section-header">Button Groups & Button Toolbars</h1>
+            <p class="descrip">There are a number of configurable button groups and toolbars that flow both horizontally and vertically as well as sizing options.</p>
+
+            <div class="bs-example">
+              <div class="lf-btn-group lf-btn-group-lg">
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+              </div><br />
+              <div class="lf-btn-group" style="margin-top: 10px;">
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+              </div><br />
+              <div class="lf-btn-group lf-btn-group-sm" style="margin-top: 10px;">
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+              </div><br />
+              <div class="lf-btn-group lf-btn-group-xs" style="margin-top: 10px;">
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button class="lf-btn lf-btn-default">Button</button>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="lf-btn-group lf-btn-group-lg"&gt;
   &lt;button class="lf-btn lf-btn-default"&gt;Button&lt;/button&gt;
   &lt;button class="lf-btn lf-btn-default"&gt;Button&lt;/button&gt;
   &lt;button class="lf-btn lf-btn-default"&gt;Button&lt;/button&gt;
@@ -148,48 +151,46 @@
 &lt;/div&gt;
 &lt;div class="lf-btn-group lf-btn-group-xs"&gt;
   ...
-&lt;/div&gt;
-</code></pre>
-          </div>
-
-          <div class="bs-example">
-            <div class="lf-btn-group-vertical">
-              <button class="lf-btn lf-btn-default">Button</button>
-              <button type="button" class="lf-btn lf-btn-default dropdown-toggle" data-toggle="dropdown">
-                Dropdown
-                <span class="caret"></span>
-              </button>
-              <button class="lf-btn lf-btn-default">Button</button>
+&lt;/div&gt;</code></pre>
             </div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;div class="lf-btn-group-vertical"&gt;
+
+            <div class="bs-example">
+              <div class="lf-btn-group-vertical">
+                <button class="lf-btn lf-btn-default">Button</button>
+                <button type="button" class="lf-btn lf-btn-default dropdown-toggle" data-toggle="dropdown">
+                  Dropdown
+                  <span class="caret"></span>
+                </button>
+                <button class="lf-btn lf-btn-default">Button</button>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="lf-btn-group-vertical"&gt;
   &lt;button class="lf-btn lf-btn-default"&gt;Button&lt;/button&gt;
   &lt;button type="button" class="lf-btn lf-btn-default dropdown-toggle" data-toggle="dropdown"&gt;
     Dropdown
     &lt;span class="caret"&gt;&lt;/span&gt;
   &lt;/button&gt;
   &lt;button class="lf-btn lf-btn-default"&gt;Button&lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-          </div>
+&lt;/div&gt;</code></pre>
+            </div>
 
-          <div class="bs-example">
-            <div class="lf-btn-toolbar">
-              <div class="lf-btn-group">
-                <button class="lf-btn lf-btn-default">1</button>
-                <button class="lf-btn lf-btn-default">2</button>
-                <button class="lf-btn lf-btn-default">3</button>
-              </div>
-              <div class="lf-btn-group">
-                <button class="lf-btn lf-btn-default">4</button>
-                <button class="lf-btn lf-btn-default">5</button>
-                <button class="lf-btn lf-btn-default">6</button>
+            <div class="bs-example">
+              <div class="lf-btn-toolbar">
+                <div class="lf-btn-group">
+                  <button class="lf-btn lf-btn-default">1</button>
+                  <button class="lf-btn lf-btn-default">2</button>
+                  <button class="lf-btn lf-btn-default">3</button>
+                </div>
+                <div class="lf-btn-group">
+                  <button class="lf-btn lf-btn-default">4</button>
+                  <button class="lf-btn lf-btn-default">5</button>
+                  <button class="lf-btn lf-btn-default">6</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;div class="lf-btn-toolbar"&gt;
+            <div class="highlight">
+              <pre><code>&lt;div class="lf-btn-toolbar"&gt;
   &lt;div class="lf-btn-group"&gt;
     &lt;button class="lf-btn lf-btn-default"&gt;1&lt;/button&gt;
     &lt;button class="lf-btn lf-btn-default"&gt;2&lt;/button&gt;
@@ -201,81 +202,73 @@
     &lt;button class="lf-btn lf-btn-default"&gt;6&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      <section id="section-labels">
-        <div class="container padded slim">
-          <h1 class="section-header">Labels</h1>
-          <p class="descrip">Labels are commonly used as tags in our UI.</p>
-          <h3>Colors</h3>
-          <div class="bs-example">
-            <span class="lf-label lf-label-default">Default</span>
-            <span class="lf-label lf-label-primary">Primary</span>
-            <span class="lf-label lf-label-success">Success</span>
-            <span class="lf-label lf-label-info">Info</span>
-            <span class="lf-label lf-label-warning">Warning</span>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;span class="lf-label lf-label-default"&gt;Default&lt;/span&gt;
+          <section id="section-labels">
+            <h1 class="section-header">Labels</h1>
+            <p class="descrip">Labels are commonly used as tags in our UI.</p>
+            <h3>Colors</h3>
+            <div class="bs-example">
+              <span class="lf-label lf-label-default">Default</span>
+              <span class="lf-label lf-label-primary">Primary</span>
+              <span class="lf-label lf-label-success">Success</span>
+              <span class="lf-label lf-label-info">Info</span>
+              <span class="lf-label lf-label-warning">Warning</span>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;span class="lf-label lf-label-default"&gt;Default&lt;/span&gt;
 &lt;span class="lf-label lf-label-primary"&gt;Primary&lt;/span&gt;
 &lt;span class="lf-label lf-label-success"&gt;Success&lt;/span&gt;
 &lt;span class="lf-label lf-label-info"&gt;Info&lt;/span&gt;
-&lt;span class="lf-label lf-label-warning"&gt;Warning&lt;/span&gt;
-</code></pre>
-          </div>
-          <h3>Sizes</h3>
-          <div class="bs-example">
-            <span class="lf-label lf-label-primary lf-label-xl">lf-label-xl</span>
-            <span class="lf-label lf-label-primary lf-label-lg">lf-label-lg</span>
-            <span class="lf-label lf-label-primary lf-label-md">lf-label-md</span>
-            <span class="lf-label lf-label-primary lf-label">lf-label</span>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;span class="lf-label lf-label-primary lf-label-xl"&gt;lf-label-xl&lt;/span&gt;
+&lt;span class="lf-label lf-label-warning"&gt;Warning&lt;/span&gt;</code></pre>
+            </div>
+            <h3>Sizes</h3>
+            <div class="bs-example">
+              <span class="lf-label lf-label-primary lf-label-xl">lf-label-xl</span>
+              <span class="lf-label lf-label-primary lf-label-lg">lf-label-lg</span>
+              <span class="lf-label lf-label-primary lf-label-md">lf-label-md</span>
+              <span class="lf-label lf-label-primary lf-label">lf-label</span>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;span class="lf-label lf-label-primary lf-label-xl"&gt;lf-label-xl&lt;/span&gt;
 &lt;span class="lf-label lf-label-primary lf-label-lg"&gt;lf-label-lg&lt;/span&gt;
 &lt;span class="lf-label lf-label-primary lf-label-md"&gt;lf-label-md&lt;/span&gt;
 &lt;span class="lf-label lf-label-primary lf-label"&gt;lf-label&lt;/span&gt;</code></pre>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      <section id="section-badges">
-        <div class="container padded slim">
-          <h1 class="section-header">Badges</h1>
-          <p class="descrip">Badges are used to denote counts of items. They can also be used as links. To de-emphasize a badge, append the modifier class, <code>.lf-badge-mute</code>.</p>
-          <div class="bs-example">
-            <span class="lf-badge">1</span>
-            <span class="lf-badge lf-badge-mute">2</span>
-            <a class="lf-badge lf-badge-mute">120</a>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;span class="lf-badge"&gt;1&lt;/span&gt;
+          <section id="section-badges">
+            <h1 class="section-header">Badges</h1>
+            <p class="descrip">Badges are used to denote counts of items. They can also be used as links. To de-emphasize a badge, append the modifier class, <code>.lf-badge-mute</code>.</p>
+            <div class="bs-example">
+              <span class="lf-badge">1</span>
+              <span class="lf-badge lf-badge-mute">2</span>
+              <a class="lf-badge lf-badge-mute">120</a>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;span class="lf-badge"&gt;1&lt;/span&gt;
 &lt;span class="lf-badge lf-badge-mute"&gt;2&lt;/span&gt;
-&lt;a href="#" class="lf-badge"&gt;120&lt;/a&gt;  
-</code></pre>
-          </div>
-        </div>
-      </section>
+&lt;a href="#" class="lf-badge"&gt;120&lt;/a&gt;</code></pre>
+            </div>
+          </section>
 
-      <section id="section-alerts">
-        <div class="container padded slim">
-          <h1 class="section-header">Alerts</h1>
-          <h3>Colors</h3>
-          <p class="descrip">
-            Alerts come in three flavors: <code>.lf-alert-success</code>, <code>.lf-alert-info</code>, and <code>.lf-alert-warning</code>.
-          </p>
+          <section id="section-alerts">
+            <h1 class="section-header">Alerts</h1>
+            <h3>Colors</h3>
+            <p class="descrip">
+              Alerts come in three flavors: <code>.lf-alert-success</code>, <code>.lf-alert-info</code>, and <code>.lf-alert-warning</code>.
+            </p>
 
-          <h3>Dismissable alerts</h3>
-          <p class="descrip">If the alert is dismissable, add class <code>.lf-alert-dismissable</code> and include a <code>&lt;span class="lf-close [light]"/&gt;</code>. Depending on the color of the alert, use the default darker close via <code>fycon-x</code> as seen in the example below.</p>
-          <div class="bs-example">
-            <div class="lf-alert lf-alert-info"><strong>Info: You might want to check that thing, it could be important.</strong></div>
-            <div class="lf-alert lf-alert-warning lf-alert-dismissable"><strong>Warning: I think you might've fucked something up.</strong><span class="lf-close light"><i class="fycon-x"></i></span></div>
-            <div class="lf-alert lf-alert-success lf-alert-dismissable"><strong>Success: Good job, everything looks good!</strong><span class="lf-close light"><i class="fycon-x"></i></span></div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;div class="lf-alert lf-alert-info"&gt;
+            <h3>Dismissable alerts</h3>
+            <p class="descrip">If the alert is dismissable, add class <code>.lf-alert-dismissable</code> and include a <code>&lt;span class="lf-close [light]"/&gt;</code>. Depending on the color of the alert, use the default darker close via <code>fycon-x</code> as seen in the example below.</p>
+            <div class="bs-example">
+              <div class="lf-alert lf-alert-info"><strong>Info: You might want to check that thing, it could be important.</strong></div>
+              <div class="lf-alert lf-alert-warning lf-alert-dismissable"><strong>Warning: I think you might've fucked something up.</strong><span class="lf-close light"><i class="fycon-x"></i></span></div>
+              <div class="lf-alert lf-alert-success lf-alert-dismissable"><strong>Success: Good job, everything looks good!</strong><span class="lf-close light"><i class="fycon-x"></i></span></div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="lf-alert lf-alert-info"&gt;
   &lt;strong&gt;Info: You might want to check that thing, it could be important.&lt;/strong&gt;
 &lt;/div&gt;
 
@@ -286,32 +279,29 @@
 &lt;div class="lf-alert lf-alert-success lf-alert-dismissable"&gt;
   &lt;strong&gt;Success: Good job, everything looks good!&lt;/strong&gt;
   &lt;span class="lf-close light"&gt;&lt;i class="fycon-x"&gt;&lt;/i&gt;&lt;/span&gt;
-&lt;/div&gt;
-</code></pre>            
-          </div>
-        </div>
-      </section>
+&lt;/div&gt;</code></pre>            
+            </div>
+          </section>
 
-      <section id="section-avatars">
-        <div class="container padded slim">
-          <h1 class="section-header">Avatars</h1>
-          <p class="descrip">Common Livefyre and other social media avatars come in sizes in multiples of 12. Livefyre-bootstrap ships with 24x24, 36x36, 48x48, and 96x96.</p>
-          <div class="bs-example">
-            <div class="lf-avatar lf-avatar-lg" style="display: inline-block;">
-              <img src="http://placehold.it/96x96">
+          <section id="section-avatars">
+            <h1 class="section-header">Avatars</h1>
+            <p class="descrip">Common Livefyre and other social media avatars come in sizes in multiples of 12. Livefyre-bootstrap ships with 24x24, 36x36, 48x48, and 96x96.</p>
+            <div class="bs-example">
+              <div class="lf-avatar lf-avatar-lg" style="display: inline-block;">
+                <img src="http://placehold.it/96x96">
+              </div>
+              <div class="lf-avatar" style="display: inline-block;">
+                <img src="http://placehold.it/48x48">
+              </div>
+              <div class="lf-avatar lf-avatar-sm" style="display: inline-block;">
+                <img src="http://placehold.it/36x36">
+              </div>
+              <div class="lf-avatar lf-avatar-xs" style="display: inline-block;">
+                <img src="http://placehold.it/24x24">
+              </div>
             </div>
-            <div class="lf-avatar" style="display: inline-block;">
-              <img src="http://placehold.it/48x48">
-            </div>
-            <div class="lf-avatar lf-avatar-sm" style="display: inline-block;">
-              <img src="http://placehold.it/36x36">
-            </div>
-            <div class="lf-avatar lf-avatar-xs" style="display: inline-block;">
-              <img src="http://placehold.it/24x24">
-            </div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;div class="lf-avatar lf-avatar-lg"&gt;
+            <div class="highlight">
+              <pre><code>&lt;div class="lf-avatar lf-avatar-lg"&gt;
   &lt;img src="http://placehold.it/96x96"&gt;
 &lt;/div&gt;
 &lt;div class="lf-avatar"&gt;
@@ -323,35 +313,33 @@
 &lt;div class="lf-avatar lf-avatar-xs"&gt;
   &lt;img src="http://placehold.it/24x24"&gt;
 &lt;/div&gt;</code></pre>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      <section id="section-toggles">
-        <div class="container padded slim">
-          <h1 class="section-header">Toggles</h1>
-          <p class="descrip">This UI component requires livefyre-bootstrap's js to be functional. Toggles are touch-ready and are gpu-accelerated on mobile via <code>-webkit-transform: translate3d(0,0,0)</code>.</p>
-          <p class="descrip">Note: requires javascript.</p>
-          <h3>Sizing</h3>
-          <p class="descrip">
-            There is an optional smaller toggle size which can be enabled by adding class <code>.lf-toggle-sm</code>.
-          </p>
-          <div class="bs-example">
-            <div class="lf-toggle" style="display: inline-block;">
-              <div class="lf-toggle-handle" ></div>
+          <section id="section-toggles">
+            <h1 class="section-header">Toggles</h1>
+            <p class="descrip">This UI component requires livefyre-bootstrap's js to be functional. Toggles are touch-ready and are gpu-accelerated on mobile via <code>-webkit-transform: translate3d(0,0,0)</code>.</p>
+            <p class="descrip">Note: requires javascript.</p>
+            <h3>Sizing</h3>
+            <p class="descrip">
+              There is an optional smaller toggle size which can be enabled by adding class <code>.lf-toggle-sm</code>.
+            </p>
+            <div class="bs-example">
+              <div class="lf-toggle" style="display: inline-block;">
+                <div class="lf-toggle-handle" ></div>
+              </div>
+              <div class="lf-toggle lf-toggle-label" style="display: inline-block;">
+                <div class="lf-toggle-handle"></div>
+              </div>
+              <div class="lf-toggle lf-toggle-sm" style="display: inline-block;">
+                <div class="lf-toggle-handle"></div>
+              </div>
+              <div class="lf-toggle lf-toggle-sm lf-toggle-label" style="display: inline-block;">
+                <div class="lf-toggle-handle"></div>
+              </div>
             </div>
-            <div class="lf-toggle lf-toggle-label" style="display: inline-block;">
-              <div class="lf-toggle-handle"></div>
-            </div>
-            <div class="lf-toggle lf-toggle-sm" style="display: inline-block;">
-              <div class="lf-toggle-handle"></div>
-            </div>
-            <div class="lf-toggle lf-toggle-sm lf-toggle-label" style="display: inline-block;">
-              <div class="lf-toggle-handle"></div>
-            </div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;div class="lf-toggle"&gt;
+            <div class="highlight">
+              <pre><code>&lt;div class="lf-toggle"&gt;
   &lt;div class="lf-toggle-handle"&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -366,28 +354,26 @@
 &lt;div class="lf-toggle lf-toggle-sm lf-toggle-label"&gt;
   &lt;div class="lf-toggle-handle"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      <section id="section-tooltips">
-        <div class="container padded slim">
-          <h1 class="section-header">Tooltips</h1>
-          <h3>Usage</h3>
-          <p class="descrip">
-            For performance reasons, tooltip() is not loaded by default. You must initialize them yourself. You can do this via jQuery:
-          </p>
-          <p class="descrip">
-            <strong>data-attribute</strong>: 
-            <code>$('[data-toggle="tooltip"]').tooltip();</code>
-          </p>
-          <p class="descrip">
-            <strong>class/id selector</strong>: 
-            <code>$('.tooltip').tooltip();</code>
-          </p>
-          <div class="bs-example">This is a <span data-toggle="tooltip" data-title="Looks like you've found meh" style="border-bottom: 1px dotted #777">tooltip</span>. You can make them appear in a number of <span data-toggle="tooltip" data-title="To the right" data-placement="right" style="border-bottom: 1px dotted #777">ways</span>. Also to the <span data-toggle="tooltip" data-title="Left coast is the best coast" data-placement="left" style="border-bottom: 1px dotted #777">left</span> and down <span data-toggle="tooltip" data-title="Australia" data-placement="bottom" style="border-bottom: 1px dotted #777">below</span>.</div>
-          <div class="highlight">
-<pre><code><-- HTML -->
+          <section id="section-tooltips">
+            <h1 class="section-header">Tooltips</h1>
+            <h3>Usage</h3>
+            <p class="descrip">
+              For performance reasons, tooltip() is not loaded by default. You must initialize them yourself. You can do this via jQuery:
+            </p>
+            <p class="descrip">
+              <strong>data-attribute</strong>: 
+              <code>$('[data-toggle="tooltip"]').tooltip();</code>
+            </p>
+            <p class="descrip">
+              <strong>class/id selector</strong>: 
+              <code>$('.tooltip').tooltip();</code>
+            </p>
+            <div class="bs-example">This is a <span data-toggle="tooltip" data-title="Looks like you've found meh" style="border-bottom: 1px dotted #777">tooltip</span>. You can make them appear in a number of <span data-toggle="tooltip" data-title="To the right" data-placement="right" style="border-bottom: 1px dotted #777">ways</span>. Also to the <span data-toggle="tooltip" data-title="Left coast is the best coast" data-placement="left" style="border-bottom: 1px dotted #777">left</span> and down <span data-toggle="tooltip" data-title="Australia" data-placement="bottom" style="border-bottom: 1px dotted #777">below</span>.</div>
+            <div class="highlight">
+              <pre><code><-- HTML -->
 &lt;span data-toggle="tooltip" data-title="Looks like you've found meh"&gt;tooltip&lt;/span&gt;
 
 <-- JS -->
@@ -404,63 +390,58 @@ $('#element').tooltip(
     container: 'string', // appends tooltip to a specific element
   }
 );</code></pre>
+            </div>
+            <h3>Methods/Options</h3>
+            <p class="descrip">
+              There are also a number of placement options to pass to tooltips. To access these, either configure them via the HTML5 Data API or in a javascript config:
+            </p>
+            <p class="descrip">
+              <strong>data-attribute: </strong>
+              <code>&lt;span data-toggle="tooltip" data-placement="top|bottom|left|right|auto"&gt;</code>
+            </p>
+          </section>
+
+          <section id="section-popovers">
+            <h1 class="section-header">Popovers</h1>
+            <h3>Usage</h3>
+            <p class="descrip">Popovers are syntatically similar to tooltips. In order to use popovers, you must include the tooltip.js lib as well as it is a dependency. Again, you are responsibile for initializing popovers yourself, and can access them via data-attribute or a selector.</p>
+            <div class="bs-example">
+            <button class='lf-btn lf-btn-primary lf-btn-lg' data-toggle="popover" data-placement="top" data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!">Click me!</button>
           </div>
-          <h3>Methods/Options</h3>
-          <p class="descrip">
-            There are also a number of placement options to pass to tooltips. To access these, either configure them via the HTML5 Data API or in a javascript config:
-          </p>
-          <p class="descrip">
-            <strong>data-attribute: </strong>
-            <code>&lt;span data-toggle="tooltip" data-placement="top|bottom|left|right|auto"&gt;</code>
-          </p>
-        </div>
-      </section>
-
-      <section id="section-popovers">
-        <div class="container padded slim">
-          <h1 class="section-header">Popovers</h1>
-          <h3>Usage</h3>
-          <p class="descrip">Popovers are syntatically similar to tooltips. In order to use popovers, you must include the tooltip.js lib as well as it is a dependency. Again, you are responsibile for initializing popovers yourself, and can access them via data-attribute or a selector.</p>
-          <div class="bs-example">
-          <button class='lf-btn lf-btn-primary lf-btn-lg' data-toggle="popover" data-placement="top" data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!">Click me!</button>
-        </div>
-        <div class="highlight">
-<pre><code>&lt;button class='lf-btn lf-btn-primary lf-btn-lg'
-    data-toggle="popover" 
-    data-placement="top" 
-    data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!"&gt;
+          <div class="highlight">
+            <pre><code>&lt;button class='lf-btn lf-btn-primary lf-btn-lg'
+  data-toggle="popover" 
+  data-placement="top" 
+  data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!"&gt;
   Click me!
-&lt;/button&gt; 
-</code></pre>
-        </div>
-        </div>
-      </section>
+&lt;/button&gt;</code></pre>
+            </div>
+          </section>
 
-      <section id="section-modals">
-        <div class="container padded slim">
-          <h1 class="section-header">Modals</h1>
-          <h3>Static Example</h3>
-          <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
-            <div class="lf-modal-dialog">
-              <div class="lf-modal-content">
-                <div class="lf-modal-header">
-                  <button class="lf-close" data-dismiss="modal">
-                    <i class="fycon-x"></i>
-                  </button>
-                  <h4 class="lf-modal-title">Modal title</h4>
-                </div>
-                <div class="lf-modal-body">
-                  <span>Yr before they sold out mustache, kale chips butcher Austin Cosby sweater selfies YOLO cred +1 XOXO selvage deep v. Pork belly asymmetrical cardigan selvage Marfa messenger bag. Quinoa American Apparel paleo, cray brunch fixie you probably haven't heard of them Intelligentsia sartorial..</span><br />
-                </div>
-                <div class="lf-modal-footer">
-                  <button class="lf-btn lf-btn-default" data-dismiss="modal">Close</button>
-                  <button class="lf-btn lf-btn-primary">Save Changes</button>
+          <section id="section-modals">
+            <h1 class="section-header">Modals</h1>
+            <h3>Static Example</h3>
+            <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+              <div class="lf-modal-dialog">
+                <div class="lf-modal-content">
+                  <div class="lf-modal-header">
+                    <button class="lf-close" data-dismiss="modal">
+                      <i class="fycon-x"></i>
+                    </button>
+                    <h4 class="lf-modal-title">Modal title</h4>
+                  </div>
+                  <div class="lf-modal-body">
+                    <span>Yr before they sold out mustache, kale chips butcher Austin Cosby sweater selfies YOLO cred +1 XOXO selvage deep v. Pork belly asymmetrical cardigan selvage Marfa messenger bag. Quinoa American Apparel paleo, cray brunch fixie you probably haven't heard of them Intelligentsia sartorial..</span><br />
+                  </div>
+                  <div class="lf-modal-footer">
+                    <button class="lf-btn lf-btn-default" data-dismiss="modal">Close</button>
+                    <button class="lf-btn lf-btn-primary">Save Changes</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;div class="lf-modal-dialog"&gt;
+            <div class="highlight">
+              <pre><code>&lt;div class="lf-modal-dialog"&gt;
   &lt;div class="lf-modal-content"&gt;
     &lt;div class="lf-modal-header"&gt;
       &lt;button class="lf-close" data-dismiss="modal"&gt;
@@ -476,72 +457,69 @@ $('#element').tooltip(
       &lt;button class="lf-btn lf-btn-primary"&gt;Save Changes&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>            
-          </div>
-          <h3>Usage</h3>
-          <p class="descrip">Include a template at the bottom of the page with class <code>fade</code> to hide it by default. Assign an <code>id</code> to this modal template and assign it as the <code>data-target</code>.</p>
-          <div class="bs-example">
-            <button class="lf-btn lf-btn-lg lf-btn-default" data-toggle="modal" data-target="#lfModal">Launch Modal</button>
-          </div>
-          <div class="highlight">
-<pre><code>&lt;button class="lf-btn lf-btn-lg lf-btn-default" data-toggle="modal" data-target="#lfModal"&gt;
+&lt;/div&gt;</code></pre>            
+            </div>
+            <h3>Usage</h3>
+            <p class="descrip">Include a template at the bottom of the page with class <code>fade</code> to hide it by default. Assign an <code>id</code> to this modal template and assign it as the <code>data-target</code>.</p>
+            <div class="bs-example">
+              <button class="lf-btn lf-btn-lg lf-btn-default" data-toggle="modal" data-target="#lfModal">Launch Modal</button>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;button class="lf-btn lf-btn-lg lf-btn-default" data-toggle="modal" data-target="#lfModal"&gt;
   Launch Modal
-&lt;/button&gt;
-</code></pre>
-          </div>
-          <h3>Size options</h3>
-          <p class="descrip">
-            You can also pass two additional modal sizes in lieu of the default 600px width on <code>lf-modal-dialog</code>:
-            <br />
-            <ul>
-              <li><code>.lf-modal-sm</code>: 300px</li>
-              <li><code>.lf-modal-md</code>: 600px</li>
-              <li><code>.lf-modal-lg</code>: 900px</li>
-            </ul>
-          </p>
-          <p class="descrip">
-            If you need the text to be centered, add the class <code>.centered</code> to <code>.lf-modal-body</code>.
-          </p>
-        </div>
-      </section>
+&lt;/button&gt;</code></pre>
+            </div>
+            <h3>Size options</h3>
+            <p class="descrip">
+              You can also pass two additional modal sizes in lieu of the default 600px width on <code>lf-modal-dialog</code>:
+              <br />
+              <ul>
+                <li><code>.lf-modal-sm</code>: 300px</li>
+                <li><code>.lf-modal-md</code>: 600px</li>
+                <li><code>.lf-modal-lg</code>: 900px</li>
+              </ul>
+            </p>
+            <p class="descrip">
+              If you need the text to be centered, add the class <code>.centered</code> to <code>.lf-modal-body</code>.
+            </p>
+          </section>
 
-      <section id="section-loader">
-        <div class="container padded slim">
-          <h1 class="section-header">Loader</h1>
-          <h3>Usage</h3>
-          <p class="descrip">
-            Livefyre's <code>loader</code> depends on <code>loader.js</code> (included in the minified js).
-          </p>
-          <h3>Options</h3>
-          <p class="descrip">
-            <code>loader</code> accepts two parameters: <code>elem</code> and <code>size</code> (optional).
-            <ul>
-              <li><code>elem</code> expects an object or jQuery object</li>
-              <li><code>size</code> expects an <code>integer</code> divisible by 3 or one of three pre-canned sizes as a <code>string</code>: 'mini', 'small', or 'large'.</li>
-            </ul>
-          </p>
-          <div class="bs-example">
-            <div id="lfLoader" style="display: inline-block;"></div>
-            <div id="lfLoader-large" style="display: inline-block;"></div>
-            <div id="lfLoader-small" style="display: inline-block;"></div>
-            <div id="lfLoader-mini" style="display: inline-block;"></div>
-          </div>
-          <div class="highlight">
-<pre><code><-- HTML -->
+          <section id="section-loader">
+            <h1 class="section-header">Loader</h1>
+            <h3>Usage</h3>
+            <p class="descrip">
+              Livefyre's <code>loader</code> depends on <code>loader.js</code> (included in the minified js).
+            </p>
+            <h3>Options</h3>
+            <p class="descrip">
+              <code>loader</code> accepts two parameters: <code>elem</code> and <code>size</code> (optional).
+              <ul>
+                <li><code>elem</code> expects an object or jQuery object</li>
+                <li><code>size</code> expects an <code>integer</code> divisible by 3 or one of three pre-canned sizes as a <code>string</code>: 'mini', 'small', or 'large'.</li>
+              </ul>
+            </p>
+            <div class="bs-example">
+              <div id="lfLoader" style="display: inline-block;"></div>
+              <div id="lfLoader-large" style="display: inline-block;"></div>
+              <div id="lfLoader-small" style="display: inline-block;"></div>
+              <div id="lfLoader-mini" style="display: inline-block;"></div>
+            </div>
+            <div class="highlight">
+              <pre><code><-- HTML -->
 &lt;div id="lfLoader"&gt;&lt;/div&gt;
 
 <-- JS -->
 loader.decorate($('#lfLoader'), 120)
 loader.decorate($('#lfLoader-large'), 'large')
 loader.decorate($('#lfLoader-small'), 'small')
-loader.decorate($('#lfLoader-mini'), 'mini')
-</code></pre>
-          </div>
-        </div>
-      </section>
-      <!-- End of Container -->
-    </div>
+loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
+            </div>
+          </section>
+
+        </div><!-- /.col -->
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
     
     <div class="lf-modal fade" id="lfModal" style="margin: 0 auto;">
       <div class="lf-modal-dialog lf-modal-lg">
@@ -571,7 +549,7 @@ loader.decorate($('#lfLoader-mini'), 'mini')
         function(jquery, livefyre_bootstrap){
           $('.glossary-list').affix({
             offset: {
-              top: 250
+              top: 240
             }
           })
           $('[data-toggle="tooltip"]').tooltip();
