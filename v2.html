@@ -126,6 +126,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
                     <ul>
                       <li>Removes the <code>lf-</code> prefix from all CSS classes, markup and JS. This makes it easier to update to the latest [Twitter] Bootstrap version, removes a lot of redundant CSS and allows us to take advantage of all [Twitter] Bootstrap features.</li>
                       <li>Updates the [Twitter] Bootstrap version to 3.3.4 (from 3.0.3).</li>
+                      <li>[Twitter] Bootstrap 3.3.4's minimum required jQuery version is 1.9.1 (Bootstrap 3.0.3's minimum was 1.9.0).</li>
                       <li>Allows you to specify the location of your [Twitter] Bootstrap files.</li>
                       <li>New Slats styles.</li>
                       <li>New Alert Modal.</li>
@@ -147,6 +148,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                   <div class="panel-body">
                     <ol>
+                      <li>Update your Livefyre Bootstrap files to 2.0.0. You may need to also update your version of [Twitter] Bootstrap to 3.3.4.</li>
                       <li>Remove the <code>lf-</code> prefix from your CSS classes, markup and JS.</li>
                       <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre-Bootstrap's variables and mixins files. (<a href="#section-importing">examples</a>)</li>
                       <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height.</li>
