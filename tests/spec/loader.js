@@ -26,29 +26,29 @@ describe('Loader', function () {
     it('decorates the provided element with an image loader in IE8/9', function () {
         var stub = sinon.stub(loader, 'isSupported').returns(false);
         loader.decorate(div);
-        expect(getLoader(div).hasClass('lf-not-supported')).to.be.true;
+        expect(getLoader(div).hasClass('not-supported')).to.be.true;
         expect(div.childNodes[0].childNodes.length).to.equal(0);
         stub.restore();
     });
 
     it('sets the default size class if a size is not provided', function () {
         loader.decorate(div);
-        expect(getLoader(div).hasClass('lf-small')).to.be.true;
+        expect(getLoader(div).hasClass('loader-small')).to.be.true;
     });
 
     it('sets the default size class if the provided string isn\'t valid', function () {
         loader.decorate(div, 'extra-wicked-large');
-        expect(getLoader(div).hasClass('lf-small')).to.be.true;
+        expect(getLoader(div).hasClass('loader-small')).to.be.true;
     });
 
     it('sets the provided string size if valid', function () {
         loader.decorate(div, 'large');
-        expect(getLoader(div).hasClass('lf-large')).to.be.true;
+        expect(getLoader(div).hasClass('loader-large')).to.be.true;
     });
 
     it('sets the default size class if the number provided is not divisible by 3', function () {
         loader.decorate(div, 17);
-        expect(getLoader(div).hasClass('lf-small')).to.be.true;
+        expect(getLoader(div).hasClass('loader-small')).to.be.true;
     });
 
     it('sets the height and width to the provided size if divisible by 3', function () {
