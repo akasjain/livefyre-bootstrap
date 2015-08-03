@@ -70,7 +70,7 @@
         </div><!-- /.col -->
 
 
-        <div class="col-md-9 col-md-pull-3">
+        <div class="content col-md-9 col-md-pull-3">
 
           <section id="intro">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -148,20 +148,20 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
                   <div class="panel-body">
                     <ol>
                       <li>Remove the <code>lf-</code> prefix from your CSS classes, markup and JS.</li>
-                      <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre-Bootstrap's variables and mixins files.</li>
-                      <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height. (link)</li>
+                      <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre-Bootstrap's variables and mixins files. (<a href="#section-importing">examples</a>)</li>
+                      <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height.</li>
                       <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
-                      <li><strong>Toggles:</strong> Update all toggle instances with the new markup (more).</li>
+                      <li><strong>Toggles:</strong> Update all toggle instances with the new markup. (<a href="#section-toggles">example markup</a>)</li>
                       <li><strong>Toggles:</strong> Toggle are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
-                      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. You should now look for the "checked" attribute of the input element (the old way was to look for the presence of the "active" class). (more)</li>
+                      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. You should now look for the "checked" attribute of the input element (the old way was to look for the presence of the "active" class). (<a href="#section-toggles">example markup</a>)</li>
                       <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
                       <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
                       <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
                       <li><strong>Modals:</strong> Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to align headlines, text and buttons.</li>
                       <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
-                      <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
-                      <li><strong>Tooltips:</strong> If you'd like the change a tooltip to trigger on click, use the <code>data-trigger="click"</code> attribute.</li>
-              <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
+                      <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc. (<a href="#section-colors">more</a>)</li>
+                      <li><strong>Tooltips:</strong> If you'd like the change a tooltip to trigger on click, use the <code>data-trigger="click"</code> attribute. (<a href="#section-tooltips">example markup</a>)</li>
+                      <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
                     </ol>
                   </div>
                 </div>

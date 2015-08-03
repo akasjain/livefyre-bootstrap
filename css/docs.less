@@ -116,8 +116,6 @@ html, body {
 }
 
 section {
-  margin-bottom: 60px;
-
   > h3 {
     margin-top: 30px;
   }
@@ -133,6 +131,10 @@ section {
       margin-bottom: 5px;
     }
   }
+}
+
+.content {
+  margin-bottom: 60px;
 }
 
 .panel-group {
@@ -165,8 +167,10 @@ ul.descrip {
   margin-bottom: 14px;
 }
 
-h1.section-header {
+.content h1.section-header {
+  margin-top: 0;
   margin-bottom: 16px;
+  padding-top: 60px; // Ensures you can see the header when you get here via anchor link 
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   color: @lf-gray;
