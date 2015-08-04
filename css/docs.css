@@ -273,6 +273,7 @@ ul.descrip {
 .collapse-toggle {
   margin-top: -3.5em;
 }
-.collapse h3 {
+.collapse h3,
+.collapsing h3 {
   margin-top: 0;
 }
