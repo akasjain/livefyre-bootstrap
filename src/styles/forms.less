@@ -92,3 +92,22 @@ input[type="radio"] {
     .fycon-form-radio-active;
   }
 }
+
+// Focus: Override browser default and TwBS styles
+// - Only works on Chrome and Safari.
+// - Only works in Safari/MacOS if user changes default keyboard shortcut setting to allow tabbing to "All controls."
+// - Can't add a blue outline like the textboxes because the input element is larger and shaped differently than the fycon. So, instead, we're simple turning the fycon blue.
+input[type="radio"],
+input[type="checkbox"] {
+  &:before {
+    transition: color ease-in-out .15s; // Similar to .form-control
+  }
+
+  &:focus {
+    outline: 0; // Remove the fuzzy focus ring that TwBS implements in forms.less with .tab-focus mixin.
+
+    &:before {
+      color: @blue;
+    }
+  }
+}
