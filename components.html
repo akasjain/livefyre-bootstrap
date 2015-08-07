@@ -507,7 +507,7 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
         https://github.com/twbs/bootstrap/issues/12126
         -->
         <div class="col-md-3">
-          <div class="glossary" data-spy="affix" data-offset-top="200">
+          <div class="glossary">
             <ul class="glossary-list">
               <a href="#section-buttons" class=""><li class="list-first">Buttons</li></a>
               <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
@@ -554,6 +554,11 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
     <script type="text/javascript">
       require(['jquery', 'livefyre-bootstrap'],
         function(jquery, livefyre_bootstrap){
+          $('.glossary').affix({
+            offset: {
+              top: 200
+            }
+          });
           $('[data-toggle="tooltip"]').tooltip();
           $('[data-toggle="popover"]').popover();
           livefyre_bootstrap.loader.decorate($('#lfLoader'), 120);
