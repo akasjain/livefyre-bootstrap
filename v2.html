@@ -44,33 +44,8 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-3 col-md-push-9">
-          <div class="glossary" data-spy="affix" data-offset-top="200">
-            <ul class="glossary-list">
-              <a href="#section-importing"><li class="list-first">Importing Variables &amp; Mixins</li></a>
-              <a href="#section-colors"><li>Colors</li></a>
-              <a href="#section-checkboxes"><li>Checkboxes and Radios</li></a>
-              <a href="#section-buttons"><li>Buttons</li></a>
-              <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
-              <a href="#section-labels"><li>Labels</li></a>
-              <a href="#section-badges"><li>Badges</li></a>
-              <a href="#section-alerts"><li>Alerts</li></a>
-              <a href="#section-avatars"><li>Avatars</li></a>
-              <a href="#section-slats"><li>Slats</li></a>
-              <a href="#section-nodatablock"><li>No-Data Block</li></a>
-              <a href="#section-pager"><li>Pager</li></a>
-              <a href="#section-toggles"><li>Toggles</li></a>
-              <a href="#section-tooltips"><li>Tooltips</li></a>
-              <a href="#section-popovers"><li>Popovers</li></a>
-              <a href="#section-dropdowns"><li>Dropdowns</li></a>
-              <a href="#section-modals"><li>Modals</li></a>
-              <a href="#section-loader"><li class="list-last">Loader</li></a>
-            </ul>
-          </div>
-        </div><!-- /.col -->
 
-
-        <div class="content col-md-9 col-md-pull-3">
+        <div class="content col-md-9">
 
           <section id="intro">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -1366,6 +1341,39 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
           </section>
 
         </div><!-- /.col -->
+
+
+        <!-- ANCHOR LINKS
+        - Unfortunately, these have to appear after the main content:
+        "Note: Do not use the affix plugin on an element contained in a relatively positioned element, 
+        such as a pulled or pushed column, due to a Safari rendering bug."
+        https://github.com/twbs/bootstrap/issues/12126
+        -->
+        <div class="col-md-3">
+          <div class="glossary" data-spy="affix" data-offset-top="200">
+            <ul class="glossary-list">
+              <a href="#section-importing"><li class="list-first">Importing Variables &amp; Mixins</li></a>
+              <a href="#section-colors"><li>Colors</li></a>
+              <a href="#section-checkboxes"><li>Checkboxes and Radios</li></a>
+              <a href="#section-buttons"><li>Buttons</li></a>
+              <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
+              <a href="#section-labels"><li>Labels</li></a>
+              <a href="#section-badges"><li>Badges</li></a>
+              <a href="#section-alerts"><li>Alerts</li></a>
+              <a href="#section-avatars"><li>Avatars</li></a>
+              <a href="#section-slats"><li>Slats</li></a>
+              <a href="#section-nodatablock"><li>No-Data Block</li></a>
+              <a href="#section-pager"><li>Pager</li></a>
+              <a href="#section-toggles"><li>Toggles</li></a>
+              <a href="#section-tooltips"><li>Tooltips</li></a>
+              <a href="#section-popovers"><li>Popovers</li></a>
+              <a href="#section-dropdowns"><li>Dropdowns</li></a>
+              <a href="#section-modals"><li>Modals</li></a>
+              <a href="#section-loader"><li class="list-last">Loader</li></a>
+            </ul>
+          </div>
+        </div><!-- /.col -->
+
 
       </div><!-- /.row -->
     </div><!-- /.container -->
