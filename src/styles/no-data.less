@@ -5,36 +5,43 @@
 // --------------------------------------------------
 
 .no-data {
-    padding: 120px (@grid-gutter-width / 2) 240px;
-    text-align: center;
-    background-color: @gray-lighter;
+  padding: 120px (@grid-gutter-width / 2) 240px;
+  text-align: center;
+  background-color: @gray-lighter;
 
-    // Large Fycon
-    [class^="fycon-"],
-    [class*=" fycon-"] {
-        display: block;
-        margin: 0 auto 16px;
-        font-size: 90px;
-        line-height: 1;
-        color: @gray;
-    }
-    
-    // Header
-    .no-data-header {
-        max-width: 560px;
-        margin: 0 auto 10px;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 24px;
-        color: @gray-darkest;
-    }
-    
-    // Subheader, buttons, links, etc.
-    p {
-        max-width: 560px;
-        margin: 0 auto 16px;
-        font-size: @font-size-base;
-        line-height: 18px;
-        color: @gray-darkish;
-    }
+  // Large Fycon (default)
+  > [class^="fycon-"],
+  > [class*=" fycon-"] {
+    display: block;
+    margin: 0 auto 16px;
+    font-size: 90px;
+    line-height: 1;
+    color: @gray;
+  }
+
+  // Small Fycon
+  > .fycon-sm {
+    display: inline-block;
+    margin: 0 4px 16px;
+    font-size: 42px;
+  }
+      
+  // Header
+  .no-data-header {
+    max-width: 560px;
+    margin: 0 auto 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: @gray-darkest;
+  }
+  
+  // Subheader, buttons, links, etc.
+  p {
+    max-width: 560px;
+    margin: 0 auto 16px;
+    font-size: @font-size-base;
+    line-height: 18px;
+    color: @gray-darkish;
+  }
 }
