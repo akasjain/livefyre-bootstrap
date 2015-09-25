@@ -13,14 +13,11 @@
   display: block;
   height: @slat-height;
   padding: @slat-padding 0;
+  font-size: @slat-font-size;
+  line-height: @slat-line-height;
   color: @slat-font-color;
+  background-color: @slat-bg-color;
   border-bottom: 1px solid @slat-border-color;
-  cursor: pointer;
-
-  &:not(.slat-header):hover {
-    color: @slat-font-color;
-    background-color: @slat-bg-hover-color;   
-  }
 
   &.no-bottom-border {
     border-bottom: 0;
@@ -33,6 +30,29 @@
 
 }
 
+
+// Header Row
+
+.slat-header {
+  height: auto;
+  min-height: @slat-header-height;
+  padding: (@slat-padding - 6px) 0;
+  font-size: @slat-header-font-size;
+  font-weight: @headings-font-weight;
+  line-height: @slat-header-line-height;
+  text-transform: uppercase;
+  color: @slat-header-font-color;
+  cursor: auto;
+
+  &.slat-vertical-center {
+    height: @slat-header-height; // Need to specify a height to properly center headers
+    padding: 0;
+  }
+}
+
+
+// Center vertically
+
 .slat-vertical-center {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,21 +64,12 @@
 }
 
 
-// Header Row
+// Hover State 
 
-.slat-header {
-  height: auto;
-  min-height: @slat-header-height;
-  padding: (@slat-padding + 3) 0 (@slat-padding + 1);
-  font-size: @slat-header-font-size;
-  line-height: (@slat-line-height - 6);
-  text-transform: uppercase;
-  color: @slat-header-font-color;
-  cursor: auto;
-
-  &.slat-vertical-center {
-    height: @slat-header-height; // Need to specify a height to properly center headers
-  }
+.slat-hover:hover {
+  color: @slat-font-hover-color;
+  background-color: @slat-bg-hover-color;   
+  cursor: pointer;
 }
 
 
@@ -69,7 +80,7 @@
   display: inline-block; // Use inline-block on all slat content to help their baselines align.
   margin: 0;
   font-size: @slat-title-size;
-  font-weight: 600;
+  font-weight: @headings-font-weight;
   line-height: @slat-line-height;
   color: @slat-title-color;
 }
