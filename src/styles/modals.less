@@ -164,6 +164,7 @@
 }
 
 .modal.in .modal-dialog.animated {
+  .transition(none); // For Safari: fixes issue where modal click areas are shifted up.
   .animation(scale-bounce-in .3s);
   .backface-visibility(visible);
   .translate3d(0,0,0);
