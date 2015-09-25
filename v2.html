@@ -704,9 +704,16 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
           <section id="section-slats">
             <h1 class="section-header">Slats</h1>
             <ul class="descrip">
-              <li>Use slats to create dashboard lists. Ex: App Manager and Collection Manager (they don't use slat styles yet but they will!)</li>
-              <li>Content is vertically-aligned to the top by default. Can be vertically centered using the <code>.slat-vertical-center</code> class.</li>
-              <li>Slat can be used as a header by adding <code>.slat-header</code> class.</li>
+              <li>Use slats to create dashboard lists. Ex: Streams List, Users List</li>
+              <li>Modifier classes:</li>
+              <ul>
+                <li><code>.slat-vertical-center</code> - Vertically centers content (default: top-aligned).</li>
+                <li><code>.slat-header</code> - Use as a header.</li>
+                <li><code>.slat-hover</code> - Add hover styles. For when entire slat will be clickable.</li>
+                <li><code>.no-bottom-border</code> - Removes bottom border. Ex: The bottom slat in a series.</li>
+                <li><code>.add-top-border</code> - Adds top border. Ex: The top slat in a series.</li>
+              </ul>
+              <li><code>.slat-title</code> - Adds header styles. Truncates longer titles with ellipsis.</li>
             </ul>
 
             <div class="bs-example">
@@ -715,18 +722,18 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
                 <div class="col-xs-5">Site</div>
                 <div class="col-xs-2">Date Modified</div>
               </div>
-              <div class="slat">
-                <div class="col-xs-5">Lorem Ipsum Dolor Sit Amet</div>
+              <div class="slat slat-vertical-center">
+                <div class="col-xs-5 slat-title">Lorem Ipsum Dolor Sit Amet</div>
                 <div class="col-xs-5">Test Site</div>
                 <div class="col-xs-2">4 days ago</div>
               </div>
-              <div class="slat">
-                <div class="col-xs-5">Praesent vestibulum vulputate vehicula In orci diam, suscipit a ultrices et, mollis a turpis</div>
+              <div class="slat slat-vertical-center">
+                <div class="col-xs-5 slat-title">Long title to show how .slat-title uses ellipsis to truncate</div>
                 <div class="col-xs-5">Another Site</div>
                 <div class="col-xs-2">10 days ago</div>
               </div>
-              <div class="slat">
-                <div class="col-xs-5">Suscipit a ultrices et, mollis a turpis</div>
+              <div class="slat slat-vertical-center slat-hover">
+                <div class="col-xs-5 slat-title">This slat has hover styles</div>
                 <div class="col-xs-5">Another Site</div>
                 <div class="col-xs-2">7 months ago</div>
               </div>
@@ -737,10 +744,20 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
   &lt;div class="col-xs-5"&gt;Site&lt;/div&gt;
   &lt;div class="col-xs-2"&gt;Date Modified&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="slat"&gt;
-  &lt;div class="col-xs-5"&gt;Lorem Ipsum...&lt;/div&gt;
+&lt;div class="slat slat-vertical-center"&gt;
+  &lt;div class="col-xs-5 slat-title"&gt;Lorem Ipsum Dolor Sit Amet&lt;/div&gt;
   &lt;div class="col-xs-5"&gt;Test Site&lt;/div&gt;
   &lt;div class="col-xs-2"&gt;4 days ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="slat slat-vertical-center"&gt;
+  &lt;div class="col-xs-5 slat-title"&gt;Long title to show how .slat-title uses ellipsis to truncate&lt;/div&gt;
+  &lt;div class="col-xs-5"&gt;Another Site&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;10 days ago&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="slat slat-vertical-center slat-hover"&gt;
+  &lt;div class="col-xs-5 slat-title"&gt;This slat has hover styles&lt;/div&gt;
+  &lt;div class="col-xs-5"&gt;Another Site&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;7 months ago&lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
           </section>
