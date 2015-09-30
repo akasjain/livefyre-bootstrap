@@ -1,0 +1,49 @@
+@import (reference) "./mixins";
+@import (reference) "./variables";
+
+//
+// Navs
+// --------------------------------------------------
+
+// Tabs
+// -------------------------
+.nav-tabs {
+  border-bottom: 0;
+
+  > li {
+    margin-bottom: 0;
+
+    > a {
+      margin-right: @grid-gutter-width;
+      padding: 12px 0;
+      font-size: @font-size-large;
+      line-height: ceil((@font-size-large * 1.2)); // ~22px
+      color: @gray-dark;
+      border-width: 0 0 2px;
+      border-radius: 0;
+
+      &:hover {
+        color: @gray-darkest;
+        background-color: transparent;
+        border-color: @nav-tabs-border-color;
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-width: 0 0 2px;
+        border-color: @nav-tabs-active-link-hover-border-color;
+      }
+    }
+  }
+}
+
+.nav-tabs-sm {
+  > li > a {
+    padding: 8px 0;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+  }
+}
