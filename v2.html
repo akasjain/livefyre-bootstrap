@@ -130,7 +130,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
                       <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
                       <li><strong>Toggles:</strong> Update all toggle instances with the new markup. (<a href="#section-toggles">example markup</a>)</li>
                       <li><strong>Toggles:</strong> Toggle are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
-                      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. You should now look for the "checked" attribute of the input element. Don't add a click event listener to the <code>&lt;label&gt;</code> element because browsers might register two clicks: one on the label and one on the checkbox inside. (<a href="#section-toggles">example markup</a>)</li>
+                      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. Event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside. (<a href="#section-toggles">example markup</a>)</li>
                       <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
                       <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
                       <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
@@ -851,7 +851,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
               You can set a toggle to its "on" state by adding the <code>checked</code> attribute to the input element.
             </p>
             <h3>Event Listeners</h3>
-            <p>Note that your click event listeners should look for changes to the "checked" attribute of the input element. Don't add an event listener to the <code>&lt;label&gt;</code> element because browsers might register two clicks: one on the label and one on the checkbox inside.</p>
+            <p>Note that your event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside.</p>
             <div class="bs-example">
               <label class="toggle" style="display: inline-block;">
                 <input type="checkbox" role="checkbox" />
