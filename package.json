@@ -8,10 +8,6 @@
       "email": "ben@livefyre.com"
     },
     {
-      "name": "Chris Richards",
-      "email": "crichards@livefyre.com"
-    },
-    {
       "name": "Phil Cho",
       "email": "pcho@livefyre.com"
     }
@@ -20,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/Livefyre/livefyre-bootstrap.git"
   },
-  "version": "1.4.11",
+  "version": "1.4.12",
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
     "start": "./bin/server.js",
