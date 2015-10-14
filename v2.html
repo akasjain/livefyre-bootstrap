@@ -1359,6 +1359,48 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
             </div>
           </section>
 
+
+          <section id="section-tabs">
+            <h1 class="section-header">Tabs</h1>
+            <p class="descrip">
+              This is just a skin update. The same markup and classes from Bootstrap's tabs apply.
+            </p>
+            <div class="bs-example">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tabId" data-toggle="tab">Home</a></li>
+                <li><a href="#tabId" data-toggle="tab">Profile</a></li>
+                <li><a href="#tabId" data-toggle="tab">Information</a></li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+
+            <h3>Sizing</h3>
+            <p class="descrip">
+              There is an optional smaller tab size which can be enabled by adding class <code>.nav-tabs-sm</code>. Useful for modals or sidebars.
+            </p>
+            <div class="bs-example">
+              <ul class="nav nav-tabs nav-tabs-sm">
+                <li class="active"><a href="#" data-toggle="tab">Home</a></li>
+                <li><a href="#" data-toggle="tab">Profile</a></li>
+                <li><a href="#" data-toggle="tab">Information</a></li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="nav nav-tabs nav-tabs-sm"&gt;
+  &lt;li class="active"&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </section>
+
+
         </div><!-- /.col -->
 
 
@@ -1388,7 +1430,8 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
               <a href="#section-popovers"><li>Popovers</li></a>
               <a href="#section-dropdowns"><li>Dropdowns</li></a>
               <a href="#section-modals"><li>Modals</li></a>
-              <a href="#section-loader"><li class="list-last">Loader</li></a>
+              <a href="#section-loader"><li>Loader</li></a>
+              <a href="#section-tabs"><li class="list-last">Tabs</li></a>
             </ul>
           </div>
         </div><!-- /.col -->
