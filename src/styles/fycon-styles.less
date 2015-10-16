@@ -14,7 +14,7 @@
 
 .fycons-styles() {
   [class^="fycon-"]:before,
-  [class*=" fycon-"]:before {
+  [class*=" fycon-"]:before { // Using nested &:before breaking compiler for some reason
     .fycons-styles-base();
   }
 
@@ -36,6 +36,17 @@
 
   .fycon-inherit {
     font-size: inherit;
+  }
+
+  // Add "+" next to fycon
+  [class^="fycon-"].add-plus:after,
+  [class*=" fycon-"].add-plus:after { // Using nested &:before breaking compiler for some reason
+    vertical-align: sub;
+    margin-left: 0.2em;
+    font-size: 0.8em;
+    font-weight: normal;
+    line-height: 1;
+    content: "+"; // Not using .fycon-plus because it's too thin at small sizes
   }
 }
 

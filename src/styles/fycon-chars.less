@@ -708,3 +708,15 @@
     color: @brand-twitter;
   }
 }
+
+// Add "+" Next to Fycon
+[class^="fycon-"],
+[class*=" fycon-"] { // Needs this extra specificity
+  &.add-plus {
+
+    &.fycon-source-twitter:after {
+      margin-left: -0.1em;
+    }
+    
+  }
+}
