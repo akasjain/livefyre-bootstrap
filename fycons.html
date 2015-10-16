@@ -3,7 +3,10 @@
   <head>
     <title>Livefyre Bootstrap Developer Docs</title>
     <!-- <link href="../../dist/all.css" rel="stylesheet"> -->
+    <!-- Use 1.x for the button example and 2.x for the add-plus example. -->
     <link rel="stylesheet" href="http://livefyre-cdn.s3.amazonaws.com/libs/livefyre-bootstrap/v1.4.12/livefyre-bootstrap.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap.min.css">
+
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="css/fycon.css">
   </head>
@@ -44,6 +47,19 @@
         <p class="descrip">Fycons are generally tracked and vertically aligned for you. When used in parent elements such as buttons, they should correctly display and scale with inherited font-sizes. The advised tag to use for fycons is <code>&lt;span class="fycon-*" aria-hidden="true"&gt;&lt;/span&gt;</code>.</p>
         <p class="descrip">The attribute <code>aria-hidden="true"</code> prevents some screenreaders from announcing the character code (<a href="http://www.filamentgroup.com/lab/bulletproof_icon_fonts.html">reference</a>).</p>
         <p class="descrip">Note: class names shown below under "List of Fycons" need to be prefixed with <code>fycon-</code>. For example, <code>&lt;span class="fycon-action-etc" aria-hidden="true"&gt;&lt;/span&gt;</code>.</p>
+
+
+        <h3>Add a Plus ("+")</h3>
+        <p class="descrip">[Livefyre Bootstrap 2.x only] Use the <code>.add-plus</code> class to add a small "+" next to the Fycon.</p>
+        <div class="bs-example">
+            <p><a href="#"><span class="fycon-source-twitter add-plus" aria-hidden="true"></span> Create a New Twitter Rule</a></p>
+            <p><button class="btn btn-default"><span class="fycon-folder add-plus" aria-hidden="true"></span> Add a Folder</button></p>
+        </div>
+        <div class="highlight">
+          <pre><code>&lt;!-- Livefyre Bootstrap 2.0 only --&gt;
+&lt;a href="#"&gt;&lt;span class="fycon-source-twitter add-plus" aria-hidden="true"&gt;&lt;/span&gt; Create a New Twitter Rule&lt;/a&gt;
+&lt;button class="btn btn-default"&gt;&lt;span class="fycon-folder add-plus" aria-hidden="true"&gt;&lt;/span&gt; Add a Folder&lt;/button&gt;</code></pre>
+        </div>
 
         <h3>With buttons</h3>
         <p class="descrip">Add the fycon tag inside of a container element. Do not add the fycon class to container itself.</p>
