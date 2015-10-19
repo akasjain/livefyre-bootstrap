@@ -6,13 +6,10 @@
 // --------------------------------------------------
 
 // Common form controls
-.form-control {
+.form-control,
+.form-control:focus {
   -webkit-box-shadow: none; // iOS <4.3 & Android <4.1
           box-shadow: none;
-
-  &:focus {
-    .box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.1));
-  }
 }
 
 // Form control sizing
