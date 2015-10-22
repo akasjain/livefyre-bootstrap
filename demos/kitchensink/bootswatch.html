@@ -793,11 +793,42 @@
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
                       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox"> Checkbox
+                          <input type="checkbox" value="">
+                          Default checkbox
                         </label>
                       </div>
+                      <div class="form-group" data-reactid=""><div class="checkbox" data-reactid=""><label class="input-ban" data-reactid="."><input class="sidebar-control-string" type="checkbox" label="Checkbox with React Markup" value="yes" data-reactid=""><span data-reactid="">Checkbox with React Markup</span></label></div></div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="" checked="">
+                          Checked checkbox
+                        </label>
+                      </div>
+                      <div class="checkbox disabled">
+                        <label>
+                          <input type="checkbox" value="" disabled>
+                          Disabled checkbox
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        </label>
+                      </div>
+
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Inline 1
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Inline 2
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Inline 3
+                      </label>
+
                     </div>
                   </div>
                   <div class="form-group">
@@ -810,18 +841,43 @@
                   <div class="form-group">
                     <label class="col-lg-2 control-label">Radios</label>
                     <div class="col-lg-10">
+
                       <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                          Option one is this
+                          Default radio button
+                        </label>
+                      </div>
+                      <div class="form-group"><div class="radio"><label class=""><input value="-updatedAt" class="sidebar-control-string input--updatedAt" type="radio" checked="" label="Button with React Markup"><span >Button with React Markup</span></label></div></div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Another default radio button
+                        </label>
+                      </div>
+                      <div class="radio disabled">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
+                          Disabled radio button
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          Option two can be something else
+                          <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
                         </label>
                       </div>
+
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Inline 1
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Inline 2
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Inline 3
+                      </label>
+
+
                     </div>
                   </div>
                   <div class="form-group">
