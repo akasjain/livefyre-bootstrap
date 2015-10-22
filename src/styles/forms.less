@@ -27,8 +27,8 @@
 
 // Checkboxes and radios
 // - Uses fycons instead of browser styles
-.checkbox label
-.radio label
+.checkbox label,
+.radio label,
 label.checkbox-inline,
 label.radio-inline {
   padding-left: 26px;
@@ -36,7 +36,7 @@ label.radio-inline {
 
   input[type="checkbox"],
   input[type="radio"] {
-    margin: 1px 0 0 -26px;
+    margin: 0 0 0 -26px;
   }
 }
 
@@ -45,6 +45,7 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: 0;
+  font-size: 1.1em;
 
   &:before {
     .fycons-styles-base;
