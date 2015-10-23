@@ -1,0 +1,89 @@
+//
+// List groups
+// --------------------------------------------------
+
+
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+
+.list-group {
+  color: @list-group-text-color;
+}
+
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+  padding: 1em 15px;
+  color: @list-group-text-color;
+  border-width: 1px 0;
+}
+
+
+// Button List
+//
+
+button.list-group-item {
+  width: 100%;
+  text-align: left;
+  border-width: 1px;
+}
+
+
+// Striped List
+//
+// Separates items using alternating bg colors instead of borders.
+// Ex: Activity feed in User details
+
+.list-group-striped {
+  .list-group-item {
+    margin-bottom: 0;
+    border: 0;
+
+    &:nth-child(odd) {
+      background-color: @gray-lightest;
+    }
+    
+    &:nth-child(even) {
+      &.disabled,
+      &.disabled:hover,
+      &.disabled:focus {
+        background-color: @list-group-bg;
+      }
+    }
+  }
+}
+
+
+// No Borders List
+//
+// Removes border dividers and reduces spacing between items.
+// Ex: Modal for managing permissions on an Asset Manager folder.
+
+.list-group-no-borders {
+  .list-group-item {
+    margin-bottom: 0;
+    padding-top: 10px; // Since there are no visual dividers, we don't need as much space
+    padding-bottom: 10px;
+    border: 0;
+  }
+}
+
+
+// Custom content options
+//
+// Extra classes for creating well-formatted content within `.list-group-item`s.
+// Ex: Assigned Roles list in User detailsfws
+
+.list-group-item-heading {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.list-group-item-text {
+  color: @gray-darkish;
+}
