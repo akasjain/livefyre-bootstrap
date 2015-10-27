@@ -642,21 +642,21 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
           </section>
 
           <section id="section-alerts">
-              <h1 class="section-header">Alerts</h1>
-              <h3>Colors</h3>
-              <p class="descrip">
-                Alerts come in three flavors: <code>.alert-success</code>, <code>.alert-info</code>, and <code>.alert-warning</code>.
-              </p>
+            <h1 class="section-header">Alerts</h1>
+            <h3>Colors</h3>
+            <p class="descrip">
+              Alerts come in three flavors: <code>.alert-success</code>, <code>.alert-info</code>, and <code>.alert-warning</code>.
+            </p>
 
-              <h3>Dismissable alerts</h3>
-              <p class="descrip">If the alert is dismissable, add class <code>.alert-dismissable</code> and include a <code>&lt;span class="close [light]"/&gt;</code>. Depending on the color of the alert, use the default darker close via <code>fycon-x</code> as seen in the example below.</p>
-              <div class="bs-example">
-                <div class="alert alert-info"><strong>Info: You might want to check that thing, it could be important.</strong></div>
-                <div class="alert alert-warning alert-dismissable"><strong>Warning: I think you might've fucked something up.</strong><span class="close light"><i class="fycon-x"></i></span></div>
-                <div class="alert alert-success alert-dismissable"><strong>Success: Good job, everything looks good!</strong><span class="close light"><i class="fycon-x"></i></span></div>
-              </div>
-              <div class="highlight">
-                <pre><code>&lt;div class="alert alert-info"&gt;
+            <h3>Dismissable alerts</h3>
+            <p class="descrip">If the alert is dismissable, add class <code>.alert-dismissable</code> and include a <code>&lt;span class="close [light]"/&gt;</code>. Depending on the color of the alert, use the default darker close via <code>fycon-x</code> as seen in the example below.</p>
+            <div class="bs-example">
+              <div class="alert alert-info"><strong>Info: You might want to check that thing, it could be important.</strong></div>
+              <div class="alert alert-warning alert-dismissable"><strong>Warning: I think you might've fucked something up.</strong><span class="close light"><i class="fycon-x"></i></span></div>
+              <div class="alert alert-success alert-dismissable"><strong>Success: Good job, everything looks good!</strong><span class="close light"><i class="fycon-x"></i></span></div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="alert alert-info"&gt;
   &lt;strong&gt;Info: You might want to check that thing, it could be important.&lt;/strong&gt;
 &lt;/div&gt;
 
@@ -669,6 +669,132 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
   &lt;span class="close light"&gt;&lt;i class="fycon-x"&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>            
             </div>
+          </section>
+
+          <section id="list-group">
+            <h1 class="section-header">List Group</h1>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-list-group" aria-expanded="false" aria-controls="changes-list-group">Changes from v1.x</a>
+            <div class="collapse" id="changes-list-group">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Minor skin update. Most notably, we removed the border that surrounded the entire list because we usually don't need it.</li>
+                  <li>Added modifier <code>.list-group-striped</code> to alternate background row colors.</li>
+                  <li>Added modifier <code>.list-group-no-borders</code> to remove all borders.</li>
+                </ul>
+              </div>
+            </div>
+
+
+            <ul class="descrip">
+              <li>Use to display simple lists of information. Ex: User activity feed, Stream rules.</li>
+              <li>Markup is pretty flexible. Ex: You can use an unordered list or a div with a list of a links.</li>
+              <li>For dashboard lists (ex: Streams List, Users List), use the <a href="#section-slats">Slats</a> component instead.</li>
+            </ul>
+
+            <h3>Basic List Group</h3>
+            <ul class="descrip">
+              <li>Minor skin update. Most notably, we removed the border that surrounded the entire list because we usually don't need it.</li>
+              <li>The same classes from Bootstrap's list group apply including <code>.active</code> and <code>.disabled</code>.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="list-group">
+                <li class="list-group-item active">This item is "active"</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item disabled">This item is "disabled"</li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="list-group"&gt;
+  &lt;li class="list-group-item active"&gt;Cras justo odio&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Porta ac consectetur ac&lt;/li&gt;
+  &lt;li class="list-group-item disabled"&gt;Vestibulum at eros&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+
+            <h3>List Group with Striped Rows</h3>
+            <ul class="descrip">
+              <li>Use the class <code>.list-group-striped</code> in the parent container.</li>
+              <li>Ex: The activity feed on the User Details page.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="list-group list-group-striped">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
+            <div class="highlight"><pre><code>&lt;ul class="list-group list-group-striped"&gt;
+  &lt;li class="list-group-item"&gt;Cras justo odio&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Porta ac consectetur ac&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Vestibulum at eros&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+            <h3>List Group with No Borders</h3>
+            <ul class="descrip">
+              <li>Use the class <code>.list-group-no-borders</code> in the parent container.</li>
+              <li>Ex: The "Manage Access" modal in the Library.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="list-group list-group-no-borders">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
+            <div class="highlight"><pre><code>&lt;ul class="list-group list-group-no-borders"&gt;
+  &lt;li class="list-group-item"&gt;Cras justo odio&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Porta ac consectetur ac&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;Vestibulum at eros&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+            <h3>Linked List Group with Headers</h3>
+            <ul class="descrip">
+              <li>Use the classes <code>.list-group-item-heading</code> and <code>.list-group-item-text</code>.</li>
+              <li>Ex: The "Assigned Roles" tab on the User Detail page.</li>
+            </ul>
+            <div class="bs-example">
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius sed diam eget risus variussed diam eget risus variussed diam eget risus variusblandit.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+              </div>
+            </div>
+            <div class="highlight"><pre><code>&lt;div class="list-group"&gt;
+  &lt;a href="#" class="list-group-item"&gt;
+    &lt;h4 class="list-group-item-heading"&gt;List group item heading&lt;/h4&gt;
+    &lt;p class="list-group-item-text"&gt;Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius sed diam eget risus variussed diam eget risus variussed diam eget risus variusblandit.&lt;/p&gt;
+  &lt;/a&gt;
+  &lt;a href="#" class="list-group-item"&gt;
+    &lt;h4 class="list-group-item-heading"&gt;List group item heading&lt;/h4&gt;
+    &lt;p class="list-group-item-text"&gt;Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+  &lt;/a&gt;
+  &lt;a href="#" class="list-group-item"&gt;
+    &lt;h4 class="list-group-item-heading"&gt;List group item heading&lt;/h4&gt;
+    &lt;p class="list-group-item-text"&gt;Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
           </section>
 
           <section id="section-avatars">
@@ -1425,6 +1551,7 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
               <a href="#section-labels"><li>Labels</li></a>
               <a href="#section-badges"><li>Badges</li></a>
               <a href="#section-alerts"><li>Alerts</li></a>
+              <a href="#list-group"><li>List Group</li></a>
               <a href="#section-avatars"><li>Avatars</li></a>
               <a href="#section-slats"><li>Slats</li></a>
               <a href="#section-nodatablock"><li>No-Data Block</li></a>
