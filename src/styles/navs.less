@@ -57,11 +57,25 @@
   }
 }
 
+
+// Small Tabs
+// -------------------------
 .nav-tabs-sm {
   > li > a {
     margin-right: 20px;
     padding: 6px 0 8px;
     font-size: @font-size-base;
     line-height: @line-height-base;
+  }
+}
+
+
+// Justified Tabs
+// -------------------------
+.nav-tabs.nav-justified > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    border-width: 0 0 2px;
   }
 }
