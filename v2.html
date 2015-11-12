@@ -1531,6 +1531,121 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
           </section>
 
 
+          <section id="section-query-inputs">
+            <h1 class="section-header">Query Inputs (i.e. Search Forms)</h1>
+
+            <h3>Usage</h3>
+            <ul class="descrip">
+              <li>Markup is taken from our React component <code>Simple.jsx</code>, used in Asset Manager.</li>
+              <li>The component's width is determined by its container. Each example below is wrapped in a <code>&lt;div class="col-md-6"&gt;</code>.</li>
+            </ul>
+
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="query-input">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Find stream">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="query-input"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" class="form-control" placeholder="Find stream"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>        
+
+            <p class="descrip">This is what it looks like with the loader in <code>Simple.jsx</code>.</p>
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="query-input">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Find stream">
+                      </div>
+                    </div>
+                    <div class="loader loader-mini">
+                      <div></div><div></div><div></div>
+                      <div></div><div></div><div></div>
+                      <div></div><div></div><div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="query-input"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" class="form-control" placeholder="Find stream"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="loader loader-mini"&gt;
+    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>   
+
+            <h3>With button</h3>
+            <p class="descrip">When using a submit button, add the <code>.query-input-with-button</code> class. It removes the magnifying class fycon from the text field. Shown here with optional loader.</p>
+
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="query-input query-input-with-button">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Find stream">
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-default">
+                            <span class="fycon-search fycon-lg"></span>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="loader loader-mini">
+                      <div></div><div></div><div></div>
+                      <div></div><div></div><div></div>
+                      <div></div><div></div><div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="query-input query-input-with-button"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" class="form-control" placeholder="Find stream"&gt;
+      &lt;span class="input-group-btn"&gt;
+        &lt;button type="submit" class="btn btn-default"&gt;
+          &lt;span class="fycon-search fycon-lg"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="loader loader-mini"&gt;
+    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>   
+
+          </section>
+
+
         </div><!-- /.col -->
 
 
@@ -1562,7 +1677,8 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
               <a href="#section-dropdowns"><li>Dropdowns</li></a>
               <a href="#section-modals"><li>Modals</li></a>
               <a href="#section-loader"><li>Loader</li></a>
-              <a href="#section-tabs"><li class="list-last">Tabs</li></a>
+              <a href="#section-tabs"><li>Tabs</li></a>
+              <a href="#section-query-inputs"><li class="list-last">Query Inputs (Search Forms)</li></a>
             </ul>
           </div>
         </div><!-- /.col -->
