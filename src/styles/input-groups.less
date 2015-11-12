@@ -9,27 +9,66 @@
   background-color: @input-bg;
 }
 
-//
-//     <div class="search-form">
-//       <i class="fycon-search"></i>
-//       <input type="text" placeholder="Search" />
-//     </div>
-//
-.search-form {
-  display: inline-block;
 
-  .fycon-search {
-    position: relative;
-    left: 2em;
-  }
+// Query Input (i.e. search forms)
+// -------------------------
+.query-input {
+  position: relative; // For loader
+  
+  .input-group {
+    .fycon-search;
+    display: block; // Override TwBootstrap style (display: table-cell)
 
-  input {
-    padding-left: 2em;
-    border-radius: 10px;
-    border: thin solid black;
-
-    &:hover {
-      border: thin solid @blue;
+    &:before {
+      .fycons-styles-base;
+      position: absolute;
+      z-index: 10; // Must be higher than 2 (z-index of input field that follows)
+      top: 8px;
+      left: 12px;
+      color: @gray-darkish;
     }
+  
+    input[type="text"] {
+      .placeholder(@input-color-placeholder); // Without this, IE10-11 lets the input field's color override the placeholder color.
+      display: block; // Make field full width in IE9
+      float: none; // Override TwBootstrap style for .input-group .form-control
+      padding-left: 34px;
+      font-family: @font-family-sans-serif;
+      font-size: @font-size-small;
+      color: @gray-darkest;
+      border-radius: @input-border-radius;
+    }
+  }
+  
+  .loader {
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    z-index: 2;
+    background-color: #fff;
+    box-shadow: -15px 0 10px -2px #fff; // When loader overlaps search text, make it look like text is fading out.
+  }
+}
+
+// With submit button
+.query-input-with-button {
+  .input-group {
+    display: table;
+    
+    &:before {
+      content: "";
+    }
+  
+    input[type="text"] {
+      float: left;
+      padding-left: 12px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+  
+  .loader {
+    right: -34px; // Can't place loader inside of text field because we don't know how wide submit button is. So placing loader outside of form for now.
+    box-shadow: none;
   }
 }
