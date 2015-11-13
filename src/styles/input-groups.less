@@ -16,12 +16,8 @@
   position: relative; // For loader
   
   .form-group {
-    margin-bottom: 0;
-  }
-
-  .input-group {
     .fycon-search;
-    display: block; // Override TwBootstrap style (display: table-cell)
+    margin-bottom: 0;
 
     &:before {
       .fycons-styles-base;
@@ -29,7 +25,7 @@
       z-index: 10; // Must be higher than 2 (z-index of input field that follows)
       top: 8px;
       left: 12px;
-      color: @gray-darkish;
+      color: @input-color-placeholder;
     }
   
     input[type="text"] {
@@ -54,11 +50,8 @@
   }
 }
 
-// With submit button
 .query-input-with-button {
-  .input-group {
-    display: table;
-    
+  .form-group {
     &:before {
       content: "";
     }
