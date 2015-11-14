@@ -27,11 +27,14 @@
       left: 12px;
       color: @input-color-placeholder;
     }
+    
+    .input-group {
+      display: block; // Override TwBootstrap style (display: table)
+    }
   
     input[type="text"] {
       .placeholder(@input-color-placeholder); // Without this, IE10-11 lets the input field's color override the placeholder color.
       display: block; // Make field full width in IE9
-      float: none; // Override TwBootstrap style for .input-group .form-control
       padding-left: 34px;
       font-family: @font-family-sans-serif;
       font-size: @font-size-small;
@@ -40,11 +43,18 @@
     }
   }
   
-  .loader {
+  .input-group-addon { // Loader wrapper
     position: absolute;
-    right: 12px;
     top: 6px;
+    right: 12px;
     z-index: 2;
+    width: 24px; // 24px = width of .loader-mini
+    padding: 1px 0; // Leave room to expose text field's border
+    border: 0;
+    background-color: transparent;
+  }
+  
+  .loader {
     background-color: #fff;
     box-shadow: -15px 0 10px -2px #fff; // When loader overlaps search text, make it look like text is fading out.
   }
@@ -55,17 +65,22 @@
     &:before {
       content: "";
     }
+    
+    .input-group {
+      display: table;
+    }
   
     input[type="text"] {
       float: left;
+      width: calc(100% ~'+' 24px); // 24px = width of .loader-mini
       padding-left: 12px;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
     }
-  }
-  
-  .loader {
-    right: -34px; // Can't place loader inside of text field because we don't know how wide submit button is. So placing loader outside of form for now.
-    box-shadow: none;
+    
+    .input-group-addon { // Loader wrapper
+      position: relative;
+      top: 0;
+    }
   }
 }
