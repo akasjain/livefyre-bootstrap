@@ -138,7 +138,7 @@
             </div><!-- /bs-component -->
 
             <div class="bs-component">
-              <h5>Loader</h5>
+              <h5>Loader (doesn't appear in the DOM until called upon)</h5>
               <div class="query-input">
                 <div class="form-group">
                   <div class="input-group">
@@ -161,6 +161,23 @@
                 <div class="form-group">
                   <div class="input-group">
                     <input type="text" placeholder="Find stream" class="form-control">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-default">
+                        <span class="fycon-search fycon-lg"></span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /bs-component -->
+
+            <div class="bs-component">
+              <h5>With Button and Loader (add class .query-input-with-button)</h5>
+
+              <div class="query-input query-input-with-button">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" placeholder="Find stream" class="form-control">
                     <span class="input-group-addon">
                       <div class="loader loader-mini">
                         <div></div><div></div><div></div>
@@ -170,12 +187,11 @@
                     </span>
                     <span class="input-group-btn">
                       <button type="submit" class="btn btn-default">
-                        <span class="fycon-search fycon-lg"></span>
+                        <span class="fycon-search fycon-lg"></span> Search
                       </button>
                     </span>
                   </div>
                 </div>
-              </div>
             </div><!-- /bs-component -->
 
             <div class="bs-component" style="padding: 20px 40px; background-color: #2f3440;">
