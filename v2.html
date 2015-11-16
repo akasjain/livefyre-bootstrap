@@ -1559,18 +1559,22 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
 &lt;/div&gt;</code></pre>
             </div>        
 
-            <p class="descrip">This is what it looks like with the loader rendered by Asset Manager's <code>Simple.jsx</code>.</p>
+            <p class="descrip">This is what it looks like with the loader rendered by Asset Manager's <code>Simple.jsx</code>. Note the addition of a <code>&lt;div class="input-group"&gt;</code> wrapper.</p>
             <div class="bs-example">
               <div class="row">
                 <div class="col-md-6">
                   <div class="query-input">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Find stream">
-                    </div>
-                    <div class="loader loader-mini">
-                      <div></div><div></div><div></div>
-                      <div></div><div></div><div></div>
-                      <div></div><div></div><div></div>
+                      <div class="input-group">
+                        <input type="text" placeholder="Find stream" class="form-control">
+                        <span class="input-group-addon">
+                          <div class="loader loader-mini">
+                            <div></div><div></div><div></div>
+                            <div></div><div></div><div></div>
+                            <div></div><div></div><div></div>
+                          </div>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1579,19 +1583,22 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
             <div class="highlight">
               <pre><code>&lt;div class="query-input"&gt;
   &lt;div class="form-group"&gt;
-    &lt;input type="text" class="form-control" placeholder="Find stream"&gt;
-  &lt;/div&gt;
-  &lt;div class="loader loader-mini"&gt;
-    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" placeholder="Find stream" class="form-control"&gt;
+      &lt;span class="input-group-addon"&gt;
+        &lt;div class="loader loader-mini"&gt;
+          &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>   
 
             <h3>With button</h3>
-            <p class="descrip">When using a submit button, add the <code>.query-input-with-button</code> class. It removes the magnifying class fycon from the text field.</p>
-            <p class="descrip">Note the addition of a <code>&lt;div class="input-group"&gt;</code> wrapper.</p>
+            <p class="descrip">When using a submit button, add the <code>.query-input-with-button</code> class. It removes the magnifying class fycon from the text field. Note the addition of a <code>&lt;div class="input-group"&gt;</code> wrapper.</p>
 
             <div class="bs-example">
               <div class="row">
