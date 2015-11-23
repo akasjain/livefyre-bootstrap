@@ -137,6 +137,7 @@ https://cdn.rawgit.com/Livefyre/livefyre-bootstrap/2.0.0/dist/livefyre-bootstrap
                       <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
                       <li><strong>Modals:</strong> Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to align headlines, text and buttons.</li>
                       <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
+                      <li><strong>Modals:</strong> Remove the <code>.animated</code> class. Use the default <code>.fade</code> class in the <code>.modal</code> wrapper.</li>
                       <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc. (<a href="#section-colors">more</a>)</li>
                       <li><strong>Tooltips:</strong> If you'd like the change a tooltip to trigger on click, use the <code>data-trigger="click"</code> attribute. (<a href="#section-tooltips">example markup</a>)</li>
                       <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
@@ -1114,6 +1115,7 @@ $('#element').tooltip(
                 <ul class="descrip">
                   <li>Increased overall padding. Other minor style changes.</li>
                   <li>To add a new 450px modal size, we changed <code>.modal-sm</code> from 300px wide to 450px. You can use the new <code>.modal-xs</code> class to create 300px wide modals.</li>
+                  <li>Make the bounce-in animation the default. So, no need to use the <code>.animated</code> class anymore.</li>
                   <li>Added ability to divide content inside the modal body using <code>section</code>.</li>
                   <li>Added support for [Twitter] Bootstrap's helper classes for text alignment (<code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code>) so they can be used on the modal's title, body and footer containers. Note that the <code>.centered</code> class has been deprecated in [Twitter] Bootstrap.</li>
                   <li>Fixed close button so it no longer affects header text positioning.</li>
@@ -1678,7 +1680,7 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
     </div><!-- /.container -->
     
     <div class="modal fade" id="lfModal" style="margin: 0 auto;">
-      <div class="modal-dialog modal-lg animated">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" data-dismiss="modal">
