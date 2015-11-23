@@ -10,6 +10,14 @@
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
+
+  // Change default animation to bounce-in (instead of slide down)
+  &.fade .modal-dialog {
+    .translate3d(0,0,0);
+    .transition(none); // For Safari: fixes issue where modal click areas are shifted up.
+    .animation(scale-bounce-in .3s);
+    .backface-visibility(visible);
+  }  
 }
 
 // Actual modal
@@ -161,11 +169,4 @@
 
 @media (min-width: @screen-md-min) {
   .modal-lg { width: @modal-lg; }
-}
-
-.modal.in .modal-dialog.animated {
-  .transition(none); // For Safari: fixes issue where modal click areas are shifted up.
-  .animation(scale-bounce-in .3s);
-  .backface-visibility(visible);
-  .translate3d(0,0,0);
 }
