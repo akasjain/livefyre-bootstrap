@@ -75,7 +75,7 @@
                   <div class="panel-body">
                     <p>In your <code>package.json</code> or <code>bower.json</code> file, add or update the <code>livefyre-bootstrap</code> dependency:
                     <pre>"livefyre-bootstrap": "git+ssh://git@github.com/Livefyre/livefyre-bootstrap.git#2.0.0"</pre>
-                    <p>For JSFiddle and CodePen projects, you can use RawGit to serve the CSS and JS files:</p>
+                    <p>Or, you can use the CDN urls:</p>
                     <pre>https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.0/livefyre-bootstrap.min.css
 https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.0/livefyre-bootstrap.min.js</pre>
                   </div>
@@ -124,7 +124,7 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.0/livefyre-bootstrap.min.j
                       <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height.</li>
                       <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
                       <li><strong>Toggles:</strong> Update all toggle instances with the new markup. (<a href="#section-toggles">example markup</a>)</li>
-                      <li><strong>Toggles:</strong> Toggle are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
+                      <li><strong>Toggles:</strong> Toggles are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
                       <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. Event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside. (<a href="#section-toggles">example markup</a>)</li>
                       <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
                       <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
