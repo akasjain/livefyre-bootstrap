@@ -133,7 +133,6 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.0/livefyre-bootstrap.min.j
                       <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
                       <li><strong>Modals:</strong> Remove the <code>.animated</code> class. Use the default <code>.fade</code> class in the <code>.modal</code> wrapper.</li>
                       <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc. (<a href="#section-colors">more</a>)</li>
-                      <li><strong>Tooltips:</strong> If you'd like the change a tooltip to trigger on click, use the <code>data-trigger="click"</code> attribute. (<a href="#section-tooltips">example markup</a>)</li>
                       <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
                       <li><strong>Tabs:</strong> Check tab navigation as <a href="#section-tabs">their styles have been updated</a>.</li>
                     </ol>
@@ -1028,7 +1027,7 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.0/livefyre-bootstrap.min.j
               <div class="well">
                 <h3>Changes from v1.x</h3>
                 <ul class="descrip">
-                  <li>Added ability to trigger tooltip on click instead of on hover. (I know, Bootstrap says it can do this out of the box but it really doesn't. So we had to extend the plugin ourselves.)</li>
+                  <li>We extended the plugin so that after triggering a tooltip via click, a 2nd click anywhere - except on the tooltip itself - closes it. This overrides the default behavior where you can only close the tooltip by clicking the trigger element again.</li>
                 </ul>
               </div>
             </div>
