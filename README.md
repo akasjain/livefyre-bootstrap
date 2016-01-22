@@ -64,3 +64,7 @@ Run tests with
 ## Todo
 * Does /dist need to be .gitignore'd? Or do people depend on dist/ assets. It hasn't been updated in 2 months.
 * Make use of https://github.com/livefyre/gulp-fycon ?
+
+
+## Variables
+https://github.com/Livefyre/livefyre-bootstrap/blob/master/src/styles/variables.less
