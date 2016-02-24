@@ -155,6 +155,25 @@
 }
 
 
+// Make Scrollable
+// - Turn an element (ex: .list-group) into a scrollable container
+// - Similar to .pre-scrollable in code.less
+.scrollable {
+  max-height: @scrollable-max-height;
+  overflow-y: scroll;
+  border: 1px solid @gray-light;
+  border-radius: @border-radius-small;
+}
+
+.scrollable-sm {
+  max-height: @scrollable-sm-max-height;
+}
+
+.scrollable-lg {
+  max-height: @scrollable-lg-max-height;
+}
+
+
 // Scale up the modal
 @media (min-width: @screen-sm-min) {
   // Automatically set modal's width for larger viewports
