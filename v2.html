@@ -1293,6 +1293,68 @@ $('#element').tooltip(
               Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> on any element align headers, text and buttons.
             </p>
 
+            <h3 id="scrollable">Scrollable</h3>
+            <p class="descrip">
+              Turn an element (ex: <code>.list-group</code>) into a scrollable container. Similar to <code>.pre-scrollable</code> in code.less.
+            </p>
+            <p class="descrip">
+              Default max-height is 350px. Use additional classes to change size.<br />
+              <code>.scrollable-sm</code> = 200px<br />
+              <code>.scrollable-lg</code> = 500px
+            </p>
+            <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">
+                      <span class="fycon-x"></span>
+                    </button>
+                    <h4 class="modal-title">Modal with Scrollable List</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>Scroll me!</h4>
+                    <ul class="list-group list-group-striped scrollable scrollable-sm">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="modal-dialog"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;button class="close" data-dismiss="modal"&gt;
+        &lt;span class="fycon-x"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;h4 class="modal-title"&gt;Modal with Scrollable List&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;h4&gt;Scroll me!&lt;/h4&gt;
+      &lt;ul class="list-group list-group-striped scrollable scrollable-sm"&gt;
+        &lt;li class="list-group-item"&gt;Cras justo odio&lt;/li&gt;
+        &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+        &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+        ...
+        ...</code></pre>
+            </div>
+
           </section>
 
 
@@ -1631,6 +1693,14 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
           </section>
 
 
+          <section id="section-helpers">
+            <h1 class="section-header">Helpers</h1>
+
+            <ul class="descrip">
+              <li><code>.word-break()</code> mixin: forces long words to break to the next line (ex: URLs)</li>
+            </ul>
+          </section>
+
         </div><!-- /.col -->
 
 
@@ -1663,7 +1733,8 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
               <a href="#section-modals"><li>Modals</li></a>
               <a href="#section-loader"><li>Loader</li></a>
               <a href="#section-tabs"><li>Tabs</li></a>
-              <a href="#section-query-inputs"><li class="list-last">Query Inputs (Search Forms)</li></a>
+              <a href="#section-query-inputs"><li>Query Inputs (Search Forms)</li></a>
+              <a href="#section-helpers"><li class="list-last">Helpers</li></a>
             </ul>
           </div>
         </div><!-- /.col -->
