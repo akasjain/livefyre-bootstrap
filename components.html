@@ -3,7 +3,7 @@
   <head>
     <title>Livefyre Bootstrap Developer Docs</title>
     <!-- <link href="../../dist/all.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://livefyre-cdn.s3.amazonaws.com/libs/livefyre-bootstrap/v1.4.16/livefyre-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.livefyre.com/libs/livefyre-bootstrap/v1.4.18/livefyre-bootstrap.min.css">
     <link rel="stylesheet" href="css/docs.css">
   </head>
   <body>
@@ -494,6 +494,42 @@ loader.decorate($('#lfLoader'), 120)
 loader.decorate($('#lfLoader-large'), 'large')
 loader.decorate($('#lfLoader-small'), 'small')
 loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
+            </div>
+
+            <h3>Spinner</h3>
+            <p class="descrip">The generic spinner is for situations when we don't want Livefyre branding and colors (ex: an app that uses a client's branding).</p>
+            <p class="descrip">Size options:</p>
+            <ul class="descrip">
+              <li><code>.spinner-xs</code> = 16x16</li>
+              <li><code>.spinner-sm</code> = 24x24</li>
+              <li><code>.spinner</code> (default) = 36x36</li>
+              <li><code>.spinner-lg</code> = 64x64</li>
+            </ul>
+            <div class="bs-example">
+              <!-- 16 x 16 -->
+              <div class="spinner spinner-xs"></div>
+
+              <!-- 24 x 24 -->
+              <div class="spinner spinner-sm"></div>
+
+              <!-- 36 x 36 (Default) -->
+              <div class="spinner"></div>
+
+              <!-- 64 x 64 -->
+              <div class="spinner spinner-lg"></div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;!-- 16 x 16 --&gt;
+&lt;div class="spinner spinner-xs"&gt;&lt;/div&gt;
+
+&lt;!-- 24 x 24 --&gt;
+&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+
+&lt;!-- 36 x 36 (Default) --&gt;
+&lt;div class="spinner"&gt;&lt;/div&gt;
+
+&lt;!-- 64 x 64 --&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;</code></pre>
             </div>
           </section>
 
