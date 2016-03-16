@@ -138,11 +138,40 @@
             </div><!-- /bs-component -->
 
             <div class="bs-component">
+              <h5>Large</h5>
+              <div class="query-input query-input-lg">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" placeholder="Find stream" class="form-control input-lg">
+                  </div>
+                </div>
+              </div>
+            </div><!-- /bs-component -->
+
+            <div class="bs-component">
               <h5>Loader (doesn't appear in the DOM until called upon)</h5>
               <div class="query-input">
                 <div class="form-group">
                   <div class="input-group">
                     <input type="text" placeholder="Find stream" class="form-control">
+                    <span class="input-group-addon">
+                      <div class="loader loader-mini">
+                        <div></div><div></div><div></div>
+                        <div></div><div></div><div></div>
+                        <div></div><div></div><div></div>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /bs-component -->
+
+            <div class="bs-component">
+              <h5>Loader Lg (doesn't appear in the DOM until called upon)</h5>
+              <div class="query-input query-input-lg">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" placeholder="Find stream" class="form-control input-lg">
                     <span class="input-group-addon">
                       <div class="loader loader-mini">
                         <div></div><div></div><div></div>
@@ -172,6 +201,22 @@
             </div><!-- /bs-component -->
 
             <div class="bs-component">
+              <h5>With Button Lg (add class .query-input-with-button)</h5>
+              <div class="query-input query-input-lg query-input-with-button">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" placeholder="Find stream" class="form-control input-lg">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-lg btn-default">
+                        <span class="fycon-search fycon-lg"></span>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /bs-component -->
+
+            <div class="bs-component">
               <h5>With Button and Loader (add class .query-input-with-button)</h5>
 
               <div class="query-input query-input-with-button">
@@ -188,6 +233,29 @@
                     <span class="input-group-btn">
                       <button type="submit" class="btn btn-default">
                         <span class="fycon-search fycon-lg"></span> Search
+                      </button>
+                    </span>
+                  </div>
+                </div>
+            </div><!-- /bs-component -->
+
+            <div class="bs-component">
+              <h5>With Button and Loader Lg (add class .query-input-with-button)</h5>
+
+              <div class="query-input query-input-lg query-input-with-button">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" placeholder="Find stream" class="form-control input-lg">
+                    <span class="input-group-addon">
+                      <div class="loader loader-mini">
+                        <div></div><div></div><div></div>
+                        <div></div><div></div><div></div>
+                        <div></div><div></div><div></div>
+                      </div>
+                    </span>
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-lg btn-default">
+                        <span class="fycon-search fycon-lg"></span>
                       </button>
                     </span>
                   </div>
@@ -298,25 +366,133 @@
           </div>
 
           <div class="bs-component">
+            <h4>Size: Default</h4>
             <div class="slat slat-header slat-vertical-center">
-              <div class="col-xs-5">Title</div>
-              <div class="col-xs-5">Site</div>
-              <div class="col-xs-2">Date Modified</div>
-            </div>
-            <div class="slat slat-vertical-center">
-              <div class="col-xs-5 slat-title">Lorem Ipsum Dolor Sit Amet</div>
-              <div class="col-xs-5">Test Site</div>
-              <div class="col-xs-2">4 days ago</div>
-            </div>
-            <div class="slat slat-vertical-center">
-              <div class="col-xs-5 slat-title">Praesent vestibulum vulputate vehicula In orci diam, suscipit a ultrices et, mollis a turpis</div>
-              <div class="col-xs-5">Another Site</div>
-              <div class="col-xs-2">10 days ago</div>
+              <div class="col-xs-2 col-md-1 slat-col col-enabled">Active</div>
+              <div class="col-xs-4 slat-col col-name">Stream name</div>
+              <div class="col-xs-3 col-md-4 slat-col col-destinationObj">Destination</div>
+              <div class="col-xs-2 slat-col col-createdAt">Created</div>
+              <div class="col-xs-1 slat-col col-actions">Actions</div>
             </div>
             <div class="slat slat-vertical-center slat-hover">
-              <div class="col-xs-5 slat-title">Suscipit a ultrices et, mollis a turpis</div>
-              <div class="col-xs-5">Another Site</div>
-              <div class="col-xs-2">7 months ago</div>
+              <div class="col-xs-2 col-md-1 slat-col slat-cell cell-enabled">
+                <label class="toggle toggle-sm">
+                  <input type="checkbox" role="checkbox" readonly="" checked=""><span></span></label>
+              </div>
+              <div class="col-xs-4 slat-col slat-cell cell-name"><a href="http://studio.qa-ext.livefyre.com/studio-qa-1.fyre.co/stream/2cc13ad408a541d6bf30654d9e4c490e" class="livefyre-link slat-title">matt_test_clone_email</a></div>
+              <div class="col-xs-3 col-md-4 slat-col slat-cell cell-destinationObj">
+                <div class="destination-icon"><span class="fycon- colored"></span><span class="destination-name"></span></div>
+              </div>
+              <div class="col-xs-2 slat-col slat-cell cell-createdAt">Nov 18th, 2015</div>
+              <div class="col-xs-1 slat-col slat-cell cell-actions">
+                <div class="more-options btn-group">
+                  <button class="dropdown-toggle btn btn-link" type="button"><span class="fycon-action-etc-vertical fycon-xl"></span><span> </span></button>
+                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li role="presentation" class=""><a href="#" tabindex="-1">Clone</a></li>
+                    <li role="presentation" class=""><a href="#" tabindex="-1">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bs-component">
+            <h4>Size: Sm</h4>
+            <div class="slat slat-sm slat-header slat-vertical-center">
+              <div class="col-xs-2 col-md-1 slat-col col-enabled">Active</div>
+              <div class="col-xs-5 slat-col col-name">Stream name</div>
+              <div class="col-xs-3 col-md-4 slat-col col-destinationObj">Destination</div>
+              <div class="col-xs-2 slat-col col-createdAt">Created</div>
+            </div>
+            <div class="slat slat-sm slat-vertical-center slat-hover">
+              <div class="col-xs-2 col-md-1 slat-col slat-cell cell-enabled">
+                <label class="toggle toggle-sm">
+                  <input type="checkbox" role="checkbox" readonly="" checked=""><span></span></label>
+              </div>
+              <div class="col-xs-5 slat-col slat-cell cell-name"><a href="http://studio.qa-ext.livefyre.com/studio-qa-1.fyre.co/stream/2cc13ad408a541d6bf30654d9e4c490e" class="livefyre-link slat-title">matt_test_clone_email Power Burst Photography TeamPower Burst Photography TeamPower Burst Photography TeamPower Burst Photography TeamPower Burst Photography Team</a></div>
+              <div class="col-xs-3 col-md-4 slat-col slat-cell cell-destinationObj">
+                <div class="destination-icon"><span class="fycon-logo-mediawall"></span><span class="destination-name">My Media Wall</span></div>
+              </div>
+              <div class="col-xs-2 slat-col slat-cell cell-createdAt">Nov 18th, 2015</div>
+            </div>
+          </div>
+
+          <div class="bs-component">
+            <h4>Size: Lg</h4>
+            <div class="slat slat-header slat-vertical-center">
+              <div class="col-xs-8 slat-col col-name">Name</div>
+              <div class="col-xs-2 slat-col col-posts">Posts</div>
+              <div class="col-xs-2 slat-col col-joined">Joined</div>
+            </div>
+            <div class="slat slat-lg slat-vertical-center slat-hover">
+              <div class="col-xs-8 slat-col slat-cell cell-name">
+                <div class="media">
+                  <div class="media-left">
+                    <img class="avatar avatar-sm" src="http://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="slat-title">ashleyeast</h4>
+                    <p>ashley228@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-2 slat-col slat-cell cell-posts">14</div>
+              <div class="col-xs-2 slat-col slat-cell cell-joined">Nov 18th, 2015</div>
+            </div>
+          </div>
+
+
+          <div class="bs-component">
+            <h4>Variable Height</h4>
+            <div class="slat slat-header slat-vertical-center">
+              <div class="col-xs-6 slat-col col-name">Folder Name</div>
+              <div class="col-xs-4 slat-col col-groups">Permissions via Groups</div>
+              <div class="col-xs-2 slat-col col-dateModified">Date Modified</div>
+            </div>
+            <div class="slat slat-variable slat-sm">
+              <div class="col-xs-6 slat-col slat-cell cell-name">
+                <div class="media">
+                  <div class="media-left">
+                    <img class="avatar avatar-sm" src="http://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="slat-title">Jane's Test Folder</h4>
+                    <p>This slat doesn't have a fixed height. It can be used alongside .slat-sm to reduce the top and bottom padding.</p>
+                  </div>
+                </div>
+              </div>      
+              <div class="col-xs-4 slat-col slat-cell cell-memberCount">
+                <ul style="padding-left: 1.5em;">
+                  <li><a href="#">Power Burst Photography Team</a></li>
+                  <li><a href="#">Power Burst Creative</a></li>
+                  <li><a href="#">2017 Team</a></li>
+                  <li><a href="#">June 18 Event Team</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-2 slat-col slat-cell cell-dateModified"><span class="vertical-center">July 14, 2016</span></div>
+            </div>
+          </div>
+
+          <div class="bs-component">
+            <h4>Disabled</h4>
+            <div class="slat slat-header slat-vertical-center">
+              <div class="col-xs-8 slat-col col-name">Name</div>
+              <div class="col-xs-2 slat-col col-memberCount">Member Count</div>
+              <div class="col-xs-2 slat-col col-dateModified">Date Modified</div>
+            </div>
+            <div class="slat slat-vertical-center slat-disabled">
+              <div class="col-xs-8 slat-col slat-cell cell-name">
+                <div class="media">
+                  <div class="media-left">
+                    <img class="avatar avatar-sm" src="http://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="slat-title">Power Burst Photography Team</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-2 slat-col slat-cell cell-memberCount">4</div>
+              <div class="col-xs-2 slat-col slat-cell cell-dateModified">July 14, 2016</div>
             </div>
           </div>
 
@@ -1471,8 +1647,8 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="bs-component">
-              <ul class="list-group">
-                <li class="list-group-item">
+              <ul class="list-group list-group-hover">
+                <li class="list-group-item active">
                   <span class="badge">14</span>
                   Cras justo odio
                 </li>
@@ -1489,7 +1665,7 @@
           </div>
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="list-group">
+              <div class="list-group list-group-hover">
                 <a href="#" class="list-group-item active">
                   Cras justo odio
                 </a>
@@ -1502,14 +1678,44 @@
           </div>
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="list-group">
-                <a href="#" class="list-group-item">
+              <div class="list-group list-group-hover">
+                <a href="#" class="list-group-item active">
                   <h4 class="list-group-item-heading">List group item heading</h4>
                   <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                 </a>
                 <a href="#" class="list-group-item">
                   <h4 class="list-group-item-heading">List group item heading</h4>
                   <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <ul class="list-group list-group-striped list-group-hover">
+                <li class="list-group-item active">
+                  Cras justo odio
+                </li>
+                <li class="list-group-item">
+                  Dapibus ac facilisis in
+                </li>
+                <li class="list-group-item">
+                  Morbi leo risus
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="list-group list-group-no-borders list-group-hover">
+                <a href="#" class="list-group-item active">
+                  Cras justo odio
+                </a>
+                <a href="#" class="list-group-item">Dapibus ac facilisis in
+                </a>
+                <a href="#" class="list-group-item">Morbi leo risus
                 </a>
               </div>
             </div>
