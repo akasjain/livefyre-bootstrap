@@ -74,10 +74,46 @@ button.list-group-item {
 }
 
 
+// List with Hover Styles
+//
+// On hover: Give slat light blue bg
+// On select: Add blue left border
+
+.list-group-hover {
+  .list-group-item {
+    cursor: pointer;
+
+    a {
+      position: relative;
+      display: block;
+      color: @gray-dark;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &:hover,
+    &.active {
+      .box-shadow(inset 6px 0px 0px @blue); // Use instead of border so it doesn't conflict with bottom border
+
+      a {
+        color: @gray-darkest;
+      }
+    }
+    
+    &.active {
+      background-color: @list-group-active-bg; // From Bootstrap's list-group.less. Repeated here to override .list-group-striped.
+    }
+  }
+}
+
+
 // Custom content options
 //
 // Extra classes for creating well-formatted content within `.list-group-item`s.
-// Ex: Assigned Roles list in User detailsfws
+// Ex: Assigned Roles list in User details
 
 .list-group-item-heading {
   margin-bottom: 6px;

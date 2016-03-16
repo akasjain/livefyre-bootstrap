@@ -74,6 +74,9 @@
 .fycon-arrow-btn-picker {
   &:before { content: "\e0b7"; }
 }
+.fycon-arrow-btn-picker2 {
+  &:before { content: "\e0cb"; }
+}
 .fycon-arrow-down {
   &:before { content: "\e015"; }
 }
@@ -164,6 +167,30 @@
 .fycon-edit-2 {
   &:before { content: "\e02f"; }
 }
+.fycon-edited {
+  &:before { content: "\e0de"; }
+}
+.fycon-editor-anchor {
+  &:before { content: "\e0cc"; }
+}
+.fycon-editor-header {
+  &:before { content: "\e0cd"; }
+}
+.fycon-editor-p-center {
+  &:before { content: "\e0ce"; }
+}
+.fycon-editor-p-left {
+  &:before { content: "\e0cf"; }
+}
+.fycon-editor-p-right {
+  &:before { content: "\e0d0"; }
+}
+.fycon-editor-quote {
+  &:before { content: "\e0d1"; }
+}
+.fycon-editor-rule {
+  &:before { content: "\e0d3"; }
+}
 .fycon-email {
   &:before { content: "\e030"; }
 }
@@ -193,6 +220,9 @@
 }
 .fycon-folder-restricted {
   &:before { content: "\e0b8"; }
+}
+.fycon-follow {
+  &:before { content: "\e0d2"; }
 }
 .fycon-form-checkbox-active {
   &:before { content: "\e037"; }
@@ -296,6 +326,9 @@
 .fycon-icon-trending {
   &:before { content: "\e124"; }
 }
+.fycon-icon-upload-app {
+  &:before { content: "\e0e3"; }
+}
 .fycon-icon-wall {
   &:before { content: "\e053"; }
 }
@@ -392,6 +425,9 @@
 .fycon-logo-trending {
   &:before { content: "\e125"; }
 }
+.fycon-logo-upload-app {
+  &:before { content: "\e0e2"; }
+}
 .fycon-logo-windows {
   &:before { content: "\e06d"; }
 }
@@ -424,6 +460,12 @@
 }
 .fycon-network {
   &:before { content: "\e076"; }
+}
+.fycon-new-story {
+  &:before { content: "\e0df"; }
+}
+.fycon-notify {
+  &:before { content: "\e0d4"; }
 }
 .fycon-person {
   &:before { content: "\e077"; }
@@ -482,6 +524,18 @@
 .fycon-source-aol {
   &:before { content: "\e0c4"; }
 }
+.fycon-source-audioboo {
+  &:before { content: "\e0d5"; }
+}
+.fycon-source-breakingnews {
+  &:before { content: "\e0d6"; }
+}
+.fycon-source-chute {
+  &:before { content: "\e0d7"; }
+}
+.fycon-source-disqus {
+  &:before { content: "\e0d8"; }
+}
 .fycon-source-drupal {
   &:before { content: "\e087"; }
 }
@@ -493,6 +547,15 @@
 }
 .fycon-source-foursquare {
   &:before { content: "\e08a"; }
+}
+.fycon-source-getty {
+  &:before { content: "\e0d9"; }
+}
+.fycon-source-gif {
+  &:before { content: "\e0da"; }
+}
+.fycon-source-giphy {
+  &:before { content: "\e0e4"; }
 }
 .fycon-source-google {
   &:before { content: "\e08b"; }
@@ -524,8 +587,17 @@
 .fycon-source-rss {
   &:before { content: "\e092"; }
 }
+.fycon-source-shutterstock {
+  &:before { content: "\e0db"; }
+}
+.fycon-source-slideshare {
+  &:before { content: "\e0dc"; }
+}
 .fycon-source-soundcloud {
   &:before { content: "\e093"; }
+}
+.fycon-source-stocktwits {
+  &:before { content: "\e0dd"; }
 }
 .fycon-source-storify {
   &:before { content: "\e094"; }
@@ -551,11 +623,15 @@
 .fycon-source-yahoo {
   &:before { content: "\e0c5"; }
 }
+.fycon-source-youtube,
 .fycon-source-youtube1 {
   &:before { content: "\e09b"; }
 }
 .fycon-source-youtube2 {
   &:before { content: "\e09c"; }
+}
+.fycon-source-zemanta {
+  &:before { content: "\e0e0"; }
 }
 .fycon-spaceship {
   &:before { content: "\e09d"; }
@@ -599,6 +675,9 @@
 .fycon-user-context {
   &:before { content: "\e0a7"; }
 }
+.fycon-user-groups {
+  &:before { content: "\e0e1"; }
+}
 .fycon-users {
   &:before { content: "\e0a8"; }
 }
@@ -626,6 +705,45 @@
 
 // Colored Icons
 .colored {
+  &.fycon-icon-chat:before {
+    color: @green;
+  }
+  &.fycon-icon-comments:before {
+    color: @red;
+  }
+  &.fycon-icon-liveblog:before {
+    color: @blue;
+  }
+  &.fycon-icon-map:before {
+    color: @purple;
+  }
+  &.fycon-icon-reviews:before {
+    color: @yellow;
+  }
+  &.fycon-icon-sidenotes:before {
+    color: @gray-darker;
+  }
+  &.fycon-icon-storify:before {
+    color: @storify-blue;
+  }
+  &.fycon-icon-trending:before {
+    color: @blue;
+  }
+  &.fycon-icon-wall:before {
+    color: @purple;
+  }
+  &.fycon-source-audioboo:before {
+    color: @brand-audioboo;
+  }
+  &.fycon-source-breakingnews:before {
+    color: @brand-breakingnews;
+  }
+  &.fycon-source-chute:before {
+    color: @brand-chute;
+  }
+  &.fycon-source-disqus:before {
+    color: @brand-disqus;
+  }
   &.fycon-source-drupal:before {
     color: @brand-drupal;
   }
@@ -637,6 +755,12 @@
   }
   &.fycon-source-foursquare:before {
     color: @brand-foursquare;
+  }
+  &.fycon-source-getty:before {
+    color: @brand-getty;
+  }
+  &.fycon-source-giphy:before {
+    color: @brand-giphy;
   }
   &.fycon-source-google:before {
     color: @brand-google;
@@ -668,8 +792,17 @@
   &.fycon-source-rss:before {
     color: @brand-rss;
   }
+  &.fycon-source-shutterstock:before {
+    color: @brand-shutterstock;
+  }
+  &.fycon-source-slideshare:before {
+    color: @brand-slideshare;
+  }
   &.fycon-source-soundcloud:before {
     color: @brand-soundcloud;
+  }
+  &.fycon-source-stocktwits:before {
+    color: @brand-stocktwits;
   }
   &.fycon-source-storify:before {
     color: @storify-blue;
@@ -695,38 +828,15 @@
   &.fycon-source-yahoo:before {
     color: @brand-yahoo;
   }
+  &.fycon-source-youtube:before,
   &.fycon-source-youtube1:before {
     color: @brand-youtube;
   }
   &.fycon-source-youtube2:before {
     color: @brand-youtube;
   }
-  &.fycon-icon-chat:before {
-    color: @green;
-  }
-  &.fycon-icon-comments:before {
-    color: @red;
-  }
-  &.fycon-icon-liveblog:before {
-    color: @blue;
-  }
-  &.fycon-icon-map:before {
-    color: @purple;
-  }
-  &.fycon-icon-reviews:before {
-    color: @yellow;
-  }
-  &.fycon-icon-sidenotes:before {
-    color: @gray-darker;
-  }
-  &.fycon-icon-storify:before {
-    color: @storify-blue;
-  }
-  &.fycon-icon-trending:before {
-    color: @blue;
-  }
-  &.fycon-icon-wall:before {
-    color: @purple;
+  &.fycon-source-zemanta:before {
+    color: @brand-zemanta;
   }
   &.fycon-verified:before {
     color: @brand-twitter;

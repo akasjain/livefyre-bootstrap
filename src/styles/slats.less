@@ -84,6 +84,41 @@
   font-weight: normal;
   line-height: @slat-title-line-height;
   color: @slat-title-color;
+
+  &:hover {
+    color: @slat-title-color;
+  }  
+}
+
+
+// Alternative Sizes
+
+.slat-sm {
+  height: @slat-height-sm;
+  padding: @slat-padding-sm 0;
+}
+
+.slat-lg {
+  height: @slat-height-lg;
+
+  .slat-title {
+    font-size: @slat-title-size-lg;
+    line-height: @slat-title-line-height;
+  }
+}
+
+
+// Variable Height
+
+.slat-variable {
+  height: auto;
+}
+
+
+// Disabled
+
+.slat-disabled {
+  cursor: not-allowed;
 }
 
 
@@ -91,4 +126,42 @@
 
 .slat .vertical-center {
   .vertical-center();
+}
+
+
+//
+// Media Objects Inside of Slats
+// --------------------------------------------------
+
+.slat {
+  .media {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; // Using flexbox helps ellipsis truncation on .slat-title to work.
+  }
+  .media-left {
+    padding-right: 12px;
+  }
+  .media-body {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.slat-vertical-center {
+  .media {
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    line-height: 1; // Ensures titles are properly centered. Downside is it requires a line-height to be re-applied to some child elements.
+    
+    p {
+      line-height: @slat-line-height;
+    }
+  }
 }

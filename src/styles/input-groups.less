@@ -63,7 +63,7 @@
 .query-input-with-button {
   .form-group {
     &:before {
-      content: "";
+      content: ""; // Hide magnifying glass
     }
     
     .input-group {
@@ -83,4 +83,27 @@
       margin-left: -24px; // Make text field stretch all the way to the submit btn. 24px = width of .loader-mini
     }
   }
+}
+
+// Large Query Input
+
+.query-input-lg .form-group {
+  &:before { // Magnifying glass
+    top: 10px;
+    font-size: @font-size-large;
+  }
+  
+  input[type="text"] {
+    padding-left: 40px;
+    font-size: @font-size-base;
+  }
+  
+  .input-group-addon { // Loader wrapper
+    top: 10px;
+  }
+}
+
+.query-input-with-button.query-input-lg .form-group input[type="text"] {
+  padding-left: 12px;
+  font-size: @font-size-base;
 }
