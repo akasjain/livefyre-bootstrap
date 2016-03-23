@@ -10,15 +10,15 @@
   cjsTranslate: true,
   generateSourceMaps: true,
   preserveLicenseComments: false,
-  onBuildRead: function(moduleName, path, contents) {
+  onBuildRead: function (moduleName, path, contents) {
     switch (moduleName) {
-      case "jquery":
-        contents = "define([], function(require, exports, module) {" + contents + "});";
+      case 'jquery':
+        contents = 'define([], function(require, exports, module) {' + contents + '});';
         break;
-      case "bootstrap":
-        contents = "define(['jquery'], function (jQuery) {" + contents + "});";
+      case 'bootstrap':
+        contents = "define(['jquery'], function (jQuery) {" + contents + '});';
         break;
     }
     return contents;
   }
-})
+});
