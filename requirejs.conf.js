@@ -11,7 +11,7 @@ require.config({
     mocha: 'lib/mocha/mocha',
     chai: 'lib/chai/chai',
     json: 'lib/requirejs-plugins/src/json',
-    sinon : 'lib/sinonjs/sinon',
+    sinon: 'lib/sinonjs/sinon',
     'sinon-chai': 'lib/sinon-chai/lib/sinon-chai',
     normalize: 'lib/require-less/normalize',
     less: 'lib/require-less/less',
@@ -20,53 +20,53 @@ require.config({
     almond: 'lib/almond/almond'
   },
   packages: [{
-     name: "livefyre-bootstrap",
-     location: "src"
+    name: 'livefyre-bootstrap',
+    location: 'src'
   },{
-     name: "livefyre-bootstrap/styles",
-     location: "dist/styles"
+    name: 'livefyre-bootstrap/styles',
+    location: 'dist/styles'
   },{
-     name: "tests",
-     location: "tests"
+    name: 'tests',
+    location: 'tests'
   },{
-     name: "streamhub-sdk",
-     location: "lib/streamhub-sdk/src/"
+    name: 'streamhub-sdk',
+    location: 'lib/streamhub-sdk/src/'
   },{
-    name: "streamhub-sdk/modal",
-    location: "lib/streamhub-sdk/src/modal"
+    name: 'streamhub-sdk/modal',
+    location: 'lib/streamhub-sdk/src/modal'
   },{
-    name: "streamhub-sdk/collection",
+    name: 'streamhub-sdk/collection',
     location: 'lib/streamhub-sdk/src/collection'
   },{
-    name: "streamhub-sdk/auth",
+    name: 'streamhub-sdk/auth',
     location: 'lib/streamhub-sdk/src/auth'
   },{
-    name: "streamhub-sdk/content",
+    name: 'streamhub-sdk/content',
     location: 'lib/streamhub-sdk/src/content'
   },{
-    name: "stream",
-    location: "lib/stream/src"
+    name: 'stream',
+    location: 'lib/stream/src'
   },{
-    name: "view",
+    name: 'view',
     location: 'lib/view/src',
     main: 'view'
   }],
   shim: {
     bootstrap: {
-        deps: ['jquery']
+      deps: ['jquery']
     },
     jquery: {
-        exports: '$'
+      exports: '$'
     },
     jasmine: {
-        exports: 'jasmine'
+      exports: 'jasmine'
     },
     'jasmine-html': {
-        deps: ['jasmine'],
-        exports: 'jasmine'
+      deps: ['jasmine'],
+      exports: 'jasmine'
     },
     'jasmine-jquery': {
-        deps: ['jquery', 'jasmine']
+      deps: ['jquery', 'jasmine']
     },
     'sinon': {
       exports: 'sinon'

@@ -6,4 +6,4 @@
     jquery: 'empty:'
   },
   cjsTranslate: true
-})
+});
