@@ -1,0 +1,161 @@
+---
+layout: default
+title: Buttons | Livefyre Bootstrap
+---
+
+<section id="buttons">
+
+  <h1 class="page-heading">Buttons</h1>
+
+  <h3>Types</h3>
+
+  <div id="buttons-default" class="item">
+    <h4>Default Button</h4>
+    <p>For use when...</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-default-code" aria-expanded="false" aria-controls="collapseExample">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <button class="btn btn-default">Default</button>
+
+      <div class="collapse" id="buttons-default-code">
+        {% highlight html %}<button class="btn btn-default">Default</button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buttons-colors" class="item">
+    <h4>Colors</h4>
+    <p>We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
+    <p>The exception is the new Hollow button. It's semi-transparent so it looks slick on top of a photo.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-colors-code" aria-expanded="false" aria-controls="collapseExample">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-warning">Warning</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-link">Link</button>
+      <button class="btn btn-hollow">Hollow</button>
+
+      <div class="collapse" id="buttons-colors-code">
+        {% highlight html %}<button class="btn btn-primary">Primary</button>
+<button class="btn btn-warning">Warning</button>
+<button class="btn btn-success">Success</button>
+<button class="btn btn-info">Info</button>
+<button class="btn btn-link">Link</button>
+<button class="btn btn-hollow">Hollow</button>{% endhighlight %}
+    </div>
+    </div>
+
+  </div>
+
+
+  <div id="buttons-disabled" class="item">
+    <h4>Disabled Buttons</h4>
+    <p>For use when...</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-disabled-code" aria-expanded="false" aria-controls="collapseExample">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <button class="btn btn-default" disabled="disabled">Disabled</button>
+      <button class="btn btn-primary" disabled="disabled">Disabled</button>
+
+      <div class="collapse" id="buttons-disabled-code">
+        {% highlight html %}<button class="btn btn-default" disabled="disabled">Disabled</button>
+<button class="btn btn-primary" disabled="disabled">Disabled</button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buttons-sizes" class="item">
+    <h4>Sizes</h4>
+    <p>There are 3 additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-sizes-code" aria-expanded="false" aria-controls="collapseExample">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <p>
+        <button class="btn btn-default btn-lg">Large</button>
+        <button class="btn btn-default">Default</button>
+        <button class="btn btn-default btn-sm">Small</button>
+        <button class="btn btn-default btn-xs">Extra small</button>
+      </p>
+
+      <button class="btn btn-default btn-block">Full-Width Block</button>
+
+      <div class="collapse" id="buttons-sizes-code">
+        {% highlight html %}<button class="btn btn-primary btn-lg">Large</button>
+<button class="btn btn-default">Default</button>
+<button class="btn btn-default btn-sm">Small</button>
+<button class="btn btn-default btn-xs">Extra small</button>
+
+<button class="btn btn-default btn-lg btn-block">Full-Width Block</button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3>Fycons in Buttons</h3>
+
+  <div id="buttons-fycons" class="item">
+    <h4>Sizes</h4>
+    <p>You can fine tune the size of fycons in buttons using <code>.fycon-xs</code>, <code>.fycon-sm</code>, <code>.fycon-lg</code>, <code>.fycon-xl</code> and <code>.fycon-inherit</code> (uses the same font size as the button).</p>
+    <p>Use these classes in the fycon's span container.</p>
+    <p>Fycon sizes will adjust based on the button size.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-fycons-code" aria-expanded="false" aria-controls="collapseExample">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-xs" aria-hidden="true"></span> Extra Small
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-sm" aria-hidden="true"></span> Small
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like" aria-hidden="true"></span> Default
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-lg" aria-hidden="true"></span> Large
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-xl" aria-hidden="true"></span> Extra Large
+      </button>
+
+      <div class="collapse" id="buttons-fycons-code">
+        {% highlight html %}<button class="btn btn-default">
+  <span class="fycon-action-like fycon-xs" aria-hidden="true"></span> Extra Small
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like fycon-sm" aria-hidden="true"></span> Small
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like" aria-hidden="true"></span> Default
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like fycon-lg" aria-hidden="true"></span> Large
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like fycon-xl" aria-hidden="true"></span> Extra Large
+</button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+</section>
