@@ -158,4 +158,24 @@ title: Buttons | Livefyre Bootstrap
     </div>
   </div>
 
+
+  <div id="buttons-plus" class="item">
+    <h4>Add a Plus ("+")</h4>
+    <p>Use the <code>.add-plus</code> class to add a small "+" next to the Fycon. Works with different fycon sizes.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-plus-code" aria-expanded="false" aria-controls="collapseExample">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-folder fycon-lg add-plus" aria-hidden="true"></span> New Folder
+      </button>
+
+      <div class="collapse" id="buttons-plus-code">
+        {% highlight html %}<button class="btn btn-default">
+  <span class="fycon-folder fycon-lg add-plus" aria-hidden="true"></span> New Folder
+</button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
 </section>
