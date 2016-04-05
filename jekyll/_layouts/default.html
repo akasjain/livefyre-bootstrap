@@ -23,6 +23,11 @@
       </div>
     </div>
 
+    <script>
+      $('body').scrollspy({ target: '#main-nav' }); // Tell Scrollspy to use #main-nav to scroll body content 
+      $('[data-hover="tooltip"]').tooltip(); // Initialize Tooltips - using data-hover instead of data-toggle to prevent conflict buttons that also need data-toggle="collapse"
+    </script>
+
   </body>
 
 </html>
