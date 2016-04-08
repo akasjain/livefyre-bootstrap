@@ -1,0 +1,2022 @@
+<!doctype html>
+<html class="lf">
+  <head>
+    <title>Livefyre Bootstrap Developer Docs</title>
+    <link rel="stylesheet" href="https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.2/livefyre-bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.css">
+  </head>
+  <body>
+    <header class="menu sticky">
+      <div class="container">
+        <a href="index.html" class="brand">Livefyre Bootstrap</a>
+        <ul class="docs-nav">
+          <li>
+            <a href="components.html">UI Components</a>
+          </li>
+          <li>
+            <a href="fycons.html">Fycons</a>
+          </li>
+          <li>
+            <a href="v2.html">Version 2.x!</a>
+          </li>
+        </ul>
+        <ul class="docs-nav right">
+          <li>
+            <a href="https://github.com/livefyre/livefyre-bootstrap">Github</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Version 2.x!</h1>
+        <p>All the funs. None of the prefixes.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+
+
+        <div class="content col-md-9">
+
+          <section id="intro">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      About This Version
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <ul>
+                      <li>This version of Livefyre Bootstrap was updated to support the creation of Asset Manager. Version 1.x still exists separately and will be maintained until the rest of Studio and our apps migrate to 2.x.</li>
+                      <li>Version 2.x currently lives on the <a href="https://github.com/Livefyre/livefyre-bootstrap/tree/2.x" target="_blank"><code>2.x</code> branch on Github</a>. The 1.x version still lives on the <code>master</code> branch for now.</li>
+                      <li>All of the content from the <a href="components.html">UI Components</a> page has been included here for your convenience.</li>
+                      <li><a href="fycons.html">Fycons</a> and their classes are pretty much identical to v1.x (minus the lf- prefix).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      Usage
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <p>In your <code>package.json</code> or <code>bower.json</code> file, add or update the <code>livefyre-bootstrap</code> dependency:
+                    <pre>"livefyre-bootstrap": "git+ssh://git@github.com/Livefyre/livefyre-bootstrap.git#2.0.2"</pre>
+                    <p>Or, you can use the CDN urls:</p>
+                    <pre>https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.2/livefyre-bootstrap.min.css
+https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.2/livefyre-bootstrap.min.js</pre>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      Changes from v1.x
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <ul>
+                      <li>Removes the <code>lf-</code> prefix from all CSS classes, markup and JS. This makes it easier to update to the latest [Twitter] Bootstrap version, removes a lot of redundant CSS and allows us to take advantage of all [Twitter] Bootstrap features.</li>
+                      <li>Updates the [Twitter] Bootstrap version to 3.3.4 (from 3.0.3).</li>
+                      <li>[Twitter] Bootstrap 3.3.4's minimum required jQuery version is 1.9.1 (Bootstrap 3.0.3's minimum was 1.9.0).</li>
+                      <li>Allows you to specify the location of your [Twitter] Bootstrap files.</li>
+                      <li>New Slats styles.</li>
+                      <li>New Alert Modal.</li>
+                      <li>New Query Input (i.e. Search Form) styles.</li>
+                      <li>Loader: Fixes bug where a one-pixel line sometimes appears between the second and third rows.</li>
+                      <li>Many more listed alongside each section below.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                      Checklist for Migrating from v1.x
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                  <div class="panel-body">
+                    <ol>
+                      <li>Update your Livefyre Bootstrap files to 2.x. You may need to also update your version of [Twitter] Bootstrap to 3.3.4.</li>
+                      <li>Remove the <code>lf-</code> prefix from your CSS classes, markup and JS.</li>
+                      <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre Bootstrap's variables and mixins files. (<a href="#section-importing">examples</a>)</li>
+                      <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height.</li>
+                      <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
+                      <li><strong>Toggles:</strong> Update all toggle instances with the new markup. (<a href="#section-toggles">example markup</a>)</li>
+                      <li><strong>Toggles:</strong> Toggles are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
+                      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. Event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside. (<a href="#section-toggles">example markup</a>)</li>
+                      <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
+                      <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
+                      <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
+                      <li><strong>Modals:</strong> Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to align headlines, text and buttons.</li>
+                      <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
+                      <li><strong>Modals:</strong> Remove the <code>.animated</code> class. Use the default <code>.fade</code> class in the <code>.modal</code> wrapper.</li>
+                      <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc. (<a href="#section-colors">more</a>)</li>
+                      <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
+                      <li><strong>Tabs:</strong> Check tab navigation as <a href="#section-tabs">their styles have been updated</a>.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
+          <section id="section-importing">
+            <h1 class="section-header">Importing Variables &amp; Mixins</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-importing" aria-expanded="false" aria-controls="changes-importing">Changes from v1.x</a>
+            <div class="collapse" id="changes-importing">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>You must specify the location of your [Twitter] Bootstrap files using the <code>@bootstrap-less</code> variable.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p>Some of Livefyre Bootstrap's Less files rely on a variable called <code>@bootstrap-less</code>, which contains the location of your [Twitter] Bootstrap files. This allows you to situate your library files wherever you wish. When you're importing Livefyre Bootstrap's Less files individually, you may need to provide a value for this variable as there is no default fallback (couldn't figure this out, sry).</p>
+
+            <p>Example: In your main Less file, if your modules have their own variables and mixins files:</p>
+            <div class="highlight">
+              <pre><code>@bootstrap-less: "/node_modules/bootstrap/less";
+@import "variables.less";
+@import "mixins.less";</code></pre>
+            </div>    
+
+            <p>Example: Import LF-BS variables and mixins into your module's Less file:</p>
+            <div class="highlight">
+              <pre><code>@bootstrap-less: "/node_modules/bootstrap/less";
+@import "/node_modules/livefyre-bootstrap/src/styles/variables.less";
+@import "/node_modules/livefyre-bootstrap/src/styles/mixins.less";</code></pre>
+            </div>      
+
+            <p>Example: If you want to import all LF-BS files AND your [Twitter] Bootstrap files live inside /lib/bootstrap/less/, you can just import all of LF-BS's variables, mixins and partials in one import, since all.less contains a <code>@bootstrap-less</code> declaration:</p>
+            <div class="highlight">
+              <pre><code>@import "/lib/livefyre-bootstrap/all.less";</code></pre>
+            </div>
+          </section>
+
+
+          <section id="section-colors">
+            
+            <h1 class="section-header">Colors</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-colors" aria-expanded="false" aria-controls="changes-colors">Changes from v1.x</a>
+            <div class="collapse" id="changes-colors">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
+                  <li>New variables <code>@gray-darkest</code>, <code>@gray-darkish</code> and <code>@gray-lightest</code>.</li>
+                  <li>Using hex codes for all (instead of <code>tint</code>) so it's easier to match a variable name with what you find in the inspector.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Grays</h3>
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #2f3440;"></div>
+                  <strong style="color: #2f3440">@gray-darkest</strong>
+                </div>
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #595d66;"></div>
+                  <strong style="color: #595d66">@gray-darker</strong>
+                </div>
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #82858c;"></div>
+                  <strong style="color: #82858c">@gray-dark</strong>
+                </div>
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #acaeb3;"></div>
+                  <strong style="color: #acaeb3">@gray-darkish</strong>
+                </div>
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #cbcccf;"></div>
+                  <strong style="color: #cbcccf">@gray</strong>
+                </div>
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #e0e1e3;"></div>
+                  <strong style="color: #e0e1e3">@gray-light</strong>
+                </div>
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #efeff0;"></div>
+                  <strong style="color: #efeff0">@gray-lighter</strong>
+                </div>
+                <div class="col-xs-1">
+                  <div class="color-swatch" style="background-color: #f7f7f7;"></div>
+                  <strong style="color: #f7f7f7">@gray-lightest</strong>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>@gray-darkest:  #2f3440; // 100% - Ex: Prominent text (LF variable)
+@gray-darker:   #595d66; // 80%  - Ex: Paragraph text
+@gray-dark:     #82858c; // 60%  - Ex: Subtext text
+@gray-darkish:  #acaeb3; // 40%  - Ex: Disabled text (LF variable)
+@gray:          #cbcccf; // 25%  - Ex: Default button bg hover
+@gray-light:    #e0e1e3; // 15%  - Ex: Default button bg
+@gray-lighter:  #efeff0; // 8%   - Ex: Bg watermark
+@gray-lightest: #f7f7f7; // 4%   - Ex: Default bg (LF variable)</code></pre>
+            </div>
+
+          </section>
+
+
+          <section id="section-checkboxes">
+            <h1 class="section-header">Checkboxes and Radio Buttons</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-checkboxes" aria-expanded="false" aria-controls="changes-checkboxes">Changes from v1.x</a>
+            <div class="collapse" id="changes-checkboxes">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Checkboxes and radio buttons override browser default styles and are rendered using Fycons. (Chrome and Safari only)</li>
+                  <li>On focus, instead of displaying a fuzzy, blue halo, checkboxes and radio buttons turn blue to be more consistent with other form fields. (Chrome and Safari only)</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="descrip">Checkboxes and radio buttons override browser default styles and are rendered using Fycons. (Chrome and Safari only)</p>
+            <div class="bs-example" data-example-id="block-checkboxes-radios">
+              <form>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Option one is this and that - be sure to include why it's great
+                  </label>
+                </div>
+                <div class="checkbox disabled">
+                  <label>
+                    <input type="checkbox" value="" disabled="">
+                    Option two is disabled
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input id="checkbox-indeterminate" type="checkbox" value="">
+                    Option three is indeterminate (triggered in this example via JS)
+                  </label>
+                </div>
+                <br>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                    Option one is this and that - be sure to include why it's great
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Option two can be something else and selecting it will deselect option one
+                  </label>
+                </div>
+                <div class="radio disabled">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+                    Option three is disabled
+                  </label>
+                </div>
+              </form>
+            </div>
+            <div class="highlight"><pre><code class="language-html" data-lang="html">&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value=""&gt;
+    Option one is this and that - be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="checkbox disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value="" disabled=""&gt;
+    Option two is disabled
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" value=""&gt;
+    Option three is indeterminate (triggered in this example via JS)
+  &lt;/label&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""&gt;
+    Option one is this and that - be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+    Option two can be something else and selecting it will deselect option one
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio disabled"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled=""&gt;
+    Option three is disabled
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre></div>
+
+          </section>
+          <script type="text/javascript">
+            document.getElementById("checkbox-indeterminate").indeterminate = true;
+          </script>
+
+
+
+          <section id="section-buttons">
+            <h1 class="section-header">Buttons</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-buttons" aria-expanded="false" aria-controls="changes-buttons">Changes from v1.x</a>
+            <div class="collapse" id="changes-buttons">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>New semi-transparent <code>.btn-hollow</code> style.</li>
+                  <li>Attach a plus symbol next to a fycon using the <code>.add-plus</code> class.</li>
+                  <li>Improved ability to fine tune fycon sizes.</li>
+                  <li>Improved vertical centering.</li>
+                  <li>Constructed using new button height variables (@btn-height-lg: 46px) instead of vertical padding to ensure better button height consistency.</li>
+                  <li>All buttons now have the same border-radius (2px).</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Colors</h3>
+            <p class="descrip">We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
+            <p class="descrip">The exception is the new Hollow button. It's semi-transparent so it looks slick on top of a photo.</p>
+            <div class="bs-example">
+              <button class="btn btn-default" disabled="disabled">Disabled</button>
+              <button class="btn btn-default">Default</button>
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-warning">Warning</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-info">Info</button>
+              <button class="btn btn-link">Link</button>
+              <div style="display: inline-block; margin-top: 30px; padding: 30px 60px; background: url(http://web.livefyre.com/wp-content/uploads/2014/10/Oreo.jpg); background-size: 150% auto;">
+                <button class="btn btn-hollow btn-lg">Hollow</button>
+              </div>
+              <button class="btn btn-default"><span class="fycon-folder fycon-lg add-plus"></span> New Folder</button>
+            </div>
+            <div class="highlight">
+              <pre class="brush: xml"><code>&lt;button class="btn btn-default" disabled="disabled"&gt;Disabled&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-link"&gt;Link&lt;/button&gt;
+&lt;button class="btn btn-hollow btn-lg"&gt;Hollow&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;&lt;span class="fycon-folder fycon-lg add-plus"&gt;&lt;/span&gt; New Folder&lt;/button&gt;</code></pre>
+            </div>
+
+            <h3>Sizes</h3>
+            <p class="descrip">There are also 3 additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
+            <div class="bs-example">
+              <button class="btn btn-primary btn-lg">Large</button>
+              <button class="btn btn-primary">Default</button>
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-primary btn-xs">Extra small</button>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;button class="btn btn-primary btn-lg">Large&lt;/button>
+&lt;button class="btn btn-primary">Default&lt;/button>
+&lt;button class="btn btn-primary btn-sm">Small&lt;/button>
+&lt;button class="btn btn-primary btn-xs">Extra small&lt;/button></code></pre>
+            </div>
+
+            <div class="bs-example">
+              <div class="well" style="max-width: 400px; margin: 0 auto 20px; background: #fff;">
+                <button class="btn btn-primary btn-lg btn-block" style="margin-bottom: 8px">Primary Action</button>
+                <button class="btn btn-default btn-lg btn-block">Cancel</button>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;button class="btn btn-primary btn-lg btn-block"&gt;Primary Action&lt;/button&gt;
+&lt;button class="btn btn-default btn-lg btn-block"&gt;Cancel&lt;/button&gt;</code></pre>
+            </div>
+
+            <h3>Fycons in Buttons</h3>
+            <p class="descrip">You can fine tune the size of fycons in buttons using <code>.fycon-xs</code>, <code>.fycon-sm</code>, <code>.fycon-lg</code>, <code>.fycon-xl</code> and <code>.fycon-inherit</code> (uses the same font size as the button).</p>
+            <p class="descrip">Use these classes in the fycon's span container.</p>
+            <p class="descrip">Fycon sizes will adjust based on the button size.</p>
+            <div class="bs-example">
+              <button class="btn btn-default">
+                <span class="fycon-action-like fycon-xs" aria-hidden="true"></span> Extra Small
+              </button>
+              <button class="btn btn-default">
+                <span class="fycon-action-like fycon-sm" aria-hidden="true"></span> Small
+              </button>
+              <button class="btn btn-default">
+                <span class="fycon-action-like" aria-hidden="true"></span> Default
+              </button>
+              <button class="btn btn-default">
+                <span class="fycon-action-like fycon-lg" aria-hidden="true"></span> Large
+              </button>
+              <button class="btn btn-default">
+                <span class="fycon-action-like fycon-xl" aria-hidden="true"></span> Extra Large
+              </button>
+            </div>
+            <div class="highlight">
+              <pre class="brush: xml"><code>&lt;button class="btn btn-default"&gt;
+  &lt;span class="fycon-action-like fycon-xs" aria-hidden="true"&gt;&lt;/span&gt; Extra Small
+&lt;/button&gt;
+
+&lt;button class="btn btn-default"&gt;
+  &lt;span class="fycon-action-like fycon-sm" aria-hidden="true"&gt;&lt;/span&gt; Small
+&lt;/button&gt;
+
+&lt;button class="btn btn-default"&gt;
+  &lt;span class="fycon-action-like" aria-hidden="true"&gt;&lt;/span&gt; Default
+&lt;/button&gt;
+
+&lt;button class="btn btn-default"&gt;
+  &lt;span class="fycon-action-like fycon-lg" aria-hidden="true"&gt;&lt;/span&gt; Large
+&lt;/button&gt;
+
+&lt;button class="btn btn-default"&gt;
+  &lt;span class="fycon-action-like fycon-xl" aria-hidden="true"&gt;&lt;/span&gt; Extra Large
+&lt;/button&gt;</code></pre>
+            </div>
+          </section>
+
+          <section id="section-button-groups">
+            <h1 class="section-header">Button Groups & Button Toolbars</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-button-groups" aria-expanded="false" aria-controls="changes-button-groups">Changes from v1.x</a>
+            <div class="collapse" id="changes-button-groups">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
+                  <li>Increased spacing between buttons in button toolbar.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="descrip">There are a number of configurable button groups and toolbars that flow both horizontally and vertically as well as sizing options.</p>
+
+            <div class="bs-example">
+              <div class="btn-group btn-group-lg">
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+              </div><br />
+              <div class="btn-group" style="margin-top: 10px;">
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+              </div><br />
+              <div class="btn-group btn-group-sm" style="margin-top: 10px;">
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+              </div><br />
+              <div class="btn-group btn-group-xs" style="margin-top: 10px;">
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+                <button class="btn btn-default">Button</button>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="btn-group btn-group-lg"&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="btn-group btn-group-sm"&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="btn-group btn-group-xs"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="bs-example">
+              <div class="btn-group-vertical">
+                <button class="btn btn-default">Button</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Dropdown
+                  <span class="caret"></span>
+                </button>
+                <button class="btn btn-default">Button</button>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="btn-group-vertical"&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+    Dropdown
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="bs-example">
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <button class="btn btn-default">1</button>
+                  <button class="btn btn-default">2</button>
+                  <button class="btn btn-default">3</button>
+                </div>
+                <div class="btn-group">
+                  <button class="btn btn-default">4</button>
+                  <button class="btn btn-default">5</button>
+                  <button class="btn btn-default">6</button>
+                </div>
+              </div>
+              <div class="btn-toolbar btn-toolbar-right">
+                <button class="btn btn-default">1</button>
+                <button class="btn btn-default">2</button>
+                <button class="btn btn-default">3</button>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-default"&gt;1&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;2&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-default"&gt;4&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;5&lt;/button&gt;
+    &lt;button class="btn btn-default"&gt;6&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-toolbar btn-toolbar-right"&gt;
+  &lt;button class="btn btn-default"&gt;1&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;2&lt;/button&gt;
+  &lt;button class="btn btn-default"&gt;3&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+          </section>
+
+          <section id="section-labels">
+            <h1 class="section-header">Labels</h1>
+            <p class="descrip">Labels are commonly used as tags in our UI.</p>
+            <h3>Colors</h3>
+            <div class="bs-example">
+              <span class="label label-default">Default</span>
+              <span class="label label-primary">Primary</span>
+              <span class="label label-success">Success</span>
+              <span class="label label-info">Info</span>
+              <span class="label label-warning">Warning</span>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;span class="label label-default"&gt;Default&lt;/span&gt;
+&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="label label-success"&gt;Success&lt;/span&gt;
+&lt;span class="label label-info"&gt;Info&lt;/span&gt;
+&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code></pre>
+            </div>
+            <h3>Sizes</h3>
+            <div class="bs-example">
+              <span class="label label-primary label-xl">label-xl</span>
+              <span class="label label-primary label-lg">label-lg</span>
+              <span class="label label-primary label-md">label-md</span>
+              <span class="label label-primary label">label</span>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;span class="label label-primary label-xl"&gt;label-xl&lt;/span&gt;
+&lt;span class="label label-primary label-lg"&gt;label-lg&lt;/span&gt;
+&lt;span class="label label-primary label-md"&gt;label-md&lt;/span&gt;
+&lt;span class="label label-primary label"&gt;label&lt;/span&gt;</code></pre>
+            </div>
+          </section>
+
+          <section id="section-badges">
+            <h1 class="section-header">Badges</h1>
+            <p class="descrip">Badges are used to denote counts of items. They can also be used as links. To de-emphasize a badge, append the modifier class, <code>.badge-mute</code>.</p>
+            <div class="bs-example">
+              <span class="badge">1</span>
+              <span class="badge badge-mute">2</span>
+              <a class="badge badge-mute">120</a>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;span class="badge"&gt;1&lt;/span&gt;
+&lt;span class="badge badge-mute"&gt;2&lt;/span&gt;
+&lt;a href="#" class="badge badge-mute"&gt;120&lt;/a&gt;</code></pre>
+            </div>
+          </section>
+
+          <section id="section-alerts">
+            <h1 class="section-header">Alerts</h1>
+            <h3>Colors</h3>
+            <p class="descrip">
+              Alerts come in three flavors: <code>.alert-success</code>, <code>.alert-info</code>, and <code>.alert-warning</code>.
+            </p>
+
+            <h3>Dismissable alerts</h3>
+            <p class="descrip">If the alert is dismissable, add class <code>.alert-dismissable</code> and include a <code>&lt;span class="close [light]"/&gt;</code>. Depending on the color of the alert, use the default darker close via <code>fycon-x</code> as seen in the example below.</p>
+            <div class="bs-example">
+              <div class="alert alert-info"><strong>Info: You might want to check that thing, it could be important.</strong></div>
+              <div class="alert alert-warning alert-dismissable"><strong>Warning: I think you might've fucked something up.</strong><span class="close light"><i class="fycon-x"></i></span></div>
+              <div class="alert alert-success alert-dismissable"><strong>Success: Good job, everything looks good!</strong><span class="close light"><i class="fycon-x"></i></span></div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="alert alert-info"&gt;
+  &lt;strong&gt;Info: You might want to check that thing, it could be important.&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning"&gt;
+  &lt;strong&gt;Warning: I think you might've fucked something up.&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success alert-dismissable"&gt;
+  &lt;strong&gt;Success: Good job, everything looks good!&lt;/strong&gt;
+  &lt;span class="close light"&gt;&lt;i class="fycon-x"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>            
+            </div>
+          </section>
+
+          <section id="list-group">
+            <h1 class="section-header">List Group</h1>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-list-group" aria-expanded="false" aria-controls="changes-list-group">Changes from v1.x</a>
+            <div class="collapse" id="changes-list-group">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Minor skin update. Most notably, we removed the border that surrounded the entire list because we usually don't need it.</li>
+                  <li>Added modifier <code>.list-group-striped</code> to alternate background row colors.</li>
+                  <li>Added modifier <code>.list-group-no-borders</code> to remove all borders.</li>
+                </ul>
+              </div>
+            </div>
+
+
+            <ul class="descrip">
+              <li>Use to display simple lists of information. Ex: User activity feed, Stream rules.</li>
+              <li>Markup is pretty flexible. Ex: You can use an unordered list or a div with a list of a links.</li>
+              <li>For dashboard lists (ex: Streams List, Users List), use the <a href="#section-slats">Slats</a> component instead.</li>
+            </ul>
+
+            <h3>Basic List Group</h3>
+            <ul class="descrip">
+              <li>Minor skin update. Most notably, we removed the border that surrounded the entire list because we usually don't need it.</li>
+              <li>The same classes from <a href="http://getbootstrap.com/components/#list-group" target="_blank">Bootstrap's list group</a> apply including <code>.active</code> and <code>.disabled</code>.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="list-group">
+                <li class="list-group-item active">This item is "active"</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item disabled">This item is "disabled"</li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="list-group"&gt;
+  &lt;li class="list-group-item active"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item disabled"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+
+            <h3>List Group with Hover Styles</h3>
+            <ul class="descrip">
+              <li>Add the class <code>.list-group-hover</code> to the parent container.</li>
+              <li>Ex: The "Rules" panel in the Streams Detail Page.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="list-group list-group-hover">
+                <li class="list-group-item active">This item is "active"</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="list-group list-group-hover"&gt;
+  &lt;li class="list-group-item active"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+
+            <h3>List Group with Striped Rows</h3>
+            <ul class="descrip">
+              <li>Add the class <code>.list-group-striped</code> to the parent container.</li>
+              <li>Ex: The activity feed on the User Details page.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="list-group list-group-striped">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
+            <div class="highlight"><pre><code>&lt;ul class="list-group list-group-striped"&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre></div>
+
+            <h3>List Group with No Borders</h3>
+            <ul class="descrip">
+              <li>Add the class <code>.list-group-no-borders</code> to the parent container.</li>
+              <li>Ex: The "Manage Access" modal in the Library.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="list-group list-group-no-borders">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+              </ul>
+            </div>
+            <div class="highlight"><pre><code>&lt;ul class="list-group list-group-no-borders"&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+  &lt;li class="list-group-item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+            <h3>Linked List Group with Headers</h3>
+            <ul class="descrip">
+              <li>Use the classes <code>.list-group-item-heading</code> and <code>.list-group-item-text</code>.</li>
+              <li>Ex: The "Assigned Roles" tab on the User Detail page.</li>
+            </ul>
+            <div class="bs-example">
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius sed diam eget risus variussed diam eget risus variussed diam eget risus variusblandit.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+              </div>
+            </div>
+            <div class="highlight"><pre><code>&lt;div class="list-group"&gt;
+  &lt;a href="..." class="list-group-item"&gt;
+    &lt;h4 class="list-group-item-heading"&gt;...&lt;/h4&gt;
+    &lt;p class="list-group-item-text"&gt;...&lt;/p&gt;
+  &lt;/a&gt;
+  ...
+&lt;/div&gt;</code></pre></div>
+          </section>
+
+          <section id="section-avatars">
+            <h1 class="section-header">Avatars</h1>
+            <p class="descrip">Common Livefyre and other social media avatars come in sizes in multiples of 12. Livefyre Bootstrap ships with 24x24, 36x36, 48x48, and 96x96.</p>
+            <div class="bs-example">
+              <div class="avatar avatar-lg" style="display: inline-block;">
+                <img src="http://placehold.it/96x96">
+              </div>
+              <div class="avatar" style="display: inline-block;">
+                <img src="http://placehold.it/48x48">
+              </div>
+              <div class="avatar avatar-sm" style="display: inline-block;">
+                <img src="http://placehold.it/36x36">
+              </div>
+              <div class="avatar avatar-xs" style="display: inline-block;">
+                <img src="http://placehold.it/24x24">
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="avatar avatar-lg"&gt;
+  &lt;img src="..."&gt;
+&lt;/div&gt;
+&lt;div class="avatar"&gt;
+  &lt;img src="..."&gt;
+&lt;/div&gt;
+&lt;div class="avatar avatar-sm"&gt;
+  &lt;img src="..."&gt;
+&lt;/div&gt;
+&lt;div class="avatar avatar-xs"&gt;
+  &lt;img src="..."&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+
+          <section id="section-slats">
+            <h1 class="section-header">Slats</h1>
+            <p class="descrip">Use slats to create dashboard lists. Ex: Streams List, Users List</p>
+
+            <h3>Size options</h3>
+            <p class="descrip">Use alongside the <code>.slat</code> class (but not with <code>.slat-header</code>).</p>
+            <ul class="descrip">
+                <li>Default - 60px high</li>
+                <li><code>.slat-sm</code> - 48px high</li>
+                <li><code>.slat-lg</code> - 72px high, larger title font</li>
+            </ul>
+
+
+            <h3>Other modifiers</h3>
+            <ul class="descrip">
+              <li><code>.slat-vertical-center</code> - Vertically centers content (default: top-aligned).</li>
+              <li><code>.slat-header</code> - Header row.</li>
+              <li><code>.slat-variable</code> - Height isn't fixed. For when you need to fit a varying amount of content.</li>
+              <li><code>.slat-hover</code> - Adds hover styles. For when the entire slat is clickable.</li>
+              <li><code>.slat-disabled</code> - Displays a disabled cursor on hover.</li>
+              <li><code>.no-bottom-border</code> - Removes the bottom border. Ex: The bottom slat in a series.</li>
+              <li><code>.add-top-border</code> - Adds a top border. Ex: The top slat in a series.</li>
+            </ul>
+
+            <h3>Titles</h3>
+            <ul class="descrip">
+              <li>Use <code>.slat-title</code> to make content more prominent (ex: the name of the streams in the Streams list).</li>
+              <li>Since it applies <code>display: inline-block</code>, it can be used with a variety of HTML elements.</li>
+              <li>Or, you can add it to the <code>.slat</code> div directly.</li>
+              <li>Longer titles are truncated with ellipsis.</li>
+            </ul>
+
+
+            <div class="bs-example" style="margin-top: 40px;">
+              <div class="slat slat-header slat-vertical-center">
+                <div class="col-xs-5">Title</div>
+                <div class="col-xs-5">Site</div>
+                <div class="col-xs-2">Date Modified</div>
+              </div>
+              <div class="slat slat-vertical-center">
+                <div class="col-xs-5 slat-title">Long title to show how .slat-title uses ellipsis to truncate</div>
+                <div class="col-xs-5">Test Site</div>
+                <div class="col-xs-2">10 days ago</div>
+              </div>
+              <div class="slat slat-vertical-center slat-hover">
+                <div class="col-xs-5 slat-title">This slat has hover styles</div>
+                <div class="col-xs-5">Another Site</div>
+                <div class="col-xs-2">7 months ago</div>
+              </div>
+              <div class="slat slat-vertical-center slat-disabled">
+                <div class="col-xs-5 slat-title">This slat is disabled</div>
+                <div class="col-xs-5">Another Site</div>
+                <div class="col-xs-2">7 months ago</div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="slat slat-header slat-vertical-center"&gt;
+  &lt;div class="col-xs-5"&gt;Title&lt;/div&gt;
+  &lt;div class="col-xs-5"&gt;Site&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;Date Modified&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="slat slat-vertical-center"&gt;
+  &lt;div class="col-xs-5 slat-title"&gt;Long title to show how .slat-title uses ellipsis to truncate&lt;/div&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="slat slat-vertical-center slat-hover"&gt;
+  &lt;div class="col-xs-5 slat-title"&gt;This slat has hover styles&lt;/div&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="slat slat-vertical-center slat-disabled"&gt;
+  &lt;div class="col-xs-5 slat-title"&gt;This slat is disabled&lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+            </div>
+
+
+            <div class="bs-example" style="margin-top: 40px;">
+              <div class="slat slat-header slat-vertical-center">
+                <div class="col-xs-8">Name</div>
+                <div class="col-xs-2">Posts</div>
+                <div class="col-xs-2">Joined</div>
+              </div>
+              <div class="slat slat-lg slat-vertical-center">
+                <div class="col-xs-8">
+                  <div class="media">
+                    <div class="media-left">
+                      <img class="avatar avatar-sm" src="http://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg">
+                    </div>
+                    <div class="media-body">
+                      <h4 class="slat-title">Ashley Eastman</h4>
+                      <p>ashley228@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-2">14</div>
+                <div class="col-xs-2">Nov 18th, 2015</div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="slat slat-header slat-vertical-center"&gt;
+  &lt;div class="col-xs-8"&gt;Name&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;Posts&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;Joined&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="slat slat-lg slat-vertical-center"&gt;
+  &lt;div class="col-xs-8"&gt;
+    &lt;div class="media"&gt;
+      &lt;div class="media-left"&gt;
+        &lt;img class="avatar avatar-sm" src="..."&gt;
+      &lt;/div&gt;
+      &lt;div class="media-body"&gt;
+        &lt;h4 class="slat-title"&gt;Ashley Eastman&lt;/h4&gt;
+        &lt;p&gt;ashley228@gmail.com&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;14&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;Nov 18th, 2015&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+
+            <div class="bs-example" style="margin-top: 40px;">
+              <div class="slat slat-header slat-vertical-center">
+                <div class="col-xs-6">Folder Name</div>
+                <div class="col-xs-4">Permissions via Groups</div>
+                <div class="col-xs-2">Date Modified</div>
+              </div>
+              <div class="slat slat-sm slat-variable">
+                <div class="col-xs-6">
+                  <div class="media">
+                    <div class="media-left">
+                      <img class="avatar avatar-sm" src="http://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg">
+                    </div>
+                    <div class="media-body">
+                      <h4 class="slat-title">Jane's Test Folder</h4>
+                      <p>This slat doesn't have a fixed height. It can be used alongside <code>.slat-sm</code> to reduce the top and bottom padding.</p>
+                    </div>
+                  </div>
+                </div>      
+                <div class="col-xs-4">
+                  <ul>
+                    <li><a href="#">Power Burst Photography Team</a></li>
+                    <li><a href="#">Power Burst Creative</a></li>
+                    <li><a href="#">2017 Team</a></li>
+                    <li><a href="#">June 18 Event Team</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-2">July 14, 2016</div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="slat slat-header slat-vertical-center"&gt;
+  &lt;div class="col-xs-6"&gt;Folder Name&lt;/div&gt;
+  &lt;div class="col-xs-4"&gt;Permissions via Groups&lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;Date Modified&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="slat slat-sm slat-variable"&gt;
+  &lt;div class="col-xs-6"&gt;
+    &lt;div class="media"&gt;
+      &lt;div class="media-left"&gt;
+        &lt;img class="avatar avatar-sm" src="..."&gt;
+      &lt;/div&gt;
+      &lt;div class="media-body"&gt;
+        &lt;h4 class="slat-title"&gt;Jane's Test Folder&lt;/h4&gt;
+        &lt;p&gt;...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;      
+  &lt;div class="col-xs-4"&gt;
+    &lt;ul&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-2"&gt;July 14, 2016&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+
+          </section>
+
+          <section id="section-nodatablock">
+            <h1 class="section-header">No-Data Block</h1>
+            <ul class="descrip">
+              <li>Used when page displays no data (ex: "No results match your search", "No content in Collection").</li>
+              <li>Can display a large image or Fycon up top.</li>
+            </ul>
+            <div class="bs-example">
+              <div class="no-data">
+                <span class="fycon-logo-modq"></span>
+                <h4 class="no-data-header">No tasks match filter section</h4>
+                <p>Clear filters to see items in queue</p>
+                <p><button type="button" class="btn btn-default" data-action="undefined">Clear filters</button></p>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="no-data"&gt;
+  &lt;span class="fycon-logo-modq"&gt;&lt;/span&gt;
+  &lt;h4 class="no-data-header"&gt;No tasks match filter section&lt;/h4&gt;
+  &lt;p&gt;Clear filters to see items in queue&lt;/p&gt;
+  &lt;p&gt;&lt;button type="button" class="btn btn-default" data-action="undefined"&gt;Clear filters&lt;/button&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+
+          <section id="section-pager">
+            <h1 class="section-header">Pager</h1>
+            <ul class="descrip">
+              <li>For previous/next paging (not for numbered pagination).</li>
+              <li>Pager is right-aligned by default but you can override it using [Twitter] Boostrap's helper classes <code>.text-left</code> and <code>.text-center</code> alongside <code>.pager</code>.</li>
+            </ul>
+            <div class="bs-example">
+              <ul class="pager">
+                <li>
+                  <strong>Showing 1-7 of 7</strong>
+                </li>
+                <li>
+                  <a class="btn btn-default" href="#"><span class="fycon-arrow-left"></span> Prev</a>
+                  <a class="btn btn-default" href="#">Next <span class="fycon-arrow-right"></span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="pager"&gt;
+  &lt;li&gt;
+    &lt;strong&gt;Showing 1-7 of 7&lt;/strong&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a class="btn btn-default" href="#"&gt;&lt;span class="fycon-arrow-left"&gt;&lt;/span&gt; Prev&lt;/a&gt;
+    &lt;a class="btn btn-default" href="#"&gt;Next &lt;span class="fycon-arrow-right"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </section>
+
+
+          <section id="section-toggles">
+            <h1 class="section-header">Toggles</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-toggles" aria-expanded="false" aria-controls="changes-toggles">Changes from v1.x</a>
+            <div class="collapse" id="changes-toggles">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Completely different markup.</li>
+                  <li>All-CSS now. No more JS.</li>
+                  <li>Uses checkbox for better accessibility and semantics.</li>
+                  <li>Check for state change by using the <code>checked</code> attribute of input element (instead of <code>.active</code> class).</li>
+                  <li>"On/Off" text lives in markup now so easier to swap in internationalization text.</li>
+                  <li>Works inside of dropdown menus.</li>
+                  <li>Visually unchanged from prevous version.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Labels</h3>
+            <p class="descrip">
+              You can display text labels by adding the <code>.toggle-label</code> class, a <code>data-off</code> attribute and text inside of the span for the "on" state.
+            </p>
+            <h3>Sizing</h3>
+            <p class="descrip">
+              There is an optional smaller toggle size which can be enabled by adding class <code>.toggle-sm</code>.
+            </p>
+            <h3>State</h3>
+            <p class="descrip">
+              You can set a toggle to its "on" state by adding the <code>checked</code> attribute to the input element.
+            </p>
+            <h3>Event Listeners</h3>
+            <p>Note that your event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside.</p>
+            <div class="bs-example">
+              <label class="toggle" style="display: inline-block;">
+                <input type="checkbox" role="checkbox" />
+                <span></span>
+              </label>
+              <label class="toggle toggle-label" style="display: inline-block;">
+                <input type="checkbox" role="checkbox" />
+                <span data-off="Off">On</span>
+              </label>
+              <label class="toggle toggle-sm" style="display: inline-block;">
+                <input type="checkbox" role="checkbox" checked />
+                <span></span>
+              </label>
+              <label class="toggle toggle-sm toggle-label" style="display: inline-block;">
+                <input type="checkbox" role="checkbox" checked />
+                <span data-off="Off">On</span>
+              </label>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;label class="toggle"&gt;
+  &lt;input type="checkbox" role="checkbox" /&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="toggle toggle-label"&gt;
+  &lt;input type="checkbox" role="checkbox" /&gt;
+  &lt;span data-off="Off"&gt;On&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="toggle toggle-sm"&gt;
+  &lt;input type="checkbox" role="checkbox" checked /&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="toggle toggle-sm toggle-label"&gt;
+  &lt;input type="checkbox" role="checkbox" checked /&gt;
+  &lt;span data-off="Off"&gt;On&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+            </div>
+
+          </section>
+
+          <section id="section-tooltips">
+            <h1 class="section-header">Tooltips</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-tooltips" aria-expanded="false" aria-controls="changes-tooltips">Changes from v1.x</a>
+            <div class="collapse" id="changes-tooltips">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>We extended the plugin so that after triggering a tooltip via click, a 2nd click anywhere - except on the tooltip itself - closes it. This overrides the default behavior where you can only close the tooltip by clicking the trigger element again.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Usage</h3>
+            <p class="descrip">
+              For performance reasons, tooltip() is not loaded by default. You must initialize them yourself. You can do this via jQuery:
+            </p>
+            <p class="descrip">
+              <strong>data-attribute</strong>: 
+              <code>$('[data-toggle="tooltip"]').tooltip();</code>
+            </p>
+            <p class="descrip">
+              <strong>class/id selector</strong>: 
+              <code>$('.tooltip').tooltip();</code>
+            </p>
+            <div class="bs-example">
+              <p>This is a <span data-toggle="tooltip" data-title="Looks like you've found meh" style="border-bottom: 1px dotted #777">tooltip</span>. You can make them appear in a number of <span data-toggle="tooltip" data-title="To the right" data-placement="right" style="border-bottom: 1px dotted #777">ways</span>. Also to the <span data-toggle="tooltip" data-title="Left coast is the best coast" data-placement="left" style="border-bottom: 1px dotted #777">left</span> and down <span data-toggle="tooltip" data-title="Australia" data-placement="bottom" style="border-bottom: 1px dotted #777">below</span>.</p>
+
+              <p>Also to <span data-toggle="tooltip" data-trigger="click" data-title="*click*" data-placement="top" style="border-bottom: 1px dotted #777">appear on click</span> instead of on hover (a 2nd click anywhere - except on the tooltip itself - closes it).</p>
+            </div>
+            <div class="highlight">
+              <pre><code><-- HTML -->
+&lt;span data-toggle="tooltip" data-title="Looks like you've found meh"&gt;tooltip&lt;/span&gt;
+&lt;span data-toggle="tooltip" data-placement="bottom" data-title="Australia"&gt;below&lt;/span&gt;
+&lt;span data-toggle="tooltip" data-trigger="click" data-title="*click*"&gt;appear on click&lt;/span&gt;
+
+<-- JS -->
+$('[data-toggle="tooltip"]').tooltip();
+
+$('#element').tooltip(
+  {
+    animation: true, // boolean
+    html: false, // boolean; allows HTML to be inserted into the tooltip
+    placement: 'top|bottom|left|right|auto', 
+    trigger: 'click|hover|focus',
+    title: 'string' // value if title attribute is not present on the element
+    delay: int, // delay animation in ms
+    container: 'string', // appends tooltip to a specific element
+  }
+);</code></pre>
+            </div>
+            <h3>Methods/Options</h3>
+            <p class="descrip">
+              There are also a number of placement options to pass to tooltips. To access these, either configure them via the HTML5 Data API or in a javascript config:
+            </p>
+            <p class="descrip">
+              <strong>data-attribute: </strong>
+              <code>&lt;span data-toggle="tooltip" data-placement="top|bottom|left|right|auto"&gt;</code>
+            </p>
+
+          </section>
+
+          <section id="section-popovers">
+            <h1 class="section-header">Popovers</h1>
+            <h3>Usage</h3>
+            <p class="descrip">Popovers are syntatically similar to tooltips. In order to use popovers, you must include the tooltip.js lib as well as it is a dependency. Again, you are responsibile for initializing popovers yourself, and can access them via data-attribute or a selector.</p>
+            <div class="bs-example">
+            <button class='btn btn-primary btn-lg' data-toggle="popover" data-placement="top" data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!">Click me!</button>
+          </div>
+          <div class="highlight">
+            <pre><code>&lt;button class='btn btn-primary btn-lg'
+  data-toggle="popover" 
+  data-placement="top" 
+  data-content="Celebrate Mark Doten Day when the weather is hotter than 90&deg;F!"&gt;
+  Click me!
+&lt;/button&gt;</code></pre>
+            </div>
+          </section>
+
+          <section id="section-modals">
+            <h1 class="section-header">Modals</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-modals" aria-expanded="false" aria-controls="changes-modals">Changes from v1.x</a>
+            <div class="collapse" id="changes-modals">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Increased overall padding. Other minor style changes.</li>
+                  <li>To add a new 450px modal size, we changed <code>.modal-sm</code> from 300px wide to 450px. You can use the new <code>.modal-xs</code> class to create 300px wide modals.</li>
+                  <li>Make the bounce-in animation the default. So, no need to use the <code>.animated</code> class anymore.</li>
+                  <li>Added ability to divide content inside the modal body using <code>section</code>.</li>
+                  <li>Added support for [Twitter] Bootstrap's helper classes for text alignment (<code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code>) so they can be used on the modal's title, body and footer containers. Note that the <code>.centered</code> class has been deprecated in [Twitter] Bootstrap.</li>
+                  <li>Fixed close button so it no longer affects header text positioning.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Static Example</h3>
+            <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">
+                      <span class="fycon-x"></span>
+                    </button>
+                    <h4 class="modal-title">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>Subheader (h4 or .modal-subheader)</h4>  
+                    <p>Yr before they sold out mustache, kale chips butcher Austin Pork belly in the asymmetrical cardigan selvage Marfa messenger bag.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="modal-dialog modal-sm"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;button class="close" data-dismiss="modal"&gt;
+        &lt;span class="fycon-x"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;h4&gt;Subheader (h4 or .modal-subheader)&lt;/h4&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-default" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Save Changes&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>            
+            </div>
+
+            <h3>Sections</h3>
+            <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">
+                      <span class="fycon-x"></span>
+                    </button>
+                    <h4 class="modal-title">Modal with Sections</h4>
+                  </div>
+                  <div class="modal-body">
+                    <section>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                    </section>
+                    <section>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Message</label>
+                        <textarea class="form-control"></textarea>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="modal-dialog"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;button class="close" data-dismiss="modal"&gt;
+        &lt;span class="fycon-x"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;h4 class="modal-title"&gt;Modal with Sections&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;section&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+          &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+          &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+      &lt;section&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="exampleInputPassword1"&gt;Message&lt;/label&gt;
+          &lt;textarea class="form-control"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-default" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Save Changes&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>            
+            </div>
+            
+            <h3>Alert Modal</h3>
+            <ul class="descrip">
+              <li>Alternative modal style, useful for alert messages and notifications that require the user's attention.</li>
+              <li>To use, add the <code>.modal-alert</code> class to <code>.modal</code> or <code>.modal-dialog</code>. You can't yet create an Alert Modal via a data attribute or JavaScript option.</li>
+              <li>Do not include a <code>.modal-header</code> section.</li>
+              <li>In <code>.modal-body</code>, use an <code>h4</code> for the headline.</li>
+              <li>Everything is center-aligned by default but you can use [Twitter] Boostrap's helper classes <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to independently align headlines, text and buttons.</li>
+            </ul>
+            <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+              <div class="modal-dialog modal-sm modal-alert">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <h4>Are you sure you want to publish this version of <strong><em>Winter Storm Media Wall</em></strong>?</h4>  
+                    <p>This will make this App live for use outside of Livefyre Studio.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Yes, Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="modal-dialog modal-sm modal-alert"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;h4&gt;...&lt;/h4&gt;  
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-default" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Yes, Publish&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>            
+            </div>
+
+            <h3>Usage</h3>
+            <p class="descrip">Include a template at the bottom of the page with class <code>fade</code> to hide it by default. Assign an <code>id</code> to this modal template and assign it as the <code>data-target</code>.</p>
+            <div class="bs-example">
+              <button class="btn btn-lg btn-default" data-toggle="modal" data-target="#lfModal">Launch Modal</button>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;button class="btn btn-lg btn-default" data-toggle="modal" data-target="#lfModal"&gt;
+  Launch Modal
+&lt;/button&gt;</code></pre>
+            </div>
+
+            <h3>Size options</h3>
+            <p class="descrip">
+              You can also pass additional modal sizes in lieu of the default 600px width on <code>.modal-dialog</code>:
+              <br />
+              <ul>
+                <li><code>.modal-xs</code>: 300px</li>
+                <li><code>.modal-sm</code>: 450px</li>
+                <li><code>.modal-md</code>: 600px</li>
+                <li><code>.modal-lg</code>: 900px</li>
+              </ul>
+            </p>
+
+            <h3>Alignment</h3>
+            <p class="descrip">
+              Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> on any element align headers, text and buttons.
+            </p>
+
+            <h3 id="scrollable">Scrollable</h3>
+            <p class="descrip">
+              Turn an element (ex: <code>.list-group</code>) into a scrollable container. Similar to <code>.pre-scrollable</code> in code.less.
+            </p>
+            <p class="descrip">
+              Default max-height is 350px. Use additional classes to change size.<br />
+              <code>.scrollable-sm</code> = 200px<br />
+              <code>.scrollable-lg</code> = 500px
+            </p>
+            <div class="bs-example" style="background-color: rgba(0, 0, 0, 0.75);">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">
+                      <span class="fycon-x"></span>
+                    </button>
+                    <h4 class="modal-title">Modal with Scrollable List</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>Scroll me!</h4>
+                    <ul class="list-group list-group-striped scrollable scrollable-sm">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="modal-dialog"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;button class="close" data-dismiss="modal"&gt;
+        &lt;span class="fycon-x"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;h4 class="modal-title"&gt;Modal with Scrollable List&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;h4&gt;Scroll me!&lt;/h4&gt;
+      &lt;ul class="list-group list-group-striped scrollable scrollable-sm"&gt;
+        &lt;li class="list-group-item"&gt;Cras justo odio&lt;/li&gt;
+        &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+        &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+        ...
+        ...</code></pre>
+            </div>
+
+          </section>
+
+
+          <section id="section-dropdowns">
+            <h1 class="section-header">Dropdowns</h1>
+
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-dropdowns" aria-expanded="false" aria-controls="changes-dropdowns">Changes from v1.x</a>
+            <div class="collapse" id="changes-dropdowns">
+              <div class="well">
+                <h3>Changes from v1.x</h3>
+                <ul class="descrip">
+                  <li>Minor style updates to padding, border-radius, hover colors.</li>
+                  <li>New <code>.dropdown-menu-center</code> class for center-aligning dropdown panels.</li>
+                  <li>The trigger button's caret has been changed to a chevron. Keep using the <code>.caret</code> class in dropdown triggers. Double-check other dropdown triggers to make sure they now display the chevron.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Alignment</h3>
+            <p class="descrip">By default, dropdown panels are left-aligned.</p>
+            <p class="descrip">To right align a panel, you can either add <code>.dropdown-menu-right</code> alongside the <code>.dropdown-menu</code> class or add <code>.pull-right</code> to the container element.</p>
+            <p class="descrip">Livefyre Bootstrap also adds a <code>.dropdown-menu-center</code> class that center-aligns the dropdown panel.</p>
+
+            <div class="bs-example">
+              <div class="btn-toolbar" role="toolbar" aria-label="...">
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Default <span class="caret fycon-xs"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Center-Aligned <span class="caret fycon-xs"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-center">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Right-Aligned <span class="caret fycon-xs"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="highlight">
+              <pre><code>&lt;div class="btn-toolbar" role="toolbar" aria-label="..."&gt;
+
+  &lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+      Default &lt;span class="caret fycon-xs"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+      Center-Aligned &lt;span class="caret fycon-xs"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu dropdown-menu-center"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+      Right-Aligned &lt;span class="caret fycon-xs"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu dropdown-menu-right"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+            </div>
+
+          </section>
+
+
+          <section id="section-loader">
+            <h1 class="section-header">Loader</h1>
+            <h3>Usage</h3>
+            <p class="descrip">
+              Livefyre's <code>loader</code> depends on <code>loader.js</code> (included in the minified js).
+            </p>
+            <h3>Options</h3>
+            <p class="descrip">
+              <code>loader</code> accepts two parameters: <code>elem</code> and <code>size</code> (optional).
+              <ul>
+                <li><code>elem</code> expects an object or jQuery object</li>
+                <li><code>size</code> expects an <code>integer</code> or one of three pre-canned sizes as a <code>string</code>: 'mini', 'small', or 'large'.</li>
+              </ul>
+            </p>
+            <div class="bs-example">
+              <div class="loader" style="display: inline-block; width: 120px; height: 120px;">
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+              </div>
+
+              <div class="loader loader-large" style="display: inline-block;">
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+              </div>
+
+              <div class="loader loader-small" style="display: inline-block;">
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+              </div>
+
+              <div class="loader loader-mini" style="display: inline-block;">
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+                <div class="lf-loader-block"></div>
+              </div>
+
+            </div>
+            <div class="highlight">
+              <pre><code><-- HTML -->
+&lt;div id="lfLoader"&gt;&lt;/div&gt;
+
+<-- JS -->
+loader.decorate($('#lfLoader'), 120)
+loader.decorate($('#lfLoader-large'), 'large')
+loader.decorate($('#lfLoader-small'), 'small')
+loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
+            </div>
+
+
+            <h3>Spinner</h3>
+            <p class="descrip">The generic spinner is for situations when we don't want Livefyre branding and colors (ex: an app that uses a client's branding).</p>
+            <p class="descrip">Size options:</p>
+            <ul class="descrip">
+              <li><code>.spinner-xs</code> = 16x16</li>
+              <li><code>.spinner-sm</code> = 24x24</li>
+              <li><code>.spinner</code> (default) = 36x36</li>
+              <li><code>.spinner-lg</code> = 64x64</li>
+            </ul>
+            <div class="bs-example">
+              <!-- 16 x 16 -->
+              <div class="spinner spinner-xs"></div>
+
+              <!-- 24 x 24 -->
+              <div class="spinner spinner-sm"></div>
+
+              <!-- 36 x 36 (Default) -->
+              <div class="spinner"></div>
+
+              <!-- 64 x 64 -->
+              <div class="spinner spinner-lg"></div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;!-- 16 x 16 --&gt;
+&lt;div class="spinner spinner-xs"&gt;&lt;/div&gt;
+
+&lt;!-- 24 x 24 --&gt;
+&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+
+&lt;!-- 36 x 36 (Default) --&gt;
+&lt;div class="spinner"&gt;&lt;/div&gt;
+
+&lt;!-- 64 x 64 --&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+
+          </section>
+
+
+          <section id="section-tabs">
+            <h1 class="section-header">Tabs</h1>
+            <p class="descrip">
+              This is just a skin update. The same markup and classes from <a href="http://getbootstrap.com/javascript/#tabs" target="_blank">Bootstrap's tabs</a> apply.
+            </p>
+            <div class="bs-example">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tabId" data-toggle="tab">Home</a></li>
+                <li><a href="#tabId" data-toggle="tab">Profile</a></li>
+                <li><a href="#tabId" data-toggle="tab">Information</a></li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+
+            <h3>Sizing</h3>
+            <p class="descrip">
+              There is an optional smaller tab size which can be enabled by adding class <code>.nav-tabs-sm</code>. Useful for modals or sidebars.
+            </p>
+            <div class="bs-example">
+              <ul class="nav nav-tabs nav-tabs-sm">
+                <li class="active"><a href="#" data-toggle="tab">Home</a></li>
+                <li><a href="#" data-toggle="tab">Profile</a></li>
+                <li><a href="#" data-toggle="tab">Information</a></li>
+              </ul>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;ul class="nav nav-tabs nav-tabs-sm"&gt;
+  &lt;li class="active"&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#tabId" data-toggle="tab"&gt;Information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </section>
+
+
+          <section id="section-query-inputs">
+            <h1 class="section-header">Query Inputs (i.e. Search Forms)</h1>
+
+            <h3>Usage</h3>
+            <ul class="descrip">
+              <li>Markup is taken from our React component <code>Simple.jsx</code>, used in Asset Manager.</li>
+              <li>The component's width is determined by its container. Each example below is wrapped in a <code>&lt;div class="col-md-6"&gt;</code>.</li>
+            </ul>
+
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="query-input">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Find stream">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="query-input"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;input type="text" class="form-control" placeholder="Find stream"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>        
+
+            <p class="descrip">This is what it looks like with the loader rendered by Asset Manager's <code>Simple.jsx</code>. Note the addition of a <code>&lt;div class="input-group"&gt;</code> wrapper.</p>
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="query-input">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" placeholder="Find stream" class="form-control">
+                        <span class="input-group-addon">
+                          <div class="loader loader-mini">
+                            <div></div><div></div><div></div>
+                            <div></div><div></div><div></div>
+                            <div></div><div></div><div></div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="query-input"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" placeholder="Find stream" class="form-control"&gt;
+      &lt;span class="input-group-addon"&gt;
+        &lt;div class="loader loader-mini"&gt;
+          &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>   
+
+            <h3>With button</h3>
+            <p class="descrip">When using a submit button, add the <code>.query-input-with-button</code> class. It removes the magnifying class fycon from the text field. Note the addition of a <code>&lt;div class="input-group"&gt;</code> wrapper.</p>
+
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="query-input query-input-with-button">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Find stream">
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-default">
+                            <span class="fycon-search fycon-lg"></span>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="query-input query-input-with-button"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" class="form-control" placeholder="Find stream"&gt;
+      &lt;span class="input-group-btn"&gt;
+        &lt;button type="submit" class="btn btn-default"&gt;
+          &lt;span class="fycon-search fycon-lg"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+            </div>   
+
+
+            <h3>Large Query Input</h3>
+            <p class="descrip">Add the <code>.query-input-lg</code> class to the container and <code>.input-lg</code> and <code>.btn-lg</code> to their respective elements.</p>
+
+            <div class="bs-example">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="query-input query-input-lg">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" class="form-control input-lg" placeholder="Find stream">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-md-6">
+                  <div class="query-input query-input-with-button query-input-lg">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" class="form-control input-lg" placeholder="Find stream">
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-lg btn-default">
+                            <span class="fycon-search fycon-lg"></span>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="highlight">
+              <pre><code>&lt;div class="query-input query-input-lg"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" class="form-control input-lg" placeholder="Find stream"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="query-input query-input-with-button query-input-lg"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;div class="input-group"&gt;
+      &lt;input type="text" class="form-control input-lg" placeholder="Find stream"&gt;
+      &lt;span class="input-group-btn"&gt;
+        &lt;button type="submit" class="btn btn-lg btn-default"&gt;
+          &lt;span class="fycon-search fycon-lg"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+            </div>   
+
+          </section>
+
+
+          <section id="section-helpers">
+            <h1 class="section-header">Helpers</h1>
+
+            <ul class="descrip">
+              <li><code>.word-break()</code> mixin: forces long words to break to the next line (ex: URLs)</li>
+            </ul>
+          </section>
+
+        </div><!-- /.col -->
+
+
+        <!-- ANCHOR LINKS
+        - Unfortunately, these have to appear after the main content:
+        "Note: Do not use the affix plugin on an element contained in a relatively positioned element, 
+        such as a pulled or pushed column, due to a Safari rendering bug."
+        https://github.com/twbs/bootstrap/issues/12126
+        -->
+        <div class="col-md-3">
+          <div class="glossary" data-spy="affix" data-offset-top="200">
+            <ul class="glossary-list">
+              <a href="#section-importing"><li class="list-first">Importing Variables &amp; Mixins</li></a>
+              <a href="#section-colors"><li>Colors</li></a>
+              <a href="#section-checkboxes"><li>Checkboxes and Radios</li></a>
+              <a href="#section-buttons"><li>Buttons</li></a>
+              <a href="#section-button-groups"><li>Button Groups/Toolbars</li></a>
+              <a href="#section-labels"><li>Labels</li></a>
+              <a href="#section-badges"><li>Badges</li></a>
+              <a href="#section-alerts"><li>Alerts</li></a>
+              <a href="#list-group"><li>List Group</li></a>
+              <a href="#section-avatars"><li>Avatars</li></a>
+              <a href="#section-slats"><li>Slats</li></a>
+              <a href="#section-nodatablock"><li>No-Data Block</li></a>
+              <a href="#section-pager"><li>Pager</li></a>
+              <a href="#section-toggles"><li>Toggles</li></a>
+              <a href="#section-tooltips"><li>Tooltips</li></a>
+              <a href="#section-popovers"><li>Popovers</li></a>
+              <a href="#section-dropdowns"><li>Dropdowns</li></a>
+              <a href="#section-modals"><li>Modals</li></a>
+              <a href="#section-loader"><li>Loader</li></a>
+              <a href="#section-tabs"><li>Tabs</li></a>
+              <a href="#section-query-inputs"><li>Query Inputs (Search Forms)</li></a>
+              <a href="#section-helpers"><li class="list-last">Helpers</li></a>
+            </ul>
+          </div>
+        </div><!-- /.col -->
+
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+    
+    <div class="modal fade" id="lfModal" style="margin: 0 auto;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal">
+              <i class="fycon-x"></i>
+            </button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <img src="img/doge.jpg" alt="doge" width="400">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <!--
+      Couldn't get the loader animation to work using the RequireJS method used on the other pages. We would need to pull in the 2.x version of the src/loader.js file. However, loader.js uses RequireJS so we can't just pull in the 2.x version via Rawgit. Sooo... let's just skip it for now and use all-CSS for the loader example.
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.2/livefyre-bootstrap.min.js"></script>    
+ 
+    <script type="text/javascript">
+      $('[data-toggle="tooltip"]').tooltip();
+      $('[data-toggle="popover"]').popover();
+      $('[data-toggle="dropdown"]').dropdown();
+    </script>
+
+
+<!--
+    <script src="cajon.js"></script>
+    <script src="requirejs.conf.js"></script>
+
+    <script type="text/javascript">
+      require(['jquery', 'livefyre-bootstrap'],
+        function(jquery, livefyre_bootstrap){
+          $('[data-toggle="tooltip"]').tooltip();
+          $('[data-toggle="popover"]').popover();
+          $('[data-toggle="dropdown"]').dropdown();
+
+          livefyre_bootstrap.loader.decorate($('#lfLoader'), 120);
+          livefyre_bootstrap.loader.decorate($('#lfLoader-large'), 'large');
+          livefyre_bootstrap.loader.decorate($('#lfLoader-small'), 'small');
+          livefyre_bootstrap.loader.decorate($('#lfLoader-mini'), 'mini');
+        });
+    </script>
+-->
+
+  </body>
+</html>

@@ -1,6 +1,3 @@
-/node_modules/
-.DS_Store
-/demos/docs-gh/
-npm-debug.log
-/dist/*.gz
-/lib/
+_site
+.sass-cache
+.jekyll-metadata

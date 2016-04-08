@@ -1,0 +1,305 @@
+---
+layout: default
+title: Buttons | Livefyre Bootstrap
+---
+
+<section id="buttons">
+
+  <h1 class="page-heading">Buttons</h1>
+
+  <h3>Types</h3>
+
+  <div id="buttons-default" class="item">
+    <h4>Default Button</h4>
+
+    <div class="well">
+      <button class="btn btn-link pull-right btn-react" type="button" data-toggle="collapse" data-target="#buttons-default-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
+        <svg version="1.1" width="20px" height="18px" viewBox="0 0 184 166">
+          <g transform="translate(92 83)">
+            <circle fill="#2f3440" r="16" />
+            <g fill="none" stroke="#2f3440" stroke-width="8">
+              <ellipse rx="84" ry="32" />
+              <ellipse rx="84" ry="32" transform="rotate(120)" />
+              <ellipse rx="84" ry="32" transform="rotate(60)" />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-default-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <button class="btn btn-default">Default</button>
+
+      <div class="collapse" id="buttons-default-html">
+        {% highlight html %}<button class="btn btn-default">Default</button>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="buttons-default-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+
+<Button>Default</Button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buttons-colors" class="item">
+    <h4>Colors</h4>
+    <p>We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
+    <p>The exception is the new Hollow button. It's semi-transparent so it looks slick on top of a photo.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right btn-react" type="button" data-toggle="collapse" data-target="#buttons-colors-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
+        <svg version="1.1" width="20px" height="18px" viewBox="0 0 184 166">
+          <g transform="translate(92 83)">
+            <circle fill="#2f3440" r="16" />
+            <g fill="none" stroke="#2f3440" stroke-width="8">
+              <ellipse rx="84" ry="32" />
+              <ellipse rx="84" ry="32" transform="rotate(120)" />
+              <ellipse rx="84" ry="32" transform="rotate(60)" />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-colors-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-warning">Warning</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-link">Link</button>
+      <button class="btn btn-hollow">Hollow</button>
+
+      <div class="collapse" id="buttons-colors-html">
+        {% highlight html %}<button class="btn btn-primary">Primary</button>
+<button class="btn btn-warning">Warning</button>
+<button class="btn btn-success">Success</button>
+<button class="btn btn-info">Info</button>
+<button class="btn btn-link">Link</button>
+<button class="btn btn-hollow">Hollow</button>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="buttons-colors-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+
+<Button bsStyle="primary">Primary</Button>
+<Button bsStyle="warning">Warning</Button>
+<Button bsStyle="success">Success</Button>
+<Button bsStyle="info">Info</Button>
+<Button bsStyle="link">Link</Button>
+<Button className="btn-hollow">Hollow</Button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buttons-disabled" class="item">
+    <h4>Disabled Buttons</h4>
+
+    <div class="well">
+      <button class="btn btn-link pull-right btn-react" type="button" data-toggle="collapse" data-target="#buttons-disabled-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
+        <svg version="1.1" width="20px" height="18px" viewBox="0 0 184 166">
+          <g transform="translate(92 83)">
+            <circle fill="#2f3440" r="16" />
+            <g fill="none" stroke="#2f3440" stroke-width="8">
+              <ellipse rx="84" ry="32" />
+              <ellipse rx="84" ry="32" transform="rotate(120)" />
+              <ellipse rx="84" ry="32" transform="rotate(60)" />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-disabled-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <button class="btn btn-default" disabled="disabled">Disabled</button>
+      <button class="btn btn-primary" disabled="disabled">Disabled</button>
+
+      <div class="collapse" id="buttons-disabled-html">
+        {% highlight html %}<button class="btn btn-default" disabled="disabled">Disabled</button>
+<button class="btn btn-primary" disabled="disabled">Disabled</button>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="buttons-disabled-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+
+<Button disabled>Disabled</Button>
+<Button bsStyle="primary" disabled>Disabled</Button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buttons-sizes" class="item">
+    <h4>Sizes</h4>
+    <p>There are 3 additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right btn-react" type="button" data-toggle="collapse" data-target="#buttons-sizes-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
+        <svg version="1.1" width="20px" height="18px" viewBox="0 0 184 166">
+          <g transform="translate(92 83)">
+            <circle fill="#2f3440" r="16" />
+            <g fill="none" stroke="#2f3440" stroke-width="8">
+              <ellipse rx="84" ry="32" />
+              <ellipse rx="84" ry="32" transform="rotate(120)" />
+              <ellipse rx="84" ry="32" transform="rotate(60)" />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-sizes-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <p>
+        <button class="btn btn-default btn-lg">Large</button>
+        <button class="btn btn-default">Default</button>
+        <button class="btn btn-default btn-sm">Small</button>
+        <button class="btn btn-default btn-xs">Extra small</button>
+      </p>
+
+      <button class="btn btn-default btn-block">Full-Width Block</button>
+
+      <div class="collapse" id="buttons-sizes-html">
+        {% highlight html %}<button class="btn btn-primary btn-lg">Large</button>
+<button class="btn btn-default">Default</button>
+<button class="btn btn-default btn-sm">Small</button>
+<button class="btn btn-default btn-xs">Extra small</button>
+
+<button class="btn btn-default btn-lg btn-block">Full-Width Block</button>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="buttons-sizes-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+
+<Button bsSize="large">Large</Button>
+<Button>Default</Button>
+<Button bsSize="small">Small</Button>
+<Button bsSize="xsmall">Extra small</Button>
+
+<Button block="true">Full-Width Block</Button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+
+  <h3>Fycons in Buttons</h3>
+
+  <div id="buttons-fycons" class="item">
+    <h4>Sizes</h4>
+    <p>Fycon sizes will adjust based on the button size.</p>
+    <p>However, you can further fine tune the size of fycons in buttons using <code>.fycon-xs</code>, <code>.fycon-sm</code>, <code>.fycon-lg</code>, <code>.fycon-xl</code> and <code>.fycon-inherit</code> (uses the same font size as the button).</p>
+    <p>Use these classes in the fycon's span container.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right btn-react" type="button" data-toggle="collapse" data-target="#buttons-fycons-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
+        <svg version="1.1" width="20px" height="18px" viewBox="0 0 184 166">
+          <g transform="translate(92 83)">
+            <circle fill="#2f3440" r="16" />
+            <g fill="none" stroke="#2f3440" stroke-width="8">
+              <ellipse rx="84" ry="32" />
+              <ellipse rx="84" ry="32" transform="rotate(120)" />
+              <ellipse rx="84" ry="32" transform="rotate(60)" />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-fycons-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-xs" aria-hidden="true"></span> Extra Small
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-sm" aria-hidden="true"></span> Small
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like" aria-hidden="true"></span> Default
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-lg" aria-hidden="true"></span> Large
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-action-like fycon-xl" aria-hidden="true"></span> Extra Large
+      </button>
+
+      <div class="collapse" id="buttons-fycons-html">
+        {% highlight html %}<button class="btn btn-default">
+  <span class="fycon-action-like fycon-xs" aria-hidden="true"></span> Extra Small
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like fycon-sm" aria-hidden="true"></span> Small
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like" aria-hidden="true"></span> Default
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like fycon-lg" aria-hidden="true"></span> Large
+</button>
+
+<button class="btn btn-default">
+  <span class="fycon-action-like fycon-xl" aria-hidden="true"></span> Extra Large
+</button>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="buttons-fycons-react">
+        {% highlight html %}// Put the font name in the "ico" attribute, leaving out the "fycon-" part of the class name.
+var Button = require('react-bootstrap').Button;
+var Fycon = require('../Fycon'); // Custom LF component
+
+<Button><Fycon ico="action-like" size="xs" /> Extra Small</Button>
+<Button><Fycon ico="action-like" size="sm" /> Small</Button>
+<Button><Fycon ico="action-like" /> Default</Button>
+<Button><Fycon ico="action-like" size="lg" /> Large</Button>
+<Button><Fycon ico="action-like" size="xl" /> Extra Large</Button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="buttons-plus" class="item">
+    <h4>Add a Plus ("+")</h4>
+    <p>Use the <code>.add-plus</code> class to add a small "+" next to the Fycon. Works with different fycon sizes.</p>
+
+    <div class="well">
+      <button class="btn btn-link pull-right btn-react" type="button" data-toggle="collapse" data-target="#buttons-plus-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
+        <svg version="1.1" width="20px" height="18px" viewBox="0 0 184 166">
+          <g transform="translate(92 83)">
+            <circle fill="#2f3440" r="16" />
+            <g fill="none" stroke="#2f3440" stroke-width="8">
+              <ellipse rx="84" ry="32" />
+              <ellipse rx="84" ry="32" transform="rotate(120)" />
+              <ellipse rx="84" ry="32" transform="rotate(60)" />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#buttons-plus-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
+        <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+      </button>
+      <button class="btn btn-default">
+        <span class="fycon-folder fycon-lg add-plus" aria-hidden="true"></span> New Folder
+      </button>
+
+      <div class="collapse" id="buttons-plus-html">
+        {% highlight html %}<button class="btn btn-default">
+  <span class="fycon-folder fycon-lg add-plus" aria-hidden="true"></span> New Folder
+</button>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="buttons-plus-react">
+        {% highlight html %}// Put the font name in the "ico" attribute, leaving out the "fycon-" part of the class name.
+var Button = require('react-bootstrap').Button;
+var Fycon = require('../Fycon'); // Custom LF component
+
+<Button><Fycon ico="folder" size="lg" className="add-plus" /> New Folder</Button>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,319 @@
+@lf-red: #E85B3F;
+@lf-blue: #0F98EC;
+@lf-gray: #2F3440;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0; padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #222222;
+}
+
+.container {
+  //max-width: 1120px;
+  max-width: 100%;
+  margin: 0 auto; 
+  padding: 0;
+  position: relative;
+
+  &.slim {
+    //max-width: 880px;
+    margin: 0; padding: 0;
+  }
+
+  &.padded {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+
+.menu {
+  width: 100%;
+  background: @lf-gray;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  color: #fff;
+  padding: 10px;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+  .brand, .brand:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+
+  .docs-nav {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0; padding: 0;
+    margin-left: 18px;
+
+    li {
+      display: inline-block;
+      margin-right: 14px;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+    
+    &.right {
+      float: right;
+      margin-top: 7px;
+    }
+  }
+}
+
+.hero {
+  background: @lf-gray;
+  margin-top: 29px;
+  margin-bottom: 20px;
+  padding: 30px 10px 50px;
+  color: #fff;
+
+  h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+  }
+
+  cite.version {
+    font-size: 0.4em;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  p {
+    font-size: 1.25em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+section {
+  > h3 {
+    margin-top: 30px;
+  }
+
+  > p,
+  > ul,
+  > ol {
+    font-size: 1.333em;
+    line-height: 1.75;
+    color: lighten(@lf-gray, 20%);
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.content {
+  margin-bottom: 60px;
+}
+
+.panel-group {
+  .panel-heading {
+    padding: 0;
+  }
+
+  .panel-title a {
+    display: block;
+    padding: 19px 17px;
+  }
+
+  p,
+  ul,
+  ol {
+    font-size: 1.333em;
+    line-height: 1.75;
+    color: lighten(@lf-gray, 20%);
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+p.descrip,
+ul.descrip {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.content h1.section-header {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-top: 60px; // Ensures you can see the header when you get here via anchor link 
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: @lf-gray;
+  font-size: 2.5em;
+}
+
+.glossary {
+  position: relative;
+  width: 200px;
+
+  @media (min-width: 990px) {
+    &.affix {
+      position: fixed;
+      top: 60px;
+    }
+  }
+}
+
+.glossary-list {
+  list-style-type: none;
+  margin: 0; 
+  padding: 0;
+}
+
+.glossary-list li {
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0;
+
+  &.list-first {
+    border-radius: 5px 5px 0 0;
+  }
+
+  &.list-last {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.bs-example {
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0 -15px 15px;
+  background-color: #fafafa;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+}
+/* Echo out a label for the example */
+.bs-example:after {
+  content: "Example";
+  position: absolute;
+  top:  15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tweak display of the code snippets when following an example */
+.bs-example + .highlight {
+  margin: -15px -15px 15px;
+  border-radius: 0;
+  border-width: 0 0 1px;
+}
+@media (min-width: 768px) {
+  .bs-example {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    border-width: 1px;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+  }
+  .bs-example + .highlight {
+    margin-top: -16px;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.highlight pre {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  white-space: nowrap;
+}
+.highlight pre code {
+  font-size: inherit;
+  color: #333; /* Effectively the base text color */
+}
+.highlight pre .lineno {
+  display: inline-block;
+  width: 22px;
+  padding-right: 5px;
+  margin-right: 10px;
+  text-align: right;
+  color: #bebec5;
+}
+
+.css-mapping span {
+  margin: 0;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  color: #162a36 !important;
+  overflow: hidden;
+  float: left;
+  font-size: 24px;
+  text-align: center;
+}
+
+.color-swatch {
+  width: 100%;
+  margin-bottom: 5px;
+  padding-top: 100%;
+  border-radius: 2px;
+}
+
+.collapse-toggle {
+  margin-top: -3.5em;
+}
+
+.collapse,
+.collapsing {
+  h3 {
+    margin-top: 0;
+  }
+}
