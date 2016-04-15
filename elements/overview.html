@@ -1,0 +1,74 @@
+---
+layout: default
+title: v2 Overview | Livefyre Bootstrap
+---
+
+<section id="overview">
+
+  <h1 class="page-heading">Livefyre Bootstrap <small>v2.0.2</small></h1>
+
+  <div id="overview-about" class="item">
+    <h4>About v2.x</h4>
+    <ul>
+      <li>This version of Livefyre Bootstrap was updated to support the creation of Asset Manager. Version 1.x still exists separately and will be maintained until the rest of Studio and our apps migrate to 2.x.</li>
+      <li>Version 2.x currently lives on the <a href="https://github.com/Livefyre/livefyre-bootstrap/tree/2.x" target="_blank"><code>2.x</code> branch on Github</a>. The 1.x version still lives on the <code>master</code> branch for now.</li>
+    </ul>
+  </div>
+
+
+  <div id="overview-usage" class="item">
+    <h4>Usage</h4>
+    <p>In your <code>package.json</code> or <code>bower.json</code> file, add or update the <code>livefyre-bootstrap</code> dependency:</p>
+    <pre>"livefyre-bootstrap": "git+ssh://git@github.com/Livefyre/livefyre-bootstrap.git#2.0.2"</pre>
+    <p>Or, you can use the CDN urls:</p>
+    <pre>https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.2/livefyre-bootstrap.min.css
+https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.2/livefyre-bootstrap.min.js</pre>
+  </div>
+
+
+  <div id="overview-changes" class="item">
+    <h4>Changes from v1.x</h4>
+    <ul>
+      <li>Removes the <code>lf-</code> prefix from all CSS classes, markup and JS. This makes it easier to update to the latest [Twitter] Bootstrap version, removes a lot of redundant CSS and allows us to take advantage of all [Twitter] Bootstrap features.</li>
+      <li>Updates the [Twitter] Bootstrap version to 3.3.4 (from 3.0.3).</li>
+      <li>[Twitter] Bootstrap 3.3.4's minimum required jQuery version is 1.9.1 (Bootstrap 3.0.3's minimum was 1.9.0).</li>
+      <li>Allows you to specify the location of your [Twitter] Bootstrap files.</li>
+      <li><a href="slats.html">New Slats styles.</a></li>
+      <li><a href="modals.html#modal-alert">New Alert Modal.</a></li>
+      <li><a href="query-input.html">New Query Input (i.e. Search Form) styles.</a></li>
+      <li>Many more listed alongside each section.</li>
+    </ul>
+  </div>
+
+
+  <div id="overview-checklist" class="item">
+    <h4>Checklist for Migrating from v1.x</h4>
+    <ol>
+      <li>Update your Livefyre Bootstrap files to 2.x. You may need to also update your version of [Twitter] Bootstrap to 3.3.4.</li>
+      <li>Remove the <code>lf-</code> prefix from your CSS classes, markup and JS.</li>
+      <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre Bootstrap's variables and mixins files. (<a href="importing.html">examples</a>)</li>
+      <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height.</li>
+      <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
+      <li><strong>Toggles:</strong> Update all toggle instances with the new markup. (<a href="toggles.html">example markup</a>)</li>
+      <li><strong>Toggles:</strong> Toggles are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
+      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. Event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside. (<a href="toggles.html">example markup</a>)</li>
+      <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
+      <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
+      <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
+      <li><strong>Modals:</strong> Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to align headlines, text and buttons.</li>
+      <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
+      <li><strong>Modals:</strong> Remove the <code>.animated</code> class. Use the default <code>.fade</code> class in the <code>.modal</code> wrapper.</li>
+      <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc. (<a href="colors.html">more</a>)</li>
+      <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
+      <li><strong>Tabs:</strong> Check tab navigation as <a href="tabs.html">their styles have been updated</a>.</li>
+      <li><strong>Fycons:</strong> Identical to v.1. All fycons appear in both versions.</li>
+    </ol>
+  </div>
+
+
+  <div id="overview-changelog" class="item">
+    <h4>Changelog</h4>
+    <p>View the <a href="https://github.com/Livefyre/livefyre-bootstrap/releases">releases page</a> on GitHub for the changelog (contains both v1 and v2 releases).</p>
+  </div>
+
+</section>

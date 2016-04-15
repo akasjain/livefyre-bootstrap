@@ -12,7 +12,17 @@
 
   <div class="collapse navbar-collapse" id="main-nav">
     <ul class="nav navbar-nav">
-      <li class="{% if page.url contains '/buttons.html' %}active{% endif %}"> 
+      <li class="{% if page.url contains '/overview.html' %}active{% endif %}">
+        <a href="overview.html">Overview</a>
+        <ul class="nav">
+          <li><a href="#overview-about">About v2.x</a></li>
+          <li><a href="#overview-usage">Usage</a></li>
+          <li><a href="#overview-changes">Changes from v1.x</a></li>
+          <li><a href="#overview-checklist">Checklist for Migrating</a></li>
+          <li><a href="#overview-changelog">Changelog</a></li>
+        </ul>
+      </li>
+      <li class="{% if page.url contains '/buttons.html' %}active{% endif %}">
         <a href="buttons.html">Buttons</a>
         <ul class="nav">
           <li><a href="#buttons-default">Default Button</a></li>
