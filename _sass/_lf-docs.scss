@@ -132,6 +132,7 @@ html, body {
 
 
 .well {
+  @extend %clearfix;
   margin: 24px 0 0;
   border: 0;
   box-shadow: none;
