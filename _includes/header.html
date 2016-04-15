@@ -12,50 +12,29 @@
 
   <div class="collapse navbar-collapse" id="main-nav">
     <ul class="nav navbar-nav">
-      <li class="">
-        <a href="#overview">Overview</a>
-        <ul class="nav">
-          <li><a href="#overview-doctype">HTML5 doctype</a></li>
-          <li><a href="#overview-mobile">Mobile first</a></li>
-          <li><a href="#overview-type-links">Typography and links</a></li>
-          <li><a href="#overview-normalize">Normalize.css</a></li>
-          <li><a href="#overview-container">Containers</a></li>
-        </ul>
-      </li>
       <li class="{% if page.url contains '/buttons.html' %}active{% endif %}"> 
         <a href="buttons.html">Buttons</a>
         <ul class="nav">
-          <li class=""><a href="#buttons-default">Default Button</a></li>
-          <li class=""><a href="#buttons-colors">Colors</a></li>
-          <li class=""><a href="#buttons-disabled">Disabled Button</a></li>
-          <li class=""><a href="#buttons-sizes">Sizes</a></li>
-          <li class=""><a href="#buttons-fycons">Fycon Sizes</a></li>
-          <li class=""><a href="#buttons-plus">Add a Plus ("+")</a></li>
+          <li><a href="#buttons-default">Default Button</a></li>
+          <li><a href="#buttons-colors">Colors</a></li>
+          <li><a href="#buttons-disabled">Disabled Button</a></li>
+          <li><a href="#buttons-sizes">Sizes</a></li>
+          <li><a href="#buttons-fycons">Fycon Sizes</a></li>
+          <li><a href="#buttons-plus">Add a Plus ("+")</a></li>
         </ul>
       </li>
       <li class="{% if page.url contains '/form-controls.html' %}active{% endif %}">
         <a href="form-controls.html">Form Controls</a>
         <ul class="nav">
-          <li class=""><a href="#checkboxes">Checkboxes</a></li>
-          <li class=""><a href="#radio-buttons">Radio Buttons</a></li>
+          <li><a href="#checkboxes">Checkboxes</a></li>
+          <li><a href="#radio-buttons">Radio Buttons</a></li>
         </ul>
       </li>
-      <li class=""> 
-        <a href="#">Item</a>
+      <li class="{% if page.url contains '/labels.html' %}active{% endif %}">
+        <a href="labels.html">Labels</a>
         <ul class="nav">
-          <li class=""><a href="#">xxxx</a></li>
-          <li class=""><a href="#">xxxx</a></li>
-          <li class=""><a href="#">xxxx</a></li>
-          <li class=""><a href="#">xxxx</a></li>
-        </ul>
-      </li>
-      <li class=""> 
-        <a href="#">Item</a>
-        <ul class="nav">
-          <li class=""><a href="#">xxxx</a></li>
-          <li class=""><a href="#">xxxx</a></li>
-          <li class=""><a href="#">xxxx</a></li>
-          <li class=""><a href="#">xxxx</a></li>
+          <li><a href="#labels-colors">Colors</a></li>
+          <li><a href="#labels-sizes">Sizes</a></li>
         </ul>
       </li>
     </ul>
