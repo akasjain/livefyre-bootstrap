@@ -1,0 +1,164 @@
+---
+layout: default
+title: Form Controls | Livefyre Bootstrap
+---
+
+<section id="form-controls">
+
+  <h1 class="page-heading">Form Controls</h1>
+
+  <h3>Checkboxes & Radio Buttons</h3>
+  <p>Checkboxes and radio buttons override browser default styles and are rendered using Fycons (Chrome and Safari only).</p>
+  <p>Their sizes are determined by their inherited font size.</p>
+
+  <div id="checkboxes" class="item">
+    <h4>Checkboxes</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="checkboxes" %}
+
+      <form style="display: inline-block;">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            Unchecked item
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="" checked>
+            Checked item
+          </label>
+        </div>
+        <div class="checkbox disabled">
+          <label>
+            <input type="checkbox" value="" disabled>
+            Disabled item
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input id="checkbox-indeterminate" type="checkbox" value="">
+            Indeterminate item (triggered in this example via JS)
+          </label>
+        </div>
+      </form>
+
+      <script type="text/javascript">
+        document.getElementById("checkbox-indeterminate").indeterminate = true;
+      </script>
+
+      <div class="collapse" id="checkboxes-html">
+        {% highlight html %}<form>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      Unchecked item
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="" checked>
+      Checked item
+    </label>
+  </div>
+  <div class="checkbox disabled">
+    <label>
+      <input type="checkbox" value="" disabled>
+      Disabled item
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input id="checkbox-indeterminate" type="checkbox" value="">
+      Indeterminate item (triggered in this example via JS below)
+    </label>
+  </div>
+</form>
+
+<script type="text/javascript">
+  document.getElementById("checkbox-indeterminate").indeterminate = true;
+</script>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="checkboxes-react">
+        {% highlight html %}var Input = ReactBootstrap.Input;
+
+<form>
+  <Input type="checkbox" label="Unchecked item" value="" />
+  <Input type="checkbox" label="Checked item" value="" checked />
+  <Input type="checkbox" label="Disabled item" value="" disabled />
+  <Input id="checkbox-indeterminate" type="checkbox" label="Indeterminate item (triggered in this example via JS below)" value="" />
+</form>
+
+document.getElementById("checkbox-indeterminate").indeterminate = true;{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="radio-buttons" class="item">
+    <h4>Radio Buttons</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="radio-buttons" %}
+
+      <form style="display: inline-block;">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+            Unchecked item
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+            Checked item
+          </label>
+        </div>
+        <div class="radio disabled">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+            Disabled item
+          </label>
+        </div>
+      </form>
+
+      <div class="collapse" id="radio-buttons-html">
+        {% highlight html %}<form>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+      Unchecked item
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+      Checked item
+    </label>
+  </div>
+  <div class="radio disabled">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+      Disabled item
+    </label>
+  </div>
+</form>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="radio-buttons-react">
+        {% highlight html %}var Input = ReactBootstrap.Input;
+
+<form>
+  <Input type="radio" label="Unchecked item" name="optionsRadios" id="optionsRadios1" value="option1" />
+  <Input type="radio" label="Checked item" name="optionsRadios" id="optionsRadios2" value="option2" checked />
+  <Input type="radio" label="Disabled item" name="optionsRadios" id="optionsRadios3" value="option3" disabled />
+</form>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
