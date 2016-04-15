@@ -1,0 +1,73 @@
+---
+layout: default
+title: Labels | Livefyre Bootstrap
+---
+
+<section id="labels">
+
+  <h1 class="page-heading">Labels</h1>
+  <p>Labels are commonly used as tags in our UI.</p>
+
+  <div id="labels-colors" class="item">
+    <h4>Colors</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="labels-colors" %}
+
+      <span class="label label-default">Default</span>
+      <span class="label label-primary">Primary</span>
+      <span class="label label-success">Success</span>
+      <span class="label label-info">Info</span>
+      <span class="label label-warning">Warning</span>
+
+      <div class="collapse" id="labels-colors-html">
+        {% highlight html %}<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="labels-colors-react">
+        {% highlight html %}var Label = ReactBootstrap.Label;
+
+<Label>Default</Label>
+<Label bsStyle="primary">Primary</Label>
+<Label bsStyle="success">Success</Label>
+<Label bsStyle="info">Info</Label>
+<Label bsStyle="warning">Warning</Label>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="labels-sizes" class="item">
+    <h4>Sizes</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="labels-sizes" %}
+
+      <span class="label label-primary">label default</span>
+      <span class="label label-primary label-md">label-md</span>
+      <span class="label label-primary label-lg">label-lg</span>
+      <span class="label label-primary label-xl">label-xl</span>
+
+      <div class="collapse" id="labels-sizes-html">
+        {% highlight html %}<span class="label label-primary">label default</span>
+<span class="label label-primary label-md">label-md</span>
+<span class="label label-primary label-lg">label-lg</span>
+<span class="label label-primary label-xl">label-xl</span>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="labels-sizes-react">
+        {% highlight html %}var Label = ReactBootstrap.Label;
+
+<Label bsStyle="primary">label default</Label>
+<Label bsStyle="primary" className="label-md">label-md</Label>
+<Label bsStyle="primary" className="label-lg">label-lg</Label>
+<Label bsStyle="primary" className="label-xl">label-xl</Label>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+</section>
