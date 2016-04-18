@@ -111,6 +111,10 @@ html, body {
     font-size: 36px;
     line-height: 42px;
     color: $gray-darkest;
+
+    & + p {
+      margin-top: 6px;
+    }
   }
 
   > h3 {
