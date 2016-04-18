@@ -148,6 +148,7 @@ html, body {
 .well {
   @extend %clearfix;
   position: relative;
+  min-height: 74px; // Trigger buttons height + well padding
   margin: 24px 0 0;
   padding-right: 120px;
   border: 0;
