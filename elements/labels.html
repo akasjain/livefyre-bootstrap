@@ -8,21 +8,40 @@ title: Labels | Livefyre Bootstrap
   <h1 class="page-heading">Labels</h1>
   <p>Labels are commonly used as tags in our UI.</p>
 
+  <div id="labels-default" class="item">
+    <h4>Default</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="labels-default" %}
+
+      <span class="label label-default">Default</span>
+
+      <div class="collapse" id="labels-default-html">
+        {% highlight html %}<span class="label label-default">Default</span>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="labels-default-react">
+        {% highlight html %}var Label = ReactBootstrap.Label;
+
+<Label>Default</Label>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
   <div id="labels-colors" class="item">
     <h4>Colors</h4>
+    <p>We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
 
     <div class="well">
       {% include btn-toggle-code.html target="labels-colors" %}
 
-      <span class="label label-default">Default</span>
       <span class="label label-primary">Primary</span>
       <span class="label label-success">Success</span>
       <span class="label label-info">Info</span>
       <span class="label label-warning">Warning</span>
 
       <div class="collapse" id="labels-colors-html">
-        {% highlight html %}<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
+        {% highlight html %}<span class="label label-primary">Primary</span>
 <span class="label label-success">Success</span>
 <span class="label label-info">Info</span>
 <span class="label label-warning">Warning</span>{% endhighlight %}
