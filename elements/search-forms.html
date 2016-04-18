@@ -1,0 +1,217 @@
+---
+layout: default
+title: Search Forms | Livefyre Bootstrap
+---
+
+<section id="search-forms">
+
+  <h1 class="page-heading">Search Forms </h1>
+  <p>a.k.a. Query Inputs</p>
+
+  <div class="item">
+    <h4>Usage</h4>
+    <p>This is a custom Livefyre component. The markup comes from our React component, <code>Simple.js</code>, found in asset-manager and react-components.</p>
+    <p>The component's width is determined by its container. Each example below is wrapped in a <code>&lt;div class="col-md-6"&gt;</code>.</p>
+  </div>
+
+
+  <div id="search-forms-default" class="item">
+    <h4>Default</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="search-forms-default" %}
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="query-input">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Find stream">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse" id="search-forms-default-html">
+        {% highlight html %}<div class="query-input">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Find stream">
+  </div>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="search-forms-default-react">
+        {% highlight html %}var QueryInput = require('../text-input/Simple');
+
+<QueryInput placeholder="Find stream" />{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="search-forms-with-loader" class="item">
+    <h4>With Loader</h4>
+    <p>This is what it looks like with the loader rendered by Asset Manager's <code>Simple.js</code>. Note the addition of a <code>&lt;div class="input-group"&gt;</code> wrapper.</p>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="search-forms-with-loader" %}
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="query-input">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" placeholder="Find stream" class="form-control">
+                <span class="input-group-addon">
+                  <div class="loader loader-mini">
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse" id="search-forms-with-loader-html">
+        {% highlight html %}<div class="query-input">
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" placeholder="Find stream" class="form-control">
+      <span class="input-group-addon">
+        <div class="loader loader-mini">
+          <div></div><div></div><div></div>
+          <div></div><div></div><div></div>
+          <div></div><div></div><div></div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="search-forms-with-loader-react">
+        {% highlight html %}var QueryInput = require('../text-input/Simple');
+
+<QueryInput placeholder="Find stream" isSearching="true" />{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="search-forms-with-button" class="item">
+    <h4>With Button</h4>
+    <p>When using a submit button, add the <code>.query-input-with-button</code> class. It removes the magnifying class fycon from the text field. Note the addition of a <code>&lt;div class="input-group"&gt;</code> wrapper.</p>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="search-forms-with-button" %}
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="query-input query-input-with-button">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Find stream">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default">
+                    <span class="fycon-search fycon-lg"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse" id="search-forms-with-button-html">
+        {% highlight html %}<div class="query-input query-input-with-button">
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Find stream">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-default">
+          <span class="fycon-search fycon-lg"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="search-forms-with-button-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+var Fycon = require('../Fycon');
+var QueryInput = require('../text-input/Simple');
+
+<QueryInput placeholder="Find stream" buttonAfter={this.renderButton()} />{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="search-forms-sizes" class="item">
+    <h4>Sizes</h4>
+    <p>Search forms come in default and large sizes.</p>
+    <p>For the large form, add the <code>.query-input-lg</code> class to the container and <code>.input-lg</code> and <code>.btn-lg</code> to their respective elements.</p>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="search-forms-sizes" %}
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="query-input query-input-lg">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control input-lg" placeholder="Find stream">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-6">
+          <div class="query-input query-input-with-button query-input-lg">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control input-lg" placeholder="Find stream">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-lg btn-default">
+                    <span class="fycon-search fycon-lg"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse" id="search-forms-sizes-html">
+        {% highlight html %}<div class="query-input query-input-lg">
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control input-lg" placeholder="Find stream">
+    </div>
+  </div>
+</div>
+
+<div class="query-input query-input-with-button query-input-lg">
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control input-lg" placeholder="Find stream">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-lg btn-default">
+          <span class="fycon-search fycon-lg"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="search-forms-sizes-react">
+        {% highlight html %}Not yet available via the React component.{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</section>
