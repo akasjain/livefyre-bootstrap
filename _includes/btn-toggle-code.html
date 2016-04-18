@@ -1,6 +1,8 @@
-<button class="btn btn-link pull-right btn-react" type="button" data-toggle="collapse" data-target="#{{ include.target }}-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
-  {% include icon-react.svg %}
-</button>
-<button class="btn btn-link pull-right" type="button" data-toggle="collapse" data-target="#{{ include.target }}-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
-  <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
-</button>
+<div class="triggers btn-group">
+  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#{{ include.target }}-html" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="HTML">
+    <span class="fycon-embed fycon-xl" aria-hidden="true"></span>
+  </button>
+  <button class="btn btn-link btn-react" type="button" data-toggle="collapse" data-target="#{{ include.target }}-react" aria-expanded="false" aria-controls="collapseExample" data-hover="tooltip" data-placement="top" data-delay="300" data-title="React">
+    {% include icon-react.svg %}
+  </button>
+</div>

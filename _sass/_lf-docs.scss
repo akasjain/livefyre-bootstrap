@@ -36,12 +36,17 @@ html, body {
     float: none;
 
     .navbar-brand {
-      padding: ($spacing-unit / 2) 0;
+      padding: 12px 0;
       color: #fff;
     }
 
     .fycon-source-livefyre {
       font-size: 24px;
+    }
+
+    .navbar-toggle {
+      margin-right: 0;
+      border: 0;
     }
   }
 
@@ -69,10 +74,15 @@ html, body {
   }
 
   @media (min-width: $screen-sm-min) {
+    min-width: 216px;
     max-width: 300px;
     overflow-y: auto;
     position: fixed;
     height: 100vh;
+
+    .navbar-header .navbar-brand {
+      padding: 24px 0 36px;
+    }
   }
 }
 
@@ -137,10 +147,19 @@ html, body {
 
 .well {
   @extend %clearfix;
+  position: relative;
   margin: 24px 0 0;
+  padding-right: 120px;
   border: 0;
   box-shadow: none;
   background-color: $gray-lightest;
+
+  .triggers {
+    @extend %clearfix;
+    position: absolute;
+    top: 19px;
+    right: 19px;
+  }
 
   .highlight {
     margin: 18px 0 0;
@@ -156,6 +175,7 @@ html, body {
   }
 
   .btn-react {
+    margin-left: 1px; // Prevent HTML btn from shifting on hover
     padding-top: 4px;
   }
 }
