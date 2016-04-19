@@ -7,6 +7,19 @@ title: Importing Variables & Mixins | Livefyre Bootstrap
 
   <h1 class="page-heading">Importing Variables & Mixins</h1>
 
+  {% include btn-reference.html target="importing-variables" %}
+
+  <div class="collapse" id="importing-variables-changes">
+    <div class="inner">
+      <div class="well">
+        <h4>What's New in v2.x</h4>
+        <ul>
+          <li>You must specify the location of your [Twitter] Bootstrap files using the <code>@bootstrap-less</code> variable.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <div class="item">
     <p>Some of Livefyre Bootstrap's Less files rely on a variable called <code>@bootstrap-less</code>, which contains the location of your [Twitter] Bootstrap files. This allows you to situate your library files wherever you wish. When you're importing Livefyre Bootstrap's Less files individually, you may need to provide a value for this variable as there is no default fallback (couldn't figure this out, sry).</p>
 
