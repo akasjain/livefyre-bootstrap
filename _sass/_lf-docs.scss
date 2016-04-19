@@ -19,6 +19,12 @@ html, body {
   height: 100%;
 }
 
+.body-text { // For extending
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
 /* Header and Nav */
 
 .container-fluid > .row > .navbar { // Ensure this doesn't conflict with any examples that use .navbar
@@ -106,23 +112,37 @@ html, body {
 
 .wrapper > section { // Ensure this doesn't conflict with any examples
   > .page-heading {
-    margin: 0;
+    margin: 0 0 12px;
     padding-top: $spacing-unit;
     font-size: 36px;
     line-height: 42px;
     color: $gray-darkest;
 
-    & + p {
-      margin-top: 6px;
+    & ~ p { // Target p that accompanies headers and not ones inside of examples.
+      @extend .body-text;
     }
   }
 
   > h3 {
-    margin: 60px 0 12px;
+    margin: 0 0 12px; // Use padding-top instead of margin-top to prevent collapse animations from jumping
+    padding-top: 60px;
     padding-bottom: 12px;
     font-size: 28px;
     line-height: 36px;
     border-bottom: 1px solid $gray-light;
+  }
+}
+
+.reference {
+  margin-top: -48px;
+
+  .btn-bootstrap-docs {
+    margin-left: 1px; // Prevent HTML btn from shifting on hover
+    padding-top: 5px;
+  }
+
+  h3 + & {
+    margin-top: -56px;
   }
 }
 
@@ -137,14 +157,14 @@ html, body {
   }
 
   > p {
+    @extend .body-text;
     margin-bottom: 18px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
   }
 
-  li {
-    margin-bottom: 18px;
+  > ul li,
+  > ol li {
+    @extend .body-text;
+    margin-bottom: 12px;
   }
 }
 
@@ -153,7 +173,6 @@ html, body {
   @extend %clearfix;
   position: relative;
   min-height: 74px; // Trigger buttons height + well padding
-  margin: 24px 0 0;
   padding-right: 120px;
   border: 0;
   box-shadow: none;
@@ -182,5 +201,18 @@ html, body {
   .btn-react {
     margin-left: 1px; // Prevent HTML btn from shifting on hover
     padding-top: 4px;
+  }
+
+  // What's New in 2.x 
+  .inner & {
+    h4 {
+      margin: 6px 0 12px;
+      color: $gray-darkest;
+    }
+
+    li {
+      @extend .body-text;
+      margin-bottom: 6px;
+    }
   }
 }
