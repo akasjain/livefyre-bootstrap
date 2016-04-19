@@ -1,3 +1,5 @@
+/* LF-Bootstrap Variables */
+
 $gray-base:     #2f3440; // 100% - Ex: Prominent text
 $gray-darkest:  #2f3440; // 100% - Ex: Prominent text (LF variable)
 $gray-darker:   #595d66; // 80%  - Ex: Paragraph text
@@ -14,6 +16,8 @@ $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
 
+/* General */
+
 html, body {
   position: relative; // For Bootstrap's ScrollSpy
   height: 100%;
@@ -24,6 +28,7 @@ html, body {
   font-weight: 300;
   line-height: 24px;
 }
+
 
 /* Header and Nav */
 
@@ -93,9 +98,7 @@ html, body {
 }
 
 
-
 /* Content */
-
 
 .page-content {
   padding-bottom: 300px;
@@ -109,6 +112,9 @@ html, body {
     }
   }
 }
+
+
+/* Section */
 
 .wrapper > section { // Ensure this doesn't conflict with any examples
   > .page-heading {
@@ -133,8 +139,16 @@ html, body {
   }
 }
 
+
+/* Links: New in 2.x, Bootstrap Docs */
+
 .reference {
+  min-width: 100px; // Prevents tooltips from being too narrow when there's only one button visible.
   margin-top: -48px;
+
+  .btn {
+    float: right;  // Override float: left since .reference is wider than one button.
+  }
 
   .btn-bootstrap-docs {
     margin-left: 1px; // Prevent HTML btn from shifting on hover
@@ -145,6 +159,9 @@ html, body {
     margin-top: -56px;
   }
 }
+
+
+/* Item */
 
 .item {
   padding: 30px 0; // Add padding on top for use with anchor links
@@ -166,8 +183,16 @@ html, body {
     @extend .body-text;
     margin-bottom: 12px;
   }
+
+  pre {
+    padding: 19px;
+    background-color: $gray-lightest;
+    border: 0;
+  }
 }
 
+
+/* Example and Code */
 
 .well {
   @extend %clearfix;
@@ -195,7 +220,6 @@ html, body {
     margin-bottom: 0;
     padding: 0;
     background: none;
-    border: 0;
   }
 
   .btn-react {
