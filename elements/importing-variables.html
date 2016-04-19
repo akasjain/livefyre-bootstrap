@@ -1,0 +1,29 @@
+---
+layout: default
+title: Importing Variables & Mixins | Livefyre Bootstrap
+---
+
+<section id="importing-variables">
+
+  <h1 class="page-heading">Importing Variables & Mixins</h1>
+
+  <div class="item">
+    <p>Some of Livefyre Bootstrap's Less files rely on a variable called <code>@bootstrap-less</code>, which contains the location of your [Twitter] Bootstrap files. This allows you to situate your library files wherever you wish. When you're importing Livefyre Bootstrap's Less files individually, you may need to provide a value for this variable as there is no default fallback (couldn't figure this out, sry).</p>
+
+    <p>Example: In your main Less file, if your modules have their own variables and mixins files:</p>
+
+    {% highlight css %}@bootstrap-less: "/node_modules/bootstrap/less";
+@import "variables.less";
+@import "mixins.less";{% endhighlight %}
+
+    <p>Example: Import LF-BS variables and mixins into your module's Less file:</p>
+
+    {% highlight css %}@bootstrap-less: "/node_modules/bootstrap/less";
+@import "/node_modules/livefyre-bootstrap/src/styles/variables.less";
+@import "/node_modules/livefyre-bootstrap/src/styles/mixins.less";{% endhighlight %}
+
+    <p>Example: If you want to import all LF-BS files AND your [Twitter] Bootstrap files live inside /lib/bootstrap/less/, you can just import all of LF-BS's variables, mixins and partials in one import, since all.less contains a <code>@bootstrap-less</code> declaration:</p>
+
+    {% highlight css %}@import "/lib/livefyre-bootstrap/all.less";{% endhighlight %}
+  </div>
+</section>
