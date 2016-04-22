@@ -25,38 +25,40 @@ title: Colors | Livefyre Bootstrap
   <div id="colors-grays" class="item">
     <h4>Grays</h4>
 
-    <div class="well">
+    <div class="well" style="background-color: #fff; border: 1px solid #e0e1e3;">
 
       <div class="row">
-        <div class="col-xs-1">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #2f3440;"></div>
           <strong style="color: #2f3440">@gray-darkest</strong>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #595d66;"></div>
           <strong style="color: #595d66">@gray-darker</strong>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #82858c;"></div>
           <strong style="color: #82858c">@gray-dark</strong>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #acaeb3;"></div>
           <strong style="color: #acaeb3">@gray-darkish</strong>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #cbcccf;"></div>
           <strong style="color: #cbcccf">@gray</strong>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #e0e1e3;"></div>
           <strong style="color: #e0e1e3">@gray-light</strong>
         </div>
-        <div class="col-xs-1">
+      </div>
+      <div class="row" style="margin-top: 24px;">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #efeff0;"></div>
           <strong style="color: #efeff0">@gray-lighter</strong>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-2 text-center">
           <div class="color-swatch" style="background-color: #f7f7f7;"></div>
           <strong style="color: #f7f7f7">@gray-lightest</strong>
         </div>
@@ -70,6 +72,80 @@ title: Colors | Livefyre Bootstrap
 @gray-light:    #e0e1e3; // 15%  - Ex: Default button bg
 @gray-lighter:  #efeff0; // 8%   - Ex: Bg watermark
 @gray-lightest: #f7f7f7; // 4%   - Ex: Default bg (LF variable){% endhighlight %}
+    </div>
+  </div>
+
+
+  <div id="colors-common" class="item">
+    <h4>Common Colors</h4>
+
+    <div class="well">
+      <div class="row">
+
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #e65b3f;"></div>
+          <strong style="color: #e65b3f">@orange</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #3A98D9;"></div>
+          <strong style="color: #3A98D9">@storify-blue</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #63c685;"></div>
+          <strong style="color: #63c685">@brand-success</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #feb33b;"></div>
+          <strong style="color: #feb33b">@brand-warning</strong>
+        </div>
+      </div> 
+    </div>
+
+      {% highlight css %}@orange:          #e65b3f; // Livefyre orange
+@storify-blue:    #3A98D9; // Storify blue
+@brand-success:   @green;  // #63c685 - Ex: Success toast, fycons that accompany success messages
+@brand-warning:   @yellow; // #feb33b - Ex: Error toast, error messages, form field validation{% endhighlight %}
+  </div>
+
+
+  <div id="colors-more" class="item">
+    <h4>More Available Colors</h4>
+
+    <div class="well">
+
+      <div class="row">
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #7168a5;"></div>
+          <strong style="color: #7168a5">@purple</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #0f98ec;"></div>
+          <strong style="color: #0f98ec">@blue</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #63c685;"></div>
+          <strong style="color: #63c685">@green</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #feb33b;"></div>
+          <strong style="color: #feb33b">@yellow</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #e65b3f;"></div>
+          <strong style="color: #e65b3f">@orange</strong>
+        </div>
+        <div class="col-xs-2 text-center">
+          <div class="color-swatch" style="background-color: #d63960;"></div>
+          <strong style="color: #d63960">@red</strong>
+        </div>
+      </div>
+
+      {% highlight css %}@purple:        #7168a5;
+@blue:          #0f98ec;
+@green:         #63c685;
+@yellow:        #feb33b;
+@orange:        #e65b3f;
+@red:           #d63960;{% endhighlight %}
     </div>
   </div>
 </section>
