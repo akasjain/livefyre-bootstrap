@@ -1,0 +1,75 @@
+---
+layout: default
+title: Colors | Livefyre Bootstrap
+---
+
+<section id="colors">
+
+  <h1 class="page-heading">Colors</h1>
+
+  {% include btn-reference.html target="colors" %}
+
+  <div class="collapse" id="colors-changes">
+    <div class="inner">
+      <div class="well">
+        <h4>What's New in v2.x</h4>
+        <ul>
+          <li>All gray values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
+          <li>New variables <code>@gray-darkest</code>, <code>@gray-darkish</code> and <code>@gray-lightest</code>.</li>
+          <li>Using hex codes for all (instead of <code>tint</code>) so it's easier to match a variable name with what you find in the inspector.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="colors-grays" class="item">
+    <h4>Grays</h4>
+
+    <div class="well">
+
+      <div class="row">
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #2f3440;"></div>
+          <strong style="color: #2f3440">@gray-darkest</strong>
+        </div>
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #595d66;"></div>
+          <strong style="color: #595d66">@gray-darker</strong>
+        </div>
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #82858c;"></div>
+          <strong style="color: #82858c">@gray-dark</strong>
+        </div>
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #acaeb3;"></div>
+          <strong style="color: #acaeb3">@gray-darkish</strong>
+        </div>
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #cbcccf;"></div>
+          <strong style="color: #cbcccf">@gray</strong>
+        </div>
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #e0e1e3;"></div>
+          <strong style="color: #e0e1e3">@gray-light</strong>
+        </div>
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #efeff0;"></div>
+          <strong style="color: #efeff0">@gray-lighter</strong>
+        </div>
+        <div class="col-xs-1">
+          <div class="color-swatch" style="background-color: #f7f7f7;"></div>
+          <strong style="color: #f7f7f7">@gray-lightest</strong>
+        </div>
+      </div>
+
+      {% highlight css %}@gray-darkest:  #2f3440; // 100% - Ex: Prominent text (LF variable)
+@gray-darker:   #595d66; // 80%  - Ex: Paragraph text
+@gray-dark:     #82858c; // 60%  - Ex: Subtext text
+@gray-darkish:  #acaeb3; // 40%  - Ex: Disabled text (LF variable)
+@gray:          #cbcccf; // 25%  - Ex: Default button bg hover
+@gray-light:    #e0e1e3; // 15%  - Ex: Default button bg
+@gray-lighter:  #efeff0; // 8%   - Ex: Bg watermark
+@gray-lightest: #f7f7f7; // 4%   - Ex: Default bg (LF variable){% endhighlight %}
+    </div>
+  </div>
+</section>
