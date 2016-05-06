@@ -1,0 +1,279 @@
+---
+layout: default
+title: Button Groups & Toolbar | Livefyre Bootstrap
+---
+
+<section id="button-groups">
+
+  <h1 class="page-heading">Button Groups & Toolbar</h1>
+
+  <h3>Button Groups</h3>
+  <p>Group a series of related buttons together into a single unit.</p>
+
+  <div id="button-groups-default" class="item">
+    <h4>Default Group</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="button-groups-default" %}
+
+      <div class="btn-group" role="group">
+        <button class="btn btn-default">Button</button>
+        <button class="btn btn-default">Button</button>
+        <button class="btn btn-default">Button</button>
+      </div>
+
+      <div class="collapse" id="button-groups-default-html">
+        {% highlight html %}<div class="btn-group" role="group">
+  <button class="btn btn-default">Button</button>
+  <button class="btn btn-default">Button</button>
+  <button class="btn btn-default">Button</button>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="button-groups-default-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+var ButtonGroup = require('react-bootstrap').ButtonGroup;
+
+<ButtonGroup>
+  <Button>Left</Button>
+  <Button>Middle</Button>
+  <Button>Right</Button>
+</ButtonGroup>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="button-groups-sizes" class="item">
+    <h4>Group Sizes</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="button-groups-sizes" %}
+
+      <div class="btn-group btn-group-lg" role="group">
+        <button class="btn btn-default">Large</button>
+        <button class="btn btn-default">Large</button>
+        <button class="btn btn-default">Large</button>
+      </div><br />
+      <div class="btn-group" role="group" style="margin-top: 12px;">
+        <button class="btn btn-default">Default</button>
+        <button class="btn btn-default">Default</button>
+        <button class="btn btn-default">Default</button>
+      </div><br />
+      <div class="btn-group btn-group-sm" role="group" style="margin-top: 12px;">
+        <button class="btn btn-default">Small</button>
+        <button class="btn btn-default">Small</button>
+        <button class="btn btn-default">Small</button>
+      </div><br />
+      <div class="btn-group btn-group-xs" role="group" style="margin-top: 12px;">
+        <button class="btn btn-default">X-Small</button>
+        <button class="btn btn-default">X-Small</button>
+        <button class="btn btn-default">X-Small</button>
+      </div>
+
+      <div class="collapse" id="button-groups-sizes-html">
+        {% highlight html %}<div class="btn-group btn-group-lg" role="group">
+  <button class="btn btn-default">Large</button>
+  <button class="btn btn-default">Large</button>
+  <button class="btn btn-default">Large</button>
+</div>
+
+<div class="btn-group" role="group">
+  <button class="btn btn-default">Default</button>
+  <button class="btn btn-default">Default</button>
+  <button class="btn btn-default">Default</button>
+</div>
+
+<div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default">Small</button>
+  <button class="btn btn-default">Small</button>
+  <button class="btn btn-default">Small</button>
+</div>
+
+<div class="btn-group btn-group-xs" role="group">
+  <button class="btn btn-default">X-Small</button>
+  <button class="btn btn-default">X-Small</button>
+  <button class="btn btn-default">X-Small</button>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="button-groups-sizes-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+var ButtonGroup = require('react-bootstrap').ButtonGroup;
+
+<ButtonGroup bsSize="large">
+  <Button>Large</Button>
+  <Button>Large</Button>
+  <Button>Large</Button>
+</ButtonGroup>
+
+<ButtonGroup>
+  <Button>Default</Button>
+  <Button>Default</Button>
+  <Button>Default</Button>
+</ButtonGroup>
+
+<ButtonGroup bsSize="small">
+  <Button>Small</Button>
+  <Button>Small</Button>
+  <Button>Small</Button>
+</ButtonGroup>
+
+<ButtonGroup bsSize="xsmall">
+  <Button>X-Small</Button>
+  <Button>X-Small</Button>
+  <Button>X-Small</Button>
+</ButtonGroup>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="button-groups-dropdown" class="item">
+    <h4>With Dropdown</h4>
+    <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want a dropdown menu mixed with a series of buttons.</p>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="button-groups-dropdown" %}
+
+      <div class="btn-group" role="group">
+        <button class="btn btn-default"><span class="fycon-check fycon-xl" aria-hidden="true"></span></button>
+        <button class="btn btn-default"><span class="fycon-admin-delete fycon-xl" aria-hidden="true"></span></button>
+
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <span class="fycon-arrow-down fycon-xs" aria-hidden="true"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="collapse" id="button-groups-dropdown-html">
+        {% highlight html %}<div class="btn-group" role="group">
+  <button class="btn btn-default"><span class="fycon-check fycon-xl" aria-hidden="true"></span></button>
+  <button class="btn btn-default"><span class="fycon-admin-delete fycon-xl" aria-hidden="true"></span></button>
+
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+      <span class="fycon-arrow-down fycon-xs" aria-hidden="true"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Dropdown link</a></li>
+    </ul>
+  </div>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="button-groups-dropdown-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+var ButtonGroup = require('react-bootstrap').ButtonGroup;
+var DropdownButton = require('react-bootstrap').DropdownButton;
+var MenuItem = require('react-bootstrap').MenuItem;
+var Fycon = require('../Fycon'); // Custom LF component - Put the font name in the "ico" attribute, leaving out the "fycon-" part of the class name.
+
+<ButtonGroup>
+  <Button><Fycon ico="check" size="xl" /></Button>
+  <Button><Fycon ico="admin-delete" size="xl" /></Button>
+  <DropdownButton pullRight>
+    <MenuItem eventKey="1">Dropdown link</MenuItem>
+    <MenuItem eventKey="2">Dropdown link</MenuItem>
+  </DropdownButton>
+</ButtonGroup>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <h3>Button Toolbar</h3>
+
+  {% include btn-reference.html target="button-toolbar" docs="components/#btn-groups-toolbar" %}
+
+  <p>For grouping a series of disparate actions. The toolbar provides a container, alignment options and controls spacing between buttons.</p>
+
+  <div class="collapse" id="button-toolbar-changes">
+    <div class="inner">
+      <div class="well">
+        <h4>What's New in v2.x</h4>
+        <ul>
+          <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
+          <li>Increased spacing between buttons in button toolbar.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="button-toolbar-default" class="item">
+    <h4>Default Toolbar</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="button-toolbar-default" %}
+
+      <div class="btn-toolbar" role="toolbar">
+        <button class="btn btn-default btn-sm">Add to folder</button>
+        <button class="btn btn-default btn-sm">Tags</button>
+        <button class="btn btn-default btn-sm">Stars</button>
+      </div>
+
+      <div class="collapse" id="button-toolbar-default-html">
+        {% highlight html %}<div class="btn-toolbar" role="toolbar">
+  <button class="btn btn-default btn-sm">Add to folder</button>
+  <button class="btn btn-default btn-sm">Tags</button>
+  <button class="btn btn-default btn-sm">Stars</button>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="button-toolbar-default-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
+
+<ButtonToolbar>
+  <Button bsSize="sm">Add to folder</Button>
+  <Button bsSize="sm">Tags</Button>
+  <Button bsSize="sm">Stars</Button>
+</ButtonToolbar>{% endhighlight %}
+      </div>
+    </div>
+  </div>
+
+
+  <div id="button-toolbar-right" class="item">
+    <h4>Right-Aligned Toolbar</h4>
+
+    <div class="well">
+      {% include btn-toggle-code.html target="button-toolbar-right" %}
+
+      <div class="btn-toolbar btn-toolbar-right" role="toolbar">
+        <button class="btn btn-default btn-sm">Cancel</button>
+        <button class="btn btn-primary btn-sm">Save</button>
+      </div>
+
+      <div class="collapse" id="button-toolbar-right-html">
+        {% highlight html %}<div class="btn-toolbar btn-toolbar-right" role="toolbar">
+  <button class="btn btn-default btn-sm">Cancel</button>
+  <button class="btn btn-primary btn-sm">Save</button>
+</div>{% endhighlight %}
+      </div>
+
+      <div class="collapse" id="button-toolbar-right-react">
+        {% highlight html %}var Button = require('react-bootstrap').Button;
+var ButtonToolbar = require('react-bootstrap').ButtonToolbar;
+
+<ButtonToolbar className="btn-toolbar-right">
+  <Button bsSize="sm">Cancel</Button>
+  <Button bsStyle="primary" bsSize="sm">Save</Button>
+</ButtonToolbar>{% endhighlight %}
+      </div>
+    </div>
+
+
+  <div id="button-toolbar-nesting" class="item">
+    <h4>Nesting</h4>
+    <p>Nest button groups inside of toolbars.</p>
+
+  </div>
+
+</section>

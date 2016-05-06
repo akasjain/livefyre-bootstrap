@@ -40,7 +40,7 @@ title: Search Forms | Livefyre Bootstrap
       </div>
 
       <div class="collapse" id="search-forms-default-react">
-        {% highlight html %}var QueryInput = require('../text-input/Simple');
+        {% highlight html %}var QueryInput = require('../text-input/Simple'); // Custom LF component
 
 <QueryInput placeholder="Find stream" />{% endhighlight %}
       </div>
@@ -92,7 +92,7 @@ title: Search Forms | Livefyre Bootstrap
       </div>
 
       <div class="collapse" id="search-forms-with-loader-react">
-        {% highlight html %}var QueryInput = require('../text-input/Simple');
+        {% highlight html %}var QueryInput = require('../text-input/Simple'); // Custom LF component
 
 <QueryInput placeholder="Find stream" isSearching="true" />{% endhighlight %}
       </div>
@@ -141,8 +141,8 @@ title: Search Forms | Livefyre Bootstrap
 
       <div class="collapse" id="search-forms-with-button-react">
         {% highlight html %}var Button = require('react-bootstrap').Button;
-var Fycon = require('../Fycon');
-var QueryInput = require('../text-input/Simple');
+var Fycon = require('../Fycon'); // Custom LF component - Put the font name in the "ico" attribute, leaving out the "fycon-" part of the class name.
+var QueryInput = require('../text-input/Simple'); // Custom LF component
 
 <QueryInput placeholder="Find stream" buttonAfter={this.renderButton()} />{% endhighlight %}
       </div>
