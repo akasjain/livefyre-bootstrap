@@ -42,7 +42,8 @@
   "lfeslint": {
     "ignore": [
       "lib/*",
-      "r.js"
+      "r.js",
+      "tools/*"
     ]
   }
 }
