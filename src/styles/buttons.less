@@ -11,14 +11,20 @@
   padding: 0 @padding-base-horizontal;
   font-size: @font-size-small;
   height: @btn-height;
-  line-height: @btn-height;
-  border: 0;
-  border-radius: @btn-radius;
-
+  line-height: @btn-height - (@btn-border-width * 2); // Use the button height (minus borders) to vertically center the button text and fycons
+  border-width: @btn-border-width;
+  border-radius: @btn-radius; // Half the button height
+  transition: background 150ms ease-out,
+              border-color 150ms ease-out,
+              color 150ms ease-out,
+              box-shadow 150ms ease-out;
   &.disabled,
+  &:disabled,
   &[disabled],
   fieldset[disabled] & {
-    .opacity(.5);
+    background: @spectrum-color-light-grey4;
+    border-color: @spectrum-color-light-grey4;
+    color: @spectrum-color-light-grey6;
   }
 
   // Remove blue outline that appears when you click a button.
@@ -30,32 +36,55 @@
   &.active.focus {
     outline: 0;
   }
+
+  &:focus { // Focus state is light blue bg with white text for all buttons (except .btn-link)
+    color: #fff;
+    background-color: @spectrum-color-blue2;
+    border-color: @spectrum-color-blue2;
+  }
 }
 
 
 // Alternate buttons
 // --------------------------------------------------
 
-.btn-default {
-  .button-shadow(@btn-default-bg; @btn-default-border);
+.btn-default { // Based on .coral-Button--primary
+  //.button-shadow(@btn-default-bg; @btn-default-border);
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @btn-default-border;
+  }
 }
-.btn-primary {
-  .button-shadow(@btn-primary-bg; @btn-primary-border);
+.btn-primary { // Based on .coral-Button--cta
+  //.button-shadow(@btn-primary-bg; @btn-primary-border);
+
+  &:focus {
+    background-color: @spectrum-color-blue2;
+    border-color: @spectrum-color-blue2;
+  }
 }
 // Warning appears as orange
-.btn-warning {
-  .button-shadow(@btn-warning-bg; @btn-warning-border);
+.btn-warning { // Based on .coral-Button--warning
+  //.button-shadow(@btn-warning-bg; @btn-warning-border);
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @btn-warning-border;
+  }
 }
 // Danger and error appear as red
-.btn-danger {
+.btn-danger { // No Coral UI equivalent
   .button-shadow(@btn-danger-bg; @btn-danger-border);
 }
 // Success appears as green
-.btn-success {
+.btn-success { // No Coral UI equivalent
   .button-shadow(@btn-success-bg; @btn-success-border);
 }
 // Info appears as blue-green
-.btn-info {
+.btn-info { // No Coral UI equivalent
   .button-shadow(@btn-info-bg; @btn-info-border);
 }
 
@@ -63,10 +92,12 @@
 // Hollow buttons
 // -------------------------
 
-.btn-hollow {
+.btn-hollow { // No Coral UI equivalent
   .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-hollow-border;);
   .button-shadow(@btn-hollow-bg; @btn-hollow-border);
   
+  &:hover,
+  &:focus,
   &:active,
   &.active,
   .open .dropdown-toggle& {
@@ -78,18 +109,19 @@
 // Link buttons
 // -------------------------
 
-.btn-link {
+.btn-link { // Based on .coral-Button--quiet
   .btn-default;
   font-weight: @btn-font-weight;
   background: transparent;
-  border-radius: @btn-radius;
+  border-color: transparent;
 
   &:hover,
   &:focus,
   &:active {
     color: @btn-default-color;
     text-decoration: none;
-    background-color: @gray-light;
+    background: transparent;
+    border-color: transparent;
   }
 }
 
@@ -97,17 +129,20 @@
 // Button Sizes
 // --------------------------------------------------
 
-.btn-lg {
-  .button-size(0; @padding-large-horizontal; @font-size-large; @btn-height-lg - 2; @btn-radius);
+.btn-lg { // Based on .coral-Button--large
+  .button-size(0; @padding-large-horizontal; @font-size-large; @btn-height-lg - 2; @btn-radius-lg);
   height: @btn-height-lg;
+  line-height: @btn-height-lg - (@btn-border-width * 2); // Use the button height (minus borders) to vertically center the button text and fycons
 }
-.btn-sm {
-  .button-size(0; @padding-small-horizontal; @font-size-small; @btn-height-sm; @btn-radius);
+.btn-sm { // No Coral UI equivalent
+  .button-size(0; @padding-small-horizontal; @font-size-small; @btn-height-sm; @btn-radius-sm);
   height: @btn-height-sm;
+  line-height: @btn-height-sm - (@btn-border-width * 2); // Use the button height (minus borders) to vertically center the button text and fycons
 }
-.btn-xs {
-  .button-size(0; @padding-xs-horizontal; @font-size-small; @btn-height-xs; @btn-radius);
+.btn-xs { // No Coral UI equivalent
+  .button-size(0; @padding-xs-horizontal; @font-size-small; @btn-height-xs; @btn-radius-xs);
   height: @btn-height-xs;
+  line-height: @btn-height-xs - (@btn-border-width * 2); // Use the button height (minus borders) to vertically center the button text and fycons
 }
 
 

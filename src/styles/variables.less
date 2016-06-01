@@ -2,8 +2,9 @@
  * Bootstrap Variables
  */
 @import "@{bootstrap-less}/variables.less";
+@import "variables-spectrum.less"; // Coral UI Spectrum variables that we've ported over
 
-// Colors
+// LF Colors
 // -------------------------
 
 @gray-base:     #2f3440; // 100% - Ex: Prominent text
@@ -16,27 +17,28 @@
 @gray-lighter:  #efeff0; // 8%   - Ex: Bg watermark
 @gray-lightest: #f7f7f7; // 4%   - Ex: Default bg (LF variable)
 
-@purple:        #7168a5;
-@blue:          #0f98ec;
-@green:         #63c685;
-@yellow:        #feb33b;
-@orange:        #e65b3f;
-@red:           #d63960;
+@purple:        @spectrum-color-periwinkle;
+@blue:          @spectrum-color-blue3;
+@green:         @spectrum-color-green2;
+@yellow:        @spectrum-color-yellow3;
+@orange:        @spectrum-color-orange3;
+@red:           @spectrum-color-red2;
 @storify-blue:  #3A98D9;
 
-@purple-dark:   darken(@purple, 15%);   // #4f4879
-@blue-dark:     darken(@blue, 15%);     // #0a6aa4
-@green-dark:    darken(@green, 15%);    // #3ba15e
-@yellow-dark:   darken(@yellow, 15%);   // #eb9101
-@orange-dark:   darken(@orange, 15%);   // #c03519
-@red-dark:      darken(@red, 15%);      // #a12141
+@purple-dark:   darken(@purple, 15%);
+@blue-dark:     darken(@blue, 15%);
+@green-dark:    darken(@green, 15%);
+@yellow-dark:   darken(@yellow, 15%);
+@orange-dark:   darken(@orange, 15%);
+@red-dark:      darken(@red, 15%);
 
-@purple-light:  lighten(@purple, 15%);  // #9e98c2
-@blue-light:    lighten(@blue, 15%);    // #53b7f4
-@green-light:   lighten(@green, 15%);   // #9bdab1
-@yellow-light:  lighten(@yellow, 15%);  // #fed187
-@orange-light:  lighten(@orange, 15%);  // #ef9583
-@red-light:     lighten(@red, 15%);     // #e37893
+@purple-light:  lighten(@purple, 15%);
+@blue-light:    lighten(@blue, 15%);
+@green-light:   lighten(@green, 15%);
+@yellow-light:  lighten(@yellow, 15%);
+@orange-light:  lighten(@orange, 15%);
+@red-light:     lighten(@red, 15%);
+
 
 // Common Social Media Colors
 // -------------------------
@@ -194,42 +196,47 @@
 // -------------------------
 
 // Using fixed heights and line-heights instead of padding to improve vertically centering fycons inside buttons
-@btn-height:                     36px;
+@btn-height:                     32px;
 @btn-height-xs:                  24px;
-@btn-height-sm:                  30px;
-@btn-height-lg:                  46px;
+@btn-height-sm:                  28px;
+@btn-height-lg:                  42px;
 
-@btn-radius:                     @border-radius-small; // Used for all button sizes
+@btn-border-width:               2px;
+
+@btn-radius:                     @btn-height/2;
+@btn-radius-xs:                  @btn-height-xs/2;
+@btn-radius-sm:                  @btn-height-sm/2;
+@btn-radius-lg:                  @btn-height-lg/2;
 
 @btn-font-weight:                500;
 
 @btn-default-color:              @gray-darkest;
-@btn-default-bg:                 @gray-light;
-@btn-default-border:             @gray-light;
+@btn-default-bg:                 transparent;
+@btn-default-border:             @spectrum-color-light-grey9; // Based on .coral-Button--primary
 
 @btn-primary-color:              #fff;
-@btn-primary-bg:                 @orange;
-@btn-primary-border:             @orange-dark;
+@btn-primary-bg:                 @blue; // Based on .coral-Button--cta
+@btn-primary-border:             @blue;
 
 @btn-success-color:              #fff;
-@btn-success-bg:                 @green;
-@btn-success-border:             @green-dark;
+@btn-success-bg:                 @green; // No Coral UI equivalent
+@btn-success-border:             @green;
 
 @btn-info-color:                 #fff;
-@btn-info-bg:                    @blue;
-@btn-info-border:                @blue-dark;
+@btn-info-bg:                    @blue; // No Coral UI equivalent
+@btn-info-border:                @blue;
 
-@btn-warning-color:              #fff;
-@btn-warning-bg:                 @yellow;
-@btn-warning-border:             @yellow-dark;
+@btn-warning-color:              @red; // Based on .coral-Button--warning
+@btn-warning-bg:                 transparent;
+@btn-warning-border:             @red;
 
 @btn-danger-color:               #fff;
-@btn-danger-bg:                  @red;
-@btn-danger-border:              @red-dark;
+@btn-danger-bg:                  @red; // No Coral UI equivalent
+@btn-danger-border:              @red;
 
-@btn-hollow-color:               #fff;
+@btn-hollow-color:               #fff; // No Coral UI equivalent
 @btn-hollow-bg:                  fade(@gray-darker, 40%);
-@btn-hollow-border:              #fff;
+@btn-hollow-border:              transparent;
 
 @btn-link-disabled-color:        @gray-darkish;
 
