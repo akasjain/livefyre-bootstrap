@@ -1,14 +1,40 @@
 //
 // Button groups
 // --------------------------------------------------
+// [6/1/16 Phil - There don't seem to be any button group styles for Spectrum available yet. So, these styles are just highly-intelligent guesses.]
 
-// Since LF buttons don't have borders, we need to add separation between buttons
+
 .btn-group {
+
+  // Add 2px margin between buttons.
   .btn + .btn,
   .btn + .btn-group,
   .btn-group + .btn,
   .btn-group + .btn-group {
-    margin-left: 1px;
+    margin-left: @btn-border-width;
+  }
+
+  // Since Default and warning buttons are outlined, overlap adjacent borders for a cleaner look.
+  .btn-default + .btn,
+  .btn-default + .btn-group,
+  .btn-warning + .btn,
+  .btn-warning + .btn-group {
+      margin-left: -@btn-border-width;
+  }
+
+  // Since the buttons have rounded corners on only one side, add a little extra padding as needed to visually center their labels better.
+  .btn:first-child { // Covers all button sizes except large
+    padding-left: @padding-base-horizontal + 2;
+  }
+  .btn:last-child {
+    padding-right: @padding-base-horizontal + 2;
+  }
+
+  .btn-lg:first-child {
+    padding-left: @padding-large-horizontal + 2;
+  }
+  .btn-lg:last-child {
+    padding-right: @padding-large-horizontal + 2;
   }
 }
 
@@ -48,11 +74,33 @@
 
 // Vertical button groups
 .btn-group-vertical {
+
+  // Add 2px margin between buttons.
   > .btn + .btn,
   > .btn + .btn-group,
   > .btn-group + .btn,
   > .btn-group + .btn-group {
-    margin-top: 1px;
+    margin-top: @btn-border-width;
+  }
+
+  // Since Default and warning buttons are outlined, overlap adjacent borders for a cleaner look.
+  .btn-default + .btn,
+  .btn-default + .btn-group,
+  .btn-warning + .btn,
+  .btn-warning + .btn-group {
+      margin-top: -@btn-border-width;
+  }
+
+  // Only slightly rounding the corners of the top and bottom buttons (It looks a bit odd when we round them as much as we do other buttons).
+  > .btn {
+    &:first-child:not(:last-child) {
+      border-top-right-radius: @border-radius-base;
+      border-top-left-radius: @border-radius-base;
+    }
+    &:last-child:not(:first-child) {
+      border-bottom-right-radius: @border-radius-base;
+      border-bottom-left-radius: @border-radius-base;
+    }
   }
 }
 
@@ -63,6 +111,18 @@
   > .btn + .btn-group,
   > .btn-group + .btn,
   > .btn-group + .btn-group {
-    border-left: 1px solid #fff;
+    border-left: 0; // Can't use the negative margin method used above since the group is justified. 
   }
+}
+
+
+// Split button dropdowns
+// ----------------------
+
+// Since the dropdown buttons have rounded corners on only one side, add a little extra right padding to visually center the caret better.
+.btn-group > .btn + .dropdown-toggle {
+  padding-right: 10px;
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+  padding-right: 14px;
 }
