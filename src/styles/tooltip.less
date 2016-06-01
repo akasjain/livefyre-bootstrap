@@ -8,12 +8,13 @@
 */
 .tooltip {
   .make-tooltip-theme(@tooltip-color, @tooltip-bg, @tooltip-arrow-color);
+  line-height: @line-height-computed;
 
   &.in     { .opacity(1); }
 }
 
 .tooltip-inner {
-  .box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.15));
+  padding: 4px 8px 3px;
 }
 
 /**
