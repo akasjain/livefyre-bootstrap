@@ -6,10 +6,19 @@
 // --------------------------------------------------
 
 // Common form controls
-.form-control,
-.form-control:focus {
-  -webkit-box-shadow: none; // iOS <4.3 & Android <4.1
-          box-shadow: none;
+.form-control {
+  .box-shadow(none);
+
+  // Hover state
+  &:hover {
+    .placeholder(@input-color-placeholder-hover);
+  }
+
+  // Focus state
+  &:focus,
+  .is-focused {
+    .box-shadow(0 0 0 1px @input-border-focus);
+  }
 }
 
 // Form control sizing
