@@ -34,90 +34,99 @@
   .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @input-border-radius);
 }
 
-// Checkboxes and radios
-// - Uses fycons instead of browser styles
+
+
+// Checkbox
+// --------------------------------------------------
+// - Styles based on coralui-theme-spectrum/styles/coralui-component-checkbox
+// - In Chrome and Safari, this replaces the native checkbox element with a box and a check icon that animate.
+// - In all other browsers, the native checkbox will display instead.
+
+
+// From coralui-theme-spectrum/styles/coralui-component-checkbox/index.styl
+@spectrum-checkbox-size: 12px;
+@spectrum-checkbox-radius: 2px;
+@spectrum-checkbox-check-icon-url: 'build/embed/coralui-component-checkbox/Check.svg';
+
+// From coralui-theme-spectrum/styles/commons/layout.styl
+@spectrum-transition-time: 150ms;
+
 .checkbox label,
-.radio label,
-label.checkbox-inline,
-label.radio-inline {
-  padding-left: 26px;
-  color: @gray-darker;
+label.checkbox-inline {
+  display: inline-block;
+  position: relative;
+  padding: 7px 0 7px 26px;
+  //font-size: 0;
 
-  input[type="checkbox"],
-  input[type="radio"] {
-    margin: 0 0 0 -26px;
-  }
-}
+  
+  input[type="checkbox"] {
+    margin-top: 1px;
+    margin-left: -26px;
 
-input[type="checkbox"],
-input[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: 0;
-  font-size: 1.1em;
-  width: 1.2em; // FF, IE
-  height: 1.2em; // FF, IE
+    // Hide the native checkbox element
+    -webkit-appearance: none;
+    outline: 0;
 
-  &:before {
-    .fycons-styles-base;
-    color: @gray-darker;
-  }
-
-  &:hover:before {
-    color: @gray-darkest;
-  }
-
-  &:checked:before {
-    color: @gray-darker;
-  }
-
-  &[disabled] {
-    &:before,
-    & + span {
-      color: @gray-darkish;
-    }
-  }
-}
-
-input[type="checkbox"] {
-  .fycon-form-checkbox-empty;
-
-  &:checked {
-    .fycon-form-checkbox-active;
-  }
-
-  &:indeterminate {
-    color: @gray-darkest;
-    .fycon-form-checkbox-partial;
-  }
-}
-
-input[type="radio"] {
-  .fycon-form-radio-empty;
-
-  &:checked {
-    .fycon-form-radio-active;
-  }
-}
-
-// Focus: Override browser default and TwBS styles
-// - Only works on Chrome and Safari.
-// - Only works in Safari/MacOS if user changes default keyboard shortcut setting to allow tabbing to "All controls."
-// - Can't add a blue outline like the textboxes because the input element is larger and shaped differently than the fycon. So, instead, we're simple turning the fycon blue.
-input[type="radio"],
-input[type="checkbox"] {
-  &:before {
-    transition: color ease-in-out .15s; // Similar to .form-control
-  }
-
-  &:focus {
-    outline: 0; // Remove the fuzzy focus ring that TwBS implements in forms.less with .tab-focus mixin.
-
+    // The checkmark icon
     &:before {
-      color: @blue;
+      .fycons-styles-base;
+      position: absolute;
+      top: 5px;
+      left: 2px;
+      font-size: 9px;
+      color: #fff;
+      content: "\e01f"; // .fycon-check
+
+      //background-image: svgurl(@spectrum-checkbox-check-icon-url) svg(path fill @spectrum-color-dark-background);
+      //background-repeat: no-repeat;
+      //background-position: center;
+
+      opacity: 0;
+      transform: scale(0);
+
+      transition: opacity @spectrum-transition-time ease-in-out, transform @spectrum-transition-time ease-in-out;
+    }
+
+    // The box that the checkmark lives in
+    &:after {
+      display: inline-block;
+      box-sizing: border-box;
+      width: @spectrum-checkbox-size;
+      height: @spectrum-checkbox-size;
+      content: "";
+
+      border: 2px solid @spectrum-color-light-grey8;
+      border-radius: @spectrum-checkbox-radius;
+
+      vertical-align: middle;
+
+      transition: border @spectrum-transition-time ease-in-out, box-shadow @spectrum-transition-time ease-in-out;
+    }
+
+    // Checked state
+    &:checked:after {
+      border-width: 6px;
+    }
+
+    &:checked:before {
+      transform:scale(1);
+      opacity:1;
+    }
+
+    // Disabled state
+    &:disabled:after,
+    &.is-disabled:after {
+      border-color: @spectrum-color-light-grey5;
+    }  
+
+    // Indeterminate state
+    &:indeterminate:after {
+      border-top-width: 5px;
+      border-bottom-width: 5px;
     }
   }
 }
+
 
 // Radios and checkboxes on same line
 .radio-inline + .radio-inline,
