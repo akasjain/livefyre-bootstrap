@@ -2,181 +2,144 @@
 
 /* Toggle styles
 -------------------------------------------------- */
+/* 6/1/16 Phil:
+  - Pretty much the same CSS as Coral.Switch.
+  - Removed the .toggle-sm option. In Studio, we ended up only using the small size so we can just made the small size the default.
+  - Coral UI doesn't have an option to display ON/OFF text alongside the switch so we'll leave it out here, too.
+*/
 
+
+// From coralui-theme-spectrum/styles/coralui-component-switch/index.styl
+@switch-width: 24px;
+@switch-height: 12px;
+@switch-handle-width: 10px;
+
+// From coralui-theme-spectrum/styles/coralui-component-switch/light.styl
+@switch-track-background-color: @spectrum-color-light-grey5;
+@switch-track-disabled-background-color: @spectrum-color-light-disabled;
+@switch-handle-border-color: @spectrum-color-light-checkmark;
+@switch-handle-border-color-hover: @spectrum-color-light-checkmark-hover;
+@switch-handle-border-color-active: @spectrum-color-light-checkmark-active;
+@switch-handle-border-color-focus: @spectrum-color-light-focus;
+@switch-handle-border-color-checked: @spectrum-color-light-checkmark-checked;
+@switch-handle-background-color: @spectrum-color-light-background;
+@switch-handle-disabled-border-color: @spectrum-color-light-checkmark-disabled;
+
+// From coralui-theme-spectrum/styles/commons/layout.styl
+@spectrum-transition-time: 150ms;
+
+
+
+// From coralui-theme-spectrum/styles/coralui-component-switch/index.styl and skin.styl
 .toggle {
+  // required to comply with single line components
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+
+  // required for the input to take the whole size
   position: relative;
-  width: @toggle-width;
-  height: @toggle-height;
-  //overflow: hidden; // Commented-out due to it cutting off the toggle handle in FF.
-  vertical-align: middle;
-  margin-bottom: auto;
-  cursor: pointer;
+
+  height: @switch-height;
+
+  &:hover input:not(:disabled) {
+    + span:after {
+      border-color: @switch-handle-border-color-hover;
+      box-shadow: none;
+    }
+  }
+
+  &:active input:not(:disabled) {
+    + span:after {
+      border-color: @switch-handle-border-color-active;
+    }
+  }  
+}
+
+.toggle span {
+  display: inline-block;
+  // positions the pseudo elements relative to this one
+  position: relative;
+
+  height: @switch-height;
+  width: @switch-width;
+
+  &:before,
+  &:after {
+    display: block;
+    position: absolute;
+    content: "";
+
+    box-sizing: border-box;
+  }
+
+  // :before is used for the track of the switch
+  &:before {
+    transition: background @spectrum-transition-time ease-in-out, border @spectrum-transition-time ease-in-out;
+
+    height: 4px;
+
+    top: 3px;
+    left: 0;
+    right: 0;
+
+    border-radius: 2px;background: @switch-track-background-color;
+  }
+
+  // :after is used for the handle of the switch
+  &:after {
+    transition: background @spectrum-transition-time ease-in-out, border @spectrum-transition-time ease-in-out, transform @spectrum-transition-time ease-in-out, box-shadow @spectrum-transition-time ease-in-out;
+
+    width: @switch-handle-width;
+    height: @switch-handle-width;
+
+    top: 0;
+    left: 0;
+
+    background: @switch-handle-background-color;
+    border: 2px solid @switch-handle-border-color;
+    border-radius: 50%;
+  }
 }
 
 .toggle input {
   position: absolute;
-  left: 0;
-  opacity: 0;
-  cursor: pointer; // At times, the declaration on .toggle isn't enough.
-}
+  top: 0;
 
-// BG
-.toggle span {
-  display: block;
-  height: @toggle-height;
-  background-color: @toggle-off-bg;
-  border-radius: 100px;
-  .transition(~"background-color 0.1s ease-in-out, border-color 0.1s ease-in-out");
+  width: 100%;
+  height: 100%;
 
-  // Hover
-  &:hover {
-    background-color: @gray;
-  }
-}
+  opacity: 0.0001;
 
-// Handle
-.toggle span:before {
-  position: absolute;
-  top: 1px;
-  left: 1px;
+  cursor: pointer;
   z-index: 1;
-  display: block;
-  width: @toggle-handle;
-  height: @toggle-handle;
-  content: "";
-  background-color: #fff;
-  border-radius: 100px;
-  .translate3d(0, 0, 0);
-  -ms-transform: translateX(0); // IE9
-  .transition-transform(0.1s ease-in-out);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
-}
 
-// Checked
-.toggle input:checked + span {
-
-  // BG    
-  background-color: @toggle-on-bg;
-  
-  // Handle
-  &:before {
-    .translate3d(@toggle-width - @toggle-handle - 2, 0, 0);
-     -ms-transform: translateX(@toggle-width - @toggle-handle - 2); // IE9
-  }
-
-  // Hover
-  &:hover {
-    background-color: darken(@toggle-on-bg, 10%);
-  }
-}
-
-
-//
-// Small Toggle
-// --------------------------------------------------
-
-.toggle-sm {
-  width: @toggle-width-sm;
-  height: @toggle-height-sm;
-
-  span {
-    height: @toggle-height-sm;
-
-    // Handle
-    &:before {
-      width: @toggle-handle-sm;
-      height: @toggle-handle-sm;
-    }
-  }
-  
-  // Checked
-  input:checked + span:before {
-    .translate3d(@toggle-width-sm - @toggle-handle-sm - 2, 0, 0);
-    -ms-transform: translateX(@toggle-width-sm - @toggle-handle-sm - 2); // IE9
-  }
-}
-
-
-//
-// On/Off text
-// --------------------------------------------------
-
-.toggle-label {
-  width: @toggle-label-width;
-  
-  // "On" text
-  span {
-    padding: 1px @toggle-handle 0 8px; // Add 1px top padding to vertically align text. Works better than increasing line-height on IE9-11.
-    font-size: 14px;
-    font-weight: 500;
-    line-height: @toggle-height;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;  
-  }
-  
-  // "Off" Text
-  span:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: calc(100% ~'-' 2px);
-    height: @toggle-height;
-    padding: 1px 8px 0 @toggle-handle;
-    content: attr(data-off);
-    background-color: @toggle-off-bg;
-    color: @gray-dark;
-    text-align: center;
-    border-radius: 100px;
-    .transition(~"color 0.1s ease-in-out, background-color 0.1s ease-in-out");
-  }
-
-  span:hover:after {
-    color: @gray-darker;
-    background-color: @gray;
-  }
-      
-  // Checked
-  input:checked {
-     
-    // Handle
-    + span:before {
-      .translate3d(@toggle-label-width - @toggle-handle - 2, 0, 0);    
-      -ms-transform: translateX(@toggle-label-width - @toggle-handle - 2); // IE9
-    }
-
-    // "Off" Text
+  &:checked {
     + span:after {
-      display: none;
+      transform: translateX(@switch-width - @switch-handle-width);
+      border-width: (@switch-handle-width / 2);
+      border-color: @switch-handle-border-color-checked;
     }
   }
-}
 
-
-// 
-// Small toggle with On/Off text
-// --------------------------------------------------
-
-.toggle-sm.toggle-label {
-  width: @toggle-label-width-sm;
-  
-  // "On" text
-  span {
-    padding: 1px (@toggle-handle-sm + 2) 0 8px;
-    font-size: 12px;
-    line-height: @toggle-height-sm;
+  &:focus {
+    + span:after {
+      border-color: @switch-handle-border-color-focus;
+      box-shadow: 0 0 0 1px @switch-handle-border-color-focus;
+    }
   }
-  
-  // "Off" text
-  span:after {
-    height: @toggle-height-sm;
-    padding: 1px 8px 0 @toggle-handle-sm;
-  }
-  
-  // Handle
-  input:checked + span:before {
-    .translate3d(@toggle-label-width-sm - @toggle-handle-sm - 2, 0, 0);    
-    -ms-transform: translateX(@toggle-label-width-sm - @toggle-handle-sm - 2); // IE9
+
+  &:disabled {
+    + span:before {
+      background: @switch-track-disabled-background-color;
+      // otherwise it will transition to disabled
+      transition: none;
+    }
+
+    + span:after {
+      border-color: @switch-handle-disabled-border-color;
+      // otherwise it will transition to disabled
+      transition: none;
+    }
   }
 }
