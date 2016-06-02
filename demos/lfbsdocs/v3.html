@@ -427,9 +427,12 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
             </div>
 
             <h3>Fycons in Buttons</h3>
-            <p class="descrip">You can fine tune the size of fycons in buttons using <code>.fycon-xs</code>, <code>.fycon-sm</code>, <code>.fycon-lg</code>, <code>.fycon-xl</code> and <code>.fycon-inherit</code> (uses the same font size as the button).</p>
-            <p class="descrip">Use these classes in the fycon's span container.</p>
-            <p class="descrip">Fycon sizes will adjust based on the button size.</p>
+            <ul class="descrip">
+              <li>You can fine tune the size of fycons in buttons using <code>.fycon-xs</code>, <code>.fycon-sm</code>, <code>.fycon-lg</code>, <code>.fycon-xl</code> and <code>.fycon-inherit</code> (uses the same font size as the button).</li>
+              <li>Use these classes in the fycon's span container.</li>
+              <li>Fycon sizes will adjust based on the button size.</li>
+              <li>Fycons are slightly transparent.</li>
+            </ul>
             <div class="bs-example">
               <button class="btn btn-default">
                 <span class="fycon-action-like fycon-xs" aria-hidden="true"></span> Extra Small
@@ -1071,54 +1074,36 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
 
 
           <section id="section-toggles">
-            <h1 class="section-header">Toggles</h1>
+            <h1 class="section-header">Toggle Switch</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-toggles" aria-expanded="false" aria-controls="changes-toggles">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-toggles" aria-expanded="false" aria-controls="changes-toggles">Changes from v2.x</a>
             <div class="collapse" id="changes-toggles">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>Completely different markup.</li>
-                  <li>All-CSS now. No more JS.</li>
-                  <li>Uses checkbox for better accessibility and semantics.</li>
-                  <li>Check for state change by using the <code>checked</code> attribute of input element (instead of <code>.active</code> class).</li>
-                  <li>"On/Off" text lives in markup now so easier to swap in internationalization text.</li>
-                  <li>Works inside of dropdown menus.</li>
-                  <li>Visually unchanged from prevous version.</li>
+                  <li>Looks completely different. Much smaller and subtler.</li>
+                  <li>Pretty much the same CSS as Coral.Switch.</li>
+                  <li>Removed the .toggle-sm option. In Studio, we ended up only using the small size so we can just made the small size the default.</li>
+                  <li>Coral UI doesn't have an option to display ON/OFF labels alongside the switch so we'll leave it out here, too.</li>
                 </ul>
               </div>
             </div>
 
-            <h3>Labels</h3>
-            <p class="descrip">
-              You can display text labels by adding the <code>.toggle-label</code> class, a <code>data-off</code> attribute and text inside of the span for the "on" state.
-            </p>
-            <h3>Sizing</h3>
-            <p class="descrip">
-              There is an optional smaller toggle size which can be enabled by adding class <code>.toggle-sm</code>.
-            </p>
             <h3>State</h3>
             <p class="descrip">
               You can set a toggle to its "on" state by adding the <code>checked</code> attribute to the input element.
             </p>
             <h3>Event Listeners</h3>
-            <p>Note that your event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside.</p>
+            <p class="descrip">Note that your event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside.</p>
             <div class="bs-example">
               <label class="toggle" style="display: inline-block;">
                 <input type="checkbox" role="checkbox" />
                 <span></span>
               </label>
-              <label class="toggle toggle-label" style="display: inline-block;">
-                <input type="checkbox" role="checkbox" />
-                <span data-off="Off">On</span>
-              </label>
-              <label class="toggle toggle-sm" style="display: inline-block;">
+
+              <label class="toggle" style="display: inline-block;">
                 <input type="checkbox" role="checkbox" checked />
                 <span></span>
-              </label>
-              <label class="toggle toggle-sm toggle-label" style="display: inline-block;">
-                <input type="checkbox" role="checkbox" checked />
-                <span data-off="Off">On</span>
               </label>
             </div>
             <div class="highlight">
@@ -1127,19 +1112,9 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
   &lt;span&gt;&lt;/span&gt;
 &lt;/label&gt;
 
-&lt;label class="toggle toggle-label"&gt;
-  &lt;input type="checkbox" role="checkbox" /&gt;
-  &lt;span data-off="Off"&gt;On&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="toggle toggle-sm"&gt;
+&lt;label class="toggle"&gt;
   &lt;input type="checkbox" role="checkbox" checked /&gt;
   &lt;span&gt;&lt;/span&gt;
-&lt;/label&gt;
-
-&lt;label class="toggle toggle-sm toggle-label"&gt;
-  &lt;input type="checkbox" role="checkbox" checked /&gt;
-  &lt;span data-off="Off"&gt;On&lt;/span&gt;
 &lt;/label&gt;</code></pre>
             </div>
 
@@ -1148,12 +1123,12 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
           <section id="section-tooltips">
             <h1 class="section-header">Tooltips</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-tooltips" aria-expanded="false" aria-controls="changes-tooltips">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-tooltips" aria-expanded="false" aria-controls="changes-tooltips">Changes from v2.x</a>
             <div class="collapse" id="changes-tooltips">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>We extended the plugin so that after triggering a tooltip via click, a 2nd click anywhere - except on the tooltip itself - closes it. This overrides the default behavior where you can only close the tooltip by clicking the trigger element again.</li>
+                  <li>Background is now blue instead of dark grey.</li>
                 </ul>
               </div>
             </div>
