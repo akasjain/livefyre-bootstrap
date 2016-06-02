@@ -116,7 +116,8 @@
 
   &:checked {
     + span:after {
-      transform: translateX(@switch-width - @switch-handle-width);
+      -ms-transform: translateX(@switch-width - @switch-handle-width); // IE9
+          transform: translateX(@switch-width - @switch-handle-width);
       border-width: (@switch-handle-width / 2);
       border-color: @switch-handle-border-color-checked;
     }
