@@ -1,6 +1,10 @@
 @import (reference) "./variables";
 @import (reference) "./mixins";
 
+// From coralui-theme-spectrum/styles/commons/layout.styl
+@spectrum-transition-time: 150ms;
+@spectrum-padding: 12px;
+
 //
 // Forms
 // --------------------------------------------------
@@ -47,9 +51,6 @@
 @spectrum-checkbox-size: 12px;
 @spectrum-checkbox-radius: 2px;
 @spectrum-checkbox-check-icon-url: 'build/embed/coralui-component-checkbox/Check.svg';
-
-// From coralui-theme-spectrum/styles/commons/layout.styl
-@spectrum-transition-time: 150ms;
 
 .checkbox label,
 label.checkbox-inline {
@@ -127,6 +128,84 @@ label.checkbox-inline {
   }
 }
 
+
+// Radio Buttons
+// --------------------------------------------------
+// - Styles based on coralui-theme-spectrum/styles/coralui-component-radio
+// - In Chrome and Safari, this replaces the native radio element with an animated circle.
+// - In all other browsers, the native radio will display instead.
+
+// From coralui-theme-spectrum/styles/coralui-component-radio/index.styl
+@spectrum-radio-diameter: 12px;
+@spectrum-radio-radius: 6px;
+
+.radio label,
+label.radio-inline {
+  display: inline-block;
+  position: relative;
+  padding: 7px 0 7px 26px;
+
+  input[type="radio"] {
+    margin-top: 1px;
+    margin-left: -26px;
+    outline: 0;
+
+    // Hide the native radio element
+    -webkit-appearance: none;
+
+    cursor: pointer;
+
+    // The rendered radio
+    &:before {
+      display: inline-block;
+      box-sizing: border-box;
+      width: @spectrum-radio-diameter;
+      height: @spectrum-radio-diameter;
+      content: "";
+
+      border-radius: @spectrum-radio-radius;
+      border-width: 2px;
+      border-style: solid;
+      border-color: @spectrum-color-light-grey9;
+
+      vertical-align: middle;
+
+      transition: border @spectrum-transition-time ease-in-out, box-shadow @spectrum-transition-time ease-in-out;
+    }
+
+    // Hover state
+    &:hover:before {
+      border-color: @spectrum-color-light-grey9;
+      box-shadow: none;
+    }
+
+    // Checked state
+    &:checked:before{
+      border-width: 6px;
+      border-color: @spectrum-color-light-grey8;
+    }
+
+    // Focus state
+    &:focus:before {
+      border-color: @spectrum-color-blue1;
+      box-shadow: 0 0 0 1px @spectrum-color-blue1;
+    }
+
+    // Disabled state
+    &:disabled:before {
+      border-color: @spectrum-color-light-grey5;
+    }
+
+    // Active state
+    &:active:before {
+      border-color: @spectrum-color-light-grey10;
+    }
+  }
+}
+
+
+// Inline Checkboxes and Radios
+// --------------------------------------------------
 
 // Radios and checkboxes on same line
 .radio-inline + .radio-inline,
