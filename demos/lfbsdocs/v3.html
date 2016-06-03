@@ -54,10 +54,10 @@
                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                   <div class="panel-body">
                     <ul>
-                      <li>This version of Livefyre Bootstrap was updated to support the creation of Asset Manager. Version 1.x still exists separately and will be maintained until the rest of Studio and our apps migrate to 2.x.</li>
-                      <li>Version 2.x currently lives on the <a href="https://github.com/Livefyre/livefyre-bootstrap/tree/2.x" target="_blank"><code>2.x</code> branch on Github</a>. The 1.x version still lives on the <code>master</code> branch for now.</li>
+                      <li>This version of Livefyre Bootstrap was updated to support the transition to Adobe's Coral UI (Spectrum Theme). Versions 1.x and 2.x still exist separately and will be maintained until the rest of Studio and our apps migrate to Coral UI.</li>
+                      <li>Reference: <a href="https://livefyre.atlassian.net/wiki/display/DES/CSS%3A+Transitioning+to+Coral+UI+using+Livefyre+Bootstrap+v3" target="_blank">Transitioning to Coral UI using Livefyre Bootstrap v3</a></li>
+                      <li>Version 3.x currently lives on the <a href="https://github.com/Livefyre/livefyre-bootstrap/tree/3.x" target="_blank"><code>3.x</code> branch on Github</a>. The 1.x version still lives on the <code>master</code> branch for now. Version 2.x lives on the <code>2.x</code> branch.</li>
                       <li>All of the content from the <a href="components.html">UI Components</a> page has been included here for your convenience.</li>
-                      <li><a href="fycons.html">Fycons</a> and their classes are pretty much identical to v1.x (minus the lf- prefix).</li>
                     </ul>
                   </div>
                 </div>
@@ -74,68 +74,10 @@
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="panel-body">
                     <p>In your <code>package.json</code> or <code>bower.json</code> file, add or update the <code>livefyre-bootstrap</code> dependency:
-                    <pre>"livefyre-bootstrap": "git+ssh://git@github.com/Livefyre/livefyre-bootstrap.git#2.0.3"</pre>
-                    <p>Or, you can use the CDN urls:</p>
-                    <pre>https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.css
-https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.js</pre>
-                  </div>
-                </div>
-              </div>
-
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                      Changes from v1.x
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                  <div class="panel-body">
-                    <ul>
-                      <li>Removes the <code>lf-</code> prefix from all CSS classes, markup and JS. This makes it easier to update to the latest [Twitter] Bootstrap version, removes a lot of redundant CSS and allows us to take advantage of all [Twitter] Bootstrap features.</li>
-                      <li>Updates the [Twitter] Bootstrap version to 3.3.4 (from 3.0.3).</li>
-                      <li>[Twitter] Bootstrap 3.3.4's minimum required jQuery version is 1.9.1 (Bootstrap 3.0.3's minimum was 1.9.0).</li>
-                      <li>Allows you to specify the location of your [Twitter] Bootstrap files.</li>
-                      <li>New Slats styles.</li>
-                      <li>New Alert Modal.</li>
-                      <li>New Query Input (i.e. Search Form) styles.</li>
-                      <li>Loader: Fixes bug where a one-pixel line sometimes appears between the second and third rows.</li>
-                      <li>Many more listed alongside each section below.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingFour">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                      Checklist for Migrating from v1.x
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                  <div class="panel-body">
-                    <ol>
-                      <li>Update your Livefyre Bootstrap files to 2.x. You may need to also update your version of [Twitter] Bootstrap to 3.3.4.</li>
-                      <li>Remove the <code>lf-</code> prefix from your CSS classes, markup and JS.</li>
-                      <li><strong>Importing:</strong> In a variable named <code>@bootstrap-less</code>, specify the location of your [Twitter] Bootstrap files. Include this variable at the top of your main Less file or wherever you import Livefyre Bootstrap's variables and mixins files. (<a href="#section-importing">examples</a>)</li>
-                      <li><strong>Buttons:</strong> In your CSS, if you've added any custom vertical padding values to a button, you may need to remove or adjust them since buttons now use line-height instead of padding to determine height.</li>
-                      <li><strong>Button Toolbars:</strong> Spacing between buttons and buttons groups has increased. You may need to adjust any subsequent layout breakage.</li>
-                      <li><strong>Toggles:</strong> Update all toggle instances with the new markup. (<a href="#section-toggles">example markup</a>)</li>
-                      <li><strong>Toggles:</strong> Toggles are now all-CSS so the <code>toggles.js</code> file has been removed. Be sure to remove any includes or references.</li>
-                      <li><strong>Toggles:</strong> Update any JS which checks for state change on toggles. Event listeners should watch for changes to the input element. Don't use a click event listener because browsers may register two clicks: one on the label and one on the checkbox inside. (<a href="#section-toggles">example markup</a>)</li>
-                      <li><strong>Dropdown Triggers:</strong> Caret icons have been changed from solid triangles to chevrons. Feel free to continue using the <code>.caret</code> class or switch to the <code>.fycon-arrow-down</code> class.</li>
-                      <li><strong>Modals:</strong> Padding has increased all around. Check that this hasn't broken any modal layouts.</li>
-                      <li><strong>Modals:</strong> The Small modal class (<code>.modal-sm</code>) has been increased from 300px to 450px wide. Use <code>.modal-xs</code> for 300px wide version.</li>
-                      <li><strong>Modals:</strong> Use <code>.text-left</code>, <code>.text-right</code> and <code>.text-center</code> to align headlines, text and buttons.</li>
-                      <li><strong>Modals:</strong> Replace instances of the <code>.centered</code> class (deprecated in Bootstrap) in modal bodies with <code>.text-center</code>.</li>
-                      <li><strong>Modals:</strong> Remove the <code>.animated</code> class. Use the default <code>.fade</code> class in the <code>.modal</code> wrapper.</li>
-                      <li><strong>Colors:</strong> All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc. (<a href="#section-colors">more</a>)</li>
-                      <li><strong>Popovers:</strong> The Light theme (i.e. the original theme) is now the default. No need to use the <code>.light</code> class anymore. The Dark theme is still available using the combination of <code>.popover .dark</code>.</li>
-                      <li><strong>Tabs:</strong> Check tab navigation as <a href="#section-tabs">their styles have been updated</a>.</li>
-                    </ol>
+                    <pre>"livefyre-bootstrap": "git+ssh://git@github.com/Livefyre/livefyre-bootstrap.git#3.0.0"</pre>
+                    <p>Or, you can use the CDN urls, once they're ready:</p>
+                    <pre>https://cdn.livefyre.com/libs/livefyre-bootstrap/v3.0.0/livefyre-bootstrap.min.css
+https://cdn.livefyre.com/libs/livefyre-bootstrap/v3.0.0/livefyre-bootstrap.min.js</pre>
                   </div>
                 </div>
               </div>
@@ -147,12 +89,12 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
           <section id="section-importing">
             <h1 class="section-header">Importing Variables &amp; Mixins</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-importing" aria-expanded="false" aria-controls="changes-importing">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-importing" aria-expanded="false" aria-controls="changes-importing">Changes from v2.x</a>
             <div class="collapse" id="changes-importing">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>You must specify the location of your [Twitter] Bootstrap files using the <code>@bootstrap-less</code> variable.</li>
+                  <li>None yet.</li>
                 </ul>
               </div>
             </div>
@@ -184,14 +126,12 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
             
             <h1 class="section-header">Colors</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-colors" aria-expanded="false" aria-controls="changes-colors">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-colors" aria-expanded="false" aria-controls="changes-colors">Changes from v2.x</a>
             <div class="collapse" id="changes-colors">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>All grey values have changed. Make sure your text is still readable, backgrounds aren't too dark/light, etc.</li>
-                  <li>New variables <code>@gray-darkest</code>, <code>@gray-darkish</code> and <code>@gray-lightest</code>.</li>
-                  <li>Using hex codes for all (instead of <code>tint</code>) so it's easier to match a variable name with what you find in the inspector.</li>
+                  <li>To do: Update this section</li>
                 </ul>
               </div>
             </div>
@@ -250,18 +190,17 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
           <section id="section-checkboxes">
             <h1 class="section-header">Checkboxes and Radio Buttons</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-checkboxes" aria-expanded="false" aria-controls="changes-checkboxes">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-checkboxes" aria-expanded="false" aria-controls="changes-checkboxes">Changes from v2.x</a>
             <div class="collapse" id="changes-checkboxes">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>Checkboxes and radio buttons override browser default styles and are rendered using Fycons. (Chrome and Safari only)</li>
-                  <li>On focus, instead of displaying a fuzzy, blue halo, checkboxes and radio buttons turn blue to be more consistent with other form fields. (Chrome and Safari only)</li>
+                  <li>Checkboxes and radio buttons override browser default styles and are rendered using animated pseudo-elements and fycons. (Chrome and Safari only)</li>
                 </ul>
               </div>
             </div>
 
-            <p class="descrip">Checkboxes and radio buttons override browser default styles and are rendered using Fycons. (Chrome and Safari only)</p>
+            <p class="descrip">Checkboxes and radio buttons override browser default styles and are rendered using animated pseudo-elements and fycons. (Chrome and Safari only)</p>
             <div class="bs-example" data-example-id="block-checkboxes-radios">
               <form>
                 <div class="checkbox">
@@ -357,24 +296,20 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
           <section id="section-buttons">
             <h1 class="section-header">Buttons</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-buttons" aria-expanded="false" aria-controls="changes-buttons">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-buttons" aria-expanded="false" aria-controls="changes-buttons">Changes from v2.x</a>
             <div class="collapse" id="changes-buttons">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>New semi-transparent <code>.btn-hollow</code> style.</li>
-                  <li>Attach a plus symbol next to a fycon using the <code>.add-plus</code> class.</li>
-                  <li>Improved ability to fine tune fycon sizes.</li>
-                  <li>Improved vertical centering.</li>
-                  <li>Constructed using new button height variables (@btn-height-lg: 46px) instead of vertical padding to ensure better button height consistency.</li>
-                  <li>All buttons now have the same border-radius (2px).</li>
+                  <li>Coral UI Spectrum Theme uses outlined buttons for Default and Warning.</li>
+                  <li>Button heights are slightly shorter for large and medium sizes.</li>
                 </ul>
               </div>
             </div>
 
             <h3>Colors</h3>
             <p class="descrip">We have a number of button colors available that are used throughout our designs. Semantically, the class names are defined by action and not color.</p>
-            <p class="descrip">The exception is the new Hollow button. It's semi-transparent so it looks slick on top of a photo.</p>
+            <p class="descrip">The exception is the Hollow button. It's semi-transparent so it looks slick on top of a photo.</p>
             <div class="bs-example">
               <button class="btn btn-default" disabled="disabled">Disabled</button>
               <button class="btn btn-default">Default</button>
@@ -401,7 +336,8 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
             </div>
 
             <h3>Sizes</h3>
-            <p class="descrip">There are also 3 additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
+            <p class="descrip">There are also three additional sizes as well as a full-width block-level button size. These are designed to match input and form control heights.</p>
+            <p class="descrip">Coral UI only comes with two button sizes (medium and large). The rest are custom to LF-Bootstrap.</p>
             <div class="bs-example">
               <button class="btn btn-primary btn-lg">Large</button>
               <button class="btn btn-primary">Default</button>
@@ -476,18 +412,19 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
           <section id="section-button-groups">
             <h1 class="section-header">Button Groups & Button Toolbars</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-button-groups" aria-expanded="false" aria-controls="changes-button-groups">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-button-groups" aria-expanded="false" aria-controls="changes-button-groups">Changes from v2.x</a>
             <div class="collapse" id="changes-button-groups">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>Added class <code>.btn-toolbar-right</code> for right-aligning buttons in a button toolbar.</li>
-                  <li>Increased spacing between buttons in button toolbar.</li>
+                  <li>To do: Update this section</li>
                 </ul>
               </div>
             </div>
 
             <p class="descrip">There are a number of configurable button groups and toolbars that flow both horizontally and vertically as well as sizing options.</p>
+
+            <p class="descrip">6/2/16 Note: As of today, there don't seem to be updated Button Group designs in the Coral UI docs. These styles are just guesses until final designs are available.</p>
 
             <div class="bs-example">
               <div class="btn-group btn-group-lg">
@@ -671,20 +608,19 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
 
           <section id="list-group">
             <h1 class="section-header">List Group</h1>
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-list-group" aria-expanded="false" aria-controls="changes-list-group">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-list-group" aria-expanded="false" aria-controls="changes-list-group">Changes from v2.x</a>
             <div class="collapse" id="changes-list-group">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>Minor skin update. Most notably, we removed the border that surrounded the entire list because we usually don't need it.</li>
-                  <li>Added modifier <code>.list-group-striped</code> to alternate background row colors.</li>
-                  <li>Added modifier <code>.list-group-no-borders</code> to remove all borders.</li>
+                  <li>To do: Update this section</li>
                 </ul>
               </div>
             </div>
 
 
             <ul class="descrip">
+              <li>This is a custom Bootstrap component. There is no equivalent component in Coral UI yet.</li> 
               <li>Use to display simple lists of information. Ex: User activity feed, Stream rules.</li>
               <li>Markup is pretty flexible. Ex: You can use an unordered list or a div with a list of a links.</li>
               <li>For dashboard lists (ex: Streams List, Users List), use the <a href="#section-slats">Slats</a> component instead.</li>
@@ -838,6 +774,7 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
 
           <section id="section-slats">
             <h1 class="section-header">Slats</h1>
+            <p class="descrip">This is a custom Bootstrap component. The closest equivalent in Coral UI is the Table component.</p> 
             <p class="descrip">Use slats to create dashboard lists. Ex: Streams List, Users List</p>
 
             <h3>Size options</h3>
@@ -1020,6 +957,7 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
           <section id="section-nodatablock">
             <h1 class="section-header">No-Data Block</h1>
             <ul class="descrip">
+              <li>This is a custom Bootstrap component. There is no equivalent component in Coral UI yet.</li> 
               <li>Used when page displays no data (ex: "No results match your search", "No content in Collection").</li>
               <li>Can display a large image or Fycon up top.</li>
             </ul>
@@ -1045,6 +983,7 @@ https://cdn.livefyre.com/libs/livefyre-bootstrap/v2.0.3/livefyre-bootstrap.min.j
           <section id="section-pager">
             <h1 class="section-header">Pager</h1>
             <ul class="descrip">
+              <li>This is a custom Bootstrap component. There is no equivalent component in Coral UI.</p> 
               <li>For previous/next paging (not for numbered pagination).</li>
               <li>Pager is right-aligned by default but you can override it using [Twitter] Boostrap's helper classes <code>.text-left</code> and <code>.text-center</code> alongside <code>.pager</code>.</li>
             </ul>
@@ -1202,17 +1141,12 @@ $('#element').tooltip(
           <section id="section-modals">
             <h1 class="section-header">Modals</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-modals" aria-expanded="false" aria-controls="changes-modals">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-modals" aria-expanded="false" aria-controls="changes-modals">Changes from v2.x</a>
             <div class="collapse" id="changes-modals">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>Increased overall padding. Other minor style changes.</li>
-                  <li>To add a new 450px modal size, we changed <code>.modal-sm</code> from 300px wide to 450px. You can use the new <code>.modal-xs</code> class to create 300px wide modals.</li>
-                  <li>Make the bounce-in animation the default. So, no need to use the <code>.animated</code> class anymore.</li>
-                  <li>Added ability to divide content inside the modal body using <code>section</code>.</li>
-                  <li>Added support for [Twitter] Bootstrap's helper classes for text alignment (<code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code>) so they can be used on the modal's title, body and footer containers. Note that the <code>.centered</code> class has been deprecated in [Twitter] Bootstrap.</li>
-                  <li>Fixed close button so it no longer affects header text positioning.</li>
+                  <li>To do: Update this section</li>
                 </ul>
               </div>
             </div>
@@ -1462,14 +1396,12 @@ $('#element').tooltip(
           <section id="section-dropdowns">
             <h1 class="section-header">Dropdowns</h1>
 
-            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-dropdowns" aria-expanded="false" aria-controls="changes-dropdowns">Changes from v1.x</a>
+            <a class="collapse-toggle pull-right" data-toggle="collapse" href="#changes-dropdowns" aria-expanded="false" aria-controls="changes-dropdowns">Changes from v2.x</a>
             <div class="collapse" id="changes-dropdowns">
               <div class="well">
-                <h3>Changes from v1.x</h3>
+                <h3>Changes from v2.x</h3>
                 <ul class="descrip">
-                  <li>Minor style updates to padding, border-radius, hover colors.</li>
-                  <li>New <code>.dropdown-menu-center</code> class for center-aligning dropdown panels.</li>
-                  <li>The trigger button's caret has been changed to a chevron. Keep using the <code>.caret</code> class in dropdown triggers. Double-check other dropdown triggers to make sure they now display the chevron.</li>
+                  <li>To do: Update this section</li>
                 </ul>
               </div>
             </div>
@@ -1734,6 +1666,7 @@ loader.decorate($('#lfLoader-mini'), 'mini')</code></pre>
 
             <h3>Usage</h3>
             <ul class="descrip">
+              <li>This is a custom Livefyre Bootstrap component. There is no Coral UI equivalent.</li>
               <li>Markup is taken from our React component <code>Simple.js</code>, used in Asset Manager.</li>
               <li>The component's width is determined by its container. Each example below is wrapped in a <code>&lt;div class="col-md-6"&gt;</code>.</li>
             </ul>
