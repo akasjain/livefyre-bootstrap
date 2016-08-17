@@ -35,6 +35,13 @@
 @lf-orange-light:    lighten(@lf-orange, 15%);
 @lf-red-light:       lighten(@lf-red, 15%);
 
+// Coral colors
+// -------------------------
+$coral-color-blue:                   rgb(50, 110, 200);
+$coral-color-primary:                $coral-color-blue;
+$link-subtle-focus-glow-color:       rgb(75, 75, 75);
+$link-subtle-focus-outline-color:    rgb(50, 50, 50);
+
 // Common Social Media Colors
 // -------------------------
 
@@ -93,14 +100,14 @@
 // -------------------------
 @padding-base-vertical:     7px;
 @component-active-bg:       @lf-blue;
-@border-radius-xsmall:		2px;
+@border-radius-xsmall:      2px;
 
 /**
  * Links
  */
 
-@link-color:            @lf-blue;
-@link-hover-color:      darken(@lf-blue, 15%);
+@link-color:            $coral-color-primary;
+@link-hover-color:      @link-color;
 
 /**
  * Navbar
@@ -186,13 +193,13 @@
 
 // Labels
 // -------------------------
-@label-color:              			#ffffff;
-@label-default-bg:					@lf-gray-lighter;
-@label-primary-bg:					@lf-orange;
-@label-success-bg:					@lf-green;
-@label-info-bg:						@lf-blue;
-@label-warning-bg:					@lf-yellow;
-@label-danger-bg:					@lf-red;
+@label-color:                       #ffffff;
+@label-default-bg:                  @lf-gray-lighter;
+@label-primary-bg:                  @lf-orange;
+@label-success-bg:                  @lf-green;
+@label-info-bg:                     @lf-blue;
+@label-warning-bg:                  @lf-yellow;
+@label-danger-bg:                   @lf-red;
 
 // Badges
 // -------------------------
@@ -203,20 +210,20 @@
 @badge-active-color:          @link-color;
 @badge-active-bg:             #fff;
 
-@badge-font-size:			  1em;
+@badge-font-size:             1em;
 @badge-font-weight:           500;
 @badge-line-height:           1.2;
 @badge-border-radius:         1em;
 
 // Tooltips
 // -------------------------
-@tooltip-max-width: 			200px;
+@tooltip-max-width:             200px;
 @tooltip-arrow-width:           5px;
 
-@tooltip-color:					#ffffff;
+@tooltip-color:                 #ffffff;
 @tooltip-light-color:           @lf-gray-dark;
 
-@tooltip-bg:					#232731;
+@tooltip-bg:                    #232731;
 @tooltip-light-bg:              #ffffff;
 
 @tooltip-arrow-color:           @tooltip-bg;
@@ -248,21 +255,21 @@
 
 // Modals
 // -------------------------
-@modal-header-bg:				#F4F5F5;
-@modal-header-border-color:		#ECECEA;
-@modal-inner-padding: 			15px;
-@modal-title-padding:         	15px;
-@modal-backdrop-bg:           	#000;
-@modal-backdrop-opacity:      	.7;
+@modal-header-bg:               #F4F5F5;
+@modal-header-border-color:     #ECECEA;
+@modal-inner-padding:           15px;
+@modal-title-padding:           15px;
+@modal-backdrop-bg:             #000;
+@modal-backdrop-opacity:        .7;
 @modal-content-fallback-border-color:          #999;
-@modal-title-line-height:     	@line-height-base;
+@modal-title-line-height:       @line-height-base;
 @modal-content-bg:              #fff;
-@modal-content-border-color: 	rgba(0,0,0,.2);
-@modal-header-border-color:   	#e5e5e5;
-@modal-footer-border-color:   	@modal-header-border-color;
-@modal-lg: 						900px;
-@modal-md: 						600px;
-@modal-sm: 						300px;
+@modal-content-border-color:    rgba(0,0,0,.2);
+@modal-header-border-color:     #e5e5e5;
+@modal-footer-border-color:     @modal-header-border-color;
+@modal-lg:                      900px;
+@modal-md:                      600px;
+@modal-sm:                      300px;
 
 // Alerts
 // -------------------------
