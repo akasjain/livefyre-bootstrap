@@ -40,10 +40,151 @@
 
 // Coral colors
 // -------------------------
-$coral-color-blue:                   rgb(50, 110, 200);
-$coral-color-primary:                $coral-color-blue;
-$link-subtle-focus-glow-color:       rgb(75, 75, 75);
-$link-subtle-focus-outline-color:    rgb(50, 50, 50);
+// base colors
+@coral-color-white: rgb(255, 255, 255);
+@coral-color-black: rgb(0, 0, 0);
+
+// (-highlight and -stroke modifiers are tints of base color)
+@coral-color-blue: rgb(50, 110, 200);
+@coral-color-blue-highlight: rgb(65, 120, 205);
+@coral-color-blue-stroke: rgb(30, 95, 190);
+@coral-color-lightblue: rgb(135, 190, 255);
+@coral-color-lightblue-highlight: rgb(150, 200, 255);
+@coral-color-lightblue-stroke: rgb(120, 175, 255);
+@coral-color-periwinkle: rgb(180, 170, 235);
+@coral-color-periwinkle-stroke: rgb(170, 155, 230);
+@coral-color-plum: rgb(195, 135, 190);
+@coral-color-plum-stroke: rgb(180, 115, 175);
+@coral-color-fuchsia: rgb(230, 125, 190);
+@coral-color-fuchsia-stroke: rgb(220, 105, 180);
+@coral-color-magenta: rgb(245, 120, 155);
+@coral-color-magenta-stroke: rgb(240, 100, 130);
+@coral-color-red: rgb(250, 115, 105);
+@coral-color-red-highlight: rgb(250, 125, 115);
+@coral-color-red-stroke: rgb(250, 105, 95);
+@coral-color-orange: rgb(250, 165, 90);
+@coral-color-orange-stroke: rgb(250, 150, 60);
+@coral-color-tangerine: rgb(245, 185, 90);
+@coral-color-tangerine-stroke: rgb(240, 170, 60);
+@coral-color-yellow: rgb(250, 210, 105);
+@coral-color-yellow-highlight: rgb(250, 215, 130);
+@coral-color-yellow-stroke: rgb(245, 195, 70);
+@coral-color-chartreuse: rgb(210, 220, 115);
+@coral-color-chartreuse-stroke: rgb(190, 200, 100);
+@coral-color-green: rgb(165, 210, 115);
+@coral-color-green-highlight: rgb(179, 218, 138);
+@coral-color-green-stroke: rgb(140, 195, 95);
+@coral-color-kellygreen: rgb(130, 195, 135);
+@coral-color-kellygreen-stroke: rgb(100, 180, 110);
+@coral-color-seafoam: rgb(120, 200, 190);
+@coral-color-seafoam-stroke: rgb(80, 190, 170);
+@coral-color-cyan: rgb(120, 215, 230);
+@coral-color-cyan-stroke: rgb(70, 200, 220);
+
+// Theme
+@coral-color-body-background: rgb(245, 245, 245);
+
+@coral-color-darkui-body-background: rgb(75, 75, 75);
+
+// Text
+@coral-color-text: rgb(50, 50, 50);
+@coral-color-text-active: @coral-color-white;
+@coral-color-text-error: rgb(225, 65, 50);
+@coral-color-text-secondary: rgb(112, 112, 112);
+@coral-color-text-caption: rgb(145, 145, 145);
+@coral-color-text-heading: @coral-color-text;
+@coral-color-text-disabled: rgb(190, 190, 190);
+
+@coral-color-darkui-text: @coral-color-white;
+@coral-color-darkui-text-active: @coral-color-white;
+@coral-color-darkui-text-error: @coral-color-text-error;
+@coral-color-darkui-text-secondary: rgb(190, 190, 190);
+@coral-color-darkui-text-caption: rgb(140, 140, 140);
+@coral-color-darkui-text-heading: @coral-color-darkui-text;
+@coral-color-darkui-text-disabled: rgb(100, 100, 100);
+
+// Icon
+@coral-color-icon: rgba(0, 0, 0, .60);
+@coral-color-icon-hover: rgba(0, 0, 0, .80);
+@coral-color-icon-disabled: rgba(0, 0, 0, .15);
+
+@coral-color-darkui-icon: rgba(255, 255, 255, .90);
+@coral-color-darkui-icon-hover: @coral-color-white;
+@coral-color-darkui-icon-disabled: rgba(255, 255, 255, .05);
+
+// Component
+@coral-color-glow: @coral-color-primary;
+@coral-color-glow-error: rgb(225, 65, 50);
+@coral-color-border: rgb(208, 208, 208); // background with black-15%
+@coral-color-border-error: rgb(225, 65, 50);
+@coral-color-border-disabled: rgb(230, 230, 230);
+@coral-color-background: rgb(250, 250, 250);
+@coral-color-background-hover: @coral-color-white;
+@coral-color-background-active: rgb(235, 235, 235);
+@coral-color-background-focus: @coral-color-white;
+@coral-color-background-disabled: rgb(240, 240, 240);
+
+@coral-color-darkui-glow: @coral-color-lightblue;
+@coral-color-darkui-glow-error: @coral-color-glow-error;
+@coral-color-darkui-border: rgb(60, 60, 60); // dark background with black-20%
+@coral-color-darkui-border-error: @coral-color-border-error;
+@coral-color-darkui-border-disabled: rgb(65, 65, 65);
+@coral-color-darkui-background: rgb(80, 80, 80);
+@coral-color-darkui-background-hover: rgb(85, 85, 85);
+@coral-color-darkui-background-active: rgb(70, 70, 70);
+@coral-color-darkui-background-focus: rgb(80, 80, 80);
+@coral-color-darkui-background-disabled: rgb(80, 80, 80);
+
+// Container
+@coral-color-container-border: rgb(233, 233, 233);
+@coral-color-container-background: rgb(240, 240, 240);
+
+@coral-color-darkui-container-border: rgb(67, 67, 67);
+@coral-color-darkui-container-background: rgb(72, 72, 72);
+
+// Overlay
+@coral-color-overlay-border: rgb(200, 200, 200);
+@coral-color-overlay-background: @coral-color-white;
+
+@coral-color-darkui-overlay-border: rgb(65, 65, 65);
+@coral-color-darkui-overlay-background: rgb(85, 85, 85);
+
+@coral-color-overlay-backdrop: rgba(0, 0, 0, 0.30);
+
+// Primary and Info
+// Blue is used to show information, help, links, or to otherwise create prominence
+@coral-color-primary: @coral-color-blue;
+@coral-color-primary-highlight: @coral-color-blue-highlight;
+@coral-color-primary-stroke: @coral-color-blue-stroke;
+
+@coral-color-darkui-primary: @coral-color-lightblue;
+@coral-color-darkui-primary-highlight: @coral-color-lightblue-highlight;
+@coral-color-darkui-primary-stroke: @coral-color-lightblue-stroke;
+
+@coral-color-info: @coral-color-lightblue;
+@coral-color-info-highlight: @coral-color-lightblue-highlight;
+@coral-color-info-stroke: @coral-color-lightblue-stroke;
+
+// Error
+// Red is used to show errors or alerts
+@coral-color-error: @coral-color-red;
+@coral-color-error-highlight: @coral-color-red-highlight;
+@coral-color-error-stroke: @coral-color-red-stroke;
+
+// Warning
+// Yellow is for warnings
+@coral-color-warning: @coral-color-yellow;
+@coral-color-warning-highlight: @coral-color-yellow-highlight;
+@coral-color-warning-stroke: @coral-color-yellow-stroke;
+
+// Success
+// Green is used to show sucess
+@coral-color-success: @coral-color-green;
+@coral-color-success-highlight: @coral-color-green-highlight;
+@coral-color-success-stroke: @coral-color-green-stroke;
+
+@link-subtle-focus-glow-color:       rgb(75, 75, 75);
+@link-subtle-focus-outline-color:    rgb(50, 50, 50);
 
 // Common Social Media Colors
 // -------------------------
@@ -120,7 +261,7 @@ $link-subtle-focus-outline-color:    rgb(50, 50, 50);
  * Links
  */
 
-@link-color:            $coral-color-primary;
+@link-color:            @coral-color-primary;
 @link-hover-color:      @link-color;
 
 /**
@@ -206,37 +347,43 @@ $link-subtle-focus-outline-color:    rgb(50, 50, 50);
 @btn-height-sm:                  30px;
 @btn-height-lg:                  46px;
 
-@btn-radius:                     @border-radius-small; // Used for all button sizes
+@btn-radius:                     @border-radius-large; // Used for all button sizes
 
 @btn-font-weight:                500;
 
-@btn-default-color:              @gray-darkest;
-@btn-default-bg:                 @gray-light;
-@btn-default-border:             @gray-light;
+@btn-default-color:              @coral-color-white;
+@btn-default-bg:                 @coral-color-primary;
+@btn-default-border:             @coral-color-primary-stroke;
+@btn-default-highlight:          @coral-color-primary-highlight;
 
-@btn-primary-color:              #fff;
-@btn-primary-bg:                 @orange;
-@btn-primary-border:             @orange-dark;
+@btn-primary-color:              @coral-color-white;
+@btn-primary-bg:                 @coral-color-primary;
+@btn-primary-border:             @coral-color-primary-stroke;
+@btn-primary-highlight:          @coral-color-primary-highlight;
 
-@btn-success-color:              #fff;
-@btn-success-bg:                 @green;
-@btn-success-border:             @green-dark;
+@btn-success-color:              @coral-color-white;
+@btn-success-bg:                 @coral-color-success;
+@btn-success-border:             @coral-color-success-stroke;
+@btn-success-highlight:          @coral-color-success-highlight;
 
-@btn-info-color:                 #fff;
-@btn-info-bg:                    @blue;
-@btn-info-border:                @blue-dark;
+@btn-info-color:                 @coral-color-white;
+@btn-info-bg:                    @coral-color-primary;
+@btn-info-border:                @coral-color-primary-stroke;
+@btn-info-highlight:             @coral-color-primary-highlight;
 
-@btn-warning-color:              #fff;
-@btn-warning-bg:                 @yellow;
-@btn-warning-border:             @yellow-dark;
-
-@btn-danger-color:               #fff;
-@btn-danger-bg:                  @red;
-@btn-danger-border:              @red-dark;
+@btn-warning-color:              @coral-color-white;
+@btn-warning-bg:                 @coral-color-warning;
+@btn-warning-border:             @coral-color-warning-stroke;
+@btn-warning-highlight:          @coral-color-warning-highlight;
 
 @btn-hollow-color:               #fff;
 @btn-hollow-bg:                  fade(@gray-darker, 40%);
 @btn-hollow-border:              #fff;
+
+@btn-danger-color:               @coral-color-white;
+@btn-danger-bg:                  @coral-color-error;
+@btn-danger-border:              @coral-color-error-stroke;
+@btn-danger-highlight:           @coral-color-error-highlight;
 
 @btn-link-disabled-color:        @gray-darkish;
 
