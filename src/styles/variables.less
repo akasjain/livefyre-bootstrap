@@ -38,6 +38,13 @@
 @orange-light:  lighten(@orange, 15%);  // #ef9583
 @red-light:     lighten(@red, 15%);     // #e37893
 
+// Coral colors
+// -------------------------
+$coral-color-blue:                   rgb(50, 110, 200);
+$coral-color-primary:                $coral-color-blue;
+$link-subtle-focus-glow-color:       rgb(75, 75, 75);
+$link-subtle-focus-outline-color:    rgb(50, 50, 50);
+
 // Common Social Media Colors
 // -------------------------
 @brand-audioboo:      #b31277;
@@ -113,8 +120,8 @@
  * Links
  */
 
-@link-color:            @blue;
-@link-hover-color:      darken(@blue, 15%);
+@link-color:            $coral-color-primary;
+@link-hover-color:      @link-color;
 
 /**
  * Navbar
