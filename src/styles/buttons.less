@@ -37,26 +37,26 @@
 // --------------------------------------------------
 
 .btn-default {
-  .button-shadow(@btn-default-bg; @btn-default-border);
+  .button-shadow(@btn-default-highlight; @btn-default-border);
 }
 .btn-primary {
-  .button-shadow(@btn-primary-bg; @btn-primary-border);
+  .button-shadow(@btn-primary-highlight; @btn-primary-border);
 }
 // Warning appears as orange
 .btn-warning {
-  .button-shadow(@btn-warning-bg; @btn-warning-border);
+  .button-shadow(@btn-warning-highlight; @btn-warning-border);
 }
 // Danger and error appear as red
 .btn-danger {
-  .button-shadow(@btn-danger-bg; @btn-danger-border);
+  .button-shadow(@btn-danger-highlight; @btn-danger-border);
 }
 // Success appears as green
 .btn-success {
-  .button-shadow(@btn-success-bg; @btn-success-border);
+  .button-shadow(@btn-success-highlight; @btn-success-border);
 }
 // Info appears as blue-green
 .btn-info {
-  .button-shadow(@btn-info-bg; @btn-info-border);
+  .button-shadow(@btn-info-highlight; @btn-info-border);
 }
 
 
@@ -83,6 +83,7 @@
   font-weight: @btn-font-weight;
   background: transparent;
   border-radius: @btn-radius;
+  color: @coral-color-text-secondary;
 
   &:hover,
   &:focus,
