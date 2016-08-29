@@ -6,17 +6,17 @@ var View = require('view');
 /**
  * A View that, when clicked, executes a Command
  */
-function Button (command, opts) {
-    View.call(this, opts);
-    if (command) {
-        this._setCommand(command);
-    }
+function Button(command, opts) {
+  View.call(this, opts);
+  if (command) {
+    this._setCommand(command);
+  }
 }
 inherits(Button, View);
 
 // DOM Event Listeners
 Button.prototype.events = {
-    click: '_execute'
+  click: '_execute'
 };
 
 Button.prototype.elClass += ' lf-btn';
@@ -33,7 +33,7 @@ Button.prototype.disabledClass = 'disabled';
  */
 Button.prototype._execute = function _execute() {
     // TODO: Don't execute if not enabled
-    this._command.execute();
+  this._command.execute();
 };
 
 /**
@@ -43,12 +43,12 @@ Button.prototype._execute = function _execute() {
  * @param command {Command}
  */
 Button.prototype._setCommand = function (command) {
-    var self = this;
-    this._command = command;
-    this._setEnabled(this._command.canExecute());
-    this._command.on('change:canExecute', function (canExecute) {
-        self._setEnabled(canExecute);
-    });
+  var self = this;
+  this._command = command;
+  this._setEnabled(this._command.canExecute());
+  this._command.on('change:canExecute', function (canExecute) {
+    self._setEnabled(canExecute);
+  });
 };
 
 /**
@@ -57,7 +57,7 @@ Button.prototype._setCommand = function (command) {
  * @param {boolean} isEnabled - Whether the button should be enabled
  */
 Button.prototype._setEnabled = function (isEnabled) {
-    this.$el.toggleClass(this.disabledClass, ! isEnabled);
+  this.$el.toggleClass(this.disabledClass, !isEnabled);
 };
 
 module.exports = Button;
