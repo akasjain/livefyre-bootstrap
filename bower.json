@@ -1,6 +1,6 @@
 {
   "name": "livefyre-bootstrap",
-  "version": "1.4.19",
+  "version": "1.4.18",
   "main": [
     "./src/main.js"
   ],
