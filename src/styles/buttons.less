@@ -52,3 +52,84 @@
 .lf-btn-block {
     .btn-block();
 }
+
+// Quiet primary
+.lf-btn-quiet {
+    border-color: transparent;
+    background-color: transparent;
+    color: @coral-color-text-secondary;
+
+    &.is-disabled,
+    &:disabled {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+        &:focus,
+        &.is-focused {
+            background-color: transparent;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: @coral-color-primary;
+        }
+
+        &.is-selected,
+        &:active {
+            background-color: transparent;
+            color: @coral-color-primary-stroke;
+        }
+    }
+}
+
+.lf-btn-minimal {
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0 8px;
+
+    // No borders
+    border-width: 0;
+    border-color: transparent;
+    background-color: transparent;
+    color: @coral-color-icon;
+    line-height: @coral-minimalbutton-line-height;
+    transition: color .15s ease-out;
+
+    &.is-disabled,
+    &:disabled {
+        border-color: transparent;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+        &.is-selected,
+        &:active,
+        &:hover {
+            background-color: transparent;
+            color: @coral-color-icon-hover;
+        }
+
+        // Focus overrides hover/selected
+        &:focus,
+        &.is-focused {
+            //no-glow();
+
+            // Override border width as set by .coral-Button
+            border-width: 0;
+            background-color: transparent;
+            color: @coral-color-glow;
+        }
+
+        // Active overrides focus
+        &:active {
+            // Repeated to override focus
+            color: @coral-color-icon-hover;
+        }
+    }
+}
