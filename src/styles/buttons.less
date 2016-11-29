@@ -168,3 +168,90 @@
     font-size: @font-size-large + 8px;
   }
 }
+
+// Quiet primary
+.btn-quiet {
+    border-color: transparent;
+    background-color: transparent;
+    color: @coral-color-text-secondary;
+
+    &.is-disabled,
+    &:disabled {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+        &:focus,
+        &.is-focused {
+            background-color: transparent;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: @coral-color-primary;
+        }
+
+        &.is-selected,
+        &:active {
+            background-color: transparent;
+            color: @coral-color-primary-stroke;
+        }
+    }
+}
+
+// Minimal Button
+@coral-minimalbutton-notification-background-color: rgb(235, 50, 45);
+@coral-minimalbutton-notification-border-color: rgb(30, 30, 30);
+@coral-minimalbutton-notification-text-color: @coral-color-text-active;
+@coral-minimalbutton-line-height: 38px;
+
+.btn-minimal {
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0 8px;
+
+    // No borders
+    border-width: 0;
+    border-color: transparent;
+    background-color: transparent;
+    color: @coral-color-icon;
+    line-height: @coral-minimalbutton-line-height;
+    transition: color .15s ease-out;
+
+    &.is-disabled,
+    &:disabled {
+        border-color: transparent;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    &:not(:disabled):not(.is-disabled) {
+        &.is-selected,
+        &:active,
+        &:hover {
+            background-color: transparent;
+            color: @coral-color-icon-hover;
+        }
+
+        // Focus overrides hover/selected
+        &:focus,
+        &.is-focused {
+            //no-glow();
+
+            // Override border width as set by .coral-Button
+            border-width: 0;
+            background-color: transparent;
+            color: @coral-color-glow;
+        }
+
+        // Active overrides focus
+        &:active {
+            // Repeated to override focus
+            color: @coral-color-icon-hover;
+        }
+    }
+}
