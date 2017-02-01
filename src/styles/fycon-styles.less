@@ -1,10 +1,11 @@
 @import (reference) "./variables";
-@fycon-font-version: "2.1.1";
+@fycon-font-version: "2.1.2";
 
 .fycons-font-face(@fycon-font-version: "@{fycon-font-version}", @icon-font-path: "@{icon-font-path}", @fycon-font-name: "@{fycon-font-name}"){
   font-family: "fycons-@{fycon-font-version}";
   src:~"url('@{icon-font-path}@{fycon-font-name}.eot')";
   src:~"url('@{icon-font-path}@{fycon-font-name}.eot?#iefix') format('embedded-opentype')",
+    ~"url('@{icon-font-path}@{fycon-font-name}.woff2') format('woff2')",
     ~"url('@{icon-font-path}@{fycon-font-name}.woff') format('woff')",
     ~"url('@{icon-font-path}@{fycon-font-name}.ttf') format('truetype')",
     ~"url('@{icon-font-path}@{fycon-font-name}.svg#fycons') format('svg')";
