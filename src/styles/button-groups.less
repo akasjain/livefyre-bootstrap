@@ -8,7 +8,26 @@
   .btn + .btn-group,
   .btn-group + .btn,
   .btn-group + .btn-group {
-    margin-left: 1px;
+    //margin-left: 1px;
+  }
+  > .btn {
+    background-color: @coral-color-background;
+    border: 1px solid @coral-color-border;
+    color: @coral-color-text-secondary;
+    text-shadow: none;
+    // Bring the "active" button to the front
+    &:hover {
+      z-index: 2;
+      background-color: @coral-color-white !important;
+      color: @coral-color-text-secondary;
+    }
+    &:focus,
+    &:active,
+    &.active {
+      z-index: 2;
+      background-color: @coral-color-background-active !important;
+      color: @coral-color-text;
+    }
   }
 }
 
