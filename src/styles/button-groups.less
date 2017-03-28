@@ -47,22 +47,22 @@
   > .lf-btn {
     position: relative;
     float: left;
-    background-color: #fafafa;
-    border-color: #d0d0d0;
+    background-color: @coral-color-background;
+    border-color: @coral-color-border;
     color: @coral-color-text-secondary;
     text-shadow: none;
     // Bring the "active" button to the front
     &:hover {
       z-index: 2;
-      //background-color: #fff;
+      background-color: @coral-color-white;
       color: @coral-color-text-secondary;
     }
     &:focus,
     &:active,
     &.active {
       z-index: 2;
-      background-color: #ebebeb;
-      color: #323232;
+      background-color: @coral-color-body-background;
+      color: @coral-color-text;
     }
     &:focus {
       // Remove focus outline when dropdown JS adds it after closing the menu
