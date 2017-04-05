@@ -9,7 +9,7 @@ mkdir -p $ROOT/dist
 # build the compiled versions
 node $ROOT/r.js -o tools/build.js
 node $ROOT/r.js -o tools/build.cdn.js
-$ROOT/node_modules/less/bin/lessc -ru --include-path=lib --compress $ROOT/src/styles/all.less $ROOT/dist/all.css
+$ROOT/node_modules/less/bin/lessc -ru --include-path=./ --compress $ROOT/src/styles/all.less $ROOT/dist/all.css
 cp $ROOT/dist/all.css $ROOT/dist/livefyre-bootstrap.min.css 
 #$ROOT/node_modules/csso/bin/csso $ROOT/dist/all.css $ROOT/dist/livefyre-bootstrap.min.css
 

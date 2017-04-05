@@ -18,11 +18,11 @@
   },
   "version": "1.5.2",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install && chmod 755 ./node_modules/less/bin/lessc",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "start": "./bin/server.js",
     "test": "./bin/test",
     "hint": "./node_modules/.bin/lfeslint",
-    "lessc": "./node_modules/less/bin/lessc -ru --include-path=lib/ --compress src/styles/all.less dist/all.css",
+    "lessc": "./node_modules/.bin/lessc -ru --include-path=./ --compress src/styles/all.less dist/all.css",
     "jsdoc": "rm -rf docs/api && ./node_modules/jsdoc/jsdoc -c tools/jsdoc.conf.json",
     "build": "bin/build"
   },
