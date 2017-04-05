@@ -17,13 +17,13 @@
     "type": "git",
     "url": "https://github.com/Livefyre/livefyre-bootstrap.git"
   },
-  "version": "2.1.2",
+  "version": "2.1.3",
   "scripts": {
     "postinstall": "bower install",
     "start": "./bin/server.js",
     "test": "./bin/test",
     "hint": "./node_modules/jshint/bin/jshint src; echo",
-    "lessc": "./node_modules/less/bin/lessc -ru --include-path=lib/ --compress src/styles/all.less dist/all.css",
+    "lessc": "./node_modules/less/bin/lessc -ru --include-path=./ --compress src/styles/all.less dist/all.css",
     "jsdoc": "rm -rf docs/api && ./node_modules/jsdoc/jsdoc -c tools/jsdoc.conf.json",
     "build": "bin/build"
   },
