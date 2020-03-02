@@ -7,7 +7,7 @@
   "dependencies": {
     "bootstrap": "~3.0.3",
     "sinon-chai": "~2.4.0",
-    "sinonjs": "~1.7.3",
+    "sinonjs": "~1.17.1",
     "view": "git://github.com/Livefyre/view.git#~1.0",
     "event-emitter": "git://github.com/Livefyre/event-emitter.git"
   },
